@@ -873,7 +873,8 @@ export const Hero: React.FC<{ pose: Pose; shadow?: number; rimId?: string; look?
 export const Actor = Hero;
 
 /**
- * A walk in profile. `phase` advances about 0.6 a frame for a normal walk; `ground` is the floor height under the hips
+ * A walk in profile. Drive `phase` from the distance covered, with walkPhase(), so the feet never slide and the pace
+ * reads as a walk (about 2 steps a second); a fixed rate like 0.6 a frame is a run. `ground` is the floor height under the hips
  * (a number, or a function of x for stairs and slopes). Leans into the step, bobs the head, bends the elbows, swings
  * loose things (the drawstrings) a beat behind the body.
  */
@@ -897,6 +898,14 @@ export const walkPose = (x: number, phase: number, ground: number | ((x: number)
     ...extra,
   };
 };
+
+/** One full walk cycle (two steps) covers about this far at scale 1: the legs swing +-28 deg from the hips. */
+export const STRIDE = 262;
+/**
+ * The walk phase for a distance walked (in px, either direction), so each foot plants where it lands instead of
+ * sliding. A calm walk covers about 260 px a second at scale 1 (two steps); move x at that speed and use this.
+ */
+export const walkPhase = (dist: number, scale = 1) => (Math.abs(dist) / (STRIDE * scale)) * Math.PI * 2;
 
 /** Where the feet are for a pose standing at hip y: use it to put a character on a floor (y = floor - feetBelowHips). */
 export const feetBelowHips = (scale: number) => LEG_LEN * scale;

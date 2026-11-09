@@ -64,7 +64,8 @@ man in a suit: combed hair, charcoal suit, red tie). Render the cast sheet with
 | `glint`, `glintColor` | 0..1 the eyes light up in the power's colour (default cyan); set it after `poseAt`, it isn't interpolated |
 
 Helpers: `poseAt(t, keys)` (eased keys, faces hold until their key), `faceAt(t, [[f, expr]...])` (a blink at each
-swap), `walkPose(x, phase, ground, scale, extra, facing)` (phase about 0.6 a frame; `ground` a number or a function
+swap), `walkPose(x, phase, ground, scale, extra, facing)` (drive the phase with `walkPhase(distance, scale)`, one cycle
+per `STRIDE` = 262 px, so the feet plant: a calm walk covers about 260 px a second; `ground` a number or a function
 like `hipGround`), `joints(pose)` and `toWorld(pose, point)` (where a hand is, to attach a prop), `reachAngle(pose,
 target)` (the arm angle that points at a world point).
 

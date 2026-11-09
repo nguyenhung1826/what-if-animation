@@ -94,8 +94,9 @@ the claim, the working, the source). 45 to 65 words. Read it aloud at pace: ever
 python <skill>/scripts/voice.py <slug>
 ```
 
-One ElevenLabs take with character timestamps (the 356-character copy-paste take cost 78 credits), then the pauses
-cut to the genre's pace: `public/<slug>/voice.wav` and `src/episodes/<slug>/words.json`. Check the length (15-25 s)
+One ElevenLabs take with character timestamps in the channel's voice, "Dylan - Chill SoCal Male"
+(`Mv9ouM1X38u0rfkwQxAz`: young, chill, approachable; about 0.44 credits a character), then the pauses cut to the
+genre's pace and the voice compressed and brought to -16 LUFS (Dylan comes back quiet and peaky): `public/<slug>/voice.wav` and `src/episodes/<slug>/words.json`. Check the length (15-25 s)
 and the word times it prints. Retune pauses with `gaps` in `episode.json` and re-run: the take is cached, so that's free. Change a word
 and it calls the API again.
 
@@ -148,7 +149,9 @@ take their notes before animating.
 ### 6. Animate
 
 Bring each shot to life from its key pose: `poseAt` keys with anticipation, holds and overshoot, `faceAt` for
-expressions, camera moves with `kf`, the power's look, the `fx`. Then render a draft and check the motion:
+expressions, camera moves with `kf`, the power's look, the `fx`. A walk is a walk, not a run: drive `walkPose`'s phase
+with `walkPhase(distance)` so the feet plant and the pace is about two steps a second (a fixed fast phase reads as
+running on the spot); keep fast leg rates for actual running. Then render a draft and check the motion:
 
 ```bash
 python <skill>/scripts/master.py <slug>

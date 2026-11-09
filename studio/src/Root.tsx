@@ -5,6 +5,7 @@ import { STUDIO } from './studio.config';
 import { EPISODES } from './episodes';
 import { CastSheet } from './CastSheet';
 import { LibraryThumbs, THUMBS } from './LibraryThumbs';
+import { PauseDemo } from './demos/PauseDemo';
 
 // Every episode gets two compositions: <Id> (the film) and <Id>Board (one frame per shot, at its key frame, for the
 // storyboard). Cast renders the cast sheet; Thumbs renders the library thumbs for CATALOG.md (one frame each).
@@ -22,6 +23,7 @@ export const Root: React.FC = () => {
       ))}
       <Composition id="Cast" component={CastSheet} durationInFrames={1} {...common} />
       <Composition id="Thumbs" component={LibraryThumbs} durationInFrames={THUMBS.length} {...common} />
+      <Composition id="PauseDemo" component={PauseDemo} durationInFrames={300} {...common} />
     </>
   );
 };

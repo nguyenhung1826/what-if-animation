@@ -1,0 +1,44 @@
+[
+ {
+  "n": 0,
+  "text": "What if you could pause time?",
+  "start": 8,
+  "frames": 41,
+  "fits": true
+ },
+ {
+  "n": 1,
+  "text": "Oops.",
+  "start": 62,
+  "frames": 21,
+  "fits": false
+ },
+ {
+  "n": 2,
+  "text": "Freeze.",
+  "start": 84,
+  "frames": 21,
+  "fits": false
+ },
+ {
+  "n": 3,
+  "text": "The whole world just... stops.",
+  "start": 102,
+  "frames": 62,
+  "fits": false
+ },
+ {
+  "n": 4,
+  "text": "So you stroll over, put it back...",
+  "start": 150,
+  "frames": 53,
+  "fits": true
+ },
+ {
+  "n": 5,
+  "text": "and nobody ever knows.",
+  "start": 226,
+  "frames": 44,
+  "fits": true
+ }
+]
