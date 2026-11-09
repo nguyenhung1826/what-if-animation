@@ -32,6 +32,7 @@ look on the cast sheet: `npx remotion still src/index.ts Cast out/cast.png`.
 
 | Look | Who | Notes | Thumb | Origin |
 |---|---|---|---|---|
+| `LOOKS.hero` | **the channel's hero** (the `Hero` default) | dark bald round head, cream calm line eyes, slim always-on arched brows; default outfit a plum long coat. Change the outfit per episode, never the face | `cast-hero.png` | channel |
 | `LOOKS.pipHood` | Pip, the shipped hero (B) | dark hoodie, mustard drawstrings | `cast-pipHood.png` | shipped |
 | `LOOKS.pip` | Pip (A) | mustard jacket | `cast-pip.png` | shipped |
 | `LOOKS.pipInk` | Pip (C) | dark head | `cast-pipInk.png` | shipped |
@@ -42,6 +43,22 @@ look on the cast sheet: `npx remotion still src/index.ts Cast out/cast.png`.
 
 Expressions (`expr`): neutral, happy, smug, shock, worried, oops, cool, dizzy, tired. Motion helpers: `poseAt`,
 `faceAt`, `walkPose`, `joints`, `toWorld`, `reachAngle`.
+
+### Costume and face options (fields of a `Look`, all in `src/engine/rig.tsx`)
+
+Dress a character for an episode by spreading a look and overriding fields:
+`{ ...LOOKS.hero, coat: 'denim', jacket: '#4A6FA5', jacketShade: '#3A5884', sleeve: '#4A6FA5', accent: '#E2A15A' }`.
+
+| Field | Options | Notes |
+|---|---|---|
+| `coat` | `biker`, `bomber`, `denim`, `long` | jacket cuts over the torso; set `sleeve` to the jacket colour so the arms match. `long` flares to mid-leg |
+| `extra` (head) | `hood`, `curls`, `bunches`, `bob`, `suit`, `bucket`, `topbun`, `beanie`, `cap`, `beret`, `ponytail` | the head piece; hats and hair use `hair` for their colour, bands use `accent`. Not for the hero (bald is its identity) unless the episode calls for a hat |
+| `item` | `satchel`, `stopwatch`, `headlamp`, `scarf`, `backpack` | carried on the rig in every pose; colour in `itemColor` |
+| `eyes` | `dot`, `big`, `bean`, `line` | `line`: calm curved eyes at rest that open to dots when something happens (the hero) |
+| `brows` | `thin`, `thick`, `slim` | `slim`: fine, always-on arched brows that act (the hero) |
+| `blush`, `curl`, `moodTint`, `faceGlow` | booleans | rosy cheeks; a reactive curl on the crown; a colour wash per expression; glowing features for coloured faces on a dark head |
+| `limbStyle` | `tube`, `stick` | `stick`: single thin-line limbs with dot hands |
+| `hair` = `skin` | | a bald head (no tuft) |
 
 ## Props
 

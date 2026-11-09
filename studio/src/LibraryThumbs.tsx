@@ -53,6 +53,7 @@ export const THUMBS: { file: string; draw: () => React.ReactNode }[] = [
   { file: 'cast-sis.png', draw: () => castThumb('sis') },
   { file: 'cast-mom.png', draw: () => castThumb('mom') },
   { file: 'cast-suit.png', draw: () => castThumb('suit') },
+  { file: 'cast-hero.png', draw: () => castThumb('hero') },
 ];
 
 export const LibraryThumbs: React.FC = () => {

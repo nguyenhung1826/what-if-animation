@@ -30,6 +30,15 @@ const rnd = (seed: number, i: number) => Math.abs(Math.sin(seed * 31.7 + i * 12.
 /** Filters shared by every shot: rim light from the left or right, blurs for depth of field. */
 export const KitDefs: React.FC = () => (
   <defs>
+    {/* a soft glow around glowing facial features (a dark head with coloured eyes) */}
+    <filter id="featGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation={3.2} result="b" />
+      <feMerge>
+        <feMergeNode in="b" />
+        <feMergeNode in="b" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
     <filter id="rimR" x="-40%" y="-40%" width="180%" height="180%">
       <feDropShadow dx={4} dy={-1} stdDeviation={1.8} floodColor={D.rim} floodOpacity={1} />
       <feDropShadow dx={0} dy={0} stdDeviation={14} floodColor="#FF9A4A" floodOpacity={0.35} />

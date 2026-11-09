@@ -30,8 +30,11 @@ schematic for the science beat, a cliffhanger blackout). Read the one closest to
   place, a prop, a character look, a power look) goes into `src/engine/`, gets its row and thumb in `CATALOG.md`, and
   is committed in the same episode (see "Adding to the library" at the end of the catalog). Never leave a reusable
   asset inside an episode's `shots.tsx`.
-- **Original characters only.** Pip (the hero, look B) and Mo (his friend) are ours, and so are the sister, mum and
-  the suit on the rig. Never a channel's own hero, and nothing that resembles a famous cartoon character: check every
+- **The channel's hero is `LOOKS.hero`** (the `Hero` default): a dark bald round head, cream calm line eyes and slim
+  arched brows. Use it as the lead of every new episode. Its outfit changes per episode (see "Costume and face
+  options" in `CATALOG.md`); its face never does. Pip stays only in the two shipped examples.
+- **Original characters only.** The hero, Pip and Mo are ours, and so are the sister, mum and
+  the suit on the rig. Never a channel's own hero (no red hoodie, no white-disc eyes, no star glint in the eye), and nothing that resembles a famous cartoon character: check every
   new look on the cast sheet (Mo's first hat was dropped for drifting toward one).
 - **Original stories.** The formula is shared; the episode isn't anyone else's. Don't remake a channel's title.
 - **Never claim the viral channels are made with Claude** or any other tool. Nobody has said how they're made.

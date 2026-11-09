@@ -12,7 +12,7 @@ const Label: React.FC<{ x: number; y: number; text: string }> = ({ x, y, text })
   </text>
 );
 const P = (o: Partial<Pose>): Pose => ({ ...basePose, ...o });
-const NAMES: Record<CastName, string> = { pip: 'PIP A', pipHood: 'PIP B (HERO)', pipInk: 'PIP C', mo: 'MO, FRIEND', sis: 'SISTER', mom: 'MUM', suit: 'THE SUIT' };
+const NAMES: Record<CastName, string> = { hero: 'HERO (CHANNEL)', pip: 'PIP A', pipHood: 'PIP B (HERO)', pipInk: 'PIP C', mo: 'MO, FRIEND', sis: 'SISTER', mom: 'MUM', suit: 'THE SUIT' };
 
 export const CastSheet: React.FC = () => {
   const cast = Object.keys(LOOKS) as CastName[];
@@ -35,8 +35,8 @@ export const CastSheet: React.FC = () => {
         </g>
         <rect width={1920} height={1080} fill="#0B0816" opacity={0.35} />
         {cast.map((c, i) => {
-          const x = 150 + i * 270;
-          const small = c === 'sis' ? 0.68 : 0.82;
+          const x = 130 + i * (1660 / (cast.length - 1));
+          const small = c === 'sis' ? 0.62 : 0.74;
           return (
             <g key={c}>
               <Hero look={LOOKS[c]} pose={P({ x, y: row1 + (0.82 - small) * 340, scale: small, yaw: i % 2 ? -0.35 : 0.35, look: i % 2 ? -0.5 : 0.5, expr: 'happy' })} shadow={0.6} />
