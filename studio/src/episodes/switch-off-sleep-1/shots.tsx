@@ -270,7 +270,7 @@ export const S12: React.FC<ShotProps> = ({ t, len }) => {
         <BedDuvet knees={0.6} />
       </g>
       <rect x={0} y={0} width={1920} height={430} fill="#05060F" opacity={0.35} />
-      <TitleCard t={t} lines={['WHAT IF YOU COULD', 'SWITCH OFF SLEEP?']} accent="OFF" accentT={50} size={104} y={175} />
+      <TitleCard t={t} lines={['WHAT IF YOU COULD', 'SWITCH OFF SLEEP?']} accent="OFF" accentT={74} size={104} y={175} />
     </g>
   );
 };

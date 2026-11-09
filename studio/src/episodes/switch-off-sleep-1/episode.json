@@ -47,14 +47,6 @@
  "cast": [
   "hero"
  ],
- "voice": {
-  "settings": {
-   "stability": 0.4,
-   "similarity_boost": 0.8,
-   "style": 0.35,
-   "use_speaker_boost": true
-  }
- },
  "gaps": {
   "word": 0.16,
   "comma": 0.3,
@@ -204,7 +196,7 @@
   },
   {
    "shot": "S6",
-   "at": "s:8.7"
+   "at": "s:8.9"
   },
   {
    "shot": "S7",
@@ -230,7 +222,7 @@
   },
   {
    "shot": "S12",
-   "at": "s:23.5"
+   "at": "s:24.7"
   },
   {
    "shot": "S13",
@@ -337,7 +329,7 @@
     0.4
    ],
    [
-    "S9+12",
+    "S9+15",
     "switch_off",
     0.4
    ],
@@ -354,7 +346,7 @@
     "S12"
    ],
    [
-    "S10+56",
+    "S10+71",
     "cat_chirp",
     0.3
    ],
