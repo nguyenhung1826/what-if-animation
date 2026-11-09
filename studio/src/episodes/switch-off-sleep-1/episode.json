@@ -47,6 +47,14 @@
  "cast": [
   "hero"
  ],
+ "voice": {
+  "settings": {
+   "stability": 0.4,
+   "similarity_boost": 0.8,
+   "style": 0.35,
+   "use_speaker_boost": true
+  }
+ },
  "gaps": {
   "word": 0.16,
   "comma": 0.3,

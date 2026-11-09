@@ -8,7 +8,9 @@ The API is only called when the text or the voice settings change (cached by a h
 gaps is free.
 
 episode.json "voice" (all optional): {"id": "rPMkKgdwgIwqv4fXgR6N", "model": "eleven_multilingual_v2",
-  "settings": {"stability": 0.4, "similarity_boost": 0.8, "style": 0.35, "use_speaker_boost": true}}
+  "settings": {"stability": 0.28, "similarity_boost": 0.8, "style": 0.55, "use_speaker_boost": true}}
+episode.json "previous_text" (optional): the last line of the previous chapter, so a long-form chapter carries on its
+  delivery instead of restarting flat. Not voiced, not charged.
 episode.json "gaps" (seconds, all optional): {"word": 0.12, "comma": 0.2, "sentence": 0.3, "question": 0.45,
   "pairs": {"anything|One": 0.6}}  -> every pause longer than its limit is cut to the limit, from its middle.
 episode.json "holds" (seconds, optional): {"asleep|Not": 1.6} -> that pause is stretched to at least this long with
@@ -25,8 +27,12 @@ force = '--force' in sys.argv
 ep = load_episode(slug)
 # The channel's voice: "Tyler - Clear US YouTube Creator Voice" from the ElevenLabs library (young, upbeat, clear),
 # picked 2026-11-10 to replace Dylan (rated too low and flat). The skill's original default was TX3LPaxmHKxFdv7VOQHJ.
-V = {'id': 'rPMkKgdwgIwqv4fXgR6N', 'model': 'eleven_multilingual_v2', 'settings': {'stability': 0.4, 'similarity_boost': 0.8, 'style': 0.35, 'use_speaker_boost': True}}
+# Settings loosened 2026-11-10 (switch-off-sleep-2): stability 0.4 -> 0.28, style 0.35 -> 0.55. The person heard it against
+# eleven_v3 with audio tags and picked this one: livelier than before, and the timestamps stay exact.
+V = {'id': 'rPMkKgdwgIwqv4fXgR6N', 'model': 'eleven_multilingual_v2', 'settings': {'stability': 0.28, 'similarity_boost': 0.8, 'style': 0.55, 'use_speaker_boost': True}}
 V.update(ep.get('voice', {}))
+if ep.get('previous_text'):
+    V['previous_text'] = ep['previous_text']
 text = ' '.join(b['text'].strip() for b in ep['script'])
 sig = hashlib.sha1(json.dumps([text, V], sort_keys=True).encode()).hexdigest()[:12]
 raw_mp3 = pub_dir(slug) / 'voice_raw.mp3'
@@ -36,7 +42,7 @@ meta = load_json(out_dir(slug) / 'voice_meta.json', {})
 if force or meta.get('sig') != sig or not raw_mp3.exists() or not raw_words.exists():
     print(f'{len(text)} characters to ElevenLabs (voice {V["id"]})')
     t0 = time.time()
-    res = json.loads(api(f'/v1/text-to-speech/{V["id"]}/with-timestamps?output_format=mp3_44100_128', {'text': text, 'model_id': V['model'], 'voice_settings': V['settings']}))
+    res = json.loads(api(f'/v1/text-to-speech/{V["id"]}/with-timestamps?output_format=mp3_44100_128', {'text': text, 'model_id': V['model'], 'voice_settings': V['settings'], **({'previous_text': V['previous_text']} if V.get('previous_text') else {})}))
     raw_mp3.write_bytes(base64.b64decode(res['audio_base64']))
     al = res['alignment']
     words, cur = [], None

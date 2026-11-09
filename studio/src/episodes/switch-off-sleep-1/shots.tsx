@@ -15,10 +15,10 @@ const ICE = '#9FE4FF';
 const on = (p: Pose, g: number): Pose => ({ ...p, glint: g, glintColor: ICE });
 
 // the room at night with the lamp off: darker, bluer
-const Night: React.FC<{ o?: number }> = ({ o = 0.42 }) => <rect x={-2000} y={-2000} width={6000} height={6000} fill="#0A1030" opacity={o} style={{ mixBlendMode: 'multiply' }} />;
+export const Night: React.FC<{ o?: number }> = ({ o = 0.42 }) => <rect x={-2000} y={-2000} width={6000} height={6000} fill="#0A1030" opacity={o} style={{ mixBlendMode: 'multiply' }} />;
 
 // a close-up of the hero against a soft background (pattern from rewind Sh9)
-const CloseUp: React.FC<{ t: number; len: number; bg: React.ReactNode; p?: Partial<Pose>; face: Partial<Pose>; glint: number; x?: number; rim?: string }> = ({ t, len, bg, p = {}, face, glint, x = 980, rim = 'rimBlueL' }) => {
+export const CloseUp: React.FC<{ t: number; len: number; bg: React.ReactNode; p?: Partial<Pose>; face: Partial<Pose>; glint: number; x?: number; rim?: string }> = ({ t, len, bg, p = {}, face, glint, x = 980, rim = 'rimBlueL' }) => {
   const sc = 4.2 * (1 + 0.05 * kf(t, [[0, 0], [len, 1]]));
   const head = { x, y: 600 };
   const pose: Pose = { ...basePose, x: head.x, y: head.y - HEAD.y * sc, scale: sc, yaw: 0.15, armL: { a: 14, b: -6 }, armR: { a: 14, b: -6 }, ...p, ...face };

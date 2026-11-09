@@ -81,7 +81,7 @@ light one white) and is dressed per episode to fit its role, by spreading the lo
 | `OpenBook`, `BookFlat`, `BookTower` | `src/engine/props.tsx` | open book (page turn), closed book, tower of books | `turn`, `cover`; `n` | - | preview run |
 | `LaptopBack` | `src/engine/props.tsx` | laptop lid from behind, screen light spilling | `glow`, `tilt` | - | preview run |
 | `PizzaSlice`, `PizzaBox` | `src/engine/props.tsx` | slice from above (bite, drip), open empty box | `bite`, `drip`, `lid` | - | preview run |
-| `Phone` | `src/engine/props.tsx` | phone, dark or ringing | `on`, `caller`, `buzz` | - | preview run |
+| `Phone` | `src/engine/props.tsx` | phone, dark or ringing, or a group chat thread | `on`, `caller`, `buzz`; `chat` (bubbles `{text, me, o}`), `title`, `status` ("Delivered") | - | preview run; chat: switch-off-sleep-2 |
 
 ## Room kit (for building a new set)
 
@@ -108,7 +108,7 @@ Faces: `FONT.title`, `FONT.ui`, `FONT.hand` (`src/engine/fonts.ts`).
 | `rewindLook` | `src/episodes/rewind/index.tsx` | desaturate, jitter, `TapeLines`, REWIND chip, stopwatch counting back | - | rewind |
 | `copyLook` | `src/episodes/copy-paste/index.tsx` | cools the picture, COPY chip | - | copy-paste |
 | `pasteLook` | `src/episodes/copy-paste/index.tsx` | PASTE chip (the pop is `PasteIn` in the shot) | - | copy-paste |
-| `offLook` | `src/episodes/switch-off-sleep-1/index.tsx` | the power turned off: picture colder, a touch darker, OFF chip with a power icon. In the shot: the lamp `lamp` 1 -> 0, the hero as `{ ...LOOKS.hero, faceGlow: true }` with `glint` 1 and `glintColor` ice blue (`#9FE4FF`), sound `switch_off`. Chapters 2-6 import it from here | - | switch-off-sleep-1 |
+| `offLook` | `src/episodes/switch-off-sleep-1/index.tsx` | the power turned off: picture colder, a touch darker, OFF chip with a power icon. In the shot: the lamp `lamp` 1 -> 0, the hero as `{ ...LOOKS.hero, faceGlow: true }` with `glint` 1 and `glintColor` ice blue (`#9FE4FF`), sound `switch_off`. Chapters 2-6 import it from here. Its `shots.tsx` also exports `CloseUp` (a hero close-up on a blurred set) and `Night` (a multiply tint) | - | switch-off-sleep-1 |
 
 A look still lives in its episode until a second episode wants it; then move it to `src/engine/looks.tsx`, export
 it from `engine/index.ts` and change its row here.

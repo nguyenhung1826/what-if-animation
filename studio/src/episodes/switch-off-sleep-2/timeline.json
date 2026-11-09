@@ -1,0 +1,240 @@
+{
+ "slug": "switch-off-sleep-2",
+ "title": "WHAT IF YOU COULD SWITCH OFF SLEEP?",
+ "fps": 30,
+ "total": 1550,
+ "segments": [
+  {
+   "shot": "S1",
+   "a": 0,
+   "b": 130,
+   "t0": 0,
+   "t1": 130,
+   "line": "Night one. Eleven. Twelve. One."
+  },
+  {
+   "shot": "S2",
+   "a": 130,
+   "b": 273,
+   "t0": 0,
+   "t1": 143,
+   "line": "Normally, you'd lose the next eight hours. Tonight, they're yours."
+  },
+  {
+   "shot": "S3",
+   "a": 273,
+   "b": 353,
+   "t0": 0,
+   "t1": 80,
+   "line": "You read the book you've ignored since summer."
+  },
+  {
+   "shot": "S4",
+   "a": 353,
+   "b": 452,
+   "t0": 0,
+   "t1": 99,
+   "line": "Then the next one. Then the whole shelf."
+  },
+  {
+   "shot": "S5",
+   "a": 452,
+   "b": 591,
+   "t0": 0,
+   "t1": 139,
+   "line": "Eight hours a night is two thousand nine hundred twenty hours a year."
+  },
+  {
+   "shot": "S6",
+   "a": 591,
+   "b": 717,
+   "t0": 0,
+   "t1": 126,
+   "line": "Four extra months. Every year. That's real."
+  },
+  {
+   "shot": "S7",
+   "a": 717,
+   "b": 770,
+   "t0": 0,
+   "t1": 53,
+   "line": "You finish every assignment."
+  },
+  {
+   "shot": "S8",
+   "a": 770,
+   "b": 858,
+   "t0": 0,
+   "t1": 88,
+   "line": "Even the ones that haven't been assigned yet."
+  },
+  {
+   "shot": "S9",
+   "a": 858,
+   "b": 984,
+   "t0": 0,
+   "t1": 126,
+   "line": "You watch a whole season of a show in one night."
+  },
+  {
+   "shot": "S10",
+   "a": 984,
+   "b": 1114,
+   "t0": 0,
+   "t1": 130,
+   "line": "Then you text your friends about it. Nobody answers."
+  },
+  {
+   "shot": "S11",
+   "a": 1114,
+   "b": 1222,
+   "t0": 0,
+   "t1": 108,
+   "line": "They're asleep. Losers."
+  },
+  {
+   "shot": "S12",
+   "a": 1222,
+   "b": 1427,
+   "t0": 0,
+   "t1": 205,
+   "line": "By sunrise, you've done a week of homework, read six books, and you feel… great."
+  },
+  {
+   "shot": "S13",
+   "a": 1427,
+   "b": 1550,
+   "t0": 0,
+   "t1": 123,
+   "line": "No coffee. No yawning. Nothing."
+  }
+ ],
+ "shots": [
+  {
+   "id": "S1",
+   "size": "insert",
+   "key": 80,
+   "len": 130,
+   "first": 0,
+   "line": "Night one. Eleven. Twelve. One.",
+   "note": "the alarm clock on the desk flips 11:00, 12:00, 1:00; a NIGHT 1 tag"
+  },
+  {
+   "id": "S2",
+   "size": "medium -> close",
+   "key": 100,
+   "len": 143,
+   "first": 130,
+   "line": "Normally, you'd lose the next eight hours. Tonight, they're yours.",
+   "note": "you at the desk, eyes glowing, the laptop's glow on your face; push in as it turns: tonight, they're yours (smug)"
+  },
+  {
+   "id": "S3",
+   "size": "top-down insert",
+   "key": 50,
+   "len": 80,
+   "first": 273,
+   "line": "You read the book you've ignored since summer.",
+   "note": "an open book, pages flipping fast under your lamp"
+  },
+  {
+   "id": "S4",
+   "size": "wide",
+   "key": 70,
+   "len": 99,
+   "first": 353,
+   "line": "Then the next one. Then the whole shelf.",
+   "note": "books fly off the shelf to the desk one after another and stack into a tower; the shelf empties"
+  },
+  {
+   "id": "S5",
+   "size": "schematic",
+   "key": 100,
+   "len": 139,
+   "first": 452,
+   "line": "Eight hours a night is two thousand nine hundred twenty hours a year.",
+   "note": "8 h x 365 nights: a counter runs 0 -> 2,920 HOURS"
+  },
+  {
+   "id": "S6",
+   "size": "schematic",
+   "key": 90,
+   "len": 126,
+   "first": 591,
+   "line": "Four extra months. Every year. That's real.",
+   "note": "= ~4 MONTHS, four month blocks drop in, EVERY YEAR"
+  },
+  {
+   "id": "S7",
+   "size": "medium",
+   "key": 40,
+   "len": 53,
+   "first": 717,
+   "line": "You finish every assignment.",
+   "note": "you at the desk, sheets flying off a growing done stack"
+  },
+  {
+   "id": "S8",
+   "size": "top-down insert",
+   "key": 50,
+   "len": 88,
+   "first": 770,
+   "line": "Even the ones that haven't been assigned yet.",
+   "note": "a sheet marked DUE: MAY gets its A; more future sheets slide in"
+  },
+  {
+   "id": "S9",
+   "size": "medium",
+   "key": 80,
+   "len": 126,
+   "first": 858,
+   "line": "You watch a whole season of a show in one night.",
+   "note": "you lean back watching the laptop, its light flickering scene to scene, episodes ticking EP 1..10"
+  },
+  {
+   "id": "S10",
+   "size": "insert",
+   "key": 90,
+   "len": 130,
+   "first": 984,
+   "line": "Then you text your friends about it. Nobody answers.",
+   "note": "the phone in your hands: bubbles go out to the group chat, delivered... no reply"
+  },
+  {
+   "id": "S11",
+   "size": "close-up",
+   "key": 50,
+   "len": 108,
+   "first": 1114,
+   "line": "They're asleep. Losers.",
+   "note": "you, eyes glowing, a smug shrug: they're asleep. Losers. ZZZ floats off the phone"
+  },
+  {
+   "id": "S12",
+   "size": "wide",
+   "key": 120,
+   "len": 205,
+   "first": 1222,
+   "line": "By sunrise, you've done a week of homework, read six books, and you feel… great.",
+   "note": "the window goes from night to sunrise; the tower of books, the done stack; you stretch, happy"
+  },
+  {
+   "id": "S13",
+   "size": "close-up",
+   "key": 70,
+   "len": 123,
+   "first": 1427,
+   "line": "No coffee. No yawning. Nothing.",
+   "note": "you, happy and wide awake in the sunrise; the full mug beside you, untouched, cold"
+  }
+ ],
+ "fx": [],
+ "audio": {
+  "voice": "switch-off-sleep-2/voice.wav",
+  "sfx": "switch-off-sleep-2/sfx.wav",
+  "voiceVol": 0.7728,
+  "sfxVol": 0.8,
+  "music": "switch-off-sleep-2/music.wav",
+  "musicVol": 0.1507
+ }
+}

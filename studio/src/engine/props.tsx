@@ -410,8 +410,11 @@ export const PizzaBox: React.FC<{ x: number; y: number; w?: number; lid?: boolea
 /**
  * A phone, from above or held: x, y its centre, w its width, `rot` its turn. Dark and glossy when `on` is 0; lit when
  * `on` > 0, showing an incoming call (`caller`, an avatar, a red and a green button). `buzz` draws vibration marks.
+ * `chat` shows a message thread instead of the call: bubbles from the bottom up, `me` on the right in blue, each with
+ * `o` (0..1) to pop it in; `status` is the small grey line under the last bubble ("Delivered").
  */
-export const Phone: React.FC<{ x: number; y: number; w?: number; rot?: number; on?: number; caller?: string; buzz?: number; f?: number }> = ({ x, y, w = 200, rot = 0, on = 0, caller = 'MUM', buzz = 0, f = 0 }) => {
+export type ChatBubble = { text: string; me?: boolean; o?: number };
+export const Phone: React.FC<{ x: number; y: number; w?: number; rot?: number; on?: number; caller?: string; buzz?: number; f?: number; chat?: ChatBubble[]; title?: string; status?: string }> = ({ x, y, w = 200, rot = 0, on = 0, caller = 'MUM', buzz = 0, f = 0, chat, title = 'THE SQUAD', status }) => {
   const h = w * 2.05;
   const jx = buzz > 0 ? Math.sin(f * 9.1) * w * 0.012 * buzz : 0;
   const s = w / 200;
@@ -421,7 +424,33 @@ export const Phone: React.FC<{ x: number; y: number; w?: number; rot?: number; o
       {on > 0 ? <circle cx={0} cy={0} r={w * 1.5} fill="url(#g3cool)" opacity={0.55 * on} style={{ mixBlendMode: 'screen' }} /> : null}
       <rect x={-w / 2} y={-h / 2} width={w} height={h} rx={w * 0.16} fill="#16151C" stroke="#3A3846" strokeWidth={4 * s} />
       <rect x={-w / 2 + w * 0.06} y={-h / 2 + w * 0.06} width={w * 0.88} height={h - w * 0.12} rx={w * 0.11} fill="#0B0A10" />
-      {on > 0 ? (
+      {on > 0 && chat ? (
+        <g opacity={on}>
+          <rect x={-w / 2 + w * 0.06} y={-h / 2 + w * 0.06} width={w * 0.88} height={h - w * 0.12} rx={w * 0.11} fill="#14161F" />
+          <rect x={-w / 2 + w * 0.06} y={-h / 2 + w * 0.06} width={w * 0.88} height={h * 0.13} rx={w * 0.11} fill="#20232F" />
+          <text x={0} y={-h / 2 + h * 0.11} textAnchor="middle" fontFamily={FONT.ui} fontSize={w * 0.075} fill="#C9D2E6" letterSpacing={w * 0.01}>{title}</text>
+          {(() => {
+            const bw = w * 0.66, bh = w * 0.15, gap = w * 0.05;
+            let yy = h / 2 - w * 0.14 - (status ? w * 0.08 : 0);
+            const out: React.ReactNode[] = [];
+            [...chat].reverse().forEach((b, i) => {
+              const o = b.o ?? 1;
+              if (o <= 0) return;
+              const sc = 0.6 + 0.4 * Math.min(1, o * 1.2);
+              const cx = b.me ? w * 0.4 - bw / 2 : -w * 0.4 + bw / 2;
+              out.push(
+                <g key={i} opacity={Math.min(1, o * 2)} transform={`translate(${cx} ${yy - bh / 2}) scale(${sc})`}>
+                  <rect x={-bw / 2} y={-bh / 2} width={bw} height={bh} rx={bh * 0.45} fill={b.me ? '#3D7BFF' : '#3A3C48'} />
+                  <text x={0} y={bh * 0.17} textAnchor="middle" fontFamily={FONT.ui} fontSize={w * 0.068} fill="#F6F8FF">{b.text}</text>
+                </g>,
+              );
+              yy -= bh + gap;
+            });
+            return out;
+          })()}
+          {status ? <text x={w * 0.4} y={h / 2 - w * 0.1} textAnchor="end" fontFamily={FONT.ui} fontSize={w * 0.05} fill="#8A90A2">{status}</text> : null}
+        </g>
+      ) : on > 0 ? (
         <g opacity={on}>
           <rect x={-w / 2 + w * 0.06} y={-h / 2 + w * 0.06} width={w * 0.88} height={h - w * 0.12} rx={w * 0.11} fill="#2C3A5E" />
           <rect x={-w / 2 + w * 0.06} y={-h / 2 + w * 0.06} width={w * 0.88} height={(h - w * 0.12) * 0.55} rx={w * 0.11} fill="#4A6A9E" opacity={0.6} />

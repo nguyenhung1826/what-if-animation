@@ -95,7 +95,10 @@ python <skill>/scripts/voice.py <slug>
 ```
 
 One ElevenLabs take with character timestamps in the channel's voice, "Tyler - Clear US YouTube Creator Voice"
-(`rPMkKgdwgIwqv4fXgR6N`: young, upbeat, clear; about 0.44 credits a character), then the pauses cut to the
+(`rPMkKgdwgIwqv4fXgR6N`: young, upbeat, clear; about 0.44 credits a character) on `eleven_multilingual_v2` with
+stability 0.28 and style 0.55 (loosened 2026-11-10 after the person found 0.4/0.35 flat; they heard it against
+`eleven_v3` with audio tags and picked this: livelier, and the timestamps stay exact). For a long-form chapter, set
+`previous_text` in `episode.json` to the last line of the chapter before so the delivery carries on. Then the pauses cut to the
 genre's pace and the voice compressed and brought to -16 LUFS (some voices come back quiet and peaky): `public/<slug>/voice.wav` and `src/episodes/<slug>/words.json`. Check the length (15-25 s)
 and the word times it prints. Retune pauses with `gaps` in `episode.json` and re-run: the take is cached, so that's free. For a long-form chapter (slower pace), stretch
 chosen pauses with `holds` (`{"asleep|Not": 1.6}`: that pause becomes at least 1.6 s of silence), also free. Change a word
@@ -167,8 +170,9 @@ reads.
 
 Read `references/sound.md`. Add `sound` to `episode.json`: the clips (prompt and length), one event per visible
 action cued to its shot, ambiences per location, the music bed and the levels. Check what the library already has
-(the Sound table in `CATALOG.md`, and `library/sfx/`) and reuse a clip by name before writing a new prompt, then
-generate:
+(the Sound table in `CATALOG.md`, and `library/sfx/`) and reuse a clip by name before writing a new prompt. A long-form
+chapter reuses the channel's music bed for free: `"music": {"clip": "music", "loop": 1.5, "offset": 6}` repeats it with a
+crossfade and starts where the previous chapter left off. Then generate:
 
 ```bash
 python <skill>/scripts/sfx.py <slug> --dry
