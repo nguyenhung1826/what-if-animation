@@ -47,16 +47,16 @@ Expressions (`expr`): neutral, happy, smug, shock, worried, oops, cool, dizzy, t
 
 ### Costume and face options (fields of a `Look`, all in `src/engine/rig.tsx`)
 
-**The rules: only the hero wears clothes, and every skin is pure black or pure white.** Every other character is
-drawn `plain(LOOKS.x)` or `plain(LOOKS.x, 'black' | 'white')` (`TONES` holds the two): no costume at all, the whole
-body fully black with cream features or fully white with dark features, face shape, hair and lashes kept. Without a
-tone, a dark skin becomes black and a light one white. Outfits are the
-person's call; when they ask for one, spread a look and override fields:
-`{ ...plain(LOOKS.heroine), coat: 'denim', jacket: '#4A6FA5', jacketShade: '#3A5884', sleeve: '#4A6FA5', limb: '#2A2733', shoe: '#1C1B22', bare: false }`.
+**The rules: everyone is dressed, only the hero's outfit is fixed, and every skin is pure black or pure white.**
+Every other character starts from `tone(LOOKS.x)` or `tone(LOOKS.x, 'black' | 'white')` (`TONES` holds the two:
+fully black with cream features, or fully white with dark features; without a tone, a dark skin becomes black and a
+light one white) and is dressed per episode to fit its role, by spreading the look and overriding fields:
+`{ ...tone(LOOKS.heroine), coat: 'denim', jacket: '#4A6FA5', jacketShade: '#3A5884', sleeve: '#4A6FA5', limb: '#2A2733', shoe: '#1C1B22' }`.
 
 | Field | Options | Notes |
 |---|---|---|
-| `plain(look, tone?)` | function | strips every costume piece (sets `bare`) and makes the skin pure `black` or `white`; the default for everyone but the hero |
+| `tone(look, tone?)` | function | makes the skin pure `black` or `white`, clothes kept; the start for everyone but the hero |
+| `plain(look, tone?)` | function | the same plus no costume at all (sets `bare`); only when the person asks for an undressed character |
 | `coat` | `biker`, `bomber`, `denim`, `long`, `sweater` | jacket cuts over the torso; set `sleeve` to the jacket colour so the arms match. `long` flares to mid-leg; `sweater` is a fine-knit mock neck with ribbed collar, hem and cuffs (the hero's) |
 | `sleeveLength` | `full`, `elbow` | `elbow`: sleeves pushed up, the forearm bare (the hero's) |
 | `extra` (head) | `hood`, `curls`, `bunches`, `bob`, `suit`, `bucket`, `topbun`, `beanie`, `cap`, `beret`, `ponytail` | the head piece; hats and hair use `hair` for their colour, bands use `accent`. Not for the hero (bald is its identity) unless the episode calls for a hat |

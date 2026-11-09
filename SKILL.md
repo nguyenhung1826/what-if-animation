@@ -35,11 +35,12 @@ schematic for the science beat, a cliffhanger blackout). Read the one closest to
   with the sleeves at the elbow, charcoal trousers, black shoes); its face never changes. `LOOKS.heroine` is a
   supporting character, not a lead: cast her only when a story needs a woman (the same face plus short lashes).
   Pip stays only in the two shipped examples.
-- **Only the hero wears clothes, and every skin is pure black or pure white.** Every other character in an episode
-  appears with no costume: draw it with `plain(LOOKS.x)` or `plain(LOOKS.x, 'black' | 'white')` (the whole body
-  fully black with cream features, or fully white with dark features; no jacket, shoes, hat, hood, headphones or
-  carried item; face shape, hair and lashes kept). No other skin tone appears in the channel's episodes. Never pick an outfit yourself, for the hero or anyone else: the person decides who wears what
-  and when, and you use exactly that (see "Costume and face options" in `CATALOG.md`).
+- **Everyone is dressed; only the hero's outfit is fixed; every skin is pure black or pure white.** The hero always
+  wears its default outfit. Every other character wears clothes too, chosen per episode to fit its role in the story
+  (a lab coat for a scientist, a suit for a boss...) and varied between episodes: start from `tone(LOOKS.x)` or
+  `tone(LOOKS.x, 'black' | 'white')` (the whole skin fully black with cream features, or fully white with dark
+  features) and dress it with the costume options in `CATALOG.md`. Show the outfits on the storyboard so the person
+  can change them, and follow any outfit the person asks for. No other skin tone appears in the channel's episodes.
 - **Original characters only.** The hero, the heroine, Pip and Mo are ours, and so are the sister, mum and
   the suit on the rig. Never a channel's own hero (no red hoodie, no white-disc eyes, no star glint in the eye), and nothing that resembles a famous cartoon character: check every
   new look on the cast sheet (Mo's first hat was dropped for drifting toward one).

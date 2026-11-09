@@ -101,16 +101,21 @@ const isDark = (hex: string) => {
 };
 
 /**
+ * A character with a pure black or pure white skin (cream features on black, dark features on white), clothes kept.
+ * `t` picks the tone; left out, a dark skin becomes black and a light one white. The channel's rule: every character
+ * but the hero is drawn tone(...) (then dressed for the episode).
+ */
+export const tone = (look: Look, t?: Tone): Look => ({ ...look, ...TONES[t ?? (isDark(look.skin) ? 'black' : 'white')] });
+
+/**
  * A character with no costume and a pure black or pure white skin: the whole body takes the skin colour (a clean black
  * or white stick silhouette), with no jacket, collar, sleeves, shoes, hat, hood, headphones or carried item. The face
- * shape, hair and lashes stay. `tone` picks black or white; left out, a dark skin becomes black and a light one white.
- * The channel's rule: in every episode, every character except the hero appears plain(...) unless the person asks
- * for a specific outfit.
+ * shape, hair and lashes stay. `t` picks black or white, as in tone(). Not the default any more (everyone wears
+ * clothes); use it only when the person asks for a character with no costume.
  */
-export const plain = (look: Look, tone?: Tone): Look => {
+export const plain = (look: Look, t?: Tone): Look => {
   const clothing: Look['extra'][] = ['hood', 'suit', 'bucket', 'beanie', 'cap', 'beret'];
-  const T = TONES[tone ?? (isDark(look.skin) ? 'black' : 'white')];
-  const L = { ...look, ...T };
+  const L = tone(look, t);
   return {
     ...L,
     jacket: L.skin,
@@ -535,12 +540,12 @@ export const Hero: React.FC<{ pose: Pose; shadow?: number; rimId?: string; look?
       {L.coat === 'long' ? (
         // a long coat: the skirt flares over the thighs to mid-leg, split up the front
         <g>
-          <path d="M -46 -112 Q 0 -124 46 -112 L 58 78 Q 30 86 3 80 L 0 20 L -3 80 Q -30 86 -58 78 Z" fill={L.jacket} stroke={L.line} strokeWidth={4} strokeLinejoin="round" />
-          <path d="M 12 0 L 54 4 L 58 78 Q 30 86 6 80 Z" fill={L.jacketShade} opacity={0.5} />
+          <path d="M -42 -92 Q -46 -118 -20 -121 Q 0 -124 20 -121 Q 46 -118 42 -92 L 56 66 Q 58 80 44 82 Q 22 86 3 80 L 0 22 L -3 80 Q -22 86 -44 82 Q -58 80 -56 66 Z" fill={L.jacket} stroke={L.line} strokeWidth={4} strokeLinejoin="round" />
+          <path d="M 12 0 L 52 4 L 56 66 Q 58 80 44 82 Q 22 86 6 80 Z" fill={L.jacketShade} opacity={0.5} />
         </g>
       ) : null}
-      <path d="M -46 -112 Q 0 -124 46 -112 L 40 2 Q 0 12 -40 2 Z" fill={L.jacket} stroke={L.line} strokeWidth={4} strokeLinejoin="round" />
-      <path d="M 10 -116 Q 30 -114 46 -112 L 40 2 Q 26 8 12 9 Z" fill={L.jacketShade} opacity={0.55} />
+      <path d="M -42 -92 Q -46 -118 -20 -121 Q 0 -124 20 -121 Q 46 -118 42 -92 L 41 -18 Q 42 6 20 9 Q 0 12 -20 9 Q -42 6 -41 -18 Z" fill={L.jacket} stroke={L.line} strokeWidth={4} strokeLinejoin="round" />
+      <path d="M 10 -121 Q 16 -121 20 -121 Q 46 -118 42 -92 L 41 -18 Q 42 6 20 9 Q 16 9 12 9 Z" fill={L.jacketShade} opacity={0.55} />
       {L.bare ? null : <path d="M 0 -112 L 0 4" stroke={L.jacketShade} strokeWidth={4} />}
       {L.extra === 'suit' ? (
         // a white shirt in the V of the jacket and a tie in the accent colour
@@ -559,7 +564,7 @@ export const Hero: React.FC<{ pose: Pose; shadow?: number; rimId?: string; look?
           {[-34, -26, -18, -10, -2, 6, 14, 22, 30].map((x) => (
             <path key={x} d={`M ${x} -104 L ${x * 1.04} -14`} stroke={L.jacketShade} strokeWidth={1.6} opacity={0.45} />
           ))}
-          <path d="M -41 -13 Q 0 -5 41 -13 L 40 2 Q 0 12 -40 2 Z" fill={L.jacketShade} stroke={L.line} strokeWidth={3.5} strokeLinejoin="round" />
+          <path d="M -41 -13 Q 0 -5 41 -13 L 41 -18 Q 42 6 20 9 Q 0 12 -20 9 Q -42 6 -41 -18 Z" fill={L.jacketShade} stroke={L.line} strokeWidth={3.5} strokeLinejoin="round" />
           {[-33, -25, -17, -9, -1, 7, 15, 23, 31].map((x) => (
             <path key={`h${x}`} d={`M ${x} ${-9 + Math.abs(x) * 0.06} L ${x} ${4 - Math.abs(x) * 0.08}`} stroke={L.line} strokeWidth={1.6} opacity={0.35} />
           ))}
@@ -589,7 +594,7 @@ export const Hero: React.FC<{ pose: Pose; shadow?: number; rimId?: string; look?
           <path d="M -8 -114 L -7 -2 L 7 -2 L 8 -114 Z" fill="#EDE8DE" />
           <path d="M -32 -118 Q 0 -102 32 -118" stroke={L.line} strokeWidth={14} fill="none" strokeLinecap="round" />
           <path d="M -32 -118 Q 0 -102 32 -118" stroke={L.jacketShade} strokeWidth={9} fill="none" strokeLinecap="round" />
-          <path d="M -41 -10 Q 0 -2 41 -10 L 40 2 Q 0 12 -40 2 Z" fill={L.jacketShade} stroke={L.line} strokeWidth={3.5} />
+          <path d="M -41 -10 Q 0 -2 41 -10 L 41 -18 Q 42 6 20 9 Q 0 12 -20 9 Q -42 6 -41 -18 Z" fill={L.jacketShade} stroke={L.line} strokeWidth={3.5} />
           {[-30, -18, -6, 6, 18, 30].map((x) => (
             <path key={x} d={`M ${x} -7 L ${x} 4`} stroke={L.line} strokeWidth={2} opacity={0.35} />
           ))}
@@ -826,8 +831,8 @@ export const Hero: React.FC<{ pose: Pose; shadow?: number; rimId?: string; look?
             // the seat of the trousers: fills the crotch between the tops of the thighs so the legs join the body with
             // no gap; outlined only at the hips (a bottom edge would cut across the thighs), a soft seam down the middle
             <g transform={`translate(${pose.yaw * 6} 0) scale(${kw} 1)`}>
-              <path d="M -28 -10 L 28 -10 L 27 14 Q 14 21 3 27 L -3 27 Q -14 21 -27 14 Z" fill={L.limb} />
-              <path d="M -28 -10 L -27 13 M 28 -10 L 27 13" stroke={L.line} strokeWidth={4} strokeLinecap="round" />
+              <path d="M -28 -10 L 28 -10 L 28 6 Q 27 15 18 20 Q 8 25 3 27 L -3 27 Q -8 25 -18 20 Q -27 15 -28 6 Z" fill={L.limb} />
+              <path d="M -28 -10 L -28 6 Q -28 11 -25 14 M 28 -10 L 28 6 Q 28 11 25 14" stroke={L.line} strokeWidth={4} strokeLinecap="round" fill="none" />
               <path d="M 0 6 L 0 22" stroke={L.line} strokeWidth={2.5} opacity={0.35} strokeLinecap="round" />
             </g>
           )}
