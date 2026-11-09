@@ -16,14 +16,14 @@ asset's file, only for the asset you are about to use.
 
 | Name | File | What it is | Params | Thumb | Origin |
 |---|---|---|---|---|---|
-| `Study` + `Desk` | `src/engine/sets/study.tsx` | Dusk study: back window with low sun, bookcase left, door and print right, pendant. `STUDY` is its room. | `night` (moon, desk lamp), `shelf` 0..1 (books fly from `STUDY_SHELF_V`), `veil` | - | shipped |
-| `Stairwell` + `Banister` | `src/engine/sets/stairwell.tsx` | Side-on stairs, 7 steps down to the right from a landing; lit doorway, arched window, lantern. `stepTop(x)`, `hipGround(x)`; `Banister` draws in front. | walk at scale 0.9 | - | shipped |
-| `Classroom` + `SchoolDesk` + `Kid` | `src/engine/sets/classroom.tsx` | Board, windows left, two rows of desks with kids from behind. `CLS` is its room, `KIDS` the kids' looks. | `board` (chalk text), `solved`, `wrong`, `laugh`; `Kid` `turn`, `laugh` | - | shipped |
-| `Rooftop` + `SunClock` | `src/engine/sets/rooftop.tsx` | Parapet, three depths of city, string lights, big low sun (optionally a clock face). | `sunX`, `sunY`, `clock`, `spin`, `crack`, `red`, `lightsOut`, `blackout`, `cityLit`, `low` | - | shipped |
-| `Kitchen` + `KitchenIsland` | `src/engine/sets/kitchen.tsx` | Counter run under a window, hob, shelves with jars, fridge, two pendants over an island. `KITCHEN` room, `islandTop(u, d)`. | `veil`, `red` | - | copy-paste |
-| `Bedroom` + `BedDuvet` | `src/engine/sets/bedroom.tsx` | Night bedroom: bed back-left, nightstand lamp and clock, window onto moon and city, calendar, wardrobe, door ajar. `BEDROOM`, `bedTop`, `bedSit`, `LAMP`, `CAL`, `WINDOW`. | `clock`, `lamp` 0..1, `crossed`, `veil`, `duvet` | - | preview run |
-| `Schematic` | `src/engine/sets/schematic.tsx` | Dark blueprint grid for the science beat. With `DrawOn`, `Arrow`, `SchLabel`, `CountUp`, `PlantIcon`; colours in `SCH`. | `PlantIcon` kinds: tower, wind, solar, dam, factory (`on`) | - | copy-paste |
-| `Tabletop` | `src/engine/furnish.tsx` | A surface from high above for inserts (wood or stone), lit front edge at `edge`. | `edge` (> 1080 = straight top-down) | - | copy-paste |
+| `Study` + `Desk` | `src/engine/sets/study.tsx` | Dusk study: back window with low sun, bookcase left, door and print right, pendant. `STUDY` is its room. | `night` (moon, desk lamp), `shelf` 0..1 (books fly from `STUDY_SHELF_V`), `veil` | `set-study.png` | shipped |
+| `Stairwell` + `Banister` | `src/engine/sets/stairwell.tsx` | Side-on stairs, 7 steps down to the right from a landing; lit doorway, arched window, lantern. `stepTop(x)`, `hipGround(x)`; `Banister` draws in front. | walk at scale 0.9 | `set-stairwell.png` | shipped |
+| `Classroom` + `SchoolDesk` + `Kid` | `src/engine/sets/classroom.tsx` | Board, windows left, two rows of desks with kids from behind. `CLS` is its room, `KIDS` the kids' looks. | `board` (chalk text), `solved`, `wrong`, `laugh`; `Kid` `turn`, `laugh` | `set-classroom.png` | shipped |
+| `Rooftop` + `SunClock` | `src/engine/sets/rooftop.tsx` | Parapet, three depths of city, string lights, big low sun (optionally a clock face). | `sunX`, `sunY`, `clock`, `spin`, `crack`, `red`, `lightsOut`, `blackout`, `cityLit`, `low` | `set-rooftop.png` | shipped |
+| `Kitchen` + `KitchenIsland` | `src/engine/sets/kitchen.tsx` | Counter run under a window, hob, shelves with jars, fridge, two pendants over an island. `KITCHEN` room, `islandTop(u, d)`. | `veil`, `red` | `set-kitchen.png` | copy-paste |
+| `Bedroom` + `BedDuvet` | `src/engine/sets/bedroom.tsx` | Night bedroom: bed back-left, nightstand lamp and clock, window onto moon and city, calendar, wardrobe, door ajar. `BEDROOM`, `bedTop`, `bedSit`, `LAMP`, `CAL`, `WINDOW`. | `clock`, `lamp` 0..1, `crossed`, `veil`, `duvet` | `set-bedroom.png` | preview run |
+| `Schematic` | `src/engine/sets/schematic.tsx` | Dark blueprint grid for the science beat. With `DrawOn`, `Arrow`, `SchLabel`, `CountUp`, `PlantIcon`; colours in `SCH`. | `PlantIcon` kinds: tower, wind, solar, dam, factory (`on`) | `set-schematic.png` | copy-paste |
+| `Tabletop` | `src/engine/furnish.tsx` | A surface from high above for inserts (wood or stone), lit front edge at `edge`. | `edge` (> 1080 = straight top-down) | `set-tabletop.png` | copy-paste |
 
 ## Cast (characters)
 
@@ -32,13 +32,13 @@ look on the cast sheet: `npx remotion still src/index.ts Cast out/cast.png`.
 
 | Look | Who | Notes | Thumb | Origin |
 |---|---|---|---|---|
-| `LOOKS.pipHood` | Pip, the shipped hero (B) | dark hoodie, mustard drawstrings | - | shipped |
-| `LOOKS.pip` | Pip (A) | mustard jacket | - | shipped |
-| `LOOKS.pipInk` | Pip (C) | dark head | - | shipped |
-| `LOOKS.mo` | Mo, the friend | curls, olive jacket, headphones | - | shipped |
-| `LOOKS.sis` | the little sister | bunches, teal; draw at about 0.7 scale | - | shipped |
-| `LOOKS.mom` | mum | bob, rose cardigan | - | shipped |
-| `LOOKS.suit` | the man in a suit | charcoal suit, red tie | - | shipped |
+| `LOOKS.pipHood` | Pip, the shipped hero (B) | dark hoodie, mustard drawstrings | `cast-pipHood.png` | shipped |
+| `LOOKS.pip` | Pip (A) | mustard jacket | `cast-pip.png` | shipped |
+| `LOOKS.pipInk` | Pip (C) | dark head | `cast-pipInk.png` | shipped |
+| `LOOKS.mo` | Mo, the friend | curls, olive jacket, headphones | `cast-mo.png` | shipped |
+| `LOOKS.sis` | the little sister | bunches, teal; draw at about 0.7 scale | `cast-sis.png` | shipped |
+| `LOOKS.mom` | mum | bob, rose cardigan | `cast-mom.png` | shipped |
+| `LOOKS.suit` | the man in a suit | charcoal suit, red tie | `cast-suit.png` | shipped |
 
 Expressions (`expr`): neutral, happy, smug, shock, worried, oops, cool, dizzy, tired. Motion helpers: `poseAt`,
 `faceAt`, `walkPose`, `joints`, `toWorld`, `reachAngle`.
@@ -113,7 +113,9 @@ Do this in the same turn the new thing is made, not "later":
    `<Kitchen night />`, not a second kitchen). Only make a new asset when the existing one would need a different
    layout.
 3. **Add its row here**: name, file, one line on what it is, the params, origin = the episode's slug.
-4. **Render its thumb** to `library/thumbs/<name>.png` (one still at a wide framing, 960 px wide is enough) and put
-   the file name in the Thumb column.
+4. **Render its thumb**: add an entry at the end of `THUMBS` in `src/LibraryThumbs.tsx` (file name `set-<name>.png`,
+   `cast-<look>.png` or `prop-<name>.png`, drawn at a wide framing), run
+   `python <skill>/scripts/thumbs.py <file>` (writes it 960 px wide to `library/thumbs/`) and put the file name in
+   the Thumb column.
 5. **Run** `python <skill>/scripts/catalog_check.py` until it reports nothing missing.
 6. **Commit and push**: `git add -A && git commit -m "library: add <name> (<slug>)" && git push`.

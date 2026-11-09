@@ -4,9 +4,10 @@ import './engine/fonts';
 import { STUDIO } from './studio.config';
 import { EPISODES } from './episodes';
 import { CastSheet } from './CastSheet';
+import { LibraryThumbs, THUMBS } from './LibraryThumbs';
 
 // Every episode gets two compositions: <Id> (the film) and <Id>Board (one frame per shot, at its key frame, for the
-// storyboard). Cast renders the cast sheet.
+// storyboard). Cast renders the cast sheet; Thumbs renders the library thumbs for CATALOG.md (one frame each).
 //   npx remotion studio src/index.ts --port 3430
 
 export const Root: React.FC = () => {
@@ -20,6 +21,7 @@ export const Root: React.FC = () => {
         </React.Fragment>
       ))}
       <Composition id="Cast" component={CastSheet} durationInFrames={1} {...common} />
+      <Composition id="Thumbs" component={LibraryThumbs} durationInFrames={THUMBS.length} {...common} />
     </>
   );
 };
