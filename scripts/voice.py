@@ -7,7 +7,7 @@ Writes public/<slug>/voice_raw.mp3, public/<slug>/voice.wav (tightened), src/epi
 The API is only called when the text or the voice settings change (cached by a hash), so re-running to retune the
 gaps is free.
 
-episode.json "voice" (all optional): {"id": "Mv9ouM1X38u0rfkwQxAz", "model": "eleven_multilingual_v2",
+episode.json "voice" (all optional): {"id": "rPMkKgdwgIwqv4fXgR6N", "model": "eleven_multilingual_v2",
   "settings": {"stability": 0.4, "similarity_boost": 0.8, "style": 0.35, "use_speaker_boost": true}}
 episode.json "gaps" (seconds, all optional): {"word": 0.12, "comma": 0.2, "sentence": 0.3, "question": 0.45,
   "pairs": {"anything|One": 0.6}}  -> every pause longer than its limit is cut to the limit, from its middle.
@@ -23,9 +23,9 @@ from wi import SR, api, spent_since, decode, ep_dir, load_episode, load_json, lo
 slug = sys.argv[1]
 force = '--force' in sys.argv
 ep = load_episode(slug)
-# The channel's voice: "Dylan - Chill SoCal Male" from the ElevenLabs library (young, chill, approachable), picked
-# 2026-11-10. The skill's original default was TX3LPaxmHKxFdv7VOQHJ.
-V = {'id': 'Mv9ouM1X38u0rfkwQxAz', 'model': 'eleven_multilingual_v2', 'settings': {'stability': 0.4, 'similarity_boost': 0.8, 'style': 0.35, 'use_speaker_boost': True}}
+# The channel's voice: "Tyler - Clear US YouTube Creator Voice" from the ElevenLabs library (young, upbeat, clear),
+# picked 2026-11-10 to replace Dylan (rated too low and flat). The skill's original default was TX3LPaxmHKxFdv7VOQHJ.
+V = {'id': 'rPMkKgdwgIwqv4fXgR6N', 'model': 'eleven_multilingual_v2', 'settings': {'stability': 0.4, 'similarity_boost': 0.8, 'style': 0.35, 'use_speaker_boost': True}}
 V.update(ep.get('voice', {}))
 text = ' '.join(b['text'].strip() for b in ep['script'])
 sig = hashlib.sha1(json.dumps([text, V], sort_keys=True).encode()).hexdigest()[:12]
@@ -115,7 +115,7 @@ for i, part in enumerate(parts):
     parts[i] = part
 y = np.concatenate(parts)
 write_wav(pub_dir(slug) / 'voice.wav', y)
-# Even the voice out and bring it to -16 LUFS: some voices (Dylan's among them) come back quiet and peaky, and then
+# Even the voice out and bring it to -16 LUFS: some voices (Dylan's, the channel's first, among them) come back quiet and peaky, and then
 # the master can't reach -14 LUFS without the peaks hitting the limit. A gentle compressor, then loudness. Length and
 # word timings are unchanged.
 vw = pub_dir(slug) / 'voice.wav'

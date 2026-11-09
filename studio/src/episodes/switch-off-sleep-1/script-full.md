@@ -99,7 +99,7 @@ Lời đọc tiếng Anh (Mỹ), ngôi thứ hai, câu ngắn. Ghi chú dựng c
 
 ## Ước tính sản xuất
 
-- **Lời đọc:** 598 từ / ~3.300 ký tự → khoảng **1.450 credit** giọng Dylan (~0,44 credit/ký tự). Ở nhịp shorts (2,7 từ/giây) chỉ ~3:40. Với nhịp long-form (~2,3 từ/giây) cộng title card và nhạc thì ~4:30.
+- **Lời đọc:** 598 từ / ~3.300 ký tự → khoảng **1.450 credit** giọng Tyler (~0,44 credit/ký tự). Ở nhịp shorts (2,7 từ/giây) chỉ ~3:40. Với nhịp long-form (~2,3 từ/giây) cộng title card và nhạc thì ~4:30.
 - **SFX mới cần tạo:** chỉ `yawn` (1.3) và `phone_buzz` (5.9, có thể dùng tạm `buzzer`). Còn lại dùng lại thư viện.
 - **Asset mới:** không có set hay prop mới. Chỉ có 1 power look `offLook` (tắt đèn + mắt sáng) và cảnh não trên `Schematic` (dùng `DrawOn`/`Arrow` có sẵn).
 - **Chia session:** mỗi chương một session, slug `switch-off-sleep-1` … `-6`, ghép bằng ffmpeg ở bước cuối.

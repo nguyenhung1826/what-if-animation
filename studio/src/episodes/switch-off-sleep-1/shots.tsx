@@ -83,7 +83,7 @@ export const S3: React.FC<ShotProps> = ({ t, len }) => {
 };
 
 // ---------- S4: insert, your hand flips the lamp's switch: Off ----------
-const FLIP = 36;
+const FLIP = 28;
 export const S4: React.FC<ShotProps> = ({ t, len }) => {
   const lit = 1 - clamp((t - FLIP) / 4);
   const down = clamp((t - FLIP + 3) / 3);

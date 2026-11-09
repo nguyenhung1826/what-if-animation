@@ -94,9 +94,9 @@ the claim, the working, the source). 45 to 65 words. Read it aloud at pace: ever
 python <skill>/scripts/voice.py <slug>
 ```
 
-One ElevenLabs take with character timestamps in the channel's voice, "Dylan - Chill SoCal Male"
-(`Mv9ouM1X38u0rfkwQxAz`: young, chill, approachable; about 0.44 credits a character), then the pauses cut to the
-genre's pace and the voice compressed and brought to -16 LUFS (Dylan comes back quiet and peaky): `public/<slug>/voice.wav` and `src/episodes/<slug>/words.json`. Check the length (15-25 s)
+One ElevenLabs take with character timestamps in the channel's voice, "Tyler - Clear US YouTube Creator Voice"
+(`rPMkKgdwgIwqv4fXgR6N`: young, upbeat, clear; about 0.44 credits a character), then the pauses cut to the
+genre's pace and the voice compressed and brought to -16 LUFS (some voices come back quiet and peaky): `public/<slug>/voice.wav` and `src/episodes/<slug>/words.json`. Check the length (15-25 s)
 and the word times it prints. Retune pauses with `gaps` in `episode.json` and re-run: the take is cached, so that's free. For a long-form chapter (slower pace), stretch
 chosen pauses with `holds` (`{"asleep|Not": 1.6}`: that pause becomes at least 1.6 s of silence), also free. Change a word
 and it calls the API again.
