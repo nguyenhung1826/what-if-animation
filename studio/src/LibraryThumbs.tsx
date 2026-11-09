@@ -1,7 +1,7 @@
 import React from 'react';
 import { AbsoluteFill, useCurrentFrame } from 'remotion';
 import {
-  Hero, basePose, Pose, LOOKS, CastName, KitDefs, SetDefs,
+  Hero, basePose, plain, Pose, LOOKS, CastName, KitDefs, SetDefs,
   Study, Desk, Stairwell, Banister, Classroom, SchoolDesk, Rooftop, Kitchen, KitchenIsland, Bedroom, Schematic, PlantIcon, SchLabel, Tabletop,
 } from './engine';
 
@@ -12,7 +12,7 @@ import {
 
 const T = 40; // a settled moment of each set's idle motion
 
-const castThumb = (c: CastName): React.ReactNode => {
+const castThumb = (c: CastName, bare = false): React.ReactNode => {
   const s = c === 'sis' ? 1.3 : 1.6;
   const pose: Pose = { ...basePose, x: 960, y: 900 - 190 * s, scale: s, yaw: 0.3, look: 0.4, expr: 'happy' };
   return (
@@ -21,7 +21,7 @@ const castThumb = (c: CastName): React.ReactNode => {
         <Study t={0} id="thumb" />
       </g>
       <rect width={1920} height={1080} fill="#0B0816" opacity={0.35} />
-      <Hero look={LOOKS[c]} pose={pose} shadow={0.6} />
+      <Hero look={bare ? plain(LOOKS[c]) : LOOKS[c]} pose={pose} shadow={0.6} />
     </>
   );
 };
@@ -54,7 +54,7 @@ export const THUMBS: { file: string; draw: () => React.ReactNode }[] = [
   { file: 'cast-mom.png', draw: () => castThumb('mom') },
   { file: 'cast-suit.png', draw: () => castThumb('suit') },
   { file: 'cast-hero.png', draw: () => castThumb('hero') },
-  { file: 'cast-heroine.png', draw: () => castThumb('heroine') },
+  { file: 'cast-heroine.png', draw: () => castThumb('heroine', true) },
 ];
 
 export const LibraryThumbs: React.FC = () => {

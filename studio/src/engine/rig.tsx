@@ -35,10 +35,13 @@ export type Look = {
   /** The item's main colour (defaults per item). */
   itemColor?: string;
   /** A jacket cut drawn over the torso (the plain top when unset). */
-  coat?: 'biker' | 'bomber' | 'denim' | 'long';
+  coat?: 'biker' | 'bomber' | 'denim' | 'long' | 'sweater';
   /** Arm colour, when the sleeves differ from the legs (a jacket's sleeves); defaults to limb. */
   sleeve?: string;
-  /** Face style: dot (the default), big (white eyes with pupils), bean (tall capsules), line (calm line eyes at rest). */
+  /** elbow: sleeves end at the elbow (pushed up), the forearm shows in the hand colour; full (default) to the wrist. */
+  sleeveLength?: 'full' | 'elbow';
+  /** Face style: dot (the default), big (white eyes with pupils), bean (tall capsules), line (open dots at rest, calm
+   *  curved line eyes when smug, cool or tired). */
   eyes?: 'dot' | 'big' | 'bean' | 'line';
   /** thick: heavy brows that are always on and carry the emotion. */
   brows?: 'thin' | 'thick' | 'slim';
@@ -46,6 +49,8 @@ export type Look = {
   blush?: boolean;
   /** A small lash flick at the outer corner of each eye. */
   lashes?: boolean;
+  /** No costume at all (set by plain()): no zip line on the body, no headphones. */
+  bare?: boolean;
   /** A single springy curl on top instead of the tuft; it reacts to the expression (stands up, droops, spins). */
   curl?: boolean;
   /** The face takes a soft colour wash per expression (warm when happy, blue when shocked...). */
@@ -57,16 +62,17 @@ export type Look = {
 };
 export type CastName = 'hero' | 'heroine' | 'pip' | 'pipHood' | 'pipInk' | 'mo' | 'sis' | 'mom' | 'suit';
 export const LOOKS: Record<CastName, Look> = {
-  // THE CHANNEL'S HERO (picked 2026-11-09): a dark, bald round head lit by the rim light, cream features that rest in
-  // calm curved line eyes (they open to dots when something happens) and slim, always-on arched brows that do the
-  // acting. The plum long coat is only the default outfit: costumes change per episode, e.g.
+  // THE CHANNEL'S HERO (picked 2026-11-09): a dark, bald round head lit by the rim light, cream features with eyes
+  // clearly open at rest (calm curved line eyes only when smug, cool or tired) and slim, always-on arched brows that
+  // do the acting. The navy mock-neck sweater (sleeves at the elbow), charcoal trousers and black shoes are only the default outfit: costumes change per
+  // episode, e.g.
   // { ...LOOKS.hero, coat: 'bomber', jacket: '#2F5D50', jacketShade: '#244A40', sleeve: '#2F5D50', accent: '#FFC266' }.
   // Keep the face (skin, face, eyes, brows, no hair) fixed: that is the identity.
   // THE CHANNEL'S FEMALE CHARACTER (supporting, cast only when a story needs her; the hero leads): the hero's face exactly, plus a short lash flick at the outer corner of each eye. That
   // face is fixed; her hair is free per episode (extra: 'ponytail' | 'topbun' | 'bob' | 'bunches' ..., colour in
   // hair, a shade lighter than the head so the shape reads), like the outfit.
   heroine: { skin: '#17141C', skinShade: '#0E0C12', hand: '#17141C', line: '#08070B', face: '#F6EFE3', hair: '#3A2E44', extra: 'ponytail', accent: '#F1A7B5', eyes: 'line', brows: 'slim', lashes: true, coat: 'denim', jacket: '#4A6FA5', jacketShade: '#3A5884', sleeve: '#4A6FA5', limb: '#2A2733', shoe: '#1C1B22' },
-  hero: { skin: '#17141C', skinShade: '#0E0C12', hand: '#17141C', line: '#08070B', face: '#F6EFE3', hair: '#17141C', eyes: 'line', brows: 'slim', coat: 'long', jacket: '#6E3F73', jacketShade: '#57315B', accent: '#F1A7B5', sleeve: '#6E3F73', limb: '#2A2733', shoe: '#1C1B22' },
+  hero: { skin: '#17141C', skinShade: '#0E0C12', hand: '#17141C', line: '#08070B', face: '#F6EFE3', hair: '#17141C', eyes: 'line', brows: 'slim', coat: 'sweater', jacket: '#1F3A6B', jacketShade: '#172D54', accent: '#1F3A6B', sleeve: '#1F3A6B', sleeveLength: 'elbow', limb: '#3A3A42', shoe: '#121216' },
   // A: Pip as built
   pip: { skin: C.skin, skinShade: C.skinShade, hand: C.skin, jacket: C.jacket, jacketShade: C.jacketShade, accent: C.jacketShade, limb: C.limb, line: C.ink, shoe: C.shoe, face: C.ink, hair: C.ink },
   // B: Pip in a dark hoodie with mustard drawstrings: the body goes dark and catches the rim light, the head stays the brightest thing
@@ -80,6 +86,46 @@ export const LOOKS: Record<CastName, Look> = {
   sis: { skin: C.skin, skinShade: C.skinShade, hand: C.skin, jacket: '#3E8C86', jacketShade: '#2F6E69', accent: '#F28C6A', limb: '#3A3446', line: '#14121C', shoe: '#F28C6A', face: C.ink, hair: '#3A2620', extra: 'bunches' },
   mom: { skin: C.skin, skinShade: C.skinShade, hand: C.skin, jacket: '#8A5A6A', jacketShade: '#704858', accent: '#E9C46A', limb: '#3A3446', line: '#14121C', shoe: '#5A4A6A', face: C.ink, hair: '#5A3226', extra: 'bob' },
   suit: { skin: '#D9C6AE', skinShade: '#C2AE96', hand: '#D9C6AE', jacket: '#2B2F3A', jacketShade: '#20232C', accent: '#A8323E', limb: '#2B2F3A', line: '#0E0F14', shoe: '#14151A', face: C.ink, hair: '#17141A', extra: 'suit' },
+};
+
+/** The channel's only two skin tones: fully black (cream features) or fully white (dark features). */
+export const TONES = {
+  black: { skin: '#17141C', skinShade: '#0E0C12', hand: '#17141C', line: '#08070B', face: '#F6EFE3' },
+  white: { skin: '#F7F4EE', skinShade: '#E4DFD6', hand: '#F7F4EE', line: '#15121C', face: '#1D2033' },
+};
+export type Tone = keyof typeof TONES;
+const isDark = (hex: string) => {
+  const n = parseInt(hex.replace('#', ''), 16);
+  const lum = (0.299 * ((n >> 16) & 255) + 0.587 * ((n >> 8) & 255) + 0.114 * (n & 255)) / 255;
+  return lum < 0.45;
+};
+
+/**
+ * A character with no costume and a pure black or pure white skin: the whole body takes the skin colour (a clean black
+ * or white stick silhouette), with no jacket, collar, sleeves, shoes, hat, hood, headphones or carried item. The face
+ * shape, hair and lashes stay. `tone` picks black or white; left out, a dark skin becomes black and a light one white.
+ * The channel's rule: in every episode, every character except the hero appears plain(...) unless the person asks
+ * for a specific outfit.
+ */
+export const plain = (look: Look, tone?: Tone): Look => {
+  const clothing: Look['extra'][] = ['hood', 'suit', 'bucket', 'beanie', 'cap', 'beret'];
+  const T = TONES[tone ?? (isDark(look.skin) ? 'black' : 'white')];
+  const L = { ...look, ...T };
+  return {
+    ...L,
+    jacket: L.skin,
+    jacketShade: L.skinShade,
+    accent: L.skin,
+    limb: L.skin,
+    shoe: L.skin,
+    sleeve: undefined,
+    sleeveLength: undefined,
+    coat: undefined,
+    item: undefined,
+    itemColor: undefined,
+    extra: clothing.includes(L.extra) ? undefined : L.extra,
+    bare: true,
+  };
 };
 
 // ---------- the hero ----------
@@ -275,7 +321,7 @@ const Face: React.FC<{ expr: Expr; blink: number; look: number; glasses: number;
           {expr === 'tired' ? <path d={`M ${cx - 12} ${eyeY + 15} Q ${cx} ${eyeY + 22} ${cx + 12} ${eyeY + 15}`} stroke="#8C7AA6" strokeWidth={4.5} fill="none" strokeLinecap="round" opacity={0.85} /> : null}
         </g>
       );
-    if (eyes === 'line' && (expr === 'neutral' || expr === 'smug' || expr === 'cool' || expr === 'tired'))
+    if (eyes === 'line' && (expr === 'smug' || expr === 'cool' || expr === 'tired'))
       return (
         <g>
           <path d={`M ${cx - 12} ${eyeY - 2} Q ${cx} ${eyeY + 6} ${cx + 12} ${eyeY - 2}`} stroke={ink} strokeWidth={5.5} fill="none" strokeLinecap="round" />
@@ -343,7 +389,7 @@ const Face: React.FC<{ expr: Expr; blink: number; look: number; glasses: number;
             if (farHidden && Math.sign(cx) === farSide) return null;
             const o = Math.sign(cx);
             // where the outer corner of this eye shape sits, then a short flick up and out from it
-            const calm = eyes === 'line' && (expr === 'neutral' || expr === 'smug' || expr === 'cool' || expr === 'tired');
+            const calm = eyes === 'line' && (expr === 'smug' || expr === 'cool' || expr === 'tired');
             const shut = blink >= 0.95;
             const [x0, y0] = expr === 'happy' ? [cx + o * 10, eyeY + 3] : calm || shut ? [cx + o * 12, eyeY - 2] : eyes === 'big' ? [cx + o * 13, eyeY - 9] : [cx + o * 6, eyeY - 7];
             return <path key={`lash${cx}`} d={`M ${x0} ${y0} q ${o * 3.5} -1.5 ${o * 6} -5.5`} stroke={ink} strokeWidth={3.4} fill="none" strokeLinecap="round" />;
@@ -419,6 +465,31 @@ export const Hero: React.FC<{ pose: Pose; shadow?: number; rimId?: string; look?
       </g>
     );
   };
+  const arm = (o: { root: P; mid: P; end: P }) => {
+    const sleeve = L.sleeve ?? L.limb;
+    if (L.sleeveLength !== 'elbow' || L.limbStyle === 'stick') return limb(o, 11, sleeve);
+    const up = `M ${o.root.x} ${o.root.y} L ${o.mid.x} ${o.mid.y}`;
+    const fore = `M ${o.mid.x} ${o.mid.y} L ${o.end.x} ${o.end.y}`;
+    const len = Math.hypot(o.mid.x - o.root.x, o.mid.y - o.root.y) || 1;
+    const ux = (o.mid.x - o.root.x) / len;
+    const uy = (o.mid.y - o.root.y) / len;
+    const band = `M ${o.mid.x - ux * 13} ${o.mid.y - uy * 13} L ${o.mid.x + ux * 1} ${o.mid.y + uy * 1}`;
+    return (
+      <g>
+        <path d={fore} stroke={L.line} strokeWidth={18} fill="none" strokeLinecap="round" />
+        <path d={fore} stroke={L.hand} strokeWidth={11} fill="none" strokeLinecap="round" />
+        <path d={up} stroke={L.line} strokeWidth={21} fill="none" strokeLinecap="round" />
+        <path d={up} stroke={sleeve} strokeWidth={14} fill="none" strokeLinecap="round" />
+        {L.coat === 'sweater' ? (
+          // the ribbed cuff, pushed up to the elbow
+          <g>
+            <path d={band} stroke={L.line} strokeWidth={22} strokeLinecap="butt" />
+            <path d={band} stroke={L.jacketShade} strokeWidth={15} strokeLinecap="butt" />
+          </g>
+        ) : null}
+      </g>
+    );
+  };
   const shoe = (o: { root: P; mid: P; end: P }) => (
     <ellipse cx={o.end.x + pose.facing * 9} cy={o.end.y + 4} rx={22} ry={11} fill={L.shoe} stroke={L.line} strokeWidth={4} />
   );
@@ -428,6 +499,13 @@ export const Hero: React.FC<{ pose: Pose; shadow?: number; rimId?: string; look?
     const ang = (Math.atan2(o.end.x - o.mid.x, o.end.y - o.mid.y) * 180) / Math.PI;
     return (
       <g transform={`translate(${o.end.x} ${o.end.y}) rotate(${-ang})`}>
+        {L.coat === 'sweater' && L.sleeveLength !== 'elbow' ? (
+          // the sweater's ribbed cuff, gathered at the wrist
+          <g>
+            <rect x={-10} y={-20} width={20} height={17} rx={5} fill={L.jacketShade} stroke={L.line} strokeWidth={3.5} />
+            <path d="M -4.5 -17 L -4.5 -6 M 0 -17 L 0 -6 M 4.5 -17 L 4.5 -6" stroke={L.line} strokeWidth={1.6} opacity={0.4} />
+          </g>
+        ) : null}
         {kind === 'point' ? (
           <g>
             <rect x={-4} y={10} width={8} height={24} rx={4} fill={L.hand} stroke={L.line} strokeWidth={3.5} />
@@ -463,7 +541,7 @@ export const Hero: React.FC<{ pose: Pose; shadow?: number; rimId?: string; look?
       ) : null}
       <path d="M -46 -112 Q 0 -124 46 -112 L 40 2 Q 0 12 -40 2 Z" fill={L.jacket} stroke={L.line} strokeWidth={4} strokeLinejoin="round" />
       <path d="M 10 -116 Q 30 -114 46 -112 L 40 2 Q 26 8 12 9 Z" fill={L.jacketShade} opacity={0.55} />
-      <path d="M 0 -112 L 0 4" stroke={L.jacketShade} strokeWidth={4} />
+      {L.bare ? null : <path d="M 0 -112 L 0 4" stroke={L.jacketShade} strokeWidth={4} />}
       {L.extra === 'suit' ? (
         // a white shirt in the V of the jacket and a tie in the accent colour
         <g>
@@ -474,6 +552,23 @@ export const Hero: React.FC<{ pose: Pose; shadow?: number; rimId?: string; look?
       ) : L.coat ? null : (
         <path d="M -22 -118 Q 0 -100 22 -118" stroke={L.accent} strokeWidth={6} fill="none" strokeLinecap="round" />
       )}
+      {L.coat === 'sweater' ? (
+        // a fine-knit mock-neck sweater: a ribbed band standing round the base of the neck, a soft vertical knit
+        // texture, a ribbed hem band; the cuffs are drawn at the wrists
+        <g>
+          {[-34, -26, -18, -10, -2, 6, 14, 22, 30].map((x) => (
+            <path key={x} d={`M ${x} -104 L ${x * 1.04} -14`} stroke={L.jacketShade} strokeWidth={1.6} opacity={0.45} />
+          ))}
+          <path d="M -41 -13 Q 0 -5 41 -13 L 40 2 Q 0 12 -40 2 Z" fill={L.jacketShade} stroke={L.line} strokeWidth={3.5} strokeLinejoin="round" />
+          {[-33, -25, -17, -9, -1, 7, 15, 23, 31].map((x) => (
+            <path key={`h${x}`} d={`M ${x} ${-9 + Math.abs(x) * 0.06} L ${x} ${4 - Math.abs(x) * 0.08}`} stroke={L.line} strokeWidth={1.6} opacity={0.35} />
+          ))}
+          <path d="M -42 -112 Q 0 -100 42 -112 L 40 -129 Q 0 -119 -40 -129 Z" fill={L.jacketShade} stroke={L.line} strokeWidth={3.5} strokeLinejoin="round" />
+          {[-34, -27, 27, 34].map((x) => (
+            <path key={`c${x}`} d={`M ${x} -125 L ${x} -111`} stroke={L.line} strokeWidth={1.6} opacity={0.4} />
+          ))}
+        </g>
+      ) : null}
       {L.coat === 'biker' ? (
         // a biker jacket: wide lapels, an off-centre zip in the accent (metal) colour, zipped pockets, a belt at the hem
         <g>
@@ -727,9 +822,18 @@ export const Hero: React.FC<{ pose: Pose; shadow?: number; rimId?: string; look?
         <g transform={`translate(0 ${LEG_LEN}) scale(${1 + 0.6 * pose.squash} ${1 - pose.squash}) translate(0 ${-LEG_LEN})`}>
           {/* the far side is drawn first, so a turned body overlaps itself the right way */}
           {pose.yaw < 0 ? <>{limb(j.legR, 12)}{shoe(j.legR)}{limb(j.legL, 12)}{shoe(j.legL)}</> : <>{limb(j.legL, 12)}{shoe(j.legL)}{limb(j.legR, 12)}{shoe(j.legR)}</>}
-          {pose.yaw < 0 ? <>{limb(j.armR, 11, L.sleeve ?? L.limb)}{hand(j.armR, -1, pose.handR)}</> : <>{limb(j.armL, 11, L.sleeve ?? L.limb)}{hand(j.armL, 1, pose.handL)}</>}
+          {L.limbStyle === 'stick' ? null : (
+            // the seat of the trousers: fills the crotch between the tops of the thighs so the legs join the body with
+            // no gap; outlined only at the hips (a bottom edge would cut across the thighs), a soft seam down the middle
+            <g transform={`translate(${pose.yaw * 6} 0) scale(${kw} 1)`}>
+              <path d="M -28 -10 L 28 -10 L 27 14 Q 14 21 3 27 L -3 27 Q -14 21 -27 14 Z" fill={L.limb} />
+              <path d="M -28 -10 L -27 13 M 28 -10 L 27 13" stroke={L.line} strokeWidth={4} strokeLinecap="round" />
+              <path d="M 0 6 L 0 22" stroke={L.line} strokeWidth={2.5} opacity={0.35} strokeLinecap="round" />
+            </g>
+          )}
+          {pose.yaw < 0 ? <>{arm(j.armR)}{hand(j.armR, -1, pose.handR)}</> : <>{arm(j.armL)}{hand(j.armL, 1, pose.handL)}</>}
           {torso}
-          {pose.yaw < 0 ? <>{limb(j.armL, 11, L.sleeve ?? L.limb)}{hand(j.armL, 1, pose.handL)}</> : <>{limb(j.armR, 11, L.sleeve ?? L.limb)}{hand(j.armR, -1, pose.handR)}</>}
+          {pose.yaw < 0 ? <>{arm(j.armL)}{hand(j.armL, 1, pose.handL)}</> : <>{arm(j.armR)}{hand(j.armR, -1, pose.handR)}</>}
           {L.extra === 'hood' ? (
             <g transform={`rotate(${pose.tilt}) rotate(${pose.headTilt * 0.5} 0 ${HEAD.y + 40})`}>
               <path d={`M -70 ${HEAD.y + 14} Q -80 ${HEAD.y - 74} 0 ${HEAD.y - 80} Q 80 ${HEAD.y - 74} 70 ${HEAD.y + 14} Q 52 -100 0 -106 Q -52 -100 -70 ${HEAD.y + 14} Z`} fill={L.jacket} stroke={L.line} strokeWidth={4} />
@@ -745,7 +849,7 @@ export const Hero: React.FC<{ pose: Pose; shadow?: number; rimId?: string; look?
               })()}
             </g>
           ) : null}
-          {L.extra === 'curls' ? (
+          {L.extra === 'curls' && !L.bare ? (
             <g transform={`rotate(${pose.tilt})`}>
               <path d="M -46 -110 Q 0 -86 46 -110" stroke="#E06A5A" strokeWidth={8} fill="none" strokeLinecap="round" />
               <rect x={-60} y={-126} width={20} height={32} rx={8} fill="#E06A5A" stroke={L.line} strokeWidth={4} />

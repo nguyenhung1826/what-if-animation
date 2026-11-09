@@ -30,10 +30,16 @@ schematic for the science beat, a cliffhanger blackout). Read the one closest to
   place, a prop, a character look, a power look) goes into `src/engine/`, gets its row and thumb in `CATALOG.md`, and
   is committed in the same episode (see "Adding to the library" at the end of the catalog). Never leave a reusable
   asset inside an episode's `shots.tsx`.
-- **The channel's hero is `LOOKS.hero`** (the `Hero` default): a dark bald round head, cream calm line eyes and slim
-  arched brows. Use it as the lead of every new episode. Its outfit changes per episode (see "Costume and face
-  options" in `CATALOG.md`); its face never does. `LOOKS.heroine` is a supporting character, not a lead: cast her
-  only when a story needs a woman (the same face plus short lashes, hair free per episode). Pip stays only in the two shipped examples.
+- **The channel's hero is `LOOKS.hero`** (the `Hero` default): a dark bald round head, cream eyes clearly open at
+  rest and slim arched brows. Use it as the lead of every new episode, in its default outfit (a navy mock-neck sweater
+  with the sleeves at the elbow, charcoal trousers, black shoes); its face never changes. `LOOKS.heroine` is a
+  supporting character, not a lead: cast her only when a story needs a woman (the same face plus short lashes).
+  Pip stays only in the two shipped examples.
+- **Only the hero wears clothes, and every skin is pure black or pure white.** Every other character in an episode
+  appears with no costume: draw it with `plain(LOOKS.x)` or `plain(LOOKS.x, 'black' | 'white')` (the whole body
+  fully black with cream features, or fully white with dark features; no jacket, shoes, hat, hood, headphones or
+  carried item; face shape, hair and lashes kept). No other skin tone appears in the channel's episodes. Never pick an outfit yourself, for the hero or anyone else: the person decides who wears what
+  and when, and you use exactly that (see "Costume and face options" in `CATALOG.md`).
 - **Original characters only.** The hero, the heroine, Pip and Mo are ours, and so are the sister, mum and
   the suit on the rig. Never a channel's own hero (no red hoodie, no white-disc eyes, no star glint in the eye), and nothing that resembles a famous cartoon character: check every
   new look on the cast sheet (Mo's first hat was dropped for drifting toward one).
