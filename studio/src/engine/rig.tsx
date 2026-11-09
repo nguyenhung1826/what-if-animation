@@ -62,7 +62,7 @@ export const LOOKS: Record<CastName, Look> = {
   // acting. The plum long coat is only the default outfit: costumes change per episode, e.g.
   // { ...LOOKS.hero, coat: 'bomber', jacket: '#2F5D50', jacketShade: '#244A40', sleeve: '#2F5D50', accent: '#FFC266' }.
   // Keep the face (skin, face, eyes, brows, no hair) fixed: that is the identity.
-  // THE CHANNEL'S HEROINE: the hero's face exactly, plus a short lash flick at the outer corner of each eye. That
+  // THE CHANNEL'S FEMALE CHARACTER (supporting, cast only when a story needs her; the hero leads): the hero's face exactly, plus a short lash flick at the outer corner of each eye. That
   // face is fixed; her hair is free per episode (extra: 'ponytail' | 'topbun' | 'bob' | 'bunches' ..., colour in
   // hair, a shade lighter than the head so the shape reads), like the outfit.
   heroine: { skin: '#17141C', skinShade: '#0E0C12', hand: '#17141C', line: '#08070B', face: '#F6EFE3', hair: '#3A2E44', extra: 'ponytail', accent: '#F1A7B5', eyes: 'line', brows: 'slim', lashes: true, coat: 'denim', jacket: '#4A6FA5', jacketShade: '#3A5884', sleeve: '#4A6FA5', limb: '#2A2733', shoe: '#1C1B22' },

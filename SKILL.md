@@ -32,8 +32,8 @@ schematic for the science beat, a cliffhanger blackout). Read the one closest to
   asset inside an episode's `shots.tsx`.
 - **The channel's hero is `LOOKS.hero`** (the `Hero` default): a dark bald round head, cream calm line eyes and slim
   arched brows. Use it as the lead of every new episode. Its outfit changes per episode (see "Costume and face
-  options" in `CATALOG.md`); its face never does. `LOOKS.heroine` is the female lead: the same face plus short
-  lashes, with hair free per episode. Pip stays only in the two shipped examples.
+  options" in `CATALOG.md`); its face never does. `LOOKS.heroine` is a supporting character, not a lead: cast her
+  only when a story needs a woman (the same face plus short lashes, hair free per episode). Pip stays only in the two shipped examples.
 - **Original characters only.** The hero, the heroine, Pip and Mo are ours, and so are the sister, mum and
   the suit on the rig. Never a channel's own hero (no red hoodie, no white-disc eyes, no star glint in the eye), and nothing that resembles a famous cartoon character: check every
   new look on the cast sheet (Mo's first hat was dropped for drifting toward one).
@@ -47,6 +47,9 @@ schematic for the science beat, a cliffhanger blackout). Read the one closest to
   when you hand the episode over. The copy-paste run cost 152 credits (78 for the voice, 74 for 12 new clips).
 - **Storyboard before animation.** No video render until the stills pass the self-check (step 5) and, when the person
   is in the loop, they've seen the board.
+- **The audience is American.** Write the script in US English with US spelling, idioms and references, and give
+  numbers in US units (miles, feet, pounds, °F, dollars), adding metric only when the science needs it. Titles and
+  on-screen text follow the same rule.
 - **Every fact is real.** A number in the script is worked out and sourced in the episode's `science` field first.
 
 ## Setup (once per machine)
