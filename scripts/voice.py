@@ -11,6 +11,8 @@ episode.json "voice" (all optional): {"id": "Mv9ouM1X38u0rfkwQxAz", "model": "el
   "settings": {"stability": 0.4, "similarity_boost": 0.8, "style": 0.35, "use_speaker_boost": true}}
 episode.json "gaps" (seconds, all optional): {"word": 0.12, "comma": 0.2, "sentence": 0.3, "question": 0.45,
   "pairs": {"anything|One": 0.6}}  -> every pause longer than its limit is cut to the limit, from its middle.
+episode.json "holds" (seconds, optional): {"asleep|Not": 1.6} -> that pause is stretched to at least this long with
+  silence in its middle (long-form pacing: room for a picture to land, a title to hold). Also free to retune.
 """
 import base64, hashlib, json, re, subprocess, sys, time
 
@@ -65,8 +67,9 @@ else:
 words = load_json(raw_words)
 G = {'word': 0.12, 'comma': 0.2, 'sentence': 0.3, 'question': 0.45, 'pairs': {}}
 G.update(ep.get('gaps', {}))
+H = ep.get('holds', {})
 x = decode(raw_mp3)
-cuts = []
+cuts = []  # (start, end, insert): remove [start, end) of the take, then put `insert` seconds of silence there
 
 
 def bare(w):
@@ -76,6 +79,11 @@ def bare(w):
 for a, b in zip(words, words[1:]):
     gap = b['s'] - a['e']
     key = bare(a['w']) + '|' + bare(b['w'])
+    if key in H:
+        if gap < H[key]:
+            mid = (a['e'] + b['s']) / 2
+            cuts.append((mid, mid, H[key] - max(gap, 0)))
+        continue
     if key in G['pairs']:
         keep = G['pairs'][key]
     elif '?' in a['p'] or '!' in a['p']:
@@ -89,10 +97,12 @@ for a, b in zip(words, words[1:]):
     if gap > keep:
         mid = (a['e'] + b['s']) / 2
         rm = gap - keep
-        cuts.append((mid - rm / 2, mid + rm / 2))
+        cuts.append((mid - rm / 2, mid + rm / 2, 0.0))
 parts, last = [], 0.0
-for s, e in cuts:
+for s, e, ins in cuts:
     parts.append(x[int(last * SR):int(s * SR)])
+    if ins > 0:
+        parts.append(np.zeros(int(ins * SR), dtype=x.dtype))
     last = e
 parts.append(x[int(last * SR):])
 fade = int(0.004 * SR)  # a 4 ms fade either side of each join, so no click
@@ -117,10 +127,10 @@ tmp.replace(vw)
 
 
 def shift(t):
-    return t - sum(min(e, t) - s for s, e in cuts if t > s)
+    return t - sum(min(e, t) - s - ins for s, e, ins in cuts if t > s)
 
 
 out = [{'w': w['w'], 's': round(shift(w['s']), 3), 'e': round(shift(w['e']), 3), 'p': w.get('p', '')} for w in words]
 save_json(ep_dir(slug) / 'words.json', out)
-print(f'Tightened {len(cuts)} pauses, removed {sum(e - s for s, e in cuts):.2f} s: {len(x) / SR:.2f} s -> {len(y) / SR:.2f} s')
+print(f'Tightened {sum(1 for c in cuts if c[2] == 0)} pauses, removed {sum(e - s for s, e, _ in cuts):.2f} s, held {sum(1 for c in cuts if c[2] > 0)} for {sum(c[2] for c in cuts):.2f} s: {len(x) / SR:.2f} s -> {len(y) / SR:.2f} s')
 print(' '.join(f"{w['w']}@{w['s']}" for w in out))

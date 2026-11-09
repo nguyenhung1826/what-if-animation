@@ -97,7 +97,7 @@ light one white) and is dressed per episode to fit its role, by spreading the lo
 
 ## UI and marks
 
-`src/engine/ui.tsx`: `TitleCard`, `HudChip` (icons: rewind, pause, copy, paste, skip, dot), `Dial`, `Gauge`, `Tag`,
+`src/engine/ui.tsx`: `TitleCard`, `HudChip` (icons: rewind, pause, copy, paste, skip, dot, power), `Dial`, `Gauge`, `Tag`,
 `Marquee`, `PasteIn`, `Toast`, `FloatLabel`, `FocusRings`, `DizzyStars`, `Sparkle`, `TapeLines`, `UI` (colours).
 Faces: `FONT.title`, `FONT.ui`, `FONT.hand` (`src/engine/fonts.ts`).
 
@@ -108,6 +108,7 @@ Faces: `FONT.title`, `FONT.ui`, `FONT.hand` (`src/engine/fonts.ts`).
 | `rewindLook` | `src/episodes/rewind/index.tsx` | desaturate, jitter, `TapeLines`, REWIND chip, stopwatch counting back | - | rewind |
 | `copyLook` | `src/episodes/copy-paste/index.tsx` | cools the picture, COPY chip | - | copy-paste |
 | `pasteLook` | `src/episodes/copy-paste/index.tsx` | PASTE chip (the pop is `PasteIn` in the shot) | - | copy-paste |
+| `offLook` | `src/episodes/switch-off-sleep-1/index.tsx` | the power turned off: picture colder, a touch darker, OFF chip with a power icon. In the shot: the lamp `lamp` 1 -> 0, the hero as `{ ...LOOKS.hero, faceGlow: true }` with `glint` 1 and `glintColor` ice blue (`#9FE4FF`), sound `switch_off`. Chapters 2-6 import it from here | - | switch-off-sleep-1 |
 
 A look still lives in its episode until a second episode wants it; then move it to `src/engine/looks.tsx`, export
 it from `engine/index.ts` and change its row here.
@@ -119,7 +120,7 @@ Every clip `sfx.py` generates is saved here and reused by name before anything n
 
 | Group | Clips |
 |---|---|
-| Body and movement | big_step, step, land, tumble, fall_whoosh, catch, gulp, gasp, laugh, dizzy |
+| Body and movement | big_step, step, land, tumble, fall_whoosh, catch, gulp, gasp, laugh, dizzy, yawn |
 | Objects | clink, cookie_crunch, paper_land, crack, shatter, bulb_pop, switch_off, ding, buzzer, counter_tick, shades |
 | Animals | cat_chirp, cat_yowl |
 | Power and UI | rewind, rewind_start, clock_back, copy_click, paste_pop, select_draw, glitch, power_hum, power_down, pop, sparkle |

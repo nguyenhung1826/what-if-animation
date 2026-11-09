@@ -46,7 +46,7 @@ export const Tag: React.FC<{ x: number; y: number; t: number; text: string; mark
 };
 
 /** A chip in the corner naming the power while it runs (REWIND, COPY, PAUSED...), with an icon that blinks. */
-export const HudChip: React.FC<{ x?: number; y?: number; f: number; label: string; icon?: 'rewind' | 'pause' | 'copy' | 'paste' | 'dot' | 'skip' }> = ({ x = 96, y = 112, f, label, icon = 'dot' }) => {
+export const HudChip: React.FC<{ x?: number; y?: number; f: number; label: string; icon?: 'rewind' | 'pause' | 'copy' | 'paste' | 'dot' | 'skip' | 'power' }> = ({ x = 96, y = 112, f, label, icon = 'dot' }) => {
   const blink = Math.floor(f / 5) % 2 ? 1 : 0.5;
   const w = 168 + label.length * 27;
   return (
@@ -62,6 +62,12 @@ export const HudChip: React.FC<{ x?: number; y?: number; f: number; label: strin
           </g>
         ) : null}
         {icon === 'dot' ? <circle r={12} fill="#FF4A4A" /> : null}
+        {icon === 'power' ? (
+          <g fill="none" stroke="#8FD8FF" strokeWidth={6} strokeLinecap="round">
+            <path d="M -14 -16 A 22 22 0 1 0 14 -16" />
+            <path d="M 0 -26 L 0 -2" />
+          </g>
+        ) : null}
         {icon === 'skip' ? <path d="M -24 -22 L -2 0 L -24 22 Z M -2 -22 L 20 0 L -2 22 Z M 22 -22 L 30 -22 L 30 22 L 22 22 Z" fill="#FFB15A" /> : null}
       </g>
       <text x={80} y={16} fontFamily={FONT.ui} fontSize={44} fill={UI.text} letterSpacing={6}>

@@ -1,0 +1,274 @@
+{
+ "slug": "switch-off-sleep-1",
+ "title": "WHAT IF YOU COULD SWITCH OFF SLEEP?",
+ "fps": 30,
+ "total": 1122,
+ "segments": [
+  {
+   "shot": "S1",
+   "a": 0,
+   "b": 37,
+   "t0": 0,
+   "t1": 37,
+   "line": "Three a. m."
+  },
+  {
+   "shot": "S2",
+   "a": 37,
+   "b": 129,
+   "t0": 0,
+   "t1": 92,
+   "line": "Your whole city is asleep."
+  },
+  {
+   "shot": "S3",
+   "a": 129,
+   "b": 168,
+   "t0": 0,
+   "t1": 39,
+   "line": "Not you."
+  },
+  {
+   "shot": "S4",
+   "a": 168,
+   "b": 221,
+   "t0": 0,
+   "t1": 53,
+   "line": "Flip. Off."
+  },
+  {
+   "shot": "S5",
+   "a": 221,
+   "b": 249,
+   "t0": 0,
+   "t1": 28,
+   "line": "",
+   "look": "off"
+  },
+  {
+   "shot": "S6",
+   "a": 249,
+   "b": 349,
+   "t0": 0,
+   "t1": 100,
+   "line": "Yawning in first period?"
+  },
+  {
+   "shot": "S7",
+   "a": 349,
+   "b": 405,
+   "t0": 0,
+   "t1": 56,
+   "line": "Off.",
+   "look": "off"
+  },
+  {
+   "shot": "S8",
+   "a": 405,
+   "b": 461,
+   "t0": 0,
+   "t1": 56,
+   "line": "Homework due at eight?"
+  },
+  {
+   "shot": "S9",
+   "a": 461,
+   "b": 583,
+   "t0": 0,
+   "t1": 122,
+   "line": "Off. Done by four.",
+   "look": "off"
+  },
+  {
+   "shot": "S10",
+   "a": 583,
+   "b": 665,
+   "t0": 0,
+   "t1": 82,
+   "line": "Your cat wakes up to judge you."
+  },
+  {
+   "shot": "S11",
+   "a": 665,
+   "b": 729,
+   "t0": 0,
+   "t1": 64,
+   "line": "You never went to bed."
+  },
+  {
+   "shot": "S12",
+   "a": 729,
+   "b": 885,
+   "t0": 0,
+   "t1": 156,
+   "line": "What if you could switch off sleep?"
+  },
+  {
+   "shot": "S13",
+   "a": 885,
+   "b": 975,
+   "t0": 0,
+   "t1": 90,
+   "line": "One flip, and you never feel tired again.",
+   "look": "off"
+  },
+  {
+   "shot": "S14",
+   "a": 975,
+   "b": 1122,
+   "t0": 0,
+   "t1": 147,
+   "line": "Not once. Not ever.",
+   "look": "off"
+  }
+ ],
+ "shots": [
+  {
+   "id": "S1",
+   "size": "insert",
+   "key": 20,
+   "len": 37,
+   "first": 0,
+   "line": "Three a. m.",
+   "note": "the bedside clock reads 3:00, the lamp's glow beside it"
+  },
+  {
+   "id": "S2",
+   "size": "wide",
+   "key": 40,
+   "len": 92,
+   "first": 37,
+   "line": "Your whole city is asleep.",
+   "note": "the whole room at night, the city asleep in the window; you sit up in bed, wide awake"
+  },
+  {
+   "id": "S3",
+   "size": "medium",
+   "key": 24,
+   "len": 39,
+   "first": 129,
+   "line": "Not you.",
+   "note": "you in bed turn to us: not you"
+  },
+  {
+   "id": "S4",
+   "size": "insert",
+   "key": 30,
+   "len": 53,
+   "first": 168,
+   "line": "Flip. Off.",
+   "note": "your hand flips the lamp's switch: Off. The lamp dies"
+  },
+  {
+   "id": "S5",
+   "size": "close-up",
+   "key": 30,
+   "len": 28,
+   "first": 221,
+   "line": "",
+   "note": "your face in the dark, cold light, your eyes glowing; cool"
+  },
+  {
+   "id": "S6",
+   "size": "medium",
+   "key": 20,
+   "len": 100,
+   "first": 249,
+   "line": "Yawning in first period?",
+   "note": "first period: you at your desk, a huge yawn, tired"
+  },
+  {
+   "id": "S7",
+   "size": "close-up",
+   "key": 24,
+   "len": 56,
+   "first": 349,
+   "line": "Off.",
+   "note": "you flick an invisible switch at your temple: Off. Eyes glow, you sit up straight, cool"
+  },
+  {
+   "id": "S8",
+   "size": "medium",
+   "key": 30,
+   "len": 56,
+   "first": 405,
+   "line": "Homework due at eight?",
+   "note": "homework due at eight: a tall blank stack, the clock at 11:58, you slump"
+  },
+  {
+   "id": "S9",
+   "size": "top-down insert",
+   "key": 34,
+   "len": 122,
+   "first": 461,
+   "line": "Off. Done by four.",
+   "note": "Off: sheets fly through, every one done, stack lands; the clock flips to 4:00"
+  },
+  {
+   "id": "S10",
+   "size": "medium close",
+   "key": 30,
+   "len": 82,
+   "first": 583,
+   "line": "Your cat wakes up to judge you.",
+   "note": "the cat on the counter wakes up and stares, judging"
+  },
+  {
+   "id": "S11",
+   "size": "medium",
+   "key": 36,
+   "len": 64,
+   "first": 665,
+   "line": "You never went to bed.",
+   "note": "you at the island, dressed, a mug, eyes glowing; you raise the mug to the cat"
+  },
+  {
+   "id": "S12",
+   "size": "title",
+   "key": 60,
+   "len": 156,
+   "first": 729,
+   "line": "What if you could switch off sleep?",
+   "note": "WHAT IF YOU COULD / SWITCH OFF SLEEP? over the dark bedroom, OFF pulses"
+  },
+  {
+   "id": "S13",
+   "size": "close-up",
+   "key": 40,
+   "len": 90,
+   "first": 885,
+   "line": "One flip, and you never feel tired again.",
+   "note": "you, lamp off, smug, eyes glowing; music comes in"
+  },
+  {
+   "id": "S14",
+   "size": "wide",
+   "key": 60,
+   "len": 147,
+   "first": 975,
+   "line": "Not once. Not ever.",
+   "note": "you sit on the made bed in the dark, awake; the clock rolls on and on"
+  }
+ ],
+ "fx": [
+  {
+   "kind": "flash",
+   "color": "#9FD8FF",
+   "o": 0.25,
+   "f": 204
+  },
+  {
+   "kind": "flash",
+   "color": "#FFF3DC",
+   "f": 729
+  }
+ ],
+ "audio": {
+  "voiceVol": 0.8,
+  "sfxVol": 0.5795,
+  "musicVol": 0.1615,
+  "voice": "switch-off-sleep-1/voice.wav",
+  "sfx": "switch-off-sleep-1/sfx.wav",
+  "music": "switch-off-sleep-1/music.wav"
+ }
+}

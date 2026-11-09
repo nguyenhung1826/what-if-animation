@@ -1,0 +1,386 @@
+{
+ "id": "SwitchOffSleep1",
+ "slug": "switch-off-sleep-1",
+ "topic": "What if you could switch off sleep?",
+ "part": "Chapter 1 of 6: cold open and title card (long-form, ~40 s)",
+ "title": [
+  "WHAT IF YOU COULD",
+  "SWITCH OFF SLEEP?"
+ ],
+ "accent": "OFF",
+ "power": {
+  "word": "Off.",
+  "rule": "one flip and you never feel tired again (it switches off feeling tired, not being tired)",
+  "look": "offLook: the lamp dies, the room's light goes cold, the hero's eyes glow in the dark, an OFF chip"
+ },
+ "script": [
+  {
+   "beat": "1.1 cold open",
+   "text": "Three a.m. Your whole city is asleep."
+  },
+  {
+   "beat": "1.2 the power",
+   "text": "Not you. Flip. Off."
+  },
+  {
+   "beat": "1.3 demo 1",
+   "text": "Yawning in first period? Off."
+  },
+  {
+   "beat": "1.4 demo 2",
+   "text": "Homework due at eight? Off. Done by four."
+  },
+  {
+   "beat": "1.5 demo 3",
+   "text": "Your cat wakes up to judge you. You never went to bed."
+  },
+  {
+   "beat": "1.6 title",
+   "text": "What if you could switch off sleep?"
+  },
+  {
+   "beat": "1.7 the rule",
+   "text": "One flip, and you never feel tired again. Not once. Not ever."
+  }
+ ],
+ "science": [],
+ "cast": [
+  "hero"
+ ],
+ "gaps": {
+  "word": 0.16,
+  "comma": 0.3,
+  "sentence": 0.62,
+  "question": 0.6,
+  "pairs": {}
+ },
+ "tail": 2.6,
+ "holds": {
+  "m|Your": 0.5,
+  "asleep|Not": 1.7,
+  "you|Flip": 0.8,
+  "Flip|Off": 0.9,
+  "Off|Yawning": 2.0,
+  "period|Off": 1.0,
+  "Off|Homework": 1.5,
+  "eight|Off": 0.8,
+  "Off|Done": 1.1,
+  "four|Your": 1.7,
+  "you|You": 1.1,
+  "bed|What": 1.9,
+  "sleep|One": 3.0,
+  "again|Not": 0.9,
+  "once|Not": 0.8
+ },
+ "shots": [
+  {
+   "id": "S1",
+   "size": "insert",
+   "set": "bedroom (nightstand)",
+   "key": 20,
+   "note": "the bedside clock reads 3:00, the lamp's glow beside it"
+  },
+  {
+   "id": "S2",
+   "size": "wide",
+   "set": "bedroom night",
+   "key": 40,
+   "note": "the whole room at night, the city asleep in the window; you sit up in bed, wide awake"
+  },
+  {
+   "id": "S3",
+   "size": "medium",
+   "set": "bedroom night",
+   "key": 24,
+   "note": "you in bed turn to us: not you"
+  },
+  {
+   "id": "S4",
+   "size": "insert",
+   "set": "bedroom (lamp)",
+   "key": 30,
+   "note": "your hand flips the lamp's switch: Off. The lamp dies"
+  },
+  {
+   "id": "S5",
+   "size": "close-up",
+   "set": "bedroom dark",
+   "key": 30,
+   "note": "your face in the dark, cold light, your eyes glowing; cool"
+  },
+  {
+   "id": "S6",
+   "size": "medium",
+   "set": "classroom",
+   "key": 20,
+   "note": "first period: you at your desk, a huge yawn, tired"
+  },
+  {
+   "id": "S7",
+   "size": "close-up",
+   "set": "classroom",
+   "key": 24,
+   "note": "you flick an invisible switch at your temple: Off. Eyes glow, you sit up straight, cool"
+  },
+  {
+   "id": "S8",
+   "size": "medium",
+   "set": "study night",
+   "key": 30,
+   "note": "homework due at eight: a tall blank stack, the clock at 11:58, you slump"
+  },
+  {
+   "id": "S9",
+   "size": "top-down insert",
+   "set": "study (desk top)",
+   "key": 34,
+   "note": "Off: sheets fly through, every one done, stack lands; the clock flips to 4:00"
+  },
+  {
+   "id": "S10",
+   "size": "medium close",
+   "set": "kitchen dark",
+   "key": 30,
+   "note": "the cat on the counter wakes up and stares, judging"
+  },
+  {
+   "id": "S11",
+   "size": "medium",
+   "set": "kitchen dark",
+   "key": 36,
+   "note": "you at the island, dressed, a mug, eyes glowing; you raise the mug to the cat"
+  },
+  {
+   "id": "S12",
+   "size": "title",
+   "set": "bedroom dark",
+   "key": 60,
+   "note": "WHAT IF YOU COULD / SWITCH OFF SLEEP? over the dark bedroom, OFF pulses"
+  },
+  {
+   "id": "S13",
+   "size": "close-up",
+   "set": "bedroom dark",
+   "key": 40,
+   "note": "you, lamp off, smug, eyes glowing; music comes in"
+  },
+  {
+   "id": "S14",
+   "size": "wide",
+   "set": "bedroom dark",
+   "key": 60,
+   "note": "you sit on the made bed in the dark, awake; the clock rolls on and on"
+  }
+ ],
+ "edit": [
+  {
+   "shot": "S1",
+   "at": "Three"
+  },
+  {
+   "shot": "S2",
+   "at": "Your"
+  },
+  {
+   "shot": "S3",
+   "at": "Not"
+  },
+  {
+   "shot": "S4",
+   "at": "Flip"
+  },
+  {
+   "shot": "S5",
+   "at": "Off+14",
+   "look": "off"
+  },
+  {
+   "shot": "S6",
+   "at": "s:8.3"
+  },
+  {
+   "shot": "S7",
+   "at": "Off",
+   "look": "off"
+  },
+  {
+   "shot": "S8",
+   "at": "Homework"
+  },
+  {
+   "shot": "S9",
+   "at": "Off",
+   "look": "off"
+  },
+  {
+   "shot": "S10",
+   "at": "Your"
+  },
+  {
+   "shot": "S11",
+   "at": "You#2"
+  },
+  {
+   "shot": "S12",
+   "at": "s:24.3"
+  },
+  {
+   "shot": "S13",
+   "at": "One",
+   "look": "off"
+  },
+  {
+   "shot": "S14",
+   "at": "Not",
+   "look": "off"
+  }
+ ],
+ "fx": [
+  {
+   "at": "S4+36",
+   "kind": "flash",
+   "color": "#9FD8FF",
+   "o": 0.25
+  },
+  {
+   "at": "S12",
+   "kind": "flash",
+   "color": "#FFF3DC"
+  }
+ ],
+ "sound": {
+  "clips": {
+   "room_tone": [
+    "quiet indoor room tone in the evening, faint distant city hum, no voices",
+    12.5
+   ],
+   "switch_off": [
+    "a heavy electrical breaker switching off with a dull clunk",
+    0.5
+   ],
+   "power_hum": [
+    "a deep electrical power grid hum swelling louder, transformers buzzing, rising",
+    3.0
+   ],
+   "class_murmur": [
+    "a quiet classroom murmur, kids whispering, chairs shuffling",
+    2.0
+   ],
+   "paper_land": [
+    "a thick stack of paper sheets dropped flat on a wooden desk, a soft slap and rustle",
+    0.7
+   ],
+   "pop": [
+    "a cartoon speech bubble pop, short and bright",
+    0.5
+   ],
+   "cat_chirp": [
+    "a cat making a short curious chirp meow",
+    0.6
+   ],
+   "title_boom": [
+    "a cinematic whoosh rising into a deep boom impact",
+    1.6
+   ],
+   "music": [
+    "playful quirky cartoon background music, pizzicato strings, glockenspiel and soft bass, light and curious, 110 bpm, no vocals",
+    17.0
+   ],
+   "yawn": [
+    "a teenage boy doing one big long sleepy yawn, cartoon, close up, no other sounds",
+    1.4
+   ]
+  },
+  "events": [
+   [
+    "S1",
+    "room_tone",
+    0.12,
+    "onset",
+    "S6"
+   ],
+   [
+    "S4+36",
+    "switch_off",
+    0.4
+   ],
+   [
+    "S5",
+    "power_hum",
+    0.08,
+    "onset",
+    "S6"
+   ],
+   [
+    "S6",
+    "class_murmur",
+    0.08,
+    "onset",
+    "S8"
+   ],
+   [
+    "S6+3",
+    "yawn",
+    0.4
+   ],
+   [
+    "S7+8",
+    "switch_off",
+    0.4
+   ],
+   [
+    "S9+12",
+    "switch_off",
+    0.4
+   ],
+   [
+    "S9+70",
+    "paper_land",
+    0.35
+   ],
+   [
+    "S10",
+    "room_tone",
+    0.12,
+    "onset",
+    "S12"
+   ],
+   [
+    "S10+56",
+    "cat_chirp",
+    0.3
+   ],
+   [
+    "S12",
+    "title_boom",
+    0.3,
+    "peak"
+   ]
+  ],
+  "repeats": [
+   {
+    "at": "S9+17",
+    "clip": "pop",
+    "n": 6,
+    "every": 9,
+    "gain": [
+     0.04,
+     0.07
+    ],
+    "pitch": [
+     0.9,
+     1.25
+    ],
+    "note": "each sheet done (k over 56 frames, 6 sheets)"
+   }
+  ],
+  "music": {
+   "clip": "music",
+   "from": "S13"
+  },
+  "levels": {
+   "sfx_lu": -5.5,
+   "music_lu": -14.5
+  }
+ }
+}
