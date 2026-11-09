@@ -1,0 +1,119 @@
+# Library catalog
+
+Everything this studio can draw or play without writing it again. **Read this file before drawing anything** in a
+new episode, and reuse or extend what is here before building something new. When you add to the library, add a
+line here in the same turn (see "Adding to the library" at the end). `python <skill>/scripts/catalog_check.py`
+lists anything exported from `src/engine/` or sitting in `library/sfx/` that this file doesn't mention yet.
+
+How to read a row: **Name** is what you import (`import { Kitchen } from '../../engine'`), **File** is where it
+lives, **Params** are the props worth knowing (the file's own comments have the rest), **Thumb** is a still in
+`library/thumbs/` (`-` until one is rendered), **Origin** is the episode that first needed it.
+
+Full coordinates, poses and patterns for the shipped kit are in `<skill>/references/kit.md`. Open that, or the
+asset's file, only for the asset you are about to use.
+
+## Sets (places)
+
+| Name | File | What it is | Params | Thumb | Origin |
+|---|---|---|---|---|---|
+| `Study` + `Desk` | `src/engine/sets/study.tsx` | Dusk study: back window with low sun, bookcase left, door and print right, pendant. `STUDY` is its room. | `night` (moon, desk lamp), `shelf` 0..1 (books fly from `STUDY_SHELF_V`), `veil` | - | shipped |
+| `Stairwell` + `Banister` | `src/engine/sets/stairwell.tsx` | Side-on stairs, 7 steps down to the right from a landing; lit doorway, arched window, lantern. `stepTop(x)`, `hipGround(x)`; `Banister` draws in front. | walk at scale 0.9 | - | shipped |
+| `Classroom` + `SchoolDesk` + `Kid` | `src/engine/sets/classroom.tsx` | Board, windows left, two rows of desks with kids from behind. `CLS` is its room, `KIDS` the kids' looks. | `board` (chalk text), `solved`, `wrong`, `laugh`; `Kid` `turn`, `laugh` | - | shipped |
+| `Rooftop` + `SunClock` | `src/engine/sets/rooftop.tsx` | Parapet, three depths of city, string lights, big low sun (optionally a clock face). | `sunX`, `sunY`, `clock`, `spin`, `crack`, `red`, `lightsOut`, `blackout`, `cityLit`, `low` | - | shipped |
+| `Kitchen` + `KitchenIsland` | `src/engine/sets/kitchen.tsx` | Counter run under a window, hob, shelves with jars, fridge, two pendants over an island. `KITCHEN` room, `islandTop(u, d)`. | `veil`, `red` | - | copy-paste |
+| `Bedroom` + `BedDuvet` | `src/engine/sets/bedroom.tsx` | Night bedroom: bed back-left, nightstand lamp and clock, window onto moon and city, calendar, wardrobe, door ajar. `BEDROOM`, `bedTop`, `bedSit`, `LAMP`, `CAL`, `WINDOW`. | `clock`, `lamp` 0..1, `crossed`, `veil`, `duvet` | - | preview run |
+| `Schematic` | `src/engine/sets/schematic.tsx` | Dark blueprint grid for the science beat. With `DrawOn`, `Arrow`, `SchLabel`, `CountUp`, `PlantIcon`; colours in `SCH`. | `PlantIcon` kinds: tower, wind, solar, dam, factory (`on`) | - | copy-paste |
+| `Tabletop` | `src/engine/furnish.tsx` | A surface from high above for inserts (wood or stone), lit front edge at `edge`. | `edge` (> 1080 = straight top-down) | - | copy-paste |
+
+## Cast (characters)
+
+All drawn by one rig, `Hero` (alias `Actor`) in `src/engine/rig.tsx`, with a costume from `LOOKS`. Check any new
+look on the cast sheet: `npx remotion still src/index.ts Cast out/cast.png`.
+
+| Look | Who | Notes | Thumb | Origin |
+|---|---|---|---|---|
+| `LOOKS.pipHood` | Pip, the shipped hero (B) | dark hoodie, mustard drawstrings | - | shipped |
+| `LOOKS.pip` | Pip (A) | mustard jacket | - | shipped |
+| `LOOKS.pipInk` | Pip (C) | dark head | - | shipped |
+| `LOOKS.mo` | Mo, the friend | curls, olive jacket, headphones | - | shipped |
+| `LOOKS.sis` | the little sister | bunches, teal; draw at about 0.7 scale | - | shipped |
+| `LOOKS.mom` | mum | bob, rose cardigan | - | shipped |
+| `LOOKS.suit` | the man in a suit | charcoal suit, red tie | - | shipped |
+
+Expressions (`expr`): neutral, happy, smug, shock, worried, oops, cool, dizzy, tired. Motion helpers: `poseAt`,
+`faceAt`, `walkPose`, `joints`, `toWorld`, `reachAngle`.
+
+## Props
+
+| Name | File | What it is | Params | Thumb | Origin |
+|---|---|---|---|---|---|
+| `Cat` | `src/engine/props.tsx` | the cat; tail always moving | `mood`: sleep, alert, peek | - | shipped |
+| `Mug` | `src/engine/props.tsx` | mug with steam | `rot`, `steam` | - | shipped |
+| `Cookie`, `CookieTop`, `CookieStack` | `src/engine/props.tsx` | cookie side-on, from above, a tower | `s`, `rot`, `bite` | - | shipped |
+| `Plate`, `PlateTop` | `src/engine/props.tsx` | plate side-on, from above | | - | shipped |
+| `Paper`, `PaperStack`, `PaperBall` | `src/engine/props.tsx` | sheet from above (ticks and grade when `done`), a neat stack, a crumpled ball | `done`, `grade`, `fill`; `n`; `r`, `rot` | - | shipped |
+| `AlarmClock` | `src/engine/props.tsx` | digital bedside clock | `text`, `on` | - | preview run |
+| `WallCalendar` + `calendarDay` | `src/engine/props.tsx` | a month with crossed-off days | `crossed`, `drawing` | - | preview run |
+| `OpenBook`, `BookFlat`, `BookTower` | `src/engine/props.tsx` | open book (page turn), closed book, tower of books | `turn`, `cover`; `n` | - | preview run |
+| `LaptopBack` | `src/engine/props.tsx` | laptop lid from behind, screen light spilling | `glow`, `tilt` | - | preview run |
+| `PizzaSlice`, `PizzaBox` | `src/engine/props.tsx` | slice from above (bite, drip), open empty box | `bite`, `drip`, `lid` | - | preview run |
+| `Phone` | `src/engine/props.tsx` | phone, dark or ringing | `on`, `caller`, `buzz` | - | preview run |
+
+## Room kit (for building a new set)
+
+`src/engine/room.tsx` and `src/engine/furnish.tsx`: `makeRoom`, `Box`, `RoomShell`, `BackWindow`, `Pendant`,
+`pendantLight`, `WallLight`, `FloorShadow`, `FloorPlant`, `WallFrame`, `WallClock`, `stand`. Order and coordinates:
+`references/kit.md`, "The room kit".
+
+## Light and atmosphere
+
+`src/engine/light.tsx`: `Glow`, `Cone`, `LightVeil`, `Dust`, `WallTexture`, `RoomCorners`, `SkyView`, `SetDefs`.
+`src/engine/kit.tsx`: `DuskSky`, `Sun`, `Rays`, `Haze`, `Bokeh`, `Shaft`, `Skyline`, `Foreground`, `NightSky`,
+`Moon`, `Stars`, `KitDefs`. Character rim filters: `rimR`, `rimL`, `rimRed`, `rimBlue`, `rimBlueL`.
+
+## UI and marks
+
+`src/engine/ui.tsx`: `TitleCard`, `HudChip` (icons: rewind, pause, copy, paste, skip, dot), `Dial`, `Gauge`, `Tag`,
+`Marquee`, `PasteIn`, `Toast`, `FloatLabel`, `FocusRings`, `DizzyStars`, `Sparkle`, `TapeLines`, `UI` (colours).
+Faces: `FONT.title`, `FONT.ui`, `FONT.hand` (`src/engine/fonts.ts`).
+
+## Power looks (how a power changes the picture while it runs)
+
+| Look | Where | What it does | Thumb | Origin |
+|---|---|---|---|---|
+| `rewindLook` | `src/episodes/rewind/index.tsx` | desaturate, jitter, `TapeLines`, REWIND chip, stopwatch counting back | - | rewind |
+| `copyLook` | `src/episodes/copy-paste/index.tsx` | cools the picture, COPY chip | - | copy-paste |
+| `pasteLook` | `src/episodes/copy-paste/index.tsx` | PASTE chip (the pop is `PasteIn` in the shot) | - | copy-paste |
+
+A look still lives in its episode until a second episode wants it; then move it to `src/engine/looks.tsx`, export
+it from `engine/index.ts` and change its row here.
+
+## Sound (`library/sfx/`)
+
+Every clip `sfx.py` generates is saved here and reused by name before anything new is generated. The file name is
+`<name>-<hash>.mp3`; reuse it by `<name>`.
+
+| Group | Clips |
+|---|---|
+| Body and movement | big_step, step, land, tumble, fall_whoosh, catch, gulp, gasp, laugh, dizzy |
+| Objects | clink, cookie_crunch, paper_land, crack, shatter, bulb_pop, switch_off, ding, buzzer, counter_tick, shades |
+| Animals | cat_chirp, cat_yowl |
+| Power and UI | rewind, rewind_start, clock_back, copy_click, paste_pop, select_draw, glitch, power_hum, power_down, pop, sparkle |
+| Hits and titles | title_boom, drone_hit |
+| Ambience and music | room_tone, roof_wind, class_murmur, music |
+
+## Adding to the library
+
+Do this in the same turn the new thing is made, not "later":
+
+1. **Make it reusable.** A new place, prop, character look or power look goes in `src/engine/` (sets in `sets/`), not
+   inside an episode's `shots.tsx`. Give it props for what an episode is likely to change (time of day, colour, a
+   state like open/closed). Export it from `src/engine/index.ts`.
+2. **Extend before you add.** If something close exists, add a prop to it (a `night` kitchen is
+   `<Kitchen night />`, not a second kitchen). Only make a new asset when the existing one would need a different
+   layout.
+3. **Add its row here**: name, file, one line on what it is, the params, origin = the episode's slug.
+4. **Render its thumb** to `library/thumbs/<name>.png` (one still at a wide framing, 960 px wide is enough) and put
+   the file name in the Thumb column.
+5. **Run** `python <skill>/scripts/catalog_check.py` until it reports nothing missing.
+6. **Commit and push**: `git add -A && git commit -m "library: add <name> (<slug>)" && git push`.

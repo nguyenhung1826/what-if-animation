@@ -13,16 +13,23 @@ schematic for the science beat, a cliffhanger blackout). Read the one closest to
 
 | File | What's in it |
 |---|---|
+| `studio/CATALOG.md` | **The library: every set, character, prop, look and sound you can reuse. Read it first.** |
 | `references/formula.md` | The seven-beat What If formula, the 15-25 s shape, script rules, choosing a topic |
 | `references/look.md` | The measured look, pace, shot vocabulary, and the storyboard and motion checklists |
 | `references/kit.md` | The building blocks: engine, cast, sets, room kit, light, UI, looks, and how to add each |
 | `references/sound.md` | Writing sound events, prompts, levels, costs |
 | `references/traps.md` | Everything that cost time on the two example episodes |
-| `studio/` | The Remotion project: copy it once, then every episode lives in it |
-| `scripts/` | voice, plan, stills, board, sfx, mixcheck, motiongrid, master (Python 3.9+ and Node) |
+| `studio/` | The Remotion project: work in it in place; every episode and every library asset lives in it |
+| `scripts/` | voice, plan, stills, board, sfx, mixcheck, motiongrid, master, catalog_check (Python 3.9+ and Node) |
 
 ## Rules
 
+- **Library first.** This skill is the channel's own copy (a git repo) and its library grows with every episode.
+  Before drawing anything, read `studio/CATALOG.md` and reuse or extend what is there; open `references/kit.md` or an
+  asset's file only for the asset you are about to use. Anything new you draw that another episode could use (a
+  place, a prop, a character look, a power look) goes into `src/engine/`, gets its row and thumb in `CATALOG.md`, and
+  is committed in the same episode (see "Adding to the library" at the end of the catalog). Never leave a reusable
+  asset inside an episode's `shots.tsx`.
 - **Original characters only.** Pip (the hero, look B) and Mo (his friend) are ours, and so are the sister, mum and
   the suit on the rig. Never a channel's own hero, and nothing that resembles a famous cartoon character: check every
   new look on the cast sheet (Mo's first hat was dropped for drifting toward one).
@@ -43,13 +50,17 @@ schematic for the science beat, a cliffhanger blackout). Read the one closest to
 Needs Node 18+, ffmpeg and ffprobe on the PATH, Python 3.9+ with `numpy` and `Pillow`, and an ElevenLabs key.
 
 ```bash
-cp -r <skill>/studio ./what-if-studio && cd what-if-studio && npm install
+cd <skill>/studio && npm install
 ```
 
-Everything below runs from that studio folder; `<skill>` is this skill's folder. To work offline or in your own
+Work **inside `<skill>/studio`**, not in a copy: that folder is in the channel's git repo, so every set, prop and
+sound added there is kept, versioned and shared by every later episode. Everything below runs from it; `<skill>`
+is this skill's folder. `out/`, `node_modules/` and `.env` are git-ignored. If the person keeps the repo somewhere
+other than the skills folder, work in that clone's `studio/` the same way. To work offline or in your own
 brand face, put a display font in `public/fonts/` and set `titleFont` in `src/studio.config.ts` (the default title
-face, Bricolage Grotesque, and the UI faces load from Google Fonts at render time). To update an existing studio to
-a newer engine, copy `<skill>/studio/src/engine` over its `src/engine`.
+face, Bricolage Grotesque, and the UI faces load from Google Fonts at render time). To take improvements from the
+original skill, merge its `main` into this repo (`git remote add upstream https://github.com/kelano86/what-if-animation`,
+`git fetch upstream`, `git merge upstream/main`) and keep this channel's assets and catalog when they conflict.
 
 ## The pipeline
 
@@ -94,13 +105,15 @@ opening and no static shot over about 3 s; fix what it flags before drawing anyt
 
 ### 4. Storyboard
 
-Read `references/kit.md` for the building blocks. Write `src/episodes/<slug>/shots.tsx`, one component per shot,
+Read `CATALOG.md` and pick the sets, cast, props and looks the shot list needs; open `references/kit.md` only for
+the parts you use (coordinates, the room kit). Write `src/episodes/<slug>/shots.tsx`, one component per shot,
 each a pure function of its clock `t` (copy the patterns in the two examples' `shots.tsx`), and `index.tsx` (the
 episode and its power look), then add the episode to `src/episodes/index.ts`. At this step each shot only needs to
-be right at its `key` frame. When a topic needs a place the library lacks, build it with the room kit and add it to
-`src/engine/sets/` (and to the skill's copy) so the next episode has it, as the copy-paste run did with the kitchen
-and the schematic. A new character or costume: add the look, then check it on the cast sheet
-(`npx remotion still src/index.ts Cast out/cast.png`).
+be right at its `key` frame. When a topic needs something the catalog lacks, first see whether an existing asset can take a new prop (a `night`
+kitchen, a `broken` phone); only if not, build a new one in `src/engine/` (places with the room kit in
+`src/engine/sets/`), as the copy-paste run did with the kitchen and the schematic. Then follow "Adding to the
+library" in `CATALOG.md`: its row, its thumb, the check. A new character or costume: add the look, check it on the
+cast sheet (`npx remotion still src/index.ts Cast out/cast.png`), and catalogue it.
 
 ```bash
 npx tsc --noEmit
@@ -135,8 +148,9 @@ reads.
 ### 7. Sound
 
 Read `references/sound.md`. Add `sound` to `episode.json`: the clips (prompt and length), one event per visible
-action cued to its shot, ambiences per location, the music bed and the levels. Check what the library already has,
-then generate:
+action cued to its shot, ambiences per location, the music bed and the levels. Check what the library already has
+(the Sound table in `CATALOG.md`, and `library/sfx/`) and reuse a clip by name before writing a new prompt, then
+generate:
 
 ```bash
 python <skill>/scripts/sfx.py <slug> --dry
@@ -161,8 +175,11 @@ python <skill>/scripts/master.py <slug>
 ```
 
 Renders, brings the mix to -14 LUFS with peaks under -1 dBTP, and writes `out/<slug>/report.json` (length, loudness,
-pace, credits). Watch the final file once through with sound. Hand over `out/<slug>/<slug>-final.mp4` and
-`out/<slug>/storyboard.jpg`, with the length, the ElevenLabs credits used, and anything you'd still improve.
+pace, credits). Watch the final file once through with sound. Then close the library: add any new clips to the Sound table in
+`CATALOG.md`, run `python <skill>/scripts/catalog_check.py` until it reports nothing missing, and commit and push
+(`git add -A && git commit -m "episode: <slug>" && git push`; the episode's own files go in too, as reference for
+later episodes). Hand over `out/<slug>/<slug>-final.mp4` and
+`out/<slug>/storyboard.jpg`, with the length, the ElevenLabs credits used, what was added to the library, and anything you'd still improve.
 
 ## Where an episode lives
 
@@ -174,3 +191,5 @@ pace, credits). Watch the final file once through with sound. Hand over `out/<sl
 | `public/<slug>/` | voice.wav, sfx.wav, music.wav |
 | `out/<slug>/` | board stills, storyboard.jpg, shotlist.md, motion grids, renders, costs.json, report.json |
 | `library/sfx/` | Every generated sound clip, shared by all episodes |
+| `library/thumbs/` | One still per catalogued asset, named in `CATALOG.md` |
+| `CATALOG.md` | The index of everything above that later episodes can reuse |

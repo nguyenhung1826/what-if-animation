@@ -147,8 +147,11 @@ All in the mono face on a dark translucent pill, cream text, orange for the live
 
 ## Adding to the kit
 
-- **A set:** build it with the room kit in `src/engine/sets/<name>.tsx`, export it from `engine/index.ts`, document
-  its coordinates in the table above, and copy it into the skill's `studio/src/engine/sets/` so it ships.
+Every addition also gets its row and thumb in `studio/CATALOG.md` and is committed (the steps are at the end of the
+catalog). The studio is worked on in place in this repo, so there is no second copy to update.
+
+- **A set:** build it with the room kit in `src/engine/sets/<name>.tsx`, export it from `engine/index.ts`, and
+  document its coordinates in the table above.
 - **A character:** a new `Look` in `LOOKS` (colours, plus an `extra` piece if it needs one, drawn in `Hero`), checked
   on the cast sheet for contrast on the dark sets and for resemblance to anything famous.
-- **A power look:** in the episode's `index.tsx`; move it to `ui.tsx` once a second episode wants it.
+- **A power look:** in the episode's `index.tsx`; move it to `src/engine/looks.tsx` once a second episode wants it.

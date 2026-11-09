@@ -1,5 +1,10 @@
 # What If animation: a free skill for Claude Code and OpenCode
 
+> **This copy is a channel's own fork with a growing asset library.** Work in `studio/` in place (no copy), read
+> `studio/CATALOG.md` before drawing, and every new set, prop, look or sound is catalogued and committed with the
+> episode that made it. `scripts/catalog_check.py` checks the catalog. Original skill:
+> [kelano86/what-if-animation](https://github.com/kelano86/what-if-animation) (MIT).
+
 Type one line, "What if you could rewind 10 seconds?", and get a finished 15-25 second animated episode in the
 dusk-lit stick-figure style of the "What If" channels that took off on YouTube in October 2026.
 
