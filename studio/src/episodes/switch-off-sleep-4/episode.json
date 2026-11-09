@@ -1,0 +1,498 @@
+{
+ "id": "SwitchOffSleep4",
+ "slug": "switch-off-sleep-4",
+ "topic": "What if you could switch off sleep?",
+ "part": "Chapter 4 of 6: the first crack, school and the stairs (long-form, ~55 s)",
+ "title": [
+  "WHAT IF YOU COULD",
+  "SWITCH OFF SLEEP?"
+ ],
+ "accent": "OFF",
+ "previous_text": "She asks how. You put a finger to your lips. Secret.",
+ "script": [
+  {
+   "beat": "4.1 unbeatable",
+   "text": "At school, you're unbeatable. Every question. Every quiz."
+  },
+  {
+   "beat": "4.2 Mo",
+   "text": "Mo can't figure out how you're always this awake. He's on his third energy drink. You're on zero."
+  },
+  {
+   "beat": "4.2b teachers",
+   "text": "Teachers start calling on you just to watch you get it right."
+  },
+  {
+   "beat": "4.3 day three",
+   "text": "Day three. You still don't feel tired. But something's slipping."
+  },
+  {
+   "beat": "4.4 the board",
+   "text": "You write the answer on the board. The right answer… to yesterday's question."
+  },
+  {
+   "beat": "4.5 the stairs",
+   "text": "Then, on the stairs, the world blinks."
+  },
+  {
+   "beat": "4.6 gone",
+   "text": "Half a second. Gone."
+  },
+  {
+   "beat": "4.7 Mo catches you",
+   "text": "Mo catches you. He says you were asleep. Standing up. You don't remember any of it."
+  },
+  {
+   "beat": "4.8 microsleep",
+   "text": "It has a name: a microsleep. Your brain grabs a few seconds of sleep, and it doesn't ask first. That's real."
+  }
+ ],
+ "science": [
+  {
+   "claim": "A microsleep is a brief, unintended episode of sleep lasting a few seconds, most likely after sleep loss, and the person often doesn't notice it",
+   "working": "no number in the narration; 'a few seconds' matches the definitions (a fraction of a second up to about 15-30 s); 'half a second. Gone.' is the story's own lapse, within that range",
+   "source": "Sleep Foundation, 'Microsleep: What Is It, What Causes It, and Is It Safe?' (sleepfoundation.org/sleep-disorders/microsleep); NHLBI (NIH), 'Sleep Deprivation and Deficiency: health effects' (nhlbi.nih.gov/health/sleep-deprivation/health-effects): microsleep is brief moments of sleep while normally awake, you can't control it and may not be aware of it; Poudel et al., 'Losing the struggle to stay awake', NeuroImage 2014"
+  }
+ ],
+ "cast": [
+  "hero",
+  "mo",
+  "teacher",
+  "kids"
+ ],
+ "gaps": {
+  "word": 0.16,
+  "comma": 0.32,
+  "sentence": 0.6,
+  "question": 0.6,
+  "pairs": {}
+ },
+ "holds": {
+  "quiz|Mo": 1.0,
+  "zero|Teachers": 1.0,
+  "right|Day": 1.1,
+  "slipping|You": 1.0,
+  "board|The": 0.7,
+  "question|Then": 1.4,
+  "blinks|Half": 1.6,
+  "Gone|Mo": 1.2,
+  "it|It": 1.2,
+  "microsleep|Your": 0.7,
+  "unbeatable|Every": 0.6,
+  "awake|He's": 0.7,
+  "drink|You're": 0.7,
+  "three|You": 0.7,
+  "tired|But": 0.8,
+  "answer|to": 1.0,
+  "second|Gone": 0.7,
+  "asleep|Standing": 0.6,
+  "up|You": 0.7,
+  "first|That's": 0.7
+ },
+ "tail": 2.0,
+ "shots": [
+  {
+   "id": "S1",
+   "size": "wide",
+   "set": "classroom",
+   "key": 40,
+   "note": "the class at dusk: the board full of formulas, every one solved; you at your desk, hand already up, sure"
+  },
+  {
+   "id": "S2",
+   "size": "top-down insert",
+   "set": "desk top",
+   "key": 40,
+   "note": "quiz papers slap down one after another, each stamped A+"
+  },
+  {
+   "id": "S3",
+   "size": "medium two-shot",
+   "set": "classroom",
+   "key": 60,
+   "note": "Mo slumped on the desk next to you, eyes half shut; you upright, wide awake, eyes glowing"
+  },
+  {
+   "id": "S4",
+   "size": "insert",
+   "set": "Mo's desk",
+   "key": 40,
+   "note": "three energy-drink cans on Mo's desk; his hand drags the third one in; gulp"
+  },
+  {
+   "id": "S5",
+   "size": "medium",
+   "set": "classroom",
+   "key": 30,
+   "note": "you, nothing on your desk, a cool little shrug; a tag: 0"
+  },
+  {
+   "id": "S6",
+   "size": "over the shoulder",
+   "set": "classroom",
+   "key": 50,
+   "note": "the teacher at the board points at you; a kid turns to look; you answer, smug"
+  },
+  {
+   "id": "S7",
+   "size": "insert",
+   "set": "bedroom wall",
+   "key": 40,
+   "note": "the wall calendar: day 3 gets its red cross; DAY 3"
+  },
+  {
+   "id": "S8",
+   "size": "close-up",
+   "set": "classroom",
+   "key": 50,
+   "note": "you, still glowing, one slow heavy blink; the glow flickers; a flicker of worry"
+  },
+  {
+   "id": "S9",
+   "size": "medium",
+   "set": "classroom (at the board)",
+   "key": 40,
+   "note": "you at the board writing the answer in chalk, confident"
+  },
+  {
+   "id": "S10",
+   "size": "wide",
+   "set": "classroom",
+   "key": 40,
+   "note": "the board: the answer is to YESTERDAY's question, a big red X; kids laugh; you, oops"
+  },
+  {
+   "id": "S11",
+   "size": "wide",
+   "set": "stairwell",
+   "key": 60,
+   "note": "you walk down the stairs (walkPhase), mid-step: the screen cuts to black for 12 frames, silence"
+  },
+  {
+   "id": "S12",
+   "size": "medium",
+   "set": "stairwell",
+   "key": 20,
+   "note": "you pitch forward off the step, arms flailing"
+  },
+  {
+   "id": "S13",
+   "size": "medium two-shot",
+   "set": "stairwell",
+   "key": 50,
+   "note": "Mo grabs you under the arms; you hang there dizzy, stars circling"
+  },
+  {
+   "id": "S14",
+   "size": "close-up",
+   "set": "stairwell",
+   "key": 40,
+   "note": "you, still held up by Mo, dazed: you don't remember any of it; the stars fade"
+  },
+  {
+   "id": "S15",
+   "size": "close-up",
+   "set": "stairwell",
+   "key": 64,
+   "note": "you, shocked; MICROSLEEP floats up"
+  },
+  {
+   "id": "S16",
+   "size": "schematic",
+   "set": "schematic",
+   "key": 80,
+   "note": "a day as a bar: AWAKE runs, a few seconds of SLEEP cut in without asking; REAL"
+  }
+ ],
+ "edit": [
+  {
+   "shot": "S1",
+   "at": "At"
+  },
+  {
+   "shot": "S2",
+   "at": "Every"
+  },
+  {
+   "shot": "S3",
+   "at": "Mo"
+  },
+  {
+   "shot": "S4",
+   "at": "He's"
+  },
+  {
+   "shot": "S5",
+   "at": "You're"
+  },
+  {
+   "shot": "S6",
+   "at": "Teachers"
+  },
+  {
+   "shot": "S7",
+   "at": "Day"
+  },
+  {
+   "shot": "S8",
+   "at": "But"
+  },
+  {
+   "shot": "S9",
+   "at": "You"
+  },
+  {
+   "shot": "S10",
+   "at": "to"
+  },
+  {
+   "shot": "S11",
+   "at": "Then"
+  },
+  {
+   "shot": "S12",
+   "at": "Half"
+  },
+  {
+   "shot": "S13",
+   "at": "Mo"
+  },
+  {
+   "shot": "S14",
+   "at": "You#3"
+  },
+  {
+   "shot": "S15",
+   "at": "It#2"
+  },
+  {
+   "shot": "S16",
+   "at": "Your"
+  }
+ ],
+ "fx": [],
+ "sound": {
+  "clips": {
+   "room_tone": [
+    "quiet indoor room tone in the evening, faint distant city hum, no voices",
+    12.5
+   ],
+   "class_murmur": [
+    "a quiet classroom murmur, kids whispering, chairs shuffling",
+    2.0
+   ],
+   "ding": [
+    "a correct answer ding, bright bell chime",
+    0.8
+   ],
+   "paper_land": [
+    "a thick stack of paper sheets dropped flat on a wooden desk, a soft slap and rustle",
+    0.7
+   ],
+   "gulp": [
+    "a nervous cartoon gulp, short",
+    0.5
+   ],
+   "pop": [
+    "a cartoon speech bubble pop, short and bright",
+    0.5
+   ],
+   "select_draw": [
+    "a quick digital selection sound, a soft rising electronic shimmer as a box is drawn on screen, short",
+    0.6
+   ],
+   "buzzer": [
+    "a game show wrong answer buzzer, short",
+    0.8
+   ],
+   "laugh": [
+    "a small classroom of kids bursting out laughing",
+    1.6
+   ],
+   "step": [
+    "a single sneaker footstep on a wooden stair, close",
+    0.5
+   ],
+   "fall_whoosh": [
+    "a small object falling fast through the air, short soft whoosh",
+    0.6
+   ],
+   "catch": [
+    "a hand catching a ceramic mug mid-air, soft slap and thud",
+    0.5
+   ],
+   "dizzy": [
+    "cartoon dizzy birds tweeting in a circle after a bonk",
+    1.4
+   ],
+   "drone_hit": [
+    "a dark ominous low drone hit, deep cinematic horror sting",
+    2.6
+   ],
+   "music": [
+    "playful quirky cartoon background music, pizzicato strings, glockenspiel and soft bass, light and curious, 110 bpm, no vocals",
+    17.0
+   ]
+  },
+  "events": [
+   [
+    "S1",
+    "room_tone",
+    0.08,
+    "onset",
+    "S7"
+   ],
+   [
+    "S1",
+    "class_murmur",
+    0.12
+   ],
+   [
+    "S1+62",
+    "ding",
+    0.25
+   ],
+   [
+    "S2+2",
+    "paper_land",
+    0.15
+   ],
+   [
+    "S2+16",
+    "paper_land",
+    0.12
+   ],
+   [
+    "S2+38",
+    "paper_land",
+    0.12
+   ],
+   [
+    "S2+52",
+    "paper_land",
+    0.12
+   ],
+   [
+    "S2+66",
+    "ding",
+    0.25
+   ],
+   [
+    "S3",
+    "class_murmur",
+    0.08
+   ],
+   [
+    "S4+64",
+    "gulp",
+    0.22
+   ],
+   [
+    "S5+14",
+    "pop",
+    0.12
+   ],
+   [
+    "S6+20",
+    "class_murmur",
+    0.1
+   ],
+   [
+    "S6+86",
+    "ding",
+    0.3
+   ],
+   [
+    "S7",
+    "room_tone",
+    0.06,
+    "onset",
+    "S9"
+   ],
+   [
+    "S7+4",
+    "select_draw",
+    0.15
+   ],
+   [
+    "S9",
+    "room_tone",
+    0.08,
+    "onset",
+    "S11"
+   ],
+   [
+    "S10+40",
+    "buzzer",
+    0.3
+   ],
+   [
+    "S10+46",
+    "laugh",
+    0.3
+   ],
+   [
+    "S11",
+    "room_tone",
+    0.07,
+    "onset",
+    "S11+74"
+   ],
+   [
+    "S12+30",
+    "fall_whoosh",
+    0.3,
+    "peak"
+   ],
+   [
+    "S13+2",
+    "catch",
+    0.2
+   ],
+   [
+    "S13+18",
+    "dizzy",
+    0.1
+   ],
+   [
+    "S15+72",
+    "drone_hit",
+    0.35,
+    "onset"
+   ],
+   [
+    "S16+162",
+    "ding",
+    0.25
+   ]
+  ],
+  "repeats": [
+   {
+    "at": "S11+6",
+    "clip": "step",
+    "n": 5,
+    "every": 16,
+    "gain": [
+     0.12,
+     0.16
+    ],
+    "pitch": [
+     0.95,
+     1.05
+    ],
+    "note": "each step down the stairs, cut at the blink"
+   }
+  ],
+  "music": {
+   "clip": "music",
+   "from": "S1",
+   "until": "S11+74",
+   "loop": 1.5,
+   "offset": 0
+  },
+  "levels": {
+   "sfx_lu": -9.5,
+   "music_lu": -14.5
+  }
+ }
+}

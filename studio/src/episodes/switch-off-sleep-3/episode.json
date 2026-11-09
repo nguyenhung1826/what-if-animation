@@ -1,0 +1,351 @@
+{
+ "id": "SwitchOffSleep3",
+ "slug": "switch-off-sleep-3",
+ "topic": "What if you could switch off sleep?",
+ "part": "Chapter 3 of 6: the fun part escalates, the kitchen (long-form, ~45 s)",
+ "title": [
+  "WHAT IF YOU COULD",
+  "SWITCH OFF SLEEP?"
+ ],
+ "accent": "OFF",
+ "previous_text": "By sunrise, you've done a week of homework, read six books, and you feel… great. No coffee. No yawning. Nothing.",
+ "script": [
+  {
+   "beat": "3.1 morning",
+   "text": "Morning. Mom finds you at the counter. Dressed. Breakfast made."
+  },
+  {
+   "beat": "3.2 kind of",
+   "text": "She asks if you slept. You say, kind of."
+  },
+  {
+   "beat": "3.3 snacks",
+   "text": "Midnight snacks turn into a second dinner. Pizza at two. Cookies at four."
+  },
+  {
+   "beat": "3.4 the cat",
+   "text": "The cat sleeps most of the day. You sleep none of it. She does not approve."
+  },
+  {
+   "beat": "3.5 sister",
+   "text": "Your little sister notices too. She's up at six for cartoons, and you're already there. Every single morning."
+  },
+  {
+   "beat": "3.6 secret",
+   "text": "She asks how. You put a finger to your lips. Secret."
+  }
+ ],
+ "science": [
+  {
+   "claim": "A cat sleeps most of the day",
+   "working": "adult house cats sleep about 12-16 hours in 24 (more than half the day)",
+   "source": "Cornell Feline Health Center; general veterinary references (12-16 h a day)"
+  }
+ ],
+ "cast": [
+  "hero",
+  "mom",
+  "sis"
+ ],
+ "gaps": {
+  "word": 0.16,
+  "comma": 0.32,
+  "sentence": 0.6,
+  "question": 0.6,
+  "pairs": {}
+ },
+ "holds": {
+  "Morning|Mom": 0.8,
+  "counter|Dressed": 0.5,
+  "made|She": 1.7,
+  "say|kind": 0.6,
+  "of|Midnight": 1.9,
+  "dinner|Pizza": 0.9,
+  "two|Cookies": 0.9,
+  "four|The": 1.9,
+  "day|You": 1.0,
+  "it|She": 1.2,
+  "approve|Your": 2.0,
+  "too|She's": 0.8,
+  "there|Every": 1.0,
+  "morning|She": 2.0,
+  "how|You": 1.1,
+  "lips|Secret": 1.2
+ },
+ "tail": 2.5,
+ "shots": [
+  {
+   "id": "S1",
+   "size": "wide",
+   "set": "kitchen morning",
+   "key": 60,
+   "note": "Morning: you at the island, dressed, breakfast out, mug steaming; Mom (white, rose robe, bob) walks in from the right and stops"
+  },
+  {
+   "id": "S2",
+   "size": "top-down insert",
+   "set": "island top",
+   "key": 30,
+   "note": "Breakfast made: plate with eggs and toast, a steaming mug, sliding into frame; a READY tag"
+  },
+  {
+   "id": "S3",
+   "size": "two-shot",
+   "set": "kitchen morning",
+   "key": 70,
+   "note": "Mom across the island, worried, leans in: did you sleep? You, smug, shrug: kind of"
+  },
+  {
+   "id": "S4",
+   "size": "medium",
+   "set": "kitchen night",
+   "key": 50,
+   "note": "Midnight: the dark kitchen, you at the island eating, eyes glowing; plates pile up, an open pizza box: SECOND DINNER"
+  },
+  {
+   "id": "S5",
+   "size": "insert side-on",
+   "set": "counter night",
+   "key": 40,
+   "note": "Clock 2:00 next to a pizza slice held up, bites taken; clock flips 4:00, a cookie stack shrinks bite by bite"
+  },
+  {
+   "id": "S6",
+   "size": "medium close",
+   "set": "kitchen day",
+   "key": 60,
+   "note": "The cat curled asleep on the counter in the sun, breathing; ZZZ; 14 HRS tag"
+  },
+  {
+   "id": "S7",
+   "size": "close-up",
+   "set": "kitchen day",
+   "key": 30,
+   "note": "The cat opens one eye (peek) at you, unimpressed"
+  },
+  {
+   "id": "S8",
+   "size": "wide",
+   "set": "kitchen dawn",
+   "key": 60,
+   "note": "6:00, your little sister (black, teal pajamas, bunches) shuffles in rubbing her eyes"
+  },
+  {
+   "id": "S9",
+   "size": "two-shot",
+   "set": "kitchen dawn",
+   "key": 40,
+   "note": "She looks up: you are already at the island, waving with cereal; she freezes, shock"
+  },
+  {
+   "id": "S10",
+   "size": "two-shot",
+   "set": "kitchen dawn",
+   "key": 40,
+   "note": "Every morning: MON / TUE / WED tags flip, you in a new pose each time, she in shock each time"
+  },
+  {
+   "id": "S11",
+   "size": "medium close",
+   "set": "kitchen dawn",
+   "key": 30,
+   "note": "Your sister, eyes narrowed, suspicious: how?"
+  },
+  {
+   "id": "S12",
+   "size": "close-up",
+   "set": "kitchen dawn",
+   "key": 60,
+   "note": "You put a finger to your lips, cool, eyes glint: Secret"
+  }
+ ],
+ "edit": [
+  {
+   "shot": "S1",
+   "at": "Morning"
+  },
+  {
+   "shot": "S2",
+   "at": "Dressed"
+  },
+  {
+   "shot": "S3",
+   "at": "She"
+  },
+  {
+   "shot": "S4",
+   "at": "Midnight"
+  },
+  {
+   "shot": "S5",
+   "at": "Pizza"
+  },
+  {
+   "shot": "S6",
+   "at": "The"
+  },
+  {
+   "shot": "S7",
+   "at": "She"
+  },
+  {
+   "shot": "S8",
+   "at": "Your"
+  },
+  {
+   "shot": "S9",
+   "at": "and"
+  },
+  {
+   "shot": "S10",
+   "at": "Every"
+  },
+  {
+   "shot": "S11",
+   "at": "She"
+  },
+  {
+   "shot": "S12",
+   "at": "You"
+  }
+ ],
+ "fx": [],
+ "sound": {
+  "clips": {
+   "room_tone": [
+    "quiet indoor room tone in the evening, faint distant city hum, no voices",
+    12.5
+   ],
+   "clink": [
+    "a ceramic coffee mug knocked by a hand on a wooden desk, short clink and scrape",
+    0.7
+   ],
+   "cookie_crunch": [
+    "one crunchy bite into a chocolate chip cookie, close up",
+    0.6
+   ],
+   "gulp": [
+    "a nervous cartoon gulp, short",
+    0.5
+   ],
+   "cat_yowl": [
+    "an angry cat yowl and hiss, short and startled",
+    0.9
+   ],
+   "gasp": [
+    "two young people gasping in surprise at the same moment, cartoon, short",
+    0.8
+   ],
+   "shades": [
+    "cool sunglasses sliding on with a swoosh and a bright metallic glint",
+    0.9
+   ],
+   "pop": [
+    "a cartoon speech bubble pop, short and bright",
+    0.5
+   ],
+   "music": [
+    "playful quirky cartoon background music, pizzicato strings, glockenspiel and soft bass, light and curious, 110 bpm, no vocals",
+    17.0
+   ]
+  },
+  "events": [
+   [
+    "S1",
+    "room_tone",
+    0.09,
+    "onset",
+    "S4"
+   ],
+   [
+    "S2+46",
+    "clink",
+    0.3
+   ],
+   [
+    "S4",
+    "room_tone",
+    0.06,
+    "onset",
+    "S6"
+   ],
+   [
+    "S4+72",
+    "gulp",
+    0.3
+   ],
+   [
+    "S5+36",
+    "cookie_crunch",
+    0.25
+   ],
+   [
+    "S5+48",
+    "cookie_crunch",
+    0.22
+   ],
+   [
+    "S5+94",
+    "cookie_crunch",
+    0.25
+   ],
+   [
+    "S5+108",
+    "cookie_crunch",
+    0.22
+   ],
+   [
+    "S5+122",
+    "cookie_crunch",
+    0.25
+   ],
+   [
+    "S6",
+    "room_tone",
+    0.09,
+    "onset",
+    "S12"
+   ],
+   [
+    "S7+34",
+    "cat_yowl",
+    0.3
+   ],
+   [
+    "S9+33",
+    "gasp",
+    0.35
+   ],
+   [
+    "S10+25",
+    "pop",
+    0.08
+   ],
+   [
+    "S10+50",
+    "pop",
+    0.08
+   ],
+   [
+    "S10+75",
+    "pop",
+    0.08
+   ],
+   [
+    "S12+96",
+    "shades",
+    0.35
+   ]
+  ],
+  "music": {
+   "clip": "music",
+   "from": "S1",
+   "loop": 1.5,
+   "offset": 6.8
+  },
+  "levels": {
+   "sfx_lu": -9.5,
+   "music_lu": -14.5
+  }
+ }
+}

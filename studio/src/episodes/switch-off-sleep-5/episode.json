@@ -1,0 +1,434 @@
+{
+ "id": "SwitchOffSleep5",
+ "slug": "switch-off-sleep-5",
+ "topic": "What if you could switch off sleep?",
+ "part": "Chapter 5 of 6: the twist, the real cost (long-form, ~70 s)",
+ "title": [
+  "WHAT IF YOU COULD",
+  "SWITCH OFF SLEEP?"
+ ],
+ "accent": "OFF",
+ "previous_text": "It has a name: a microsleep. Your brain grabs a few seconds of sleep, and it doesn't ask first. That's real.",
+ "script": [
+  {
+   "beat": "5.1 the catch",
+   "text": "Here's the catch. The switch turns off feeling tired. It doesn't turn off being tired."
+  },
+  {
+   "beat": "5.2 the days",
+   "text": "Day four. Day five. Day six."
+  },
+  {
+   "beat": "5.3 the wash",
+   "text": "When you sleep, the gaps between your brain cells open up, and fluid washes out the day's waste."
+  },
+  {
+   "beat": "5.4 the number",
+   "text": "In mice, those gaps grow by about sixty percent. That's real."
+  },
+  {
+   "beat": "5.5 no wash",
+   "text": "No sleep, no wash. The waste just… stays."
+  },
+  {
+   "beat": "5.6 drunk",
+   "text": "And after about a day awake, your reactions test about as badly as someone too drunk to legally drive. That's real too."
+  },
+  {
+   "beat": "5.7 day six",
+   "text": "You're on day six. Your hands shake when you pour cereal. Words on the page slide around. You keep reading the same line."
+  },
+  {
+   "beat": "5.7b feel fine",
+   "text": "And the whole time, you feel fine. That's the scary part."
+  },
+  {
+   "beat": "5.8 the record",
+   "text": "The longest anyone's ever been watched staying awake on purpose? About eleven days."
+  },
+  {
+   "beat": "5.9 the call",
+   "text": "Then your phone rings. Unknown number. Someone's heard about a kid who never sleeps."
+  }
+ ],
+ "science": [
+  {
+   "claim": "During sleep the space between brain cells grows by about 60% in mice, and waste is cleared faster",
+   "working": "Xie et al. measured the interstitial space fraction in mouse cortex: about 14% awake vs about 23% asleep or anesthetized, a ~60% increase; beta-amyloid was cleared about twice as fast. Mice, so the script says 'in mice'.",
+   "source": "Xie L. et al., 'Sleep Drives Metabolite Clearance from the Adult Brain', Science 342:373-377 (2013)"
+  },
+  {
+   "claim": "After about a day awake, performance is about as impaired as a blood alcohol level above the US legal driving limit",
+   "working": "Dawson & Reid: after 17 h awake, performance matched a BAC of 0.05%; after ~24 h, about 0.10%. Lamond & Dawson: 20-25 h awake matched 0.10%. The legal limit for adult drivers is 0.08% in every US state except Utah (0.05%), so 'too drunk to legally drive'.",
+   "source": "Dawson D. & Reid K., 'Fatigue, alcohol and performance impairment', Nature 388:235 (1997); Lamond N. & Dawson D., J Sleep Res 8:255-262 (1999); NHTSA"
+  },
+  {
+   "claim": "The longest scientifically observed deliberate wakefulness is about eleven days",
+   "working": "264.4 hours = 11.0 days, set in 1964 during a high-school science fair project, observed by sleep researchers. No real person is named on screen.",
+   "source": "Gulevich G., Dement W., Johnson L., Arch Gen Psychiatry 15:29-35 (1966)"
+  }
+ ],
+ "cast": [
+  "hero"
+ ],
+ "gaps": {
+  "word": 0.16,
+  "comma": 0.32,
+  "sentence": 0.6,
+  "question": 0.6,
+  "pairs": {}
+ },
+ "holds": {
+  "catch|The": 0.7,
+  "tired|It": 0.5,
+  "tired|Day": 1.1,
+  "four|Day": 0.7,
+  "five|Day": 0.7,
+  "six|When": 1.1,
+  "waste|In": 0.8,
+  "real|No": 1.0,
+  "wash|The": 0.5,
+  "stays|And": 1.1,
+  "cereal|Words": 0.6,
+  "line|And": 1.3,
+  "part|The": 1.6,
+  "days|Then": 1.5,
+  "too|Youre": 1.3,
+  "fine|Thats": 0.8,
+  "number|Someones": 0.6,
+  "drive|Thats": 0.5,
+  "percent|Thats": 0.5
+ },
+ "tail": 2.4,
+ "shots": [
+  {
+   "id": "S1",
+   "size": "wide",
+   "set": "bedroom night",
+   "key": 60,
+   "note": "the dark bedroom, you sit on the bed, eyes glowing, and turn to look at the lamp's switch on the nightstand; the smile drops (worried)"
+  },
+  {
+   "id": "S2",
+   "size": "insert",
+   "set": "bedroom night (nightstand)",
+   "key": 50,
+   "note": "the lamp's rocker switch on its cord, OFF; your eyes' blue glow in it; a slow push in; power_down"
+  },
+  {
+   "id": "S3",
+   "size": "insert",
+   "set": "bedroom wall",
+   "key": 20,
+   "note": "the wall calendar: a red X draws through day 4"
+  },
+  {
+   "id": "S4",
+   "size": "insert (tilted)",
+   "set": "bedroom wall",
+   "key": 20,
+   "note": "closer, tilted: the X through day 5"
+  },
+  {
+   "id": "S5",
+   "size": "extreme close",
+   "set": "bedroom wall",
+   "key": 20,
+   "note": "tighter still: the X through day 6"
+  },
+  {
+   "id": "S6",
+   "size": "schematic",
+   "set": "schematic",
+   "key": 150,
+   "note": "a brain draws on, zoom into a patch of cells: the gaps between them open and blue fluid arrows wash the orange waste dots out"
+  },
+  {
+   "id": "S7",
+   "size": "schematic",
+   "set": "schematic",
+   "key": 100,
+   "note": "two gaps side by side, AWAKE vs ASLEEP; CountUp +60%, label (MICE), REAL tag"
+  },
+  {
+   "id": "S8",
+   "size": "schematic",
+   "set": "schematic",
+   "key": 90,
+   "note": "the arrows switch off, the gaps close, waste dots pile up between the cells; a glitch flicker"
+  },
+  {
+   "id": "S9",
+   "size": "schematic",
+   "set": "schematic",
+   "key": 150,
+   "note": "a reaction-test dial: hours awake count to 24, the needle sweeps past the red 0.08% LEGAL LIMIT line; REAL TOO tag"
+  },
+  {
+   "id": "S10",
+   "size": "close-up",
+   "set": "kitchen night (blurred)",
+   "key": 40,
+   "note": "you, day six: tired lids but the eyes still glowing ice blue; DAY 6"
+  },
+  {
+   "id": "S11",
+   "size": "insert",
+   "set": "kitchen counter",
+   "key": 50,
+   "note": "your hand shakes as it pours cereal; flakes miss the bowl; clink"
+  },
+  {
+   "id": "S12",
+   "size": "top-down insert",
+   "set": "desk top night",
+   "key": 80,
+   "note": "an open book: the lines of text drift and jitter; one line keeps highlighting again and again"
+  },
+  {
+   "id": "S13",
+   "size": "close-up",
+   "set": "bedroom night (blurred)",
+   "key": 70,
+   "note": "you turn and look straight at us, neutral, eyes glowing: you feel fine; music cuts; slow push in on 'scary'"
+  },
+  {
+   "id": "S14",
+   "size": "insert",
+   "set": "bedroom wall",
+   "key": 120,
+   "note": "the calendar, days 1-6 crossed; a red circle draws round day 11, LONGEST EVER OBSERVED; drone_hit"
+  },
+  {
+   "id": "S15",
+   "size": "insert",
+   "set": "bedroom nightstand night",
+   "key": 60,
+   "note": "your phone lights up on the nightstand, buzzing: UNKNOWN; push in"
+  },
+  {
+   "id": "S16",
+   "size": "close-up",
+   "set": "bedroom night (blurred)",
+   "key": 60,
+   "note": "you, lit blue by the phone in the dark, worried; the buzz keeps going"
+  }
+ ],
+ "edit": [
+  {
+   "shot": "S1",
+   "at": "Here's"
+  },
+  {
+   "shot": "S2",
+   "at": "It"
+  },
+  {
+   "shot": "S3",
+   "at": "Day"
+  },
+  {
+   "shot": "S4",
+   "at": "Day"
+  },
+  {
+   "shot": "S5",
+   "at": "Day"
+  },
+  {
+   "shot": "S6",
+   "at": "When"
+  },
+  {
+   "shot": "S7",
+   "at": "In"
+  },
+  {
+   "shot": "S8",
+   "at": "No"
+  },
+  {
+   "shot": "S9",
+   "at": "And"
+  },
+  {
+   "shot": "S10",
+   "at": "You're"
+  },
+  {
+   "shot": "S11",
+   "at": "Your"
+  },
+  {
+   "shot": "S12",
+   "at": "Words"
+  },
+  {
+   "shot": "S13",
+   "at": "And"
+  },
+  {
+   "shot": "S14",
+   "at": "The#3"
+  },
+  {
+   "shot": "S15",
+   "at": "Then"
+  },
+  {
+   "shot": "S16",
+   "at": "Someone's"
+  }
+ ],
+ "fx": [],
+ "sound": {
+  "clips": {
+   "room_tone": [
+    "quiet indoor room tone in the evening, faint distant city hum, no voices",
+    12.5
+   ],
+   "power_down": [
+    "a whole city losing power, a deep electrical power-down whine dropping in pitch into silence",
+    2.5
+   ],
+   "select_draw": [
+    "a quick digital selection sound, a soft rising electronic shimmer as a box is drawn on screen, short",
+    0.6
+   ],
+   "power_hum": [
+    "a deep electrical power grid hum swelling louder, transformers buzzing, rising",
+    3.0
+   ],
+   "ding": [
+    "a correct answer ding, bright bell chime",
+    0.8
+   ],
+   "glitch": [
+    "a short digital glitch, an electric buzz and crackle flickering like an unstable hologram",
+    1.5
+   ],
+   "buzzer": [
+    "a game show wrong answer buzzer, short",
+    0.8
+   ],
+   "clink": [
+    "a ceramic coffee mug knocked by a hand on a wooden desk, short clink and scrape",
+    0.7
+   ],
+   "drone_hit": [
+    "a dark ominous low drone hit, deep cinematic horror sting",
+    2.6
+   ],
+   "music": [
+    "playful quirky cartoon background music, pizzicato strings, glockenspiel and soft bass, light and curious, 110 bpm, no vocals",
+    17.0
+   ],
+   "phone_buzz": [
+    "a smartphone on vibrate buzzing on a wooden nightstand at night, two short rattling buzzes, no ringtone",
+    1.6
+   ]
+  },
+  "events": [
+   [
+    "S1",
+    "room_tone",
+    0.09,
+    "onset",
+    "S6"
+   ],
+   [
+    "S2+50",
+    "power_down",
+    0.22
+   ],
+   [
+    "S3+11",
+    "select_draw",
+    0.25
+   ],
+   [
+    "S4+11",
+    "select_draw",
+    0.25
+   ],
+   [
+    "S5+11",
+    "select_draw",
+    0.25
+   ],
+   [
+    "S6+98",
+    "power_hum",
+    0.08
+   ],
+   [
+    "S7+100",
+    "ding",
+    0.3
+   ],
+   [
+    "S8+126",
+    "glitch",
+    0.25
+   ],
+   [
+    "S9+176",
+    "buzzer",
+    0.22
+   ],
+   [
+    "S10",
+    "room_tone",
+    0.08,
+    "onset",
+    "S14"
+   ],
+   [
+    "S11+62",
+    "clink",
+    0.25
+   ],
+   [
+    "S14",
+    "room_tone",
+    0.06
+   ],
+   [
+    "S14+167",
+    "drone_hit",
+    0.35
+   ],
+   [
+    "S15+12",
+    "phone_buzz",
+    0.08
+   ],
+   [
+    "S15+60",
+    "phone_buzz",
+    0.1
+   ],
+   [
+    "S16+64",
+    "phone_buzz",
+    0.2
+   ],
+   [
+    "S16+108",
+    "phone_buzz",
+    0.2
+   ]
+  ],
+  "music": {
+   "clip": "music",
+   "from": "S1",
+   "until": "S13",
+   "loop": 1.5,
+   "offset": 6
+  },
+  "levels": {
+   "sfx_lu": -9.5,
+   "music_lu": -16.5
+  }
+ }
+}

@@ -1,0 +1,223 @@
+{
+ "slug": "switch-off-sleep-3",
+ "title": "WHAT IF YOU COULD SWITCH OFF SLEEP?",
+ "fps": 30,
+ "total": 1328,
+ "segments": [
+  {
+   "shot": "S1",
+   "a": 0,
+   "b": 93,
+   "t0": 0,
+   "t1": 93,
+   "line": "Morning. Mom finds you at the counter."
+  },
+  {
+   "shot": "S2",
+   "a": 93,
+   "b": 189,
+   "t0": 0,
+   "t1": 96,
+   "line": "Dressed. Breakfast made."
+  },
+  {
+   "shot": "S3",
+   "a": 189,
+   "b": 338,
+   "t0": 0,
+   "t1": 149,
+   "line": "She asks if you slept. You say, kind of."
+  },
+  {
+   "shot": "S4",
+   "a": 338,
+   "b": 427,
+   "t0": 0,
+   "t1": 89,
+   "line": "Midnight snacks turn into a second dinner."
+  },
+  {
+   "shot": "S5",
+   "a": 427,
+   "b": 572,
+   "t0": 0,
+   "t1": 145,
+   "line": "Pizza at two. Cookies at four."
+  },
+  {
+   "shot": "S6",
+   "a": 572,
+   "b": 721,
+   "t0": 0,
+   "t1": 149,
+   "line": "The cat sleeps most of the day. You sleep none of it."
+  },
+  {
+   "shot": "S7",
+   "a": 721,
+   "b": 810,
+   "t0": 0,
+   "t1": 89,
+   "line": "She does not approve."
+  },
+  {
+   "shot": "S8",
+   "a": 810,
+   "b": 940,
+   "t0": 0,
+   "t1": 130,
+   "line": "Your little sister notices too. She's up at six for cartoons,"
+  },
+  {
+   "shot": "S9",
+   "a": 940,
+   "b": 998,
+   "t0": 0,
+   "t1": 58,
+   "line": "and you're already there."
+  },
+  {
+   "shot": "S10",
+   "a": 998,
+   "b": 1100,
+   "t0": 0,
+   "t1": 102,
+   "line": "Every single morning."
+  },
+  {
+   "shot": "S11",
+   "a": 1100,
+   "b": 1159,
+   "t0": 0,
+   "t1": 59,
+   "line": "She asks how."
+  },
+  {
+   "shot": "S12",
+   "a": 1159,
+   "b": 1328,
+   "t0": 0,
+   "t1": 169,
+   "line": "You put a finger to your lips. Secret."
+  }
+ ],
+ "shots": [
+  {
+   "id": "S1",
+   "size": "wide",
+   "key": 60,
+   "len": 93,
+   "first": 0,
+   "line": "Morning. Mom finds you at the counter.",
+   "note": "Morning: you at the island, dressed, breakfast out, mug steaming; Mom (white, rose robe, bob) walks in from the right and stops"
+  },
+  {
+   "id": "S2",
+   "size": "top-down insert",
+   "key": 30,
+   "len": 96,
+   "first": 93,
+   "line": "Dressed. Breakfast made.",
+   "note": "Breakfast made: plate with eggs and toast, a steaming mug, sliding into frame; a READY tag"
+  },
+  {
+   "id": "S3",
+   "size": "two-shot",
+   "key": 70,
+   "len": 149,
+   "first": 189,
+   "line": "She asks if you slept. You say, kind of.",
+   "note": "Mom across the island, worried, leans in: did you sleep? You, smug, shrug: kind of"
+  },
+  {
+   "id": "S4",
+   "size": "medium",
+   "key": 50,
+   "len": 89,
+   "first": 338,
+   "line": "Midnight snacks turn into a second dinner.",
+   "note": "Midnight: the dark kitchen, you at the island eating, eyes glowing; plates pile up, an open pizza box: SECOND DINNER"
+  },
+  {
+   "id": "S5",
+   "size": "insert side-on",
+   "key": 40,
+   "len": 145,
+   "first": 427,
+   "line": "Pizza at two. Cookies at four.",
+   "note": "Clock 2:00 next to a pizza slice held up, bites taken; clock flips 4:00, a cookie stack shrinks bite by bite"
+  },
+  {
+   "id": "S6",
+   "size": "medium close",
+   "key": 60,
+   "len": 149,
+   "first": 572,
+   "line": "The cat sleeps most of the day. You sleep none of it.",
+   "note": "The cat curled asleep on the counter in the sun, breathing; ZZZ; 14 HRS tag"
+  },
+  {
+   "id": "S7",
+   "size": "close-up",
+   "key": 30,
+   "len": 89,
+   "first": 721,
+   "line": "She does not approve.",
+   "note": "The cat opens one eye (peek) at you, unimpressed"
+  },
+  {
+   "id": "S8",
+   "size": "wide",
+   "key": 60,
+   "len": 130,
+   "first": 810,
+   "line": "Your little sister notices too. She's up at six for cartoons,",
+   "note": "6:00, your little sister (black, teal pajamas, bunches) shuffles in rubbing her eyes"
+  },
+  {
+   "id": "S9",
+   "size": "two-shot",
+   "key": 40,
+   "len": 58,
+   "first": 940,
+   "line": "and you're already there.",
+   "note": "She looks up: you are already at the island, waving with cereal; she freezes, shock"
+  },
+  {
+   "id": "S10",
+   "size": "two-shot",
+   "key": 40,
+   "len": 102,
+   "first": 998,
+   "line": "Every single morning.",
+   "note": "Every morning: MON / TUE / WED tags flip, you in a new pose each time, she in shock each time"
+  },
+  {
+   "id": "S11",
+   "size": "medium close",
+   "key": 30,
+   "len": 59,
+   "first": 1100,
+   "line": "She asks how.",
+   "note": "Your sister, eyes narrowed, suspicious: how?"
+  },
+  {
+   "id": "S12",
+   "size": "close-up",
+   "key": 60,
+   "len": 169,
+   "first": 1159,
+   "line": "You put a finger to your lips. Secret.",
+   "note": "You put a finger to your lips, cool, eyes glint: Secret"
+  }
+ ],
+ "fx": [],
+ "audio": {
+  "voice": "switch-off-sleep-3/voice.wav",
+  "sfx": "switch-off-sleep-3/sfx.wav",
+  "voiceVol": 0.8,
+  "sfxVol": 0.4056,
+  "music": "switch-off-sleep-3/music.wav",
+  "musicVol": 0.1524
+ }
+}

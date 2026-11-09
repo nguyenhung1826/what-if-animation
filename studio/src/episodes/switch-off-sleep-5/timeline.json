@@ -1,0 +1,291 @@
+{
+ "slug": "switch-off-sleep-5",
+ "title": "WHAT IF YOU COULD SWITCH OFF SLEEP?",
+ "fps": 30,
+ "total": 1954,
+ "segments": [
+  {
+   "shot": "S1",
+   "a": 0,
+   "b": 106,
+   "t0": 0,
+   "t1": 106,
+   "line": "Here's the catch. The switch turns off feeling tired."
+  },
+  {
+   "shot": "S2",
+   "a": 106,
+   "b": 188,
+   "t0": 0,
+   "t1": 82,
+   "line": "It doesn't turn off being tired."
+  },
+  {
+   "shot": "S3",
+   "a": 188,
+   "b": 225,
+   "t0": 0,
+   "t1": 37,
+   "line": "Day four."
+  },
+  {
+   "shot": "S4",
+   "a": 225,
+   "b": 267,
+   "t0": 0,
+   "t1": 42,
+   "line": "Day five."
+  },
+  {
+   "shot": "S5",
+   "a": 267,
+   "b": 319,
+   "t0": 0,
+   "t1": 52,
+   "line": "Day six."
+  },
+  {
+   "shot": "S6",
+   "a": 319,
+   "b": 544,
+   "t0": 0,
+   "t1": 225,
+   "line": "When you sleep, the gaps between your brain cells open up, and fluid washes out the day's waste."
+  },
+  {
+   "shot": "S7",
+   "a": 544,
+   "b": 700,
+   "t0": 0,
+   "t1": 156,
+   "line": "In mice, those gaps grow by about sixty percent. That's real."
+  },
+  {
+   "shot": "S8",
+   "a": 700,
+   "b": 855,
+   "t0": 0,
+   "t1": 155,
+   "line": "No sleep, no wash. The waste just… stays."
+  },
+  {
+   "shot": "S9",
+   "a": 855,
+   "b": 1104,
+   "t0": 0,
+   "t1": 249,
+   "line": "And after about a day awake, your reactions test about as badly as someone too drunk to legally drive. That's real too."
+  },
+  {
+   "shot": "S10",
+   "a": 1104,
+   "b": 1150,
+   "t0": 0,
+   "t1": 46,
+   "line": "You're on day six."
+  },
+  {
+   "shot": "S11",
+   "a": 1150,
+   "b": 1224,
+   "t0": 0,
+   "t1": 74,
+   "line": "Your hands shake when you pour cereal."
+  },
+  {
+   "shot": "S12",
+   "a": 1224,
+   "b": 1383,
+   "t0": 0,
+   "t1": 159,
+   "line": "Words on the page slide around. You keep reading the same line."
+  },
+  {
+   "shot": "S13",
+   "a": 1383,
+   "b": 1554,
+   "t0": 0,
+   "t1": 171,
+   "line": "And the whole time, you feel fine. That's the scary part."
+  },
+  {
+   "shot": "S14",
+   "a": 1554,
+   "b": 1756,
+   "t0": 0,
+   "t1": 202,
+   "line": "The longest anyone's ever been watched staying awake on purpose? About eleven days."
+  },
+  {
+   "shot": "S15",
+   "a": 1756,
+   "b": 1828,
+   "t0": 0,
+   "t1": 72,
+   "line": "Then your phone rings. Unknown number."
+  },
+  {
+   "shot": "S16",
+   "a": 1828,
+   "b": 1954,
+   "t0": 0,
+   "t1": 126,
+   "line": "Someone's heard about a kid who never sleeps."
+  }
+ ],
+ "shots": [
+  {
+   "id": "S1",
+   "size": "wide",
+   "key": 60,
+   "len": 106,
+   "first": 0,
+   "line": "Here's the catch. The switch turns off feeling tired.",
+   "note": "the dark bedroom, you sit on the bed, eyes glowing, and turn to look at the lamp's switch on the nightstand; the smile drops (worried)"
+  },
+  {
+   "id": "S2",
+   "size": "insert",
+   "key": 50,
+   "len": 82,
+   "first": 106,
+   "line": "It doesn't turn off being tired.",
+   "note": "the lamp's rocker switch on its cord, OFF; your eyes' blue glow in it; a slow push in; power_down"
+  },
+  {
+   "id": "S3",
+   "size": "insert",
+   "key": 20,
+   "len": 37,
+   "first": 188,
+   "line": "Day four.",
+   "note": "the wall calendar: a red X draws through day 4"
+  },
+  {
+   "id": "S4",
+   "size": "insert (tilted)",
+   "key": 20,
+   "len": 42,
+   "first": 225,
+   "line": "Day five.",
+   "note": "closer, tilted: the X through day 5"
+  },
+  {
+   "id": "S5",
+   "size": "extreme close",
+   "key": 20,
+   "len": 52,
+   "first": 267,
+   "line": "Day six.",
+   "note": "tighter still: the X through day 6"
+  },
+  {
+   "id": "S6",
+   "size": "schematic",
+   "key": 150,
+   "len": 225,
+   "first": 319,
+   "line": "When you sleep, the gaps between your brain cells open up, and fluid washes out the day's waste.",
+   "note": "a brain draws on, zoom into a patch of cells: the gaps between them open and blue fluid arrows wash the orange waste dots out"
+  },
+  {
+   "id": "S7",
+   "size": "schematic",
+   "key": 100,
+   "len": 156,
+   "first": 544,
+   "line": "In mice, those gaps grow by about sixty percent. That's real.",
+   "note": "two gaps side by side, AWAKE vs ASLEEP; CountUp +60%, label (MICE), REAL tag"
+  },
+  {
+   "id": "S8",
+   "size": "schematic",
+   "key": 90,
+   "len": 155,
+   "first": 700,
+   "line": "No sleep, no wash. The waste just… stays.",
+   "note": "the arrows switch off, the gaps close, waste dots pile up between the cells; a glitch flicker"
+  },
+  {
+   "id": "S9",
+   "size": "schematic",
+   "key": 150,
+   "len": 249,
+   "first": 855,
+   "line": "And after about a day awake, your reactions test about as badly as someone too drunk to legally drive. That's real too.",
+   "note": "a reaction-test dial: hours awake count to 24, the needle sweeps past the red 0.08% LEGAL LIMIT line; REAL TOO tag"
+  },
+  {
+   "id": "S10",
+   "size": "close-up",
+   "key": 40,
+   "len": 46,
+   "first": 1104,
+   "line": "You're on day six.",
+   "note": "you, day six: tired lids but the eyes still glowing ice blue; DAY 6"
+  },
+  {
+   "id": "S11",
+   "size": "insert",
+   "key": 50,
+   "len": 74,
+   "first": 1150,
+   "line": "Your hands shake when you pour cereal.",
+   "note": "your hand shakes as it pours cereal; flakes miss the bowl; clink"
+  },
+  {
+   "id": "S12",
+   "size": "top-down insert",
+   "key": 80,
+   "len": 159,
+   "first": 1224,
+   "line": "Words on the page slide around. You keep reading the same line.",
+   "note": "an open book: the lines of text drift and jitter; one line keeps highlighting again and again"
+  },
+  {
+   "id": "S13",
+   "size": "close-up",
+   "key": 70,
+   "len": 171,
+   "first": 1383,
+   "line": "And the whole time, you feel fine. That's the scary part.",
+   "note": "you turn and look straight at us, neutral, eyes glowing: you feel fine; music cuts; slow push in on 'scary'"
+  },
+  {
+   "id": "S14",
+   "size": "insert",
+   "key": 120,
+   "len": 202,
+   "first": 1554,
+   "line": "The longest anyone's ever been watched staying awake on purpose? About eleven days.",
+   "note": "the calendar, days 1-6 crossed; a red circle draws round day 11, LONGEST EVER OBSERVED; drone_hit"
+  },
+  {
+   "id": "S15",
+   "size": "insert",
+   "key": 60,
+   "len": 72,
+   "first": 1756,
+   "line": "Then your phone rings. Unknown number.",
+   "note": "your phone lights up on the nightstand, buzzing: UNKNOWN; push in"
+  },
+  {
+   "id": "S16",
+   "size": "close-up",
+   "key": 60,
+   "len": 126,
+   "first": 1828,
+   "line": "Someone's heard about a kid who never sleeps.",
+   "note": "you, lit blue by the phone in the dark, worried; the buzz keeps going"
+  }
+ ],
+ "fx": [],
+ "audio": {
+  "voice": "switch-off-sleep-5/voice.wav",
+  "sfx": "switch-off-sleep-5/sfx.wav",
+  "voiceVol": 0.8,
+  "sfxVol": 0.3918,
+  "music": "switch-off-sleep-5/music.wav",
+  "musicVol": 0.1253
+ }
+}

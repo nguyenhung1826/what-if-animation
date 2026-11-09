@@ -1,0 +1,347 @@
+{
+ "id": "SwitchOffSleep6",
+ "slug": "switch-off-sleep-6",
+ "topic": "What if you could switch off sleep?",
+ "part": "Chapter 6 of 6: the choice, the ending (long-form, ~47 s)",
+ "title": [
+  "WHAT IF YOU COULD",
+  "SWITCH OFF SLEEP?"
+ ],
+ "accent": "OFF",
+ "previous_text": "Then your phone rings. Unknown number. Someone's heard about a kid who never sleeps.",
+ "script": [
+  {
+   "beat": "6.1 the roof",
+   "text": "You go up to the roof to think. Sunrise number seven."
+  },
+  {
+   "beat": "6.2 sister",
+   "text": "Your little sister followed you. She saw the switch. She wants one."
+  },
+  {
+   "beat": "6.3 the man",
+   "text": "The man on the phone wants one too. For everyone. A whole city that never sleeps."
+  },
+  {
+   "beat": "6.4 the pitch",
+   "text": "Four extra months a year, for every person in the city. Factories that never close. Schools that never end. Who'd say no?"
+  },
+  {
+   "beat": "6.4b cartoons",
+   "text": "Your sister tugs your sleeve. She just wants to stay up for cartoons."
+  },
+  {
+   "beat": "6.5 the cost",
+   "text": "You know what it costs. They don't."
+  },
+  {
+   "beat": "6.6 back on",
+   "text": "So do you flip it back on, and lose it forever?"
+  },
+  {
+   "beat": "6.7 day twelve",
+   "text": "Or keep it, and find out what happens on day twelve?"
+  },
+  {
+   "beat": "6.8 part one",
+   "text": "Part one. Tell me what you'd do."
+  }
+ ],
+ "science": [
+  {
+   "claim": "Four extra months a year (8 hours a night)",
+   "working": "8 h x 365 nights = 2,920 h; 2,920 / 24 = 121.7 days, about 4 months",
+   "source": "arithmetic, as in chapter 2; assumes 8 h of sleep a night"
+  },
+  {
+   "claim": "Day twelve is past the longest monitored stretch awake (about eleven days)",
+   "working": "the 1964 science-fair record was 264.4 h = 11 days 24 min, so day 12 is beyond it",
+   "source": "as in chapter 5 (no real person named)"
+  }
+ ],
+ "cast": [
+  "hero",
+  "sis",
+  "suit"
+ ],
+ "gaps": {
+  "word": 0.16,
+  "comma": 0.32,
+  "sentence": 0.6,
+  "question": 0.6,
+  "pairs": {}
+ },
+ "holds": {
+  "think|Sunrise": 0.8,
+  "seven|Your": 1.2,
+  "one|The": 1.0,
+  "everyone|A": 0.6,
+  "sleeps|Four": 1.2,
+  "no|Your": 1.2,
+  "cartoons|You": 1.2,
+  "forever|Or": 0.9,
+  "twelve|Part": 2.0,
+  "one|Tell": 0.7,
+  "costs|They": 0.7,
+  "dont|So": 1.0,
+  "end|Whod": 0.7
+ },
+ "tail": 3.2,
+ "shots": [
+  {
+   "id": "S1",
+   "size": "wide, low",
+   "set": "rooftop sunrise",
+   "key": 60,
+   "note": "the roof at sunrise, the sun low; you sit alone on the parapet, small against the city; DAY 7 tag"
+  },
+  {
+   "id": "S2",
+   "size": "medium wide",
+   "set": "rooftop",
+   "key": 60,
+   "note": "the roof door opens left; your little sister steps out in pajamas, happy, and pads over to you"
+  },
+  {
+   "id": "S3",
+   "size": "medium close",
+   "set": "rooftop",
+   "key": 30,
+   "note": "sis, happy, bouncing on her toes, points at you: she wants one"
+  },
+  {
+   "id": "S4",
+   "size": "low angle medium",
+   "set": "rooftop",
+   "key": 70,
+   "note": "the man in the suit by the parapet, phone at his ear, lowers it and smiles: for everyone"
+  },
+  {
+   "id": "S5",
+   "size": "wide",
+   "set": "rooftop cityLit",
+   "key": 40,
+   "note": "the whole city: every window snaps on at once, a city that never sleeps"
+  },
+  {
+   "id": "S6",
+   "size": "wide",
+   "set": "rooftop",
+   "key": 80,
+   "note": "the three of you on the roof, the city behind; windows switch on block by block"
+  },
+  {
+   "id": "S7",
+   "size": "over the shoulder",
+   "set": "rooftop",
+   "key": 120,
+   "note": "over the suit's shoulder onto the glowing city: tags pop OPEN 24/7, SCHOOL NEVER ENDS; he turns to you, hand out: who'd say no?"
+  },
+  {
+   "id": "S8",
+   "size": "medium two-shot",
+   "set": "rooftop",
+   "key": 60,
+   "note": "sis tugs your sleeve, happy; you look down at her"
+  },
+  {
+   "id": "S9",
+   "size": "close-up",
+   "set": "rooftop",
+   "key": 50,
+   "note": "you, worried, eyes still glowing; the music drops away"
+  },
+  {
+   "id": "S10",
+   "size": "insert",
+   "set": "rooftop (blurred)",
+   "key": 60,
+   "note": "your hand over the switch, set to OFF, hesitating: flip it back on?"
+  },
+  {
+   "id": "S11",
+   "size": "low angle",
+   "set": "rooftop",
+   "key": 70,
+   "note": "you look into the sun; the string lights and the city die all at once; black, only your glowing eyes"
+  },
+  {
+   "id": "S12",
+   "size": "title",
+   "set": "black",
+   "key": 70,
+   "note": "end card on black: what would you do? FLIP IT BACK ON / KEEP IT, then THE END"
+  }
+ ],
+ "edit": [
+  {
+   "shot": "S1",
+   "at": "You"
+  },
+  {
+   "shot": "S2",
+   "at": "Your"
+  },
+  {
+   "shot": "S3",
+   "at": "She#2"
+  },
+  {
+   "shot": "S4",
+   "at": "The"
+  },
+  {
+   "shot": "S5",
+   "at": "A"
+  },
+  {
+   "shot": "S6",
+   "at": "Four"
+  },
+  {
+   "shot": "S7",
+   "at": "Factories"
+  },
+  {
+   "shot": "S8",
+   "at": "Your"
+  },
+  {
+   "shot": "S9",
+   "at": "You"
+  },
+  {
+   "shot": "S10",
+   "at": "So"
+  },
+  {
+   "shot": "S11",
+   "at": "Or"
+  },
+  {
+   "shot": "S12",
+   "at": "Tell"
+  }
+ ],
+ "fx": [],
+ "audio_edit": "'Part one.' is cut out of the take by cut_part_one.py (the story ends here, no Part 2): re-run it after voice.py. The script text keeps it so the cached take stays valid.",
+ "sound": {
+  "clips": {
+   "roof_wind": [
+    "a gentle evening breeze on a city rooftop, distant traffic",
+    7.0
+   ],
+   "step": [
+    "a single sneaker footstep on a wooden stair, close",
+    0.5
+   ],
+   "title_boom": [
+    "a cinematic whoosh rising into a deep boom impact",
+    1.6
+   ],
+   "power_hum": [
+    "a deep electrical power grid hum swelling louder, transformers buzzing, rising",
+    3.0
+   ],
+   "switch_off": [
+    "a heavy electrical breaker switching off with a dull clunk",
+    0.5
+   ],
+   "pop": [
+    "a cartoon speech bubble pop, short and bright",
+    0.5
+   ],
+   "sparkle": [
+    "a short bright magical sparkle twinkle, cartoon",
+    0.8
+   ],
+   "music": [
+    "playful quirky cartoon background music, pizzicato strings, glockenspiel and soft bass, light and curious, 110 bpm, no vocals",
+    17.0
+   ]
+  },
+  "events": [
+   [
+    "S1",
+    "roof_wind",
+    0.065,
+    "onset",
+    "S6"
+   ],
+   [
+    "S6",
+    "roof_wind",
+    0.065,
+    "onset",
+    "S11+90"
+   ],
+   [
+    "S5+60",
+    "title_boom",
+    0.1,
+    "onset"
+   ],
+   [
+    "S6+30",
+    "power_hum",
+    0.03,
+    "onset",
+    "S7+60"
+   ],
+   [
+    "S7+4",
+    "pop",
+    0.12
+   ],
+   [
+    "S7+62",
+    "pop",
+    0.12
+   ],
+   [
+    "S11+90",
+    "switch_off",
+    0.4
+   ],
+   [
+    "S11+97",
+    "title_boom",
+    0.3,
+    "peak"
+   ],
+   [
+    "S12+44",
+    "sparkle",
+    0.2
+   ]
+  ],
+  "repeats": [
+   {
+    "at": "S2+4",
+    "clip": "step",
+    "n": 8,
+    "every": 7.5,
+    "gain": [
+     0.05,
+     0.08
+    ],
+    "pitch": [
+     1.1,
+     1.35
+    ],
+    "note": "sis's little steps"
+   }
+  ],
+  "music": {
+   "clip": "music",
+   "from": "S1",
+   "until": "S9",
+   "loop": 1.5,
+   "offset": 6
+  },
+  "levels": {
+   "sfx_lu": -9.5,
+   "music_lu": -15.5
+  }
+ }
+}

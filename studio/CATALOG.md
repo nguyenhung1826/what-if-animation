@@ -121,7 +121,7 @@ Every clip `sfx.py` generates is saved here and reused by name before anything n
 | Group | Clips |
 |---|---|
 | Body and movement | big_step, step, land, tumble, fall_whoosh, catch, gulp, gasp, laugh, dizzy, yawn |
-| Objects | clink, cookie_crunch, paper_land, crack, shatter, bulb_pop, switch_off, ding, buzzer, counter_tick, shades |
+| Objects | clink, cookie_crunch, paper_land, crack, shatter, bulb_pop, switch_off, ding, buzzer, counter_tick, shades, phone_buzz |
 | Animals | cat_chirp, cat_yowl |
 | Power and UI | rewind, rewind_start, clock_back, copy_click, paste_pop, select_draw, glitch, power_hum, power_down, pop, sparkle |
 | Hits and titles | title_boom, drone_hit |

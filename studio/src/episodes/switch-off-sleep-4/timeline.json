@@ -1,0 +1,291 @@
+{
+ "slug": "switch-off-sleep-4",
+ "title": "WHAT IF YOU COULD SWITCH OFF SLEEP?",
+ "fps": 30,
+ "total": 1628,
+ "segments": [
+  {
+   "shot": "S1",
+   "a": 0,
+   "b": 81,
+   "t0": 0,
+   "t1": 81,
+   "line": "At school, you're unbeatable."
+  },
+  {
+   "shot": "S2",
+   "a": 81,
+   "b": 176,
+   "t0": 0,
+   "t1": 95,
+   "line": "Every question. Every quiz."
+  },
+  {
+   "shot": "S3",
+   "a": 176,
+   "b": 266,
+   "t0": 0,
+   "t1": 90,
+   "line": "Mo can't figure out how you're always this awake."
+  },
+  {
+   "shot": "S4",
+   "a": 266,
+   "b": 334,
+   "t0": 0,
+   "t1": 68,
+   "line": "He's on his third energy drink."
+  },
+  {
+   "shot": "S5",
+   "a": 334,
+   "b": 393,
+   "t0": 0,
+   "t1": 59,
+   "line": "You're on zero."
+  },
+  {
+   "shot": "S6",
+   "a": 393,
+   "b": 510,
+   "t0": 0,
+   "t1": 117,
+   "line": "Teachers start calling on you just to watch you get it right."
+  },
+  {
+   "shot": "S7",
+   "a": 510,
+   "b": 618,
+   "t0": 0,
+   "t1": 108,
+   "line": "Day three. You still don't feel tired."
+  },
+  {
+   "shot": "S8",
+   "a": 618,
+   "b": 681,
+   "t0": 0,
+   "t1": 63,
+   "line": "But something's slipping."
+  },
+  {
+   "shot": "S9",
+   "a": 681,
+   "b": 814,
+   "t0": 0,
+   "t1": 133,
+   "line": "You write the answer on the board. The right answer…"
+  },
+  {
+   "shot": "S10",
+   "a": 814,
+   "b": 892,
+   "t0": 0,
+   "t1": 78,
+   "line": "to yesterday's question."
+  },
+  {
+   "shot": "S11",
+   "a": 892,
+   "b": 1012,
+   "t0": 0,
+   "t1": 120,
+   "line": "Then, on the stairs, the world blinks."
+  },
+  {
+   "shot": "S12",
+   "a": 1012,
+   "b": 1103,
+   "t0": 0,
+   "t1": 91,
+   "line": "Half a second. Gone."
+  },
+  {
+   "shot": "S13",
+   "a": 1103,
+   "b": 1237,
+   "t0": 0,
+   "t1": 134,
+   "line": "Mo catches you. He says you were asleep. Standing up."
+  },
+  {
+   "shot": "S14",
+   "a": 1237,
+   "b": 1320,
+   "t0": 0,
+   "t1": 83,
+   "line": "You don't remember any of it."
+  },
+  {
+   "shot": "S15",
+   "a": 1320,
+   "b": 1411,
+   "t0": 0,
+   "t1": 91,
+   "line": "It has a name: a microsleep."
+  },
+  {
+   "shot": "S16",
+   "a": 1411,
+   "b": 1628,
+   "t0": 0,
+   "t1": 217,
+   "line": "Your brain grabs a few seconds of sleep, and it doesn't ask first. That's real."
+  }
+ ],
+ "shots": [
+  {
+   "id": "S1",
+   "size": "wide",
+   "key": 40,
+   "len": 81,
+   "first": 0,
+   "line": "At school, you're unbeatable.",
+   "note": "the class at dusk: the board full of formulas, every one solved; you at your desk, hand already up, sure"
+  },
+  {
+   "id": "S2",
+   "size": "top-down insert",
+   "key": 40,
+   "len": 95,
+   "first": 81,
+   "line": "Every question. Every quiz.",
+   "note": "quiz papers slap down one after another, each stamped A+"
+  },
+  {
+   "id": "S3",
+   "size": "medium two-shot",
+   "key": 60,
+   "len": 90,
+   "first": 176,
+   "line": "Mo can't figure out how you're always this awake.",
+   "note": "Mo slumped on the desk next to you, eyes half shut; you upright, wide awake, eyes glowing"
+  },
+  {
+   "id": "S4",
+   "size": "insert",
+   "key": 40,
+   "len": 68,
+   "first": 266,
+   "line": "He's on his third energy drink.",
+   "note": "three energy-drink cans on Mo's desk; his hand drags the third one in; gulp"
+  },
+  {
+   "id": "S5",
+   "size": "medium",
+   "key": 30,
+   "len": 59,
+   "first": 334,
+   "line": "You're on zero.",
+   "note": "you, nothing on your desk, a cool little shrug; a tag: 0"
+  },
+  {
+   "id": "S6",
+   "size": "over the shoulder",
+   "key": 50,
+   "len": 117,
+   "first": 393,
+   "line": "Teachers start calling on you just to watch you get it right.",
+   "note": "the teacher at the board points at you; a kid turns to look; you answer, smug"
+  },
+  {
+   "id": "S7",
+   "size": "insert",
+   "key": 40,
+   "len": 108,
+   "first": 510,
+   "line": "Day three. You still don't feel tired.",
+   "note": "the wall calendar: day 3 gets its red cross; DAY 3"
+  },
+  {
+   "id": "S8",
+   "size": "close-up",
+   "key": 50,
+   "len": 63,
+   "first": 618,
+   "line": "But something's slipping.",
+   "note": "you, still glowing, one slow heavy blink; the glow flickers; a flicker of worry"
+  },
+  {
+   "id": "S9",
+   "size": "medium",
+   "key": 40,
+   "len": 133,
+   "first": 681,
+   "line": "You write the answer on the board. The right answer…",
+   "note": "you at the board writing the answer in chalk, confident"
+  },
+  {
+   "id": "S10",
+   "size": "wide",
+   "key": 40,
+   "len": 78,
+   "first": 814,
+   "line": "to yesterday's question.",
+   "note": "the board: the answer is to YESTERDAY's question, a big red X; kids laugh; you, oops"
+  },
+  {
+   "id": "S11",
+   "size": "wide",
+   "key": 60,
+   "len": 120,
+   "first": 892,
+   "line": "Then, on the stairs, the world blinks.",
+   "note": "you walk down the stairs (walkPhase), mid-step: the screen cuts to black for 12 frames, silence"
+  },
+  {
+   "id": "S12",
+   "size": "medium",
+   "key": 20,
+   "len": 91,
+   "first": 1012,
+   "line": "Half a second. Gone.",
+   "note": "you pitch forward off the step, arms flailing"
+  },
+  {
+   "id": "S13",
+   "size": "medium two-shot",
+   "key": 50,
+   "len": 134,
+   "first": 1103,
+   "line": "Mo catches you. He says you were asleep. Standing up.",
+   "note": "Mo grabs you under the arms; you hang there dizzy, stars circling"
+  },
+  {
+   "id": "S14",
+   "size": "close-up",
+   "key": 40,
+   "len": 83,
+   "first": 1237,
+   "line": "You don't remember any of it.",
+   "note": "you, still held up by Mo, dazed: you don't remember any of it; the stars fade"
+  },
+  {
+   "id": "S15",
+   "size": "close-up",
+   "key": 64,
+   "len": 91,
+   "first": 1320,
+   "line": "It has a name: a microsleep.",
+   "note": "you, shocked; MICROSLEEP floats up"
+  },
+  {
+   "id": "S16",
+   "size": "schematic",
+   "key": 80,
+   "len": 217,
+   "first": 1411,
+   "line": "Your brain grabs a few seconds of sleep, and it doesn't ask first. That's real.",
+   "note": "a day as a bar: AWAKE runs, a few seconds of SLEEP cut in without asking; REAL"
+  }
+ ],
+ "fx": [],
+ "audio": {
+  "voice": "switch-off-sleep-4/voice.wav",
+  "sfx": "switch-off-sleep-4/sfx.wav",
+  "voiceVol": 0.8,
+  "sfxVol": 0.4499,
+  "music": "switch-off-sleep-4/music.wav",
+  "musicVol": 0.1456
+ }
+}

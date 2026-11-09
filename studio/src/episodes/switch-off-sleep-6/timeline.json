@@ -1,0 +1,223 @@
+{
+ "slug": "switch-off-sleep-6",
+ "title": "WHAT IF YOU COULD SWITCH OFF SLEEP?",
+ "fps": 30,
+ "total": 1409,
+ "segments": [
+  {
+   "shot": "S1",
+   "a": 0,
+   "b": 133,
+   "t0": 0,
+   "t1": 133,
+   "line": "You go up to the roof to think. Sunrise number seven."
+  },
+  {
+   "shot": "S2",
+   "a": 133,
+   "b": 225,
+   "t0": 0,
+   "t1": 92,
+   "line": "Your little sister followed you. She saw the switch."
+  },
+  {
+   "shot": "S3",
+   "a": 225,
+   "b": 281,
+   "t0": 0,
+   "t1": 56,
+   "line": "She wants one."
+  },
+  {
+   "shot": "S4",
+   "a": 281,
+   "b": 392,
+   "t0": 0,
+   "t1": 111,
+   "line": "The man on the phone wants one too. For everyone."
+  },
+  {
+   "shot": "S5",
+   "a": 392,
+   "b": 485,
+   "t0": 0,
+   "t1": 93,
+   "line": "A whole city that never sleeps."
+  },
+  {
+   "shot": "S6",
+   "a": 485,
+   "b": 604,
+   "t0": 0,
+   "t1": 119,
+   "line": "Four extra months a year, for every person in the city."
+  },
+  {
+   "shot": "S7",
+   "a": 604,
+   "b": 783,
+   "t0": 0,
+   "t1": 179,
+   "line": "Factories that never close. Schools that never end. Who'd say no?"
+  },
+  {
+   "shot": "S8",
+   "a": 783,
+   "b": 930,
+   "t0": 0,
+   "t1": 147,
+   "line": "Your sister tugs your sleeve. She just wants to stay up for cartoons."
+  },
+  {
+   "shot": "S9",
+   "a": 930,
+   "b": 1030,
+   "t0": 0,
+   "t1": 100,
+   "line": "You know what it costs. They don't."
+  },
+  {
+   "shot": "S10",
+   "a": 1030,
+   "b": 1140,
+   "t0": 0,
+   "t1": 110,
+   "line": "So do you flip it back on, and lose it forever?"
+  },
+  {
+   "shot": "S11",
+   "a": 1140,
+   "b": 1288,
+   "t0": 0,
+   "t1": 148,
+   "line": "Or keep it, and find out what happens on day twelve?"
+  },
+  {
+   "shot": "S12",
+   "a": 1288,
+   "b": 1409,
+   "t0": 0,
+   "t1": 121,
+   "line": "Tell me what you'd do."
+  }
+ ],
+ "shots": [
+  {
+   "id": "S1",
+   "size": "wide, low",
+   "key": 60,
+   "len": 133,
+   "first": 0,
+   "line": "You go up to the roof to think. Sunrise number seven.",
+   "note": "the roof at sunrise, the sun low; you sit alone on the parapet, small against the city; DAY 7 tag"
+  },
+  {
+   "id": "S2",
+   "size": "medium wide",
+   "key": 60,
+   "len": 92,
+   "first": 133,
+   "line": "Your little sister followed you. She saw the switch.",
+   "note": "the roof door opens left; your little sister steps out in pajamas, happy, and pads over to you"
+  },
+  {
+   "id": "S3",
+   "size": "medium close",
+   "key": 30,
+   "len": 56,
+   "first": 225,
+   "line": "She wants one.",
+   "note": "sis, happy, bouncing on her toes, points at you: she wants one"
+  },
+  {
+   "id": "S4",
+   "size": "low angle medium",
+   "key": 70,
+   "len": 111,
+   "first": 281,
+   "line": "The man on the phone wants one too. For everyone.",
+   "note": "the man in the suit by the parapet, phone at his ear, lowers it and smiles: for everyone"
+  },
+  {
+   "id": "S5",
+   "size": "wide",
+   "key": 40,
+   "len": 93,
+   "first": 392,
+   "line": "A whole city that never sleeps.",
+   "note": "the whole city: every window snaps on at once, a city that never sleeps"
+  },
+  {
+   "id": "S6",
+   "size": "wide",
+   "key": 80,
+   "len": 119,
+   "first": 485,
+   "line": "Four extra months a year, for every person in the city.",
+   "note": "the three of you on the roof, the city behind; windows switch on block by block"
+  },
+  {
+   "id": "S7",
+   "size": "over the shoulder",
+   "key": 120,
+   "len": 179,
+   "first": 604,
+   "line": "Factories that never close. Schools that never end. Who'd say no?",
+   "note": "over the suit's shoulder onto the glowing city: tags pop OPEN 24/7, SCHOOL NEVER ENDS; he turns to you, hand out: who'd say no?"
+  },
+  {
+   "id": "S8",
+   "size": "medium two-shot",
+   "key": 60,
+   "len": 147,
+   "first": 783,
+   "line": "Your sister tugs your sleeve. She just wants to stay up for cartoons.",
+   "note": "sis tugs your sleeve, happy; you look down at her"
+  },
+  {
+   "id": "S9",
+   "size": "close-up",
+   "key": 50,
+   "len": 100,
+   "first": 930,
+   "line": "You know what it costs. They don't.",
+   "note": "you, worried, eyes still glowing; the music drops away"
+  },
+  {
+   "id": "S10",
+   "size": "insert",
+   "key": 60,
+   "len": 110,
+   "first": 1030,
+   "line": "So do you flip it back on, and lose it forever?",
+   "note": "your hand over the switch, set to OFF, hesitating: flip it back on?"
+  },
+  {
+   "id": "S11",
+   "size": "low angle",
+   "key": 70,
+   "len": 148,
+   "first": 1140,
+   "line": "Or keep it, and find out what happens on day twelve?",
+   "note": "you look into the sun; the string lights and the city die all at once; black, only your glowing eyes"
+  },
+  {
+   "id": "S12",
+   "size": "title",
+   "key": 70,
+   "len": 121,
+   "first": 1288,
+   "line": "Tell me what you'd do.",
+   "note": "end card on black: what would you do? FLIP IT BACK ON / KEEP IT, then THE END"
+  }
+ ],
+ "fx": [],
+ "audio": {
+  "voice": "switch-off-sleep-6/voice.wav",
+  "sfx": "switch-off-sleep-6/sfx.wav",
+  "voiceVol": 0.5664,
+  "sfxVol": 0.8,
+  "music": "switch-off-sleep-6/music.wav",
+  "musicVol": 0.0973
+ }
+}
