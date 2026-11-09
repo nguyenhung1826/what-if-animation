@@ -33,6 +33,7 @@ look on the cast sheet: `npx remotion still src/index.ts Cast out/cast.png`.
 | Look | Who | Notes | Thumb | Origin |
 |---|---|---|---|---|
 | `LOOKS.hero` | **the channel's hero** (the `Hero` default) | dark bald round head, cream calm line eyes, slim always-on arched brows; default outfit a plum long coat. Change the outfit per episode, never the face | `cast-hero.png` | channel |
+| `LOOKS.heroine` | **the channel's heroine** | the hero's face exactly plus a short lash flick at each outer eye corner (`lashes`). Hair is free per episode (`extra`: ponytail by default, or bob, topbun...; `hair` a shade lighter than the head), like the outfit. Never change the face | `cast-heroine.png` | channel |
 | `LOOKS.pipHood` | Pip, the shipped hero (B) | dark hoodie, mustard drawstrings | `cast-pipHood.png` | shipped |
 | `LOOKS.pip` | Pip (A) | mustard jacket | `cast-pip.png` | shipped |
 | `LOOKS.pipInk` | Pip (C) | dark head | `cast-pipInk.png` | shipped |
@@ -56,7 +57,7 @@ Dress a character for an episode by spreading a look and overriding fields:
 | `item` | `satchel`, `stopwatch`, `headlamp`, `scarf`, `backpack` | carried on the rig in every pose; colour in `itemColor` |
 | `eyes` | `dot`, `big`, `bean`, `line` | `line`: calm curved eyes at rest that open to dots when something happens (the hero) |
 | `brows` | `thin`, `thick`, `slim` | `slim`: fine, always-on arched brows that act (the hero) |
-| `blush`, `curl`, `moodTint`, `faceGlow` | booleans | rosy cheeks; a reactive curl on the crown; a colour wash per expression; glowing features for coloured faces on a dark head |
+| `blush`, `lashes`, `curl`, `moodTint`, `faceGlow` | booleans | rosy cheeks; a short lash flick at the outer eye corners (the heroine); a reactive curl on the crown; a colour wash per expression; glowing features for coloured faces on a dark head |
 | `limbStyle` | `tube`, `stick` | `stick`: single thin-line limbs with dot hands |
 | `hair` = `skin` | | a bald head (no tuft) |
 

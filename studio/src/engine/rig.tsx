@@ -44,6 +44,8 @@ export type Look = {
   brows?: 'thin' | 'thick' | 'slim';
   /** Permanent rosy cheeks. */
   blush?: boolean;
+  /** A small lash flick at the outer corner of each eye. */
+  lashes?: boolean;
   /** A single springy curl on top instead of the tuft; it reacts to the expression (stands up, droops, spins). */
   curl?: boolean;
   /** The face takes a soft colour wash per expression (warm when happy, blue when shocked...). */
@@ -53,13 +55,17 @@ export type Look = {
   /** The eyes, brows and mouth glow softly in the face colour (for dark heads with coloured features). */
   faceGlow?: boolean;
 };
-export type CastName = 'hero' | 'pip' | 'pipHood' | 'pipInk' | 'mo' | 'sis' | 'mom' | 'suit';
+export type CastName = 'hero' | 'heroine' | 'pip' | 'pipHood' | 'pipInk' | 'mo' | 'sis' | 'mom' | 'suit';
 export const LOOKS: Record<CastName, Look> = {
   // THE CHANNEL'S HERO (picked 2026-11-09): a dark, bald round head lit by the rim light, cream features that rest in
   // calm curved line eyes (they open to dots when something happens) and slim, always-on arched brows that do the
   // acting. The plum long coat is only the default outfit: costumes change per episode, e.g.
   // { ...LOOKS.hero, coat: 'bomber', jacket: '#2F5D50', jacketShade: '#244A40', sleeve: '#2F5D50', accent: '#FFC266' }.
   // Keep the face (skin, face, eyes, brows, no hair) fixed: that is the identity.
+  // THE CHANNEL'S HEROINE: the hero's face exactly, plus a short lash flick at the outer corner of each eye. That
+  // face is fixed; her hair is free per episode (extra: 'ponytail' | 'topbun' | 'bob' | 'bunches' ..., colour in
+  // hair, a shade lighter than the head so the shape reads), like the outfit.
+  heroine: { skin: '#17141C', skinShade: '#0E0C12', hand: '#17141C', line: '#08070B', face: '#F6EFE3', hair: '#3A2E44', extra: 'ponytail', accent: '#F1A7B5', eyes: 'line', brows: 'slim', lashes: true, coat: 'denim', jacket: '#4A6FA5', jacketShade: '#3A5884', sleeve: '#4A6FA5', limb: '#2A2733', shoe: '#1C1B22' },
   hero: { skin: '#17141C', skinShade: '#0E0C12', hand: '#17141C', line: '#08070B', face: '#F6EFE3', hair: '#17141C', eyes: 'line', brows: 'slim', coat: 'long', jacket: '#6E3F73', jacketShade: '#57315B', accent: '#F1A7B5', sleeve: '#6E3F73', limb: '#2A2733', shoe: '#1C1B22' },
   // A: Pip as built
   pip: { skin: C.skin, skinShade: C.skinShade, hand: C.skin, jacket: C.jacket, jacketShade: C.jacketShade, accent: C.jacketShade, limb: C.limb, line: C.ink, shoe: C.shoe, face: C.ink, hair: C.ink },
@@ -247,7 +253,7 @@ export const reachAngle = (pose: Pose, target: P) => {
   return world - pose.tilt;
 };
 
-const Face: React.FC<{ expr: Expr; blink: number; look: number; glasses: number; yaw?: number; ink?: string; glint?: number; glintColor?: string; eyes?: Look['eyes']; browStyle?: Look['brows']; blush?: boolean }> = ({ expr, blink, look, glasses, yaw = 0, ink = C.ink, glint = 0, glintColor = '#8FF0FF', eyes = 'dot', browStyle = 'thin', blush = false }) => {
+const Face: React.FC<{ expr: Expr; blink: number; look: number; glasses: number; yaw?: number; ink?: string; glint?: number; glintColor?: string; eyes?: Look['eyes']; browStyle?: Look['brows']; blush?: boolean; lashes?: boolean }> = ({ expr, blink, look, glasses, yaw = 0, ink = C.ink, glint = 0, glintColor = '#8FF0FF', eyes = 'dot', browStyle = 'thin', blush = false, lashes = false }) => {
   const ex = look * 7;
   const ay = Math.min(1, Math.abs(yaw));
   const farHidden = ay > 0.72;
@@ -332,6 +338,17 @@ const Face: React.FC<{ expr: Expr; blink: number; look: number; glasses: number;
     <g transform={`translate(${yaw * 30} 0) scale(${1 - 0.28 * ay} 1)`}>
       {eye(-21)}
       {eye(21)}
+      {lashes && expr !== 'dizzy' && expr !== 'oops'
+        ? [-21, 21].map((cx) => {
+            if (farHidden && Math.sign(cx) === farSide) return null;
+            const o = Math.sign(cx);
+            // where the outer corner of this eye shape sits, then a short flick up and out from it
+            const calm = eyes === 'line' && (expr === 'neutral' || expr === 'smug' || expr === 'cool' || expr === 'tired');
+            const shut = blink >= 0.95;
+            const [x0, y0] = expr === 'happy' ? [cx + o * 10, eyeY + 3] : calm || shut ? [cx + o * 12, eyeY - 2] : eyes === 'big' ? [cx + o * 13, eyeY - 9] : [cx + o * 6, eyeY - 7];
+            return <path key={`lash${cx}`} d={`M ${x0} ${y0} q ${o * 3.5} -1.5 ${o * 6} -5.5`} stroke={ink} strokeWidth={3.4} fill="none" strokeLinecap="round" />;
+          })
+        : null}
       {(() => {
         if (browStyle === 'slim') {
           // slim, gently arched brows, always on: a fine line that still acts (arches up, knits, droops)
@@ -683,7 +700,7 @@ export const Hero: React.FC<{ pose: Pose; shadow?: number; rimId?: string; look?
         </g>
       ) : null}
       <g filter={L.faceGlow ? 'url(#featGlow)' : undefined}>
-      <Face expr={pose.expr} blink={pose.blink} look={pose.look} glasses={pose.glasses} yaw={pose.yaw} ink={L.face} glint={pose.glint} glintColor={pose.glintColor} eyes={L.eyes} browStyle={L.brows} blush={L.blush} />
+      <Face expr={pose.expr} blink={pose.blink} look={pose.look} glasses={pose.glasses} yaw={pose.yaw} ink={L.face} glint={pose.glint} glintColor={pose.glintColor} eyes={L.eyes} browStyle={L.brows} blush={L.blush} lashes={L.lashes} />
       </g>
       {L.item === 'headlamp' ? (
         // a small headlamp on the front of the hat, always lit: a dark housing, a warm lens, a soft halo
