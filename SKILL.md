@@ -15,6 +15,7 @@ schematic for the science beat, a cliffhanger blackout). Read the one closest to
 |---|---|
 | `studio/CATALOG.md` | **The library: every set, character, prop, look and sound you can reuse. Read it first.** |
 | `references/formula.md` | The seven-beat What If formula, the 15-25 s shape, script rules, choosing a topic |
+| `references/longform.md` | Long-form (8-minute, chaptered) videos: retention structure, re-hooks, title and thumbnail rules |
 | `references/look.md` | The measured look, pace, shot vocabulary, and the storyboard and motion checklists |
 | `references/kit.md` | The building blocks: engine, cast, sets, room kit, light, UI, looks, and how to add each |
 | `references/sound.md` | Writing sound events, prompts, levels, costs |
@@ -87,6 +88,9 @@ episode, change the power or the rule. From the topic line, decide the power's w
 demos and the turn (one real fact with a number). Write `src/episodes/<slug>/episode.json` with `id` (PascalCase,
 the composition name), `slug`, `topic`, `title` (two lines), `script` (one entry per beat) and `science` (each fact:
 the claim, the working, the source). 45 to 65 words. Read it aloud at pace: every line must be a picture.
+For a long-form (chaptered, ~8-minute) video, also read `references/longform.md`: write the chapters to its shape
+(hook, promise and stakes in the first 30 s, a forward hook ending every chapter, the biggest moment near 60%), run
+its checklist, and show a title and three thumbnail ideas together with the script.
 
 ### 2. Voice
 
@@ -202,6 +206,8 @@ pace, credits). Watch the final file once through with sound. Then close the lib
 (`git add -A && git commit -m "episode: <slug>" && git push`; the episode's own files go in too, as reference for
 later episodes). Hand over `out/<slug>/<slug>-final.mp4` and
 `out/<slug>/storyboard.jpg`, with the length, the ElevenLabs credits used, what was added to the library, and anything you'd still improve.
+For a long-form video, also render the three thumbnail variants from `src/thumbnails/` (rules in
+`references/longform.md`) and hand them over with the final title.
 
 ## Where an episode lives
 
