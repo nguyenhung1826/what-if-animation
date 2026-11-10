@@ -1,0 +1,531 @@
+{
+ "slug": "feel-pain-2",
+ "title": "WHAT IF YOU COULD FEEL EVERYONE'S PAIN?",
+ "fps": 30,
+ "total": 2967,
+ "segments": [
+  {
+   "shot": "S1",
+   "a": 0,
+   "b": 180,
+   "t0": 0,
+   "t1": 180,
+   "line": "Week one, you make rules. Rule one: no sports."
+  },
+  {
+   "shot": "S2",
+   "a": 180,
+   "b": 307,
+   "t0": 0,
+   "t1": 127,
+   "line": "You learned that the hard way. Your buddy invites you over to watch football."
+  },
+  {
+   "shot": "S3",
+   "a": 307,
+   "b": 407,
+   "t0": 0,
+   "t1": 100,
+   "line": "First quarter, a 250- pound linebacker hits the quarterback..."
+  },
+  {
+   "shot": "S4",
+   "a": 407,
+   "b": 463,
+   "t0": 0,
+   "t1": 56,
+   "line": "and you hit the floor."
+  },
+  {
+   "shot": "S5",
+   "a": 463,
+   "b": 539,
+   "t0": 0,
+   "t1": 76,
+   "line": "Rule two: no cooking shows."
+  },
+  {
+   "shot": "S6",
+   "a": 539,
+   "b": 587,
+   "t0": 0,
+   "t1": 48,
+   "line": "Too many knives."
+  },
+  {
+   "shot": "S7",
+   "a": 587,
+   "b": 715,
+   "t0": 0,
+   "t1": 128,
+   "line": "Rule three: never, ever, walk past a playground."
+  },
+  {
+   "shot": "S8",
+   "a": 715,
+   "b": 796,
+   "t0": 0,
+   "t1": 81,
+   "line": "You buy the darkest sunglasses in the store."
+  },
+  {
+   "shot": "S9",
+   "a": 796,
+   "b": 860,
+   "t0": 0,
+   "t1": 64,
+   "line": "You walk to work staring at your shoes."
+  },
+  {
+   "shot": "S10",
+   "a": 860,
+   "b": 1000,
+   "t0": 0,
+   "t1": 140,
+   "line": "You take the long way around the gym, the skate park, and the dentist."
+  },
+  {
+   "shot": "S11",
+   "a": 1000,
+   "b": 1083,
+   "t0": 0,
+   "t1": 83,
+   "line": "And it kind of works. For about four days."
+  },
+  {
+   "shot": "S12",
+   "a": 1083,
+   "b": 1176,
+   "t0": 0,
+   "t1": 93,
+   "line": "Then your little nephew's birthday party happens."
+  },
+  {
+   "shot": "S13",
+   "a": 1176,
+   "b": 1318,
+   "t0": 0,
+   "t1": 142,
+   "line": "Twelve kids. One bouncy castle. Zero helmets."
+  },
+  {
+   "shot": "S14",
+   "a": 1318,
+   "b": 1415,
+   "t0": 0,
+   "t1": 97,
+   "line": "A kid bonks heads with another kid. Ouch, ouch."
+  },
+  {
+   "shot": "S15",
+   "a": 1415,
+   "b": 1472,
+   "t0": 0,
+   "t1": 57,
+   "line": "Two bumps, both on you."
+  },
+  {
+   "shot": "S16",
+   "a": 1472,
+   "b": 1509,
+   "t0": 0,
+   "t1": 37,
+   "line": "Someone steps on a LEGO."
+  },
+  {
+   "shot": "S17",
+   "a": 1509,
+   "b": 1581,
+   "t0": 0,
+   "t1": 72,
+   "line": "Someone gets a balloon popped in their face."
+  },
+  {
+   "shot": "S18",
+   "a": 1581,
+   "b": 1729,
+   "t0": 0,
+   "t1": 148,
+   "line": "The birthday boy falls off the bouncy castle and lands right on his elbow..."
+  },
+  {
+   "shot": "S19",
+   "a": 1729,
+   "b": 1789,
+   "t0": 0,
+   "t1": 60,
+   "line": "And you're the one crying."
+  },
+  {
+   "shot": "S20",
+   "a": 1789,
+   "b": 1907,
+   "t0": 0,
+   "t1": 118,
+   "line": "Your sister looks at you.\" Are you... okay?\""
+  },
+  {
+   "shot": "S21",
+   "a": 1907,
+   "b": 2054,
+   "t0": 0,
+   "t1": 147,
+   "line": "How do you explain it?\" Yeah, no, I'm fine, I just felt your son's elbow.\""
+  },
+  {
+   "shot": "S22",
+   "a": 2054,
+   "b": 2203,
+   "t0": 0,
+   "t1": 149,
+   "line": "But something else happens too. Something you didn't expect."
+  },
+  {
+   "shot": "S22b",
+   "a": 2203,
+   "b": 2313,
+   "t0": 0,
+   "t1": 110,
+   "line": "You start to notice how much everyone around you is hurting."
+  },
+  {
+   "shot": "S23",
+   "a": 2313,
+   "b": 2372,
+   "t0": 0,
+   "t1": 59,
+   "line": "The mail carrier's knee."
+  },
+  {
+   "shot": "S24",
+   "a": 2372,
+   "b": 2455,
+   "t0": 0,
+   "t1": 83,
+   "line": "Your boss's back, every time he sits down."
+  },
+  {
+   "shot": "S25",
+   "a": 2455,
+   "b": 2559,
+   "t0": 0,
+   "t1": 104,
+   "line": "The barista's burned wrist that she never mentions."
+  },
+  {
+   "shot": "S26",
+   "a": 2559,
+   "b": 2722,
+   "t0": 0,
+   "t1": 163,
+   "line": "They all just... keep going. Smiling. Saying\" I'm good, thanks!\""
+  },
+  {
+   "shot": "S27",
+   "a": 2722,
+   "b": 2851,
+   "t0": 0,
+   "t1": 129,
+   "line": "Everybody is carrying something. You just never saw it before."
+  },
+  {
+   "shot": "S28",
+   "a": 2851,
+   "b": 2967,
+   "t0": 0,
+   "t1": 116,
+   "line": "And now, you can't un- see it."
+  }
+ ],
+ "shots": [
+  {
+   "id": "S1",
+   "size": "top-down insert",
+   "key": 60,
+   "len": 180,
+   "first": 0,
+   "line": "Week one, you make rules. Rule one: no sports.",
+   "note": "a notepad: RULES; 1. NO SPORTS writes on"
+  },
+  {
+   "id": "S2",
+   "size": "wide",
+   "key": 60,
+   "len": 127,
+   "first": 180,
+   "line": "You learned that the hard way. Your buddy invites you over to watch football.",
+   "note": "your buddy and you on the couch, football on the TV"
+  },
+  {
+   "id": "S3",
+   "size": "insert",
+   "key": 70,
+   "len": 100,
+   "first": 307,
+   "line": "First quarter, a 250- pound linebacker hits the quarterback...",
+   "note": "on TV: a 250-lb linebacker flattens the quarterback (ring)"
+  },
+  {
+   "id": "S4",
+   "size": "wide",
+   "key": 30,
+   "len": 56,
+   "first": 407,
+   "line": "and you hit the floor.",
+   "note": "you tumble off the couch; your buddy stares"
+  },
+  {
+   "id": "S5",
+   "size": "top-down insert",
+   "key": 50,
+   "len": 76,
+   "first": 463,
+   "line": "Rule two: no cooking shows.",
+   "note": "2. NO COOKING SHOWS"
+  },
+  {
+   "id": "S6",
+   "size": "close-up",
+   "key": 20,
+   "len": 48,
+   "first": 539,
+   "line": "Too many knives.",
+   "note": "a knife chops on TV; you flinch, fingers throbbing"
+  },
+  {
+   "id": "S7",
+   "size": "top-down insert",
+   "key": 60,
+   "len": 128,
+   "first": 587,
+   "line": "Rule three: never, ever, walk past a playground.",
+   "note": "3. NEVER WALK PAST A PLAYGROUND"
+  },
+  {
+   "id": "S8",
+   "size": "medium",
+   "key": 40,
+   "len": 81,
+   "first": 715,
+   "line": "You buy the darkest sunglasses in the store.",
+   "note": "outside the shades shop: the darkest sunglasses drop on"
+  },
+  {
+   "id": "S9",
+   "size": "wide",
+   "key": 40,
+   "len": 64,
+   "first": 796,
+   "line": "You walk to work staring at your shoes.",
+   "note": "you walk to work in shades, staring at your shoes"
+  },
+  {
+   "id": "S10",
+   "size": "schematic map",
+   "key": 90,
+   "len": 140,
+   "first": 860,
+   "line": "You take the long way around the gym, the skate park, and the dentist.",
+   "note": "your route bends around the GYM, the SKATE PARK, the DENTIST"
+  },
+  {
+   "id": "S11",
+   "size": "medium",
+   "key": 40,
+   "len": 83,
+   "first": 1000,
+   "line": "And it kind of works. For about four days.",
+   "note": "smug in your shades; a DAY 1..4 counter"
+  },
+  {
+   "id": "S12",
+   "size": "wide",
+   "key": 60,
+   "len": 93,
+   "first": 1083,
+   "line": "Then your little nephew's birthday party happens.",
+   "note": "the party: bouncy castle, kids, balloons, cake, your sister"
+  },
+  {
+   "id": "S13",
+   "size": "medium",
+   "key": 70,
+   "len": 142,
+   "first": 1176,
+   "line": "Twelve kids. One bouncy castle. Zero helmets.",
+   "note": "12 KIDS, 1 BOUNCY CASTLE, 0 HELMETS"
+  },
+  {
+   "id": "S14",
+   "size": "medium",
+   "key": 20,
+   "len": 97,
+   "first": 1318,
+   "line": "A kid bonks heads with another kid. Ouch, ouch.",
+   "note": "two kids bonk heads mid-bounce (rings)"
+  },
+  {
+   "id": "S15",
+   "size": "close-up",
+   "key": 20,
+   "len": 57,
+   "first": 1415,
+   "line": "Two bumps, both on you.",
+   "note": "two red bumps throb on your forehead"
+  },
+  {
+   "id": "S16",
+   "size": "low insert",
+   "key": 14,
+   "len": 37,
+   "first": 1472,
+   "line": "Someone steps on a LEGO.",
+   "note": "a foot comes down on a LEGO (ring)"
+  },
+  {
+   "id": "S17",
+   "size": "medium",
+   "key": 20,
+   "len": 72,
+   "first": 1509,
+   "line": "Someone gets a balloon popped in their face.",
+   "note": "a balloon pops in a kid's face"
+  },
+  {
+   "id": "S18",
+   "size": "wide",
+   "key": 60,
+   "len": 148,
+   "first": 1581,
+   "line": "The birthday boy falls off the bouncy castle and lands right on his elbow...",
+   "note": "the birthday boy falls off the castle onto his elbow"
+  },
+  {
+   "id": "S19",
+   "size": "close-up",
+   "key": 30,
+   "len": 60,
+   "first": 1729,
+   "line": "And you're the one crying.",
+   "note": "you, crying, your elbow throbbing"
+  },
+  {
+   "id": "S20",
+   "size": "over the shoulder",
+   "key": 40,
+   "len": 118,
+   "first": 1789,
+   "line": "Your sister looks at you.\" Are you... okay?\"",
+   "note": "your sister: are you okay?"
+  },
+  {
+   "id": "S21",
+   "size": "medium two-shot",
+   "key": 60,
+   "len": 147,
+   "first": 1907,
+   "line": "How do you explain it?\" Yeah, no, I'm fine, I just felt your son's elbow.\"",
+   "note": "you try to explain: I just felt your son's elbow"
+  },
+  {
+   "id": "S22",
+   "size": "close-up",
+   "key": 60,
+   "len": 149,
+   "first": 2054,
+   "line": "But something else happens too. Something you didn't expect.",
+   "note": "you realize: everyone is hurting"
+  },
+  {
+   "id": "S22b",
+   "size": "medium",
+   "key": 80,
+   "len": 110,
+   "first": 2203,
+   "line": "You start to notice how much everyone around you is hurting.",
+   "note": "you look around the party: small red aches on every grown-up"
+  },
+  {
+   "id": "S23",
+   "size": "medium",
+   "key": 20,
+   "len": 59,
+   "first": 2313,
+   "line": "The mail carrier's knee.",
+   "note": "the mail carrier's knee aches"
+  },
+  {
+   "id": "S24",
+   "size": "medium",
+   "key": 30,
+   "len": 83,
+   "first": 2372,
+   "line": "Your boss's back, every time he sits down.",
+   "note": "your boss eases into his chair: his back aches"
+  },
+  {
+   "id": "S25",
+   "size": "medium",
+   "key": 60,
+   "len": 104,
+   "first": 2455,
+   "line": "The barista's burned wrist that she never mentions.",
+   "note": "the barista smiles, a burn on her wrist she never mentions"
+  },
+  {
+   "id": "S26",
+   "size": "wide",
+   "key": 90,
+   "len": 163,
+   "first": 2559,
+   "line": "They all just... keep going. Smiling. Saying\" I'm good, thanks!\"",
+   "note": "everyone keeps going, smiling, each with a quiet ache"
+  },
+  {
+   "id": "S27",
+   "size": "close-up",
+   "key": 50,
+   "len": 129,
+   "first": 2722,
+   "line": "Everybody is carrying something. You just never saw it before.",
+   "note": "you, moved"
+  },
+  {
+   "id": "S28",
+   "size": "wide, high",
+   "key": 60,
+   "len": 116,
+   "first": 2851,
+   "line": "And now, you can't un- see it.",
+   "note": "pull back: the whole street dotted with red aches"
+  }
+ ],
+ "fx": [
+  {
+   "kind": "flash",
+   "color": "#FF4A4A",
+   "o": 0.4,
+   "f": 379
+  },
+  {
+   "kind": "flash",
+   "color": "#FF4A4A",
+   "o": 0.4,
+   "f": 1338
+  },
+  {
+   "kind": "flash",
+   "color": "#FF4A4A",
+   "o": 0.4,
+   "f": 1492
+  }
+ ],
+ "audio": {
+  "voiceVol": 0.8,
+  "sfxVol": 0.5347,
+  "musicVol": 0.1507,
+  "voice": "feel-pain-2/voice.wav",
+  "sfx": "feel-pain-2/sfx.wav",
+  "music": "feel-pain-2/music.wav"
+ }
+}

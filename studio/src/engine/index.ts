@@ -4,6 +4,7 @@ export * from './rig';
 export * from './props';
 export * from './kit';
 export * from './light';
+export * from './depth';
 export * from './room';
 export * from './furnish';
 export * from './ui';

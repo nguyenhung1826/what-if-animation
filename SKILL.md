@@ -13,7 +13,8 @@ schematic for the science beat, a cliffhanger blackout). Read the one closest to
 
 | File | What's in it |
 |---|---|
-| `studio/CATALOG.md` | **The library: every set, character, prop, look and sound you can reuse. Read it first.** |
+| `references/scenes.md` | **How to build each episode's sets fresh and beautiful: scene sheet, layers, light, checklist. Read it before drawing.** |
+| `studio/CATALOG.md` | The tools you can reuse: rig, cast looks, room kit, light, UI, sounds (older sets listed there are reference only) |
 | `references/formula.md` | The seven-beat What If formula, the 15-25 s shape, script rules, choosing a topic |
 | `references/longform.md` | Long-form (8-minute, chaptered) videos: retention structure, re-hooks, title and thumbnail rules |
 | `references/look.md` | The measured look, pace, shot vocabulary, and the storyboard and motion checklists |
@@ -25,12 +26,14 @@ schematic for the science beat, a cliffhanger blackout). Read the one closest to
 
 ## Rules
 
-- **Library first.** This skill is the channel's own copy (a git repo) and its library grows with every episode.
-  Before drawing anything, read `studio/CATALOG.md` and reuse or extend what is there; open `references/kit.md` or an
-  asset's file only for the asset you are about to use. Anything new you draw that another episode could use (a
-  place, a prop, a character look, a power look) goes into `src/engine/`, gets its row and thumb in `CATALOG.md`, and
-  is committed in the same episode (see "Adding to the library" at the end of the catalog). Never leave a reusable
-  asset inside an episode's `shots.tsx`.
+- **Fresh sets, every episode (from 2026-11-10).** Don't reuse places or props from earlier episodes: each
+  episode builds its own sets, as beautiful as you can make them, in its own folder (`src/episodes/<slug>/sets.tsx`
+  and `kit.tsx`). Follow `references/scenes.md`: a scene sheet per set (one light, a 3-4 colour palette, near/middle/
+  far, idle life), the layer stack, and its craft checklist on every still. What you do reuse are the tools: the rig
+  and the cast's looks, the room kit (`makeRoom`, `Box`...), light (`Glow`, `LightVeil`...), `depth.tsx`
+  (`Parallax`, `Vignette`, `Grain`, `idle`, `Drift`) and the sound library (`library/sfx/`, reuse clips by name).
+  No catalog step: new sets don't go into `src/engine/` or `CATALOG.md`. Older episodes stay as reference for
+  patterns, not as stock to copy.
 - **The channel's hero is `LOOKS.hero`** (the `Hero` default): a dark bald round head, cream eyes clearly open at
   rest and slim arched brows. Use it as the lead of every new episode, in its default outfit (a navy mock-neck sweater
   with the sleeves at the elbow, charcoal trousers, black shoes); its face never changes. `LOOKS.heroine` is a
@@ -98,14 +101,18 @@ its checklist, and show a title and three thumbnail ideas together with the scri
 python <skill>/scripts/voice.py <slug>
 ```
 
-One ElevenLabs take with character timestamps in the channel's voice, "Tyler - Clear US YouTube Creator Voice"
-(`rPMkKgdwgIwqv4fXgR6N`: young, upbeat, clear; about 0.44 credits a character) on `eleven_multilingual_v2` with
-stability 0.28 and style 0.55 (loosened 2026-11-10 after the person found 0.4/0.35 flat; they heard it against
-`eleven_v3` with audio tags and picked this: livelier, and the timestamps stay exact). For a long-form chapter, set
+One ElevenLabs take with character timestamps in the channel's voice, "Marcus - Bright, Upbeat and Clear"
+(`y0s2ExEMuum3muUnA6Zd`: young American male, energetic and cheerful; picked 2026-11-10 over Tyler for a punchier,
+more charismatic read) on `eleven_multilingual_v2` with stability 0.28 and style 0.55 (loosened 2026-11-10 after the
+person found 0.4/0.35 flat; they heard it against `eleven_v3` with audio tags and picked this: livelier, and the
+timestamps stay exact). For a long-form chapter, set
 `previous_text` in `episode.json` to the last line of the chapter before so the delivery carries on. Then the pauses cut to the
 genre's pace and the voice compressed and brought to -16 LUFS (some voices come back quiet and peaky): `public/<slug>/voice.wav` and `src/episodes/<slug>/words.json`. Check the length (15-25 s)
 and the word times it prints. Retune pauses with `gaps` in `episode.json` and re-run: the take is cached, so that's free. For a long-form chapter (slower pace), stretch
-chosen pauses with `holds` (`{"asleep|Not": 1.6}`: that pause becomes at least 1.6 s of silence), also free. Change a word
+chosen pauses with `holds` (`{"asleep|Not": 1.6}`: that pause becomes at least 1.6 s of silence), also free. Keep a
+beat-boundary hold short (about 0.6 s): the next shot cuts in as the next line starts. Longer holds only for the
+title card (about 2.4 s) or a pause that sits inside a shot under visible action. 2 s holds at every beat left
+about 37 s of dead air per 2-minute chapter on feel-pain and the picture stalled after every line (see `traps.md`). Change a word
 and it calls the API again.
 
 ### 3. Shot list
@@ -128,15 +135,14 @@ opening and no static shot over about 3 s; fix what it flags before drawing anyt
 
 ### 4. Storyboard
 
-Read `CATALOG.md` and pick the sets, cast, props and looks the shot list needs; open `references/kit.md` only for
-the parts you use (coordinates, the room kit). Write `src/episodes/<slug>/shots.tsx`, one component per shot,
-each a pure function of its clock `t` (copy the patterns in the two examples' `shots.tsx`), and `index.tsx` (the
-episode and its power look), then add the episode to `src/episodes/index.ts`. At this step each shot only needs to
-be right at its `key` frame. When a topic needs something the catalog lacks, first see whether an existing asset can take a new prop (a `night`
-kitchen, a `broken` phone); only if not, build a new one in `src/engine/` (places with the room kit in
-`src/engine/sets/`), as the copy-paste run did with the kitchen and the schematic. Then follow "Adding to the
-library" in `CATALOG.md`: its row, its thumb, the check. A new character or costume: add the look, check it on the
-cast sheet (`npx remotion still src/index.ts Cast out/cast.png`), and catalogue it.
+Read `references/scenes.md` and write a scene sheet for each set the shot list needs (light, palette, depth,
+life). Draw the sets fresh in `src/episodes/<slug>/sets.tsx` with the room kit and `depth.tsx`, layered back to front,
+every surface with base, texture and edge; pick the cast's looks from `CATALOG.md` and dress them for this story.
+Open `references/kit.md` only for the parts you use (coordinates, the room kit). Write
+`src/episodes/<slug>/shots.tsx`, one component per shot, each a pure function of its clock `t` (copy the patterns in
+the examples' `shots.tsx`), and `index.tsx` (the episode and its power look), then add the episode to
+`src/episodes/index.ts`. At this step each shot only needs to be right at its `key` frame. A new character or
+costume: check it on the cast sheet (`npx remotion still src/index.ts Cast out/cast.png`).
 
 ```bash
 npx tsc --noEmit
@@ -201,11 +207,10 @@ python <skill>/scripts/master.py <slug>
 ```
 
 Renders, brings the mix to -14 LUFS with peaks under -1 dBTP, and writes `out/<slug>/report.json` (length, loudness,
-pace, credits). Watch the final file once through with sound. Then close the library: add any new clips to the Sound table in
-`CATALOG.md`, run `python <skill>/scripts/catalog_check.py` until it reports nothing missing, and commit and push
+pace, credits). Watch the final file once through with sound. Then commit and push
 (`git add -A && git commit -m "episode: <slug>" && git push`; the episode's own files go in too, as reference for
 later episodes). Hand over `out/<slug>/<slug>-final.mp4` and
-`out/<slug>/storyboard.jpg`, with the length, the ElevenLabs credits used, what was added to the library, and anything you'd still improve.
+`out/<slug>/storyboard.jpg`, with the length, the ElevenLabs credits used, and anything you'd still improve.
 For a long-form video, also render the three thumbnail variants from `src/thumbnails/` (rules in
 `references/longform.md`) and hand them over with the final title.
 

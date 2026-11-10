@@ -1,0 +1,542 @@
+{
+ "slug": "feel-pain-1",
+ "title": "WHAT IF YOU COULD FEEL EVERYONE'S PAIN?",
+ "fps": 30,
+ "total": 3005,
+ "segments": [
+  {
+   "shot": "S1",
+   "a": 0,
+   "b": 118,
+   "t0": 0,
+   "t1": 118,
+   "line": "What if you could feel everyone's pain?"
+  },
+  {
+   "shot": "S2",
+   "a": 118,
+   "b": 246,
+   "t0": 0,
+   "t1": 128,
+   "line": "Not\" I feel your pain,\" like your friend says when your phone cracks."
+  },
+  {
+   "shot": "S3",
+   "a": 246,
+   "b": 311,
+   "t0": 0,
+   "t1": 65,
+   "line": "I mean actually feel it."
+  },
+  {
+   "shot": "S4",
+   "a": 311,
+   "b": 395,
+   "t0": 0,
+   "t1": 84,
+   "line": "One morning you wake up, and the rule is simple."
+  },
+  {
+   "shot": "S5",
+   "a": 395,
+   "b": 542,
+   "t0": 0,
+   "t1": 147,
+   "line": "Any hurt you see... you feel. Same spot. Same strength."
+  },
+  {
+   "shot": "S6",
+   "a": 542,
+   "b": 639,
+   "t0": 0,
+   "t1": 97,
+   "line": "Your roommate stumbles into the kitchen, half asleep... and"
+  },
+  {
+   "shot": "S7",
+   "a": 639,
+   "b": 713,
+   "t0": 0,
+   "t1": 74,
+   "line": "slams his toe into the table leg."
+  },
+  {
+   "shot": "S8",
+   "a": 713,
+   "b": 752,
+   "t0": 0,
+   "t1": 39,
+   "line": "Ouch."
+  },
+  {
+   "shot": "S9",
+   "a": 752,
+   "b": 809,
+   "t0": 0,
+   "t1": 57,
+   "line": "You drop your cereal."
+  },
+  {
+   "shot": "S10",
+   "a": 809,
+   "b": 958,
+   "t0": 0,
+   "t1": 149,
+   "line": "Your toe is on fire. Your sock isn't even touching anything."
+  },
+  {
+   "shot": "S11",
+   "a": 958,
+   "b": 1088,
+   "t0": 0,
+   "t1": 130,
+   "line": "Okay. Weird. Maybe you slept on it funny."
+  },
+  {
+   "shot": "S12",
+   "a": 1088,
+   "b": 1162,
+   "t0": 0,
+   "t1": 74,
+   "line": "On the bus, a kid flicks his little sister's ear."
+  },
+  {
+   "shot": "S13",
+   "a": 1162,
+   "b": 1218,
+   "t0": 0,
+   "t1": 56,
+   "line": "Your ear stings."
+  },
+  {
+   "shot": "S14",
+   "a": 1218,
+   "b": 1294,
+   "t0": 0,
+   "t1": 76,
+   "line": "A guy cuts himself on a paper envelope."
+  },
+  {
+   "shot": "S15",
+   "a": 1294,
+   "b": 1340,
+   "t0": 0,
+   "t1": 46,
+   "line": "Your finger stings."
+  },
+  {
+   "shot": "S16",
+   "a": 1340,
+   "b": 1489,
+   "t0": 0,
+   "t1": 149,
+   "line": "Someone across the aisle bites their tongue on a sandwich... and now you're biting yours."
+  },
+  {
+   "shot": "S17",
+   "a": 1489,
+   "b": 1687,
+   "t0": 0,
+   "t1": 198,
+   "line": "By the time you get to work, you've felt three stubbed toes, a hangnail, and a sunburn that wasn't yours."
+  },
+  {
+   "shot": "S18",
+   "a": 1687,
+   "b": 1856,
+   "t0": 0,
+   "t1": 169,
+   "line": "But here's the strange part. When you close your eyes? Nothing. Silence."
+  },
+  {
+   "shot": "S19",
+   "a": 1856,
+   "b": 1950,
+   "t0": 0,
+   "t1": 94,
+   "line": "Your body is just... yours again."
+  },
+  {
+   "shot": "S20",
+   "a": 1950,
+   "b": 2058,
+   "t0": 0,
+   "t1": 108,
+   "line": "So the power isn't about touch. It's about seeing."
+  },
+  {
+   "shot": "S21",
+   "a": 2058,
+   "b": 2115,
+   "t0": 0,
+   "t1": 57,
+   "line": "And that gives you an idea."
+  },
+  {
+   "shot": "S22",
+   "a": 2115,
+   "b": 2289,
+   "t0": 0,
+   "t1": 174,
+   "line": "Your coworker is about to staple a stack of papers... and you know exactly how this ends."
+  },
+  {
+   "shot": "S23",
+   "a": 2289,
+   "b": 2422,
+   "t0": 0,
+   "t1": 133,
+   "line": "You look away. You hear the clack, you hear the\" ow\"..."
+  },
+  {
+   "shot": "S24",
+   "a": 2422,
+   "b": 2475,
+   "t0": 0,
+   "t1": 53,
+   "line": "And you feel nothing."
+  },
+  {
+   "shot": "S25",
+   "a": 2475,
+   "b": 2616,
+   "t0": 0,
+   "t1": 141,
+   "line": "You're a genius. You'll just... never look at anything that's about to hurt."
+  },
+  {
+   "shot": "S26",
+   "a": 2616,
+   "b": 2682,
+   "t0": 0,
+   "t1": 66,
+   "line": "Easy, right?"
+  },
+  {
+   "shot": "S27",
+   "a": 2682,
+   "b": 2766,
+   "t0": 0,
+   "t1": 84,
+   "line": "Except you live in a world where people trip on curbs."
+  },
+  {
+   "shot": "S28",
+   "a": 2766,
+   "b": 2826,
+   "t0": 0,
+   "t1": 60,
+   "line": "Where kids fall off monkey bars."
+  },
+  {
+   "shot": "S29",
+   "a": 2826,
+   "b": 2911,
+   "t0": 0,
+   "t1": 85,
+   "line": "Where your neighbor hammers his own thumb every single weekend."
+  },
+  {
+   "shot": "S30",
+   "a": 2911,
+   "b": 3005,
+   "t0": 0,
+   "t1": 94,
+   "line": "And you can't close your eyes forever."
+  }
+ ],
+ "shots": [
+  {
+   "id": "S1",
+   "size": "wide, title",
+   "key": 60,
+   "len": 118,
+   "first": 0,
+   "line": "What if you could feel everyone's pain?",
+   "note": "the street at dusk, you walk past the shops; title card"
+  },
+  {
+   "id": "S2",
+   "size": "medium two-shot",
+   "key": 60,
+   "len": 128,
+   "first": 118,
+   "line": "Not\" I feel your pain,\" like your friend says when your phone cracks.",
+   "note": "your buddy shows his cracked phone; you pat his shoulder: I feel your pain"
+  },
+  {
+   "id": "S3",
+   "size": "close-up",
+   "key": 40,
+   "len": 65,
+   "first": 246,
+   "line": "I mean actually feel it.",
+   "note": "you, dead serious: I mean actually feel it"
+  },
+  {
+   "id": "S4",
+   "size": "wide",
+   "key": 60,
+   "len": 84,
+   "first": 311,
+   "line": "One morning you wake up, and the rule is simple.",
+   "note": "morning: you stretch by the big window"
+  },
+  {
+   "id": "S5",
+   "size": "schematic",
+   "key": 120,
+   "len": 147,
+   "first": 395,
+   "line": "Any hurt you see... you feel. Same spot. Same strength.",
+   "note": "two figures: a hurt seen on one (red ring at the toe) lands on the other; SAME SPOT, SAME STRENGTH"
+  },
+  {
+   "id": "S6",
+   "size": "wide",
+   "key": 80,
+   "len": 97,
+   "first": 542,
+   "line": "Your roommate stumbles into the kitchen, half asleep... and",
+   "note": "you at the table with cereal; your roommate shuffles in half asleep"
+  },
+  {
+   "id": "S7",
+   "size": "low insert",
+   "key": 14,
+   "len": 74,
+   "first": 639,
+   "line": "slams his toe into the table leg.",
+   "note": "his sock slams into the table leg: flash, red ring"
+  },
+  {
+   "id": "S8",
+   "size": "close-up",
+   "key": 20,
+   "len": 39,
+   "first": 713,
+   "line": "Ouch.",
+   "note": "you: OUCH, eyes flash red"
+  },
+  {
+   "id": "S9",
+   "size": "top-down insert",
+   "key": 20,
+   "len": 57,
+   "first": 752,
+   "line": "You drop your cereal.",
+   "note": "your spoon and cereal splash down"
+  },
+  {
+   "id": "S10",
+   "size": "low insert",
+   "key": 40,
+   "len": 149,
+   "first": 809,
+   "line": "Your toe is on fire. Your sock isn't even touching anything.",
+   "note": "your sock foot under the table, glowing red, touching nothing"
+  },
+  {
+   "id": "S11",
+   "size": "medium",
+   "key": 60,
+   "len": 130,
+   "first": 958,
+   "line": "Okay. Weird. Maybe you slept on it funny.",
+   "note": "you, puzzled, shrug: maybe you slept on it funny"
+  },
+  {
+   "id": "S12",
+   "size": "wide",
+   "key": 60,
+   "len": 74,
+   "first": 1088,
+   "line": "On the bus, a kid flicks his little sister's ear.",
+   "note": "the bus: a kid flicks his little sister's ear (ring); you a row behind"
+  },
+  {
+   "id": "S13",
+   "size": "close-up",
+   "key": 20,
+   "len": 56,
+   "first": 1162,
+   "line": "Your ear stings.",
+   "note": "your ear throbs red"
+  },
+  {
+   "id": "S14",
+   "size": "medium",
+   "key": 50,
+   "len": 76,
+   "first": 1218,
+   "line": "A guy cuts himself on a paper envelope.",
+   "note": "a man opens an envelope, paper cut (ring on his finger)"
+  },
+  {
+   "id": "S15",
+   "size": "insert",
+   "key": 20,
+   "len": 46,
+   "first": 1294,
+   "line": "Your finger stings.",
+   "note": "your hand: the same finger glows"
+  },
+  {
+   "id": "S16",
+   "size": "medium two-shot",
+   "key": 70,
+   "len": 149,
+   "first": 1340,
+   "line": "Someone across the aisle bites their tongue on a sandwich... and now you're biting yours.",
+   "note": "a woman bites her tongue on a sandwich; you bite yours (oops)"
+  },
+  {
+   "id": "S17",
+   "size": "wide",
+   "key": 120,
+   "len": 198,
+   "first": 1489,
+   "line": "By the time you get to work, you've felt three stubbed toes, a hangnail, and a sunburn that wasn't yours.",
+   "note": "the office: you trudge to your desk; tally: 3 TOES, 1 HANGNAIL, 1 SUNBURN"
+  },
+  {
+   "id": "S18",
+   "size": "close-up",
+   "key": 80,
+   "len": 169,
+   "first": 1687,
+   "line": "But here's the strange part. When you close your eyes? Nothing. Silence.",
+   "note": "you close your eyes: the red fades. Silence"
+  },
+  {
+   "id": "S19",
+   "size": "medium",
+   "key": 40,
+   "len": 94,
+   "first": 1856,
+   "line": "Your body is just... yours again.",
+   "note": "eyes shut, leaning back, relieved"
+  },
+  {
+   "id": "S20",
+   "size": "schematic",
+   "key": 60,
+   "len": 108,
+   "first": 1950,
+   "line": "So the power isn't about touch. It's about seeing.",
+   "note": "TOUCH (hand) crossed out; SEEING (eye) ticked"
+  },
+  {
+   "id": "S21",
+   "size": "close-up",
+   "key": 40,
+   "len": 57,
+   "first": 2058,
+   "line": "And that gives you an idea.",
+   "note": "you get an idea (smug, focus rings)"
+  },
+  {
+   "id": "S22",
+   "size": "medium",
+   "key": 60,
+   "len": 174,
+   "first": 2115,
+   "line": "Your coworker is about to staple a stack of papers... and you know exactly how this ends.",
+   "note": "your coworker raises the stapler over a stack of papers"
+  },
+  {
+   "id": "S23",
+   "size": "medium close",
+   "key": 40,
+   "len": 133,
+   "first": 2289,
+   "line": "You look away. You hear the clack, you hear the\" ow\"...",
+   "note": "you snap your head away, eyes shut; clack behind you"
+  },
+  {
+   "id": "S24",
+   "size": "close-up",
+   "key": 30,
+   "len": 53,
+   "first": 2422,
+   "line": "And you feel nothing.",
+   "note": "nothing: you open one eye, smug"
+  },
+  {
+   "id": "S25",
+   "size": "medium",
+   "key": 50,
+   "len": 141,
+   "first": 2475,
+   "line": "You're a genius. You'll just... never look at anything that's about to hurt.",
+   "note": "arms up in your chair: genius"
+  },
+  {
+   "id": "S26",
+   "size": "close-up",
+   "key": 20,
+   "len": 66,
+   "first": 2616,
+   "line": "Easy, right?",
+   "note": "you grin"
+  },
+  {
+   "id": "S27",
+   "size": "wide",
+   "key": 30,
+   "len": 84,
+   "first": 2682,
+   "line": "Except you live in a world where people trip on curbs.",
+   "note": "on the street a man trips on the curb (ring)"
+  },
+  {
+   "id": "S28",
+   "size": "wide",
+   "key": 30,
+   "len": 60,
+   "first": 2766,
+   "line": "Where kids fall off monkey bars.",
+   "note": "a kid drops off the monkey bars (ring)"
+  },
+  {
+   "id": "S29",
+   "size": "medium",
+   "key": 40,
+   "len": 85,
+   "first": 2826,
+   "line": "Where your neighbor hammers his own thumb every single weekend.",
+   "note": "over the fence the neighbor hammers his own thumb (ring)"
+  },
+  {
+   "id": "S30",
+   "size": "close-up",
+   "key": 40,
+   "len": 94,
+   "first": 2911,
+   "line": "And you can't close your eyes forever.",
+   "note": "you, eyes wide, worried: you can't close your eyes forever"
+  }
+ ],
+ "fx": [
+  {
+   "kind": "flash",
+   "color": "#FF4A4A",
+   "o": 0.5,
+   "f": 695
+  },
+  {
+   "kind": "shake",
+   "len": 8,
+   "amp": 10,
+   "f": 713
+  }
+ ],
+ "audio": {
+  "voiceVol": 0.8,
+  "sfxVol": 0.7728,
+  "musicVol": 0.149,
+  "voice": "feel-pain-1/voice.wav",
+  "sfx": "feel-pain-1/sfx.wav",
+  "music": "feel-pain-1/music.wav"
+ }
+}

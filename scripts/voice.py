@@ -7,7 +7,7 @@ Writes public/<slug>/voice_raw.mp3, public/<slug>/voice.wav (tightened), src/epi
 The API is only called when the text or the voice settings change (cached by a hash), so re-running to retune the
 gaps is free.
 
-episode.json "voice" (all optional): {"id": "rPMkKgdwgIwqv4fXgR6N", "model": "eleven_multilingual_v2",
+episode.json "voice" (all optional): {"id": "y0s2ExEMuum3muUnA6Zd", "model": "eleven_multilingual_v2",
   "settings": {"stability": 0.28, "similarity_boost": 0.8, "style": 0.55, "use_speaker_boost": true}}
 episode.json "previous_text" (optional): the last line of the previous chapter, so a long-form chapter carries on its
   delivery instead of restarting flat. Not voiced, not charged.
@@ -25,11 +25,12 @@ from wi import SR, api, spent_since, decode, ep_dir, load_episode, load_json, lo
 slug = sys.argv[1]
 force = '--force' in sys.argv
 ep = load_episode(slug)
-# The channel's voice: "Tyler - Clear US YouTube Creator Voice" from the ElevenLabs library (young, upbeat, clear),
-# picked 2026-11-10 to replace Dylan (rated too low and flat). The skill's original default was TX3LPaxmHKxFdv7VOQHJ.
-# Settings loosened 2026-11-10 (switch-off-sleep-2): stability 0.4 -> 0.28, style 0.35 -> 0.55. The person heard it against
-# eleven_v3 with audio tags and picked this one: livelier than before, and the timestamps stay exact.
-V = {'id': 'rPMkKgdwgIwqv4fXgR6N', 'model': 'eleven_multilingual_v2', 'settings': {'stability': 0.28, 'similarity_boost': 0.8, 'style': 0.55, 'use_speaker_boost': True}}
+# The channel's voice: "Marcus - Bright, Upbeat and Clear" from the ElevenLabs library (young American male, energetic,
+# hooks fast), picked 2026-11-10 to replace Tyler (rPMkKgdwgIwqv4fXgR6N): the person wanted a more cheerful, charismatic,
+# punchier read. Tyler had replaced Dylan; the skill's original default was TX3LPaxmHKxFdv7VOQHJ.
+# Settings carried over from Tyler (loosened 2026-11-10: stability 0.4 -> 0.28, style 0.35 -> 0.55; livelier, and the
+# timestamps stay exact on eleven_multilingual_v2).
+V = {'id': 'y0s2ExEMuum3muUnA6Zd', 'model': 'eleven_multilingual_v2', 'settings': {'stability': 0.28, 'similarity_boost': 0.8, 'style': 0.55, 'use_speaker_boost': True}}
 V.update(ep.get('voice', {}))
 if ep.get('previous_text'):
     V['previous_text'] = ep['previous_text']

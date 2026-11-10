@@ -1,0 +1,858 @@
+{
+ "id": "FeelPain4",
+ "slug": "feel-pain-4",
+ "topic": "What if you could feel everyone's pain?",
+ "part": "Chapter 4 of 4: the job only you can do, the ending (~2 min)",
+ "title": [
+  "WHAT IF YOU COULD",
+  "FEEL EVERYONE'S PAIN?"
+ ],
+ "accent": "PAIN",
+ "previous_text": "\"Do that again.\"",
+ "script": [
+  {
+   "beat": "4.1",
+   "text": "Three months later, you're standing in a hospital emergency room."
+  },
+  {
+   "beat": "4.2",
+   "text": "Yeah. The one place you swore you'd never go."
+  },
+  {
+   "beat": "4.3",
+   "text": "But here's what the doctor figured out. A lot of patients can't tell you where it hurts. Babies. People who don't speak English. People who are too scared, or too confused, or just too tough to say anything."
+  },
+  {
+   "beat": "4.4",
+   "text": "You can't read their minds. But you can see them. And when you see them... you know."
+  },
+  {
+   "beat": "4.5",
+   "text": "A toddler won't stop crying. Nobody can find anything wrong. You look at him for two seconds... and your left ear is throbbing. Ear infection."
+  },
+  {
+   "beat": "4.6",
+   "text": "An old man swears he's \"fine, just tired.\" Your chest goes tight. The doctors run a test. He's having a heart attack. They catch it in time."
+  },
+  {
+   "beat": "4.7",
+   "text": "By the end of the shift, you can barely stand. You feel like you ran a marathon, broke your arm, and had three toothaches. Because, kind of, you did."
+  },
+  {
+   "beat": "4.8",
+   "text": "But for the first time since this started, it doesn't feel like a curse."
+  },
+  {
+   "beat": "4.9",
+   "text": "It feels like a job. A job only you can do."
+  },
+  {
+   "beat": "4.10",
+   "text": "You walk out into the parking lot. The sun is coming up. Your whole body hurts... and you're smiling."
+  },
+  {
+   "beat": "4.11",
+   "text": "You get home. Your roommate shuffles into the kitchen, half asleep... and slams his toe into the table leg. Again."
+  },
+  {
+   "beat": "4.12",
+   "text": "Ouch."
+  },
+  {
+   "beat": "4.13",
+   "text": "Your toe is on fire. And for the first time since all this started... you laugh."
+  },
+  {
+   "beat": "4.14",
+   "text": "He looks at you like you're crazy. You just grab two bags of frozen peas. One for him. One for you."
+  },
+  {
+   "beat": "4.15",
+   "text": "Because maybe that's the whole point. When you feel everyone's pain... nobody has to hurt alone."
+  },
+  {
+   "beat": "4.16",
+   "text": "So, would you want this power? Or would it be too much? Tell me in the comments."
+  }
+ ],
+ "science": [],
+ "cast": [
+  "hero"
+ ],
+ "gaps": {
+  "word": 0.16,
+  "comma": 0.3,
+  "sentence": 0.55,
+  "question": 0.6,
+  "pairs": {}
+ },
+ "holds": {
+  "room|Yeah": 0.6,
+  "go|But": 0.6,
+  "anything|You": 0.6,
+  "know|A": 0.6,
+  "infection|An": 0.6,
+  "time|By": 0.6,
+  "did|But": 0.6,
+  "curse|It": 0.6,
+  "do|You": 0.6,
+  "smiling|You": 0.6,
+  "Again|Ouch": 0.6,
+  "Ouch|Your": 2.0,
+  "laugh|He": 0.6,
+  "you|Because": 0.6,
+  "alone|So": 0.6
+ },
+ "tail": 1.5,
+ "shots": [
+  {
+   "id": "S1",
+   "size": "wide",
+   "set": "ER bay",
+   "key": 60,
+   "note": "three months later: the ER bay, monitor beeping; you stand by the bed"
+  },
+  {
+   "id": "S2",
+   "size": "close-up",
+   "set": "ER (blur)",
+   "key": 40,
+   "note": "you, a wry smile: the one place you swore you'd never go"
+  },
+  {
+   "id": "S3",
+   "size": "medium two-shot",
+   "set": "ER bay",
+   "key": 60,
+   "note": "the doctor and you by the bed"
+  },
+  {
+   "id": "S4",
+   "size": "wide",
+   "set": "ER bay",
+   "key": 60,
+   "note": "a patient in the bed, a nurse with a clipboard: where does it hurt?"
+  },
+  {
+   "id": "S5",
+   "size": "medium",
+   "set": "ER bay",
+   "key": 20,
+   "note": "a baby crying in the bed"
+  },
+  {
+   "id": "S6",
+   "size": "medium",
+   "set": "ER bay",
+   "key": 30,
+   "note": "a patient shrugs, lost for words"
+  },
+  {
+   "id": "S7",
+   "size": "medium",
+   "set": "ER bay",
+   "key": 60,
+   "note": "a tough guy, arms crossed, sweating: fine"
+  },
+  {
+   "id": "S8",
+   "size": "close-up",
+   "set": "ER (blur)",
+   "key": 40,
+   "note": "you, calm"
+  },
+  {
+   "id": "S9",
+   "size": "close-up",
+   "set": "ER (blur)",
+   "key": 60,
+   "note": "your eyes glow red: you see them, you know"
+  },
+  {
+   "id": "S10",
+   "size": "medium",
+   "set": "ER bay",
+   "key": 40,
+   "note": "a toddler crying on his mom's lap"
+  },
+  {
+   "id": "S11",
+   "size": "close-up",
+   "set": "ER (blur)",
+   "key": 60,
+   "note": "your left ear throbs"
+  },
+  {
+   "id": "S12",
+   "size": "medium",
+   "set": "ER bay",
+   "key": 30,
+   "note": "the doctor checks the toddler's ear: EAR INFECTION"
+  },
+  {
+   "id": "S13",
+   "size": "medium",
+   "set": "ER bay",
+   "key": 40,
+   "note": "an old man in bed: fine, just tired"
+  },
+  {
+   "id": "S14",
+   "size": "close-up",
+   "set": "ER (blur)",
+   "key": 30,
+   "note": "your chest goes tight (throb)"
+  },
+  {
+   "id": "S15",
+   "size": "insert",
+   "set": "the monitor",
+   "key": 30,
+   "note": "the monitor spikes"
+  },
+  {
+   "id": "S16",
+   "size": "medium",
+   "set": "ER bay",
+   "key": 40,
+   "note": "the doctor and the nurse at the bed: CAUGHT IN TIME"
+  },
+  {
+   "id": "S17",
+   "size": "wide",
+   "set": "ER bay, empty",
+   "key": 40,
+   "note": "end of the shift: you slumped on a bench in the empty bay"
+  },
+  {
+   "id": "S18",
+   "size": "schematic",
+   "set": "schematic",
+   "key": 80,
+   "note": "your body tally: MARATHON LEGS, BROKEN ARM, 3 TOOTHACHES"
+  },
+  {
+   "id": "S19",
+   "size": "close-up",
+   "set": "ER (blur)",
+   "key": 40,
+   "note": "a tired laugh"
+  },
+  {
+   "id": "S20",
+   "size": "medium",
+   "set": "ER bay",
+   "key": 60,
+   "note": "you smile, gently"
+  },
+  {
+   "id": "S21",
+   "size": "insert",
+   "set": "your badge",
+   "key": 60,
+   "note": "your ER STAFF badge"
+  },
+  {
+   "id": "S22",
+   "size": "wide",
+   "set": "parking lot",
+   "key": 60,
+   "note": "out of the ER doors into the sunrise"
+  },
+  {
+   "id": "S23",
+   "size": "low angle",
+   "set": "parking lot",
+   "key": 50,
+   "note": "you against the rising sun, aching and smiling"
+  },
+  {
+   "id": "S24",
+   "size": "wide",
+   "set": "apartment dawn",
+   "key": 70,
+   "note": "home: your roommate shuffles in half asleep, again"
+  },
+  {
+   "id": "S25",
+   "size": "low insert",
+   "set": "apartment floor",
+   "key": 45,
+   "note": "his toe slams into the table leg"
+  },
+  {
+   "id": "S26",
+   "size": "close-up",
+   "set": "apartment (blur)",
+   "key": 20,
+   "note": "OUCH"
+  },
+  {
+   "id": "S27",
+   "size": "medium",
+   "set": "apartment",
+   "key": 60,
+   "note": "you laugh"
+  },
+  {
+   "id": "S28",
+   "size": "medium",
+   "set": "apartment",
+   "key": 30,
+   "note": "the roommate stares at you like you're crazy"
+  },
+  {
+   "id": "S29",
+   "size": "insert",
+   "set": "the freezer",
+   "key": 40,
+   "note": "two bags of frozen peas"
+  },
+  {
+   "id": "S30",
+   "size": "medium two-shot",
+   "set": "apartment",
+   "key": 40,
+   "note": "one for him, one for you"
+  },
+  {
+   "id": "S31",
+   "size": "wide",
+   "set": "apartment dawn",
+   "key": 80,
+   "note": "pull back: the two of you at the table in the sunrise"
+  },
+  {
+   "id": "S32",
+   "size": "close-up",
+   "set": "apartment (blur)",
+   "key": 60,
+   "note": "you, to camera: would you want this power?"
+  }
+ ],
+ "edit": [
+  {
+   "shot": "S1",
+   "at": "f:0"
+  },
+  {
+   "shot": "S2",
+   "at": "f:122"
+  },
+  {
+   "shot": "S3",
+   "at": "f:236"
+  },
+  {
+   "shot": "S4",
+   "at": "f:297"
+  },
+  {
+   "shot": "S5",
+   "at": "f:370"
+  },
+  {
+   "shot": "S6",
+   "at": "f:395"
+  },
+  {
+   "shot": "S7",
+   "at": "f:442"
+  },
+  {
+   "shot": "S8",
+   "at": "f:569"
+  },
+  {
+   "shot": "S9",
+   "at": "f:629"
+  },
+  {
+   "shot": "S10",
+   "at": "f:756"
+  },
+  {
+   "shot": "S11",
+   "at": "f:859"
+  },
+  {
+   "shot": "S12",
+   "at": "f:967"
+  },
+  {
+   "shot": "S13",
+   "at": "f:1007"
+  },
+  {
+   "shot": "S14",
+   "at": "f:1094"
+  },
+  {
+   "shot": "S15",
+   "at": "f:1142"
+  },
+  {
+   "shot": "S16",
+   "at": "f:1191"
+  },
+  {
+   "shot": "S17",
+   "at": "f:1276"
+  },
+  {
+   "shot": "S18",
+   "at": "f:1346"
+  },
+  {
+   "shot": "S19",
+   "at": "f:1487"
+  },
+  {
+   "shot": "S20",
+   "at": "f:1562"
+  },
+  {
+   "shot": "S21",
+   "at": "f:1685"
+  },
+  {
+   "shot": "S22",
+   "at": "f:1799"
+  },
+  {
+   "shot": "S23",
+   "at": "f:1904"
+  },
+  {
+   "shot": "S24",
+   "at": "f:2021"
+  },
+  {
+   "shot": "S25",
+   "at": "f:2150"
+  },
+  {
+   "shot": "S26",
+   "at": "f:2262"
+  },
+  {
+   "shot": "S27",
+   "at": "f:2380"
+  },
+  {
+   "shot": "S28",
+   "at": "f:2509"
+  },
+  {
+   "shot": "S29",
+   "at": "f:2564"
+  },
+  {
+   "shot": "S30",
+   "at": "f:2643"
+  },
+  {
+   "shot": "S31",
+   "at": "f:2715"
+  },
+  {
+   "shot": "S32",
+   "at": "f:2904"
+  }
+ ],
+ "fx": [
+  {
+   "at": "S25+58",
+   "kind": "flash",
+   "color": "#FF4A4A",
+   "o": 0.5
+  }
+ ],
+ "sound": {
+  "clips": {
+   "baby_cry": [
+    "a baby crying, a short wail",
+    1.5
+   ],
+   "dawn_birds": [
+    "early morning birds chirping outside, distant quiet traffic, no voices",
+    5.0
+   ],
+   "ding": [
+    "a correct answer ding, bright bell chime",
+    0.8
+   ],
+   "er_beep": [
+    "a hospital heart monitor beeping steadily, clean electronic beeps, no voices",
+    3.0
+   ],
+   "freezer": [
+    "a freezer door opening with a suction pop and a cold hum",
+    1.0
+   ],
+   "monitor_alarm": [
+    "a hospital monitor alarm beeping fast and urgently",
+    1.5
+   ],
+   "music": [
+    "playful quirky cartoon background music, pizzicato strings, glockenspiel and soft bass, light and curious, 110 bpm, no vocals",
+    17.0
+   ],
+   "ouch": [
+    "a cartoon sharp twang of a plucked tight rubber band with a tiny comic sting, short",
+    0.6
+   ],
+   "pop": [
+    "a cartoon speech bubble pop, short and bright",
+    0.5
+   ],
+   "room_tone": [
+    "quiet indoor room tone in the evening, faint distant city hum, no voices",
+    12.5
+   ],
+   "sparkle": [
+    "a short bright magical sparkle twinkle, cartoon",
+    0.8
+   ],
+   "step": [
+    "a single sneaker footstep on a wooden stair, close",
+    0.5
+   ],
+   "toe_thud": [
+    "a foot in a sock slamming into a wooden table leg, a hollow wooden thunk, cartoon",
+    0.6
+   ]
+  },
+  "events": [
+   [
+    "f:0",
+    "er_beep",
+    0.07,
+    "onset",
+    "f:88"
+   ],
+   [
+    "f:78",
+    "er_beep",
+    0.07,
+    "onset",
+    "f:166"
+   ],
+   [
+    "f:156",
+    "er_beep",
+    0.07,
+    "onset",
+    "f:244"
+   ],
+   [
+    "f:234",
+    "er_beep",
+    0.07,
+    "onset",
+    "f:322"
+   ],
+   [
+    "f:312",
+    "er_beep",
+    0.07,
+    "onset",
+    "f:400"
+   ],
+   [
+    "f:390",
+    "er_beep",
+    0.07,
+    "onset",
+    "f:478"
+   ],
+   [
+    "f:468",
+    "er_beep",
+    0.07,
+    "onset",
+    "f:556"
+   ],
+   [
+    "f:546",
+    "er_beep",
+    0.07,
+    "onset",
+    "f:634"
+   ],
+   [
+    "f:624",
+    "er_beep",
+    0.07,
+    "onset",
+    "f:712"
+   ],
+   [
+    "f:702",
+    "er_beep",
+    0.07,
+    "onset",
+    "f:790"
+   ],
+   [
+    "f:780",
+    "er_beep",
+    0.07,
+    "onset",
+    "f:868"
+   ],
+   [
+    "f:858",
+    "er_beep",
+    0.07,
+    "onset",
+    "f:946"
+   ],
+   [
+    "f:936",
+    "er_beep",
+    0.07,
+    "onset",
+    "f:1024"
+   ],
+   [
+    "f:1014",
+    "er_beep",
+    0.07,
+    "onset",
+    "f:1102"
+   ],
+   [
+    "f:1092",
+    "er_beep",
+    0.07,
+    "onset",
+    "f:1142"
+   ],
+   [
+    "f:0",
+    "room_tone",
+    0.09,
+    "onset",
+    "f:373"
+   ],
+   [
+    "f:363",
+    "room_tone",
+    0.09,
+    "onset",
+    "f:736"
+   ],
+   [
+    "f:726",
+    "room_tone",
+    0.09,
+    "onset",
+    "f:1099"
+   ],
+   [
+    "f:1089",
+    "room_tone",
+    0.09,
+    "onset",
+    "f:1142"
+   ],
+   [
+    "f:1191",
+    "er_beep",
+    0.07,
+    "onset",
+    "f:1279"
+   ],
+   [
+    "f:1269",
+    "er_beep",
+    0.07,
+    "onset",
+    "f:1346"
+   ],
+   [
+    "f:1487",
+    "er_beep",
+    0.07,
+    "onset",
+    "f:1575"
+   ],
+   [
+    "f:1565",
+    "er_beep",
+    0.07,
+    "onset",
+    "f:1653"
+   ],
+   [
+    "f:1643",
+    "er_beep",
+    0.07,
+    "onset",
+    "f:1685"
+   ],
+   [
+    "f:1799",
+    "dawn_birds",
+    0.1,
+    "onset",
+    "f:1947"
+   ],
+   [
+    "f:1937",
+    "dawn_birds",
+    0.1,
+    "onset",
+    "f:2021"
+   ],
+   [
+    "f:2021",
+    "room_tone",
+    0.09,
+    "onset",
+    "f:2394"
+   ],
+   [
+    "f:2384",
+    "room_tone",
+    0.09,
+    "onset",
+    "f:2757"
+   ],
+   [
+    "f:2747",
+    "room_tone",
+    0.09,
+    "onset",
+    "f:3100"
+   ],
+   [
+    "S1+8",
+    "pop",
+    0.2
+   ],
+   [
+    "S5+2",
+    "baby_cry",
+    0.25
+   ],
+   [
+    "S9+26",
+    "sparkle",
+    0.3
+   ],
+   [
+    "S10+4",
+    "baby_cry",
+    0.2
+   ],
+   [
+    "S11+66",
+    "ouch",
+    0.4
+   ],
+   [
+    "S12+8",
+    "ding",
+    0.3
+   ],
+   [
+    "S14+20",
+    "ouch",
+    0.45
+   ],
+   [
+    "S15+2",
+    "monitor_alarm",
+    0.2
+   ],
+   [
+    "S16+54",
+    "ding",
+    0.35
+   ],
+   [
+    "S18+29",
+    "ouch",
+    0.25
+   ],
+   [
+    "S18+72",
+    "ouch",
+    0.25
+   ],
+   [
+    "S18+116",
+    "ouch",
+    0.25
+   ],
+   [
+    "S21+30",
+    "sparkle",
+    0.3
+   ],
+   [
+    "S25+58",
+    "toe_thud",
+    0.7
+   ],
+   [
+    "S25+62",
+    "ouch",
+    0.45
+   ],
+   [
+    "S26+18",
+    "ouch",
+    0.5
+   ],
+   [
+    "S27+100",
+    "sparkle",
+    0.25
+   ],
+   [
+    "S29+10",
+    "freezer",
+    0.4
+   ],
+   [
+    "S30+8",
+    "pop",
+    0.2
+   ],
+   [
+    "S32+44",
+    "pop",
+    0.25
+   ]
+  ],
+  "repeats": [
+   {
+    "at": "S22+2",
+    "clip": "step",
+    "n": 10,
+    "every": 9,
+    "gain": [
+     0.05,
+     0.09
+    ],
+    "pitch": [
+     0.9,
+     1.1
+    ]
+   }
+  ],
+  "music": {
+   "clip": "music",
+   "from": "S1",
+   "loop": 1.5,
+   "offset": 14
+  },
+  "levels": {
+   "sfx_lu": -12.0,
+   "music_lu": -15.0
+  }
+ }
+}

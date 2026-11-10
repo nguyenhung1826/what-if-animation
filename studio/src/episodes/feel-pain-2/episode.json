@@ -1,0 +1,877 @@
+{
+ "id": "FeelPain2",
+ "slug": "feel-pain-2",
+ "topic": "What if you could feel everyone's pain?",
+ "part": "Chapter 2 of 4: the world is full of tiny hurts (~2 min)",
+ "title": [
+  "WHAT IF YOU COULD",
+  "FEEL EVERYONE'S PAIN?"
+ ],
+ "accent": "PAIN",
+ "previous_text": "And you can't close your eyes forever.",
+ "script": [
+  {
+   "beat": "2.1",
+   "text": "Week one, you make rules."
+  },
+  {
+   "beat": "2.2",
+   "text": "Rule one: no sports. You learned that the hard way. Your buddy invites you over to watch football. First quarter, a 250-pound linebacker hits the quarterback... and you hit the floor."
+  },
+  {
+   "beat": "2.3",
+   "text": "Rule two: no cooking shows. Too many knives."
+  },
+  {
+   "beat": "2.4",
+   "text": "Rule three: never, ever, walk past a playground."
+  },
+  {
+   "beat": "2.5",
+   "text": "You buy the darkest sunglasses in the store. You walk to work staring at your shoes. You take the long way around the gym, the skate park, and the dentist."
+  },
+  {
+   "beat": "2.6",
+   "text": "And it kind of works. For about four days."
+  },
+  {
+   "beat": "2.7",
+   "text": "Then your little nephew's birthday party happens. Twelve kids. One bouncy castle. Zero helmets."
+  },
+  {
+   "beat": "2.8",
+   "text": "A kid bonks heads with another kid. Ouch, ouch. Two bumps, both on you. Someone steps on a LEGO. Someone gets a balloon popped in their face. The birthday boy falls off the bouncy castle and lands right on his elbow..."
+  },
+  {
+   "beat": "2.9",
+   "text": "And you're the one crying."
+  },
+  {
+   "beat": "2.10",
+   "text": "Your sister looks at you. \"Are you... okay?\""
+  },
+  {
+   "beat": "2.11",
+   "text": "How do you explain it? \"Yeah, no, I'm fine, I just felt your son's elbow.\""
+  },
+  {
+   "beat": "2.12",
+   "text": "But something else happens too. Something you didn't expect."
+  },
+  {
+   "beat": "2.13",
+   "text": "You start to notice how much everyone around you is hurting. The mail carrier's knee. Your boss's back, every time he sits down. The barista's burned wrist that she never mentions."
+  },
+  {
+   "beat": "2.14",
+   "text": "They all just... keep going. Smiling. Saying \"I'm good, thanks!\""
+  },
+  {
+   "beat": "2.15",
+   "text": "Everybody is carrying something. You just never saw it before."
+  },
+  {
+   "beat": "2.16",
+   "text": "And now, you can't un-see it."
+  }
+ ],
+ "science": [
+  {
+   "claim": "A 250-pound linebacker",
+   "working": "NFL linebackers typically weigh about 230-260 lb",
+   "source": "typical NFL roster weights"
+  }
+ ],
+ "cast": [
+  "hero"
+ ],
+ "gaps": {
+  "word": 0.16,
+  "comma": 0.3,
+  "sentence": 0.55,
+  "question": 0.6,
+  "pairs": {}
+ },
+ "holds": {
+  "rules|Rule": 2.0,
+  "floor|Rule": 0.6,
+  "knives|Rule": 0.6,
+  "playground|You": 0.6,
+  "dentist|And": 0.6,
+  "days|Then": 0.6,
+  "helmets|A": 0.6,
+  "elbow|And": 0.6,
+  "crying|Your": 0.6,
+  "okay|How": 0.6,
+  "elbow|But": 0.6,
+  "expect|You": 0.6,
+  "mentions|They": 0.6,
+  "thanks|Everybody": 0.6,
+  "before|And": 0.6
+ },
+ "tail": 1.5,
+ "shots": [
+  {
+   "id": "S1",
+   "size": "top-down insert",
+   "set": "notepad",
+   "key": 60,
+   "note": "a notepad: RULES; 1. NO SPORTS writes on"
+  },
+  {
+   "id": "S2",
+   "size": "wide",
+   "set": "living room",
+   "key": 60,
+   "note": "your buddy and you on the couch, football on the TV"
+  },
+  {
+   "id": "S3",
+   "size": "insert",
+   "set": "the TV",
+   "key": 70,
+   "note": "on TV: a 250-lb linebacker flattens the quarterback (ring)"
+  },
+  {
+   "id": "S4",
+   "size": "wide",
+   "set": "living room",
+   "key": 30,
+   "note": "you tumble off the couch; your buddy stares"
+  },
+  {
+   "id": "S5",
+   "size": "top-down insert",
+   "set": "notepad",
+   "key": 50,
+   "note": "2. NO COOKING SHOWS"
+  },
+  {
+   "id": "S6",
+   "size": "close-up",
+   "set": "living room (blur)",
+   "key": 20,
+   "note": "a knife chops on TV; you flinch, fingers throbbing"
+  },
+  {
+   "id": "S7",
+   "size": "top-down insert",
+   "set": "notepad",
+   "key": 60,
+   "note": "3. NEVER WALK PAST A PLAYGROUND"
+  },
+  {
+   "id": "S8",
+   "size": "medium",
+   "set": "street, SHADES",
+   "key": 40,
+   "note": "outside the shades shop: the darkest sunglasses drop on"
+  },
+  {
+   "id": "S9",
+   "size": "wide",
+   "set": "street",
+   "key": 40,
+   "note": "you walk to work in shades, staring at your shoes"
+  },
+  {
+   "id": "S10",
+   "size": "schematic map",
+   "set": "schematic",
+   "key": 90,
+   "note": "your route bends around the GYM, the SKATE PARK, the DENTIST"
+  },
+  {
+   "id": "S11",
+   "size": "medium",
+   "set": "street",
+   "key": 40,
+   "note": "smug in your shades; a DAY 1..4 counter"
+  },
+  {
+   "id": "S12",
+   "size": "wide",
+   "set": "backyard party",
+   "key": 60,
+   "note": "the party: bouncy castle, kids, balloons, cake, your sister"
+  },
+  {
+   "id": "S13",
+   "size": "medium",
+   "set": "backyard",
+   "key": 70,
+   "note": "12 KIDS, 1 BOUNCY CASTLE, 0 HELMETS"
+  },
+  {
+   "id": "S14",
+   "size": "medium",
+   "set": "bouncy castle",
+   "key": 20,
+   "note": "two kids bonk heads mid-bounce (rings)"
+  },
+  {
+   "id": "S15",
+   "size": "close-up",
+   "set": "backyard (blur)",
+   "key": 20,
+   "note": "two red bumps throb on your forehead"
+  },
+  {
+   "id": "S16",
+   "size": "low insert",
+   "set": "the lawn",
+   "key": 14,
+   "note": "a foot comes down on a LEGO (ring)"
+  },
+  {
+   "id": "S17",
+   "size": "medium",
+   "set": "backyard",
+   "key": 20,
+   "note": "a balloon pops in a kid's face"
+  },
+  {
+   "id": "S18",
+   "size": "wide",
+   "set": "backyard",
+   "key": 60,
+   "note": "the birthday boy falls off the castle onto his elbow"
+  },
+  {
+   "id": "S19",
+   "size": "close-up",
+   "set": "backyard (blur)",
+   "key": 30,
+   "note": "you, crying, your elbow throbbing"
+  },
+  {
+   "id": "S20",
+   "size": "over the shoulder",
+   "set": "backyard",
+   "key": 40,
+   "note": "your sister: are you okay?"
+  },
+  {
+   "id": "S21",
+   "size": "medium two-shot",
+   "set": "backyard",
+   "key": 60,
+   "note": "you try to explain: I just felt your son's elbow"
+  },
+  {
+   "id": "S22",
+   "size": "close-up",
+   "set": "backyard (blur)",
+   "key": 60,
+   "note": "you realize: everyone is hurting"
+  },
+  {
+   "id": "S22b",
+   "size": "medium",
+   "set": "backyard",
+   "key": 80,
+   "note": "you look around the party: small red aches on every grown-up"
+  },
+  {
+   "id": "S23",
+   "size": "medium",
+   "set": "street",
+   "key": 20,
+   "note": "the mail carrier's knee aches"
+  },
+  {
+   "id": "S24",
+   "size": "medium",
+   "set": "office",
+   "key": 30,
+   "note": "your boss eases into his chair: his back aches"
+  },
+  {
+   "id": "S25",
+   "size": "medium",
+   "set": "street, café window",
+   "key": 60,
+   "note": "the barista smiles, a burn on her wrist she never mentions"
+  },
+  {
+   "id": "S26",
+   "size": "wide",
+   "set": "street",
+   "key": 90,
+   "note": "everyone keeps going, smiling, each with a quiet ache"
+  },
+  {
+   "id": "S27",
+   "size": "close-up",
+   "set": "street (blur)",
+   "key": 50,
+   "note": "you, moved"
+  },
+  {
+   "id": "S28",
+   "size": "wide, high",
+   "set": "street",
+   "key": 60,
+   "note": "pull back: the whole street dotted with red aches"
+  }
+ ],
+ "edit": [
+  {
+   "shot": "S1",
+   "at": "f:0"
+  },
+  {
+   "shot": "S2",
+   "at": "f:180"
+  },
+  {
+   "shot": "S3",
+   "at": "f:307"
+  },
+  {
+   "shot": "S4",
+   "at": "f:407"
+  },
+  {
+   "shot": "S5",
+   "at": "f:463"
+  },
+  {
+   "shot": "S6",
+   "at": "f:539"
+  },
+  {
+   "shot": "S7",
+   "at": "f:587"
+  },
+  {
+   "shot": "S8",
+   "at": "f:715"
+  },
+  {
+   "shot": "S9",
+   "at": "f:796"
+  },
+  {
+   "shot": "S10",
+   "at": "f:860"
+  },
+  {
+   "shot": "S11",
+   "at": "f:1000"
+  },
+  {
+   "shot": "S12",
+   "at": "f:1083"
+  },
+  {
+   "shot": "S13",
+   "at": "f:1176"
+  },
+  {
+   "shot": "S14",
+   "at": "f:1318"
+  },
+  {
+   "shot": "S15",
+   "at": "f:1415"
+  },
+  {
+   "shot": "S16",
+   "at": "f:1472"
+  },
+  {
+   "shot": "S17",
+   "at": "f:1509"
+  },
+  {
+   "shot": "S18",
+   "at": "f:1581"
+  },
+  {
+   "shot": "S19",
+   "at": "f:1729"
+  },
+  {
+   "shot": "S20",
+   "at": "f:1789"
+  },
+  {
+   "shot": "S21",
+   "at": "f:1907"
+  },
+  {
+   "shot": "S22",
+   "at": "f:2054"
+  },
+  {
+   "shot": "S22b",
+   "at": "f:2203"
+  },
+  {
+   "shot": "S23",
+   "at": "f:2313"
+  },
+  {
+   "shot": "S24",
+   "at": "f:2372"
+  },
+  {
+   "shot": "S25",
+   "at": "f:2455"
+  },
+  {
+   "shot": "S26",
+   "at": "f:2559"
+  },
+  {
+   "shot": "S27",
+   "at": "f:2722"
+  },
+  {
+   "shot": "S28",
+   "at": "f:2851"
+  }
+ ],
+ "fx": [
+  {
+   "at": "S3+72",
+   "kind": "flash",
+   "color": "#FF4A4A",
+   "o": 0.4
+  },
+  {
+   "at": "S14+20",
+   "kind": "flash",
+   "color": "#FF4A4A",
+   "o": 0.4
+  },
+  {
+   "at": "S16+20",
+   "kind": "flash",
+   "color": "#FF4A4A",
+   "o": 0.4
+  }
+ ],
+ "sound": {
+  "clips": {
+   "balloon_pop": [
+    "a party balloon popping loudly, short",
+    0.5
+   ],
+   "bonk": [
+    "two cartoon heads bonking together, a hollow comic bonk",
+    0.5
+   ],
+   "buzzer": [
+    "a game show wrong answer buzzer, short",
+    0.8
+   ],
+   "chop": [
+    "a kitchen knife chopping vegetables fast on a wooden board",
+    1.0
+   ],
+   "crack": [
+    "glass cracking sharply, the crack spreading across a pane",
+    1.1
+   ],
+   "dizzy": [
+    "cartoon dizzy birds tweeting in a circle after a bonk",
+    1.4
+   ],
+   "drone_hit": [
+    "a dark ominous low drone hit, deep cinematic horror sting",
+    2.6
+   ],
+   "land": [
+    "a heavy body landing flat on a wooden floor, cartoon thud",
+    0.6
+   ],
+   "music": [
+    "playful quirky cartoon background music, pizzicato strings, glockenspiel and soft bass, light and curious, 110 bpm, no vocals",
+    17.0
+   ],
+   "ouch": [
+    "a cartoon sharp twang of a plucked tight rubber band with a tiny comic sting, short",
+    0.6
+   ],
+   "party_amb": [
+    "a kids birthday party in a backyard, children laughing and playing in the distance, no clear words",
+    5.0
+   ],
+   "pen_write": [
+    "a marker pen writing quickly on a notepad, squeaky scribble",
+    1.0
+   ],
+   "pop": [
+    "a cartoon speech bubble pop, short and bright",
+    0.5
+   ],
+   "roof_wind": [
+    "a gentle evening breeze on a city rooftop, distant traffic",
+    7.0
+   ],
+   "room_tone": [
+    "quiet indoor room tone in the evening, faint distant city hum, no voices",
+    12.5
+   ],
+   "shades": [
+    "cool sunglasses sliding on with a swoosh and a bright metallic glint",
+    0.9
+   ],
+   "sparkle": [
+    "a short bright magical sparkle twinkle, cartoon",
+    0.8
+   ],
+   "step": [
+    "a single sneaker footstep on a wooden stair, close",
+    0.5
+   ],
+   "tumble": [
+    "a cartoon character tumbling down wooden stairs, a quick series of bumps and thuds",
+    1.3
+   ],
+   "tv_crowd": [
+    "a football game on a television in another room, muffled stadium crowd roar, no clear words",
+    3.0
+   ]
+  },
+  "events": [
+   [
+    "f:0",
+    "room_tone",
+    0.09,
+    "onset",
+    "f:180"
+   ],
+   [
+    "f:180",
+    "tv_crowd",
+    0.08,
+    "onset",
+    "f:268"
+   ],
+   [
+    "f:258",
+    "tv_crowd",
+    0.08,
+    "onset",
+    "f:346"
+   ],
+   [
+    "f:336",
+    "tv_crowd",
+    0.08,
+    "onset",
+    "f:424"
+   ],
+   [
+    "f:414",
+    "tv_crowd",
+    0.08,
+    "onset",
+    "f:463"
+   ],
+   [
+    "f:463",
+    "room_tone",
+    0.09,
+    "onset",
+    "f:715"
+   ],
+   [
+    "f:715",
+    "roof_wind",
+    0.1,
+    "onset",
+    "f:860"
+   ],
+   [
+    "f:1000",
+    "roof_wind",
+    0.1,
+    "onset",
+    "f:1083"
+   ],
+   [
+    "f:1083",
+    "party_amb",
+    0.1,
+    "onset",
+    "f:1231"
+   ],
+   [
+    "f:1221",
+    "party_amb",
+    0.1,
+    "onset",
+    "f:1369"
+   ],
+   [
+    "f:1359",
+    "party_amb",
+    0.1,
+    "onset",
+    "f:1507"
+   ],
+   [
+    "f:1497",
+    "party_amb",
+    0.1,
+    "onset",
+    "f:1645"
+   ],
+   [
+    "f:1635",
+    "party_amb",
+    0.1,
+    "onset",
+    "f:1783"
+   ],
+   [
+    "f:1773",
+    "party_amb",
+    0.1,
+    "onset",
+    "f:1921"
+   ],
+   [
+    "f:1911",
+    "party_amb",
+    0.1,
+    "onset",
+    "f:2059"
+   ],
+   [
+    "f:2049",
+    "party_amb",
+    0.1,
+    "onset",
+    "f:2197"
+   ],
+   [
+    "f:2187",
+    "party_amb",
+    0.1,
+    "onset",
+    "f:2313"
+   ],
+   [
+    "f:2313",
+    "roof_wind",
+    0.1,
+    "onset",
+    "f:2372"
+   ],
+   [
+    "f:2372",
+    "room_tone",
+    0.09,
+    "onset",
+    "f:2455"
+   ],
+   [
+    "f:2455",
+    "roof_wind",
+    0.1,
+    "onset",
+    "f:2663"
+   ],
+   [
+    "f:2653",
+    "roof_wind",
+    0.1,
+    "onset",
+    "f:2861"
+   ],
+   [
+    "f:2851",
+    "roof_wind",
+    0.1,
+    "onset",
+    "f:2967"
+   ],
+   [
+    "S1+150",
+    "pen_write",
+    0.35
+   ],
+   [
+    "S3+72",
+    "land",
+    0.5
+   ],
+   [
+    "S3+76",
+    "ouch",
+    0.35
+   ],
+   [
+    "S4+22",
+    "tumble",
+    0.3
+   ],
+   [
+    "S4+28",
+    "ouch",
+    0.4
+   ],
+   [
+    "S4+44",
+    "dizzy",
+    0.2
+   ],
+   [
+    "S5+36",
+    "pen_write",
+    0.35
+   ],
+   [
+    "S6+10",
+    "chop",
+    0.35
+   ],
+   [
+    "S6+18",
+    "ouch",
+    0.35
+   ],
+   [
+    "S7+38",
+    "pen_write",
+    0.35
+   ],
+   [
+    "S8+30",
+    "shades",
+    0.45
+   ],
+   [
+    "S10+46",
+    "pop",
+    0.25
+   ],
+   [
+    "S10+70",
+    "pop",
+    0.25
+   ],
+   [
+    "S10+106",
+    "pop",
+    0.25
+   ],
+   [
+    "S11+14",
+    "pop",
+    0.18
+   ],
+   [
+    "S11+28",
+    "pop",
+    0.18
+   ],
+   [
+    "S11+42",
+    "pop",
+    0.18
+   ],
+   [
+    "S13+4",
+    "pop",
+    0.25
+   ],
+   [
+    "S13+44",
+    "pop",
+    0.25
+   ],
+   [
+    "S13+94",
+    "buzzer",
+    0.2
+   ],
+   [
+    "S14+20",
+    "bonk",
+    0.5
+   ],
+   [
+    "S14+24",
+    "ouch",
+    0.35
+   ],
+   [
+    "S15+4",
+    "ouch",
+    0.35
+   ],
+   [
+    "S16+20",
+    "crack",
+    0.2
+   ],
+   [
+    "S16+22",
+    "ouch",
+    0.35
+   ],
+   [
+    "S17+30",
+    "balloon_pop",
+    0.25
+   ],
+   [
+    "S17+34",
+    "ouch",
+    0.3
+   ],
+   [
+    "S18+100",
+    "land",
+    0.45
+   ],
+   [
+    "S18+104",
+    "ouch",
+    0.4
+   ],
+   [
+    "S22+92",
+    "sparkle",
+    0.25
+   ],
+   [
+    "S28+2",
+    "drone_hit",
+    0.22
+   ]
+  ],
+  "repeats": [
+   {
+    "at": "S9+2",
+    "clip": "step",
+    "n": 7,
+    "every": 9,
+    "gain": [
+     0.05,
+     0.09
+    ],
+    "pitch": [
+     0.9,
+     1.1
+    ]
+   }
+  ],
+  "music": {
+   "clip": "music",
+   "from": "S1",
+   "loop": 1.5,
+   "offset": 4
+  },
+  "levels": {
+   "sfx_lu": -12.0,
+   "music_lu": -15.0
+  }
+ }
+}

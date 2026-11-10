@@ -74,6 +74,17 @@ shot or a character.
 
 ## Pipeline
 
+- **No dead air between beats (feel-pain, long-form).** `holds` of 2 s at every beat boundary meant the voice
+  finished, then the shot sat still until the cut: about 37 s of silence per 2-minute chapter, and the person found it
+  stuttering and tiring to watch. Keep beat holds about 0.6 s; before rendering, measure each shot's silent tail (shot
+  end minus last word end) and fix anything over 1 s. When you shorten holds after the shots are drawn, check two
+  things: a hold that falls *inside* a shot (its words then come early against the animation: keep that one), and
+  sound or fx cues like `S12+76` that now land past the shortened shot (move them in).
+- **Long-form runs (8-minute videos), as the person wants them:** script split into chapters and shown first; one
+  storyboard review for all chapters, then render everything in one pass and take notes per chapter afterwards; the
+  video closes for good at the end (no part 2, no cliffhanger) unless asked; build many new sets and props so it does
+  not repeat the last video, but keep them episode-local when the person says to skip the library step.
+
 - **Storyboard first.** A still renders in about two seconds, a full 23 s episode in about two and a half minutes.
   Iterate on stills.
 - **Never cut to an empty frame.** Whatever a shot builds, something is already on at its first frame (start a pop at

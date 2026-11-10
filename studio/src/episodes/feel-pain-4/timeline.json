@@ -1,0 +1,570 @@
+{
+ "slug": "feel-pain-4",
+ "title": "WHAT IF YOU COULD FEEL EVERYONE'S PAIN?",
+ "fps": 30,
+ "total": 3100,
+ "segments": [
+  {
+   "shot": "S1",
+   "a": 0,
+   "b": 122,
+   "t0": 0,
+   "t1": 122,
+   "line": "Three months later, you're standing in a hospital emergency room."
+  },
+  {
+   "shot": "S2",
+   "a": 122,
+   "b": 236,
+   "t0": 0,
+   "t1": 114,
+   "line": "Yeah. The one place you swore you'd never go."
+  },
+  {
+   "shot": "S3",
+   "a": 236,
+   "b": 297,
+   "t0": 0,
+   "t1": 61,
+   "line": "But here's what the doctor figured out."
+  },
+  {
+   "shot": "S4",
+   "a": 297,
+   "b": 370,
+   "t0": 0,
+   "t1": 73,
+   "line": "A lot of patients can't tell you where it hurts."
+  },
+  {
+   "shot": "S5",
+   "a": 370,
+   "b": 395,
+   "t0": 0,
+   "t1": 25,
+   "line": "Babies."
+  },
+  {
+   "shot": "S6",
+   "a": 395,
+   "b": 442,
+   "t0": 0,
+   "t1": 47,
+   "line": "People who don't speak English."
+  },
+  {
+   "shot": "S7",
+   "a": 442,
+   "b": 569,
+   "t0": 0,
+   "t1": 127,
+   "line": "People who are too scared, or too confused, or just too tough to say anything."
+  },
+  {
+   "shot": "S8",
+   "a": 569,
+   "b": 629,
+   "t0": 0,
+   "t1": 60,
+   "line": "You can't read their minds."
+  },
+  {
+   "shot": "S9",
+   "a": 629,
+   "b": 756,
+   "t0": 0,
+   "t1": 127,
+   "line": "But you can see them. And when you see them... you know."
+  },
+  {
+   "shot": "S10",
+   "a": 756,
+   "b": 859,
+   "t0": 0,
+   "t1": 103,
+   "line": "A toddler won't stop crying. Nobody can find anything wrong."
+  },
+  {
+   "shot": "S11",
+   "a": 859,
+   "b": 967,
+   "t0": 0,
+   "t1": 108,
+   "line": "You look at him for two seconds... and your left ear is throbbing."
+  },
+  {
+   "shot": "S12",
+   "a": 967,
+   "b": 1007,
+   "t0": 0,
+   "t1": 40,
+   "line": "Ear infection."
+  },
+  {
+   "shot": "S13",
+   "a": 1007,
+   "b": 1094,
+   "t0": 0,
+   "t1": 87,
+   "line": "An old man swears he's\" fine, just tired.\""
+  },
+  {
+   "shot": "S14",
+   "a": 1094,
+   "b": 1142,
+   "t0": 0,
+   "t1": 48,
+   "line": "Your chest goes tight."
+  },
+  {
+   "shot": "S15",
+   "a": 1142,
+   "b": 1191,
+   "t0": 0,
+   "t1": 49,
+   "line": "The doctors run a test."
+  },
+  {
+   "shot": "S16",
+   "a": 1191,
+   "b": 1276,
+   "t0": 0,
+   "t1": 85,
+   "line": "He's having a heart attack. They catch it in time."
+  },
+  {
+   "shot": "S17",
+   "a": 1276,
+   "b": 1346,
+   "t0": 0,
+   "t1": 70,
+   "line": "By the end of the shift, you can barely stand."
+  },
+  {
+   "shot": "S18",
+   "a": 1346,
+   "b": 1487,
+   "t0": 0,
+   "t1": 141,
+   "line": "You feel like you ran a marathon, broke your arm, and had three toothaches."
+  },
+  {
+   "shot": "S19",
+   "a": 1487,
+   "b": 1562,
+   "t0": 0,
+   "t1": 75,
+   "line": "Because, kind of, you did."
+  },
+  {
+   "shot": "S20",
+   "a": 1562,
+   "b": 1685,
+   "t0": 0,
+   "t1": 123,
+   "line": "But for the first time since this started, it doesn't feel like a curse."
+  },
+  {
+   "shot": "S21",
+   "a": 1685,
+   "b": 1799,
+   "t0": 0,
+   "t1": 114,
+   "line": "It feels like a job. A job only you can do."
+  },
+  {
+   "shot": "S22",
+   "a": 1799,
+   "b": 1904,
+   "t0": 0,
+   "t1": 105,
+   "line": "You walk out into the parking lot. The sun is coming up."
+  },
+  {
+   "shot": "S23",
+   "a": 1904,
+   "b": 2021,
+   "t0": 0,
+   "t1": 117,
+   "line": "Your whole body hurts... and you're smiling."
+  },
+  {
+   "shot": "S24",
+   "a": 2021,
+   "b": 2150,
+   "t0": 0,
+   "t1": 129,
+   "line": "You get home. Your roommate shuffles into the kitchen, half asleep..."
+  },
+  {
+   "shot": "S25",
+   "a": 2150,
+   "b": 2262,
+   "t0": 0,
+   "t1": 112,
+   "line": "and slams his toe into the table leg. Again."
+  },
+  {
+   "shot": "S26",
+   "a": 2262,
+   "b": 2380,
+   "t0": 0,
+   "t1": 118,
+   "line": "Ouch. Your toe is on fire."
+  },
+  {
+   "shot": "S27",
+   "a": 2380,
+   "b": 2509,
+   "t0": 0,
+   "t1": 129,
+   "line": "And for the first time since all this started... you laugh."
+  },
+  {
+   "shot": "S28",
+   "a": 2509,
+   "b": 2564,
+   "t0": 0,
+   "t1": 55,
+   "line": "He looks at you like you're crazy."
+  },
+  {
+   "shot": "S29",
+   "a": 2564,
+   "b": 2643,
+   "t0": 0,
+   "t1": 79,
+   "line": "You just grab two bags of frozen peas."
+  },
+  {
+   "shot": "S30",
+   "a": 2643,
+   "b": 2715,
+   "t0": 0,
+   "t1": 72,
+   "line": "One for him. One for you."
+  },
+  {
+   "shot": "S31",
+   "a": 2715,
+   "b": 2904,
+   "t0": 0,
+   "t1": 189,
+   "line": "Because maybe that's the whole point. When you feel everyone's pain... nobody has to hurt alone."
+  },
+  {
+   "shot": "S32",
+   "a": 2904,
+   "b": 3100,
+   "t0": 0,
+   "t1": 196,
+   "line": "So, would you want this power? Or would it be too much? Tell me in the comments."
+  }
+ ],
+ "shots": [
+  {
+   "id": "S1",
+   "size": "wide",
+   "key": 60,
+   "len": 122,
+   "first": 0,
+   "line": "Three months later, you're standing in a hospital emergency room.",
+   "note": "three months later: the ER bay, monitor beeping; you stand by the bed"
+  },
+  {
+   "id": "S2",
+   "size": "close-up",
+   "key": 40,
+   "len": 114,
+   "first": 122,
+   "line": "Yeah. The one place you swore you'd never go.",
+   "note": "you, a wry smile: the one place you swore you'd never go"
+  },
+  {
+   "id": "S3",
+   "size": "medium two-shot",
+   "key": 60,
+   "len": 61,
+   "first": 236,
+   "line": "But here's what the doctor figured out.",
+   "note": "the doctor and you by the bed"
+  },
+  {
+   "id": "S4",
+   "size": "wide",
+   "key": 60,
+   "len": 73,
+   "first": 297,
+   "line": "A lot of patients can't tell you where it hurts.",
+   "note": "a patient in the bed, a nurse with a clipboard: where does it hurt?"
+  },
+  {
+   "id": "S5",
+   "size": "medium",
+   "key": 20,
+   "len": 25,
+   "first": 370,
+   "line": "Babies.",
+   "note": "a baby crying in the bed"
+  },
+  {
+   "id": "S6",
+   "size": "medium",
+   "key": 30,
+   "len": 47,
+   "first": 395,
+   "line": "People who don't speak English.",
+   "note": "a patient shrugs, lost for words"
+  },
+  {
+   "id": "S7",
+   "size": "medium",
+   "key": 60,
+   "len": 127,
+   "first": 442,
+   "line": "People who are too scared, or too confused, or just too tough to say anything.",
+   "note": "a tough guy, arms crossed, sweating: fine"
+  },
+  {
+   "id": "S8",
+   "size": "close-up",
+   "key": 40,
+   "len": 60,
+   "first": 569,
+   "line": "You can't read their minds.",
+   "note": "you, calm"
+  },
+  {
+   "id": "S9",
+   "size": "close-up",
+   "key": 60,
+   "len": 127,
+   "first": 629,
+   "line": "But you can see them. And when you see them... you know.",
+   "note": "your eyes glow red: you see them, you know"
+  },
+  {
+   "id": "S10",
+   "size": "medium",
+   "key": 40,
+   "len": 103,
+   "first": 756,
+   "line": "A toddler won't stop crying. Nobody can find anything wrong.",
+   "note": "a toddler crying on his mom's lap"
+  },
+  {
+   "id": "S11",
+   "size": "close-up",
+   "key": 60,
+   "len": 108,
+   "first": 859,
+   "line": "You look at him for two seconds... and your left ear is throbbing.",
+   "note": "your left ear throbs"
+  },
+  {
+   "id": "S12",
+   "size": "medium",
+   "key": 30,
+   "len": 40,
+   "first": 967,
+   "line": "Ear infection.",
+   "note": "the doctor checks the toddler's ear: EAR INFECTION"
+  },
+  {
+   "id": "S13",
+   "size": "medium",
+   "key": 40,
+   "len": 87,
+   "first": 1007,
+   "line": "An old man swears he's\" fine, just tired.\"",
+   "note": "an old man in bed: fine, just tired"
+  },
+  {
+   "id": "S14",
+   "size": "close-up",
+   "key": 30,
+   "len": 48,
+   "first": 1094,
+   "line": "Your chest goes tight.",
+   "note": "your chest goes tight (throb)"
+  },
+  {
+   "id": "S15",
+   "size": "insert",
+   "key": 30,
+   "len": 49,
+   "first": 1142,
+   "line": "The doctors run a test.",
+   "note": "the monitor spikes"
+  },
+  {
+   "id": "S16",
+   "size": "medium",
+   "key": 40,
+   "len": 85,
+   "first": 1191,
+   "line": "He's having a heart attack. They catch it in time.",
+   "note": "the doctor and the nurse at the bed: CAUGHT IN TIME"
+  },
+  {
+   "id": "S17",
+   "size": "wide",
+   "key": 40,
+   "len": 70,
+   "first": 1276,
+   "line": "By the end of the shift, you can barely stand.",
+   "note": "end of the shift: you slumped on a bench in the empty bay"
+  },
+  {
+   "id": "S18",
+   "size": "schematic",
+   "key": 80,
+   "len": 141,
+   "first": 1346,
+   "line": "You feel like you ran a marathon, broke your arm, and had three toothaches.",
+   "note": "your body tally: MARATHON LEGS, BROKEN ARM, 3 TOOTHACHES"
+  },
+  {
+   "id": "S19",
+   "size": "close-up",
+   "key": 40,
+   "len": 75,
+   "first": 1487,
+   "line": "Because, kind of, you did.",
+   "note": "a tired laugh"
+  },
+  {
+   "id": "S20",
+   "size": "medium",
+   "key": 60,
+   "len": 123,
+   "first": 1562,
+   "line": "But for the first time since this started, it doesn't feel like a curse.",
+   "note": "you smile, gently"
+  },
+  {
+   "id": "S21",
+   "size": "insert",
+   "key": 60,
+   "len": 114,
+   "first": 1685,
+   "line": "It feels like a job. A job only you can do.",
+   "note": "your ER STAFF badge"
+  },
+  {
+   "id": "S22",
+   "size": "wide",
+   "key": 60,
+   "len": 105,
+   "first": 1799,
+   "line": "You walk out into the parking lot. The sun is coming up.",
+   "note": "out of the ER doors into the sunrise"
+  },
+  {
+   "id": "S23",
+   "size": "low angle",
+   "key": 50,
+   "len": 117,
+   "first": 1904,
+   "line": "Your whole body hurts... and you're smiling.",
+   "note": "you against the rising sun, aching and smiling"
+  },
+  {
+   "id": "S24",
+   "size": "wide",
+   "key": 70,
+   "len": 129,
+   "first": 2021,
+   "line": "You get home. Your roommate shuffles into the kitchen, half asleep...",
+   "note": "home: your roommate shuffles in half asleep, again"
+  },
+  {
+   "id": "S25",
+   "size": "low insert",
+   "key": 45,
+   "len": 112,
+   "first": 2150,
+   "line": "and slams his toe into the table leg. Again.",
+   "note": "his toe slams into the table leg"
+  },
+  {
+   "id": "S26",
+   "size": "close-up",
+   "key": 20,
+   "len": 118,
+   "first": 2262,
+   "line": "Ouch. Your toe is on fire.",
+   "note": "OUCH"
+  },
+  {
+   "id": "S27",
+   "size": "medium",
+   "key": 60,
+   "len": 129,
+   "first": 2380,
+   "line": "And for the first time since all this started... you laugh.",
+   "note": "you laugh"
+  },
+  {
+   "id": "S28",
+   "size": "medium",
+   "key": 30,
+   "len": 55,
+   "first": 2509,
+   "line": "He looks at you like you're crazy.",
+   "note": "the roommate stares at you like you're crazy"
+  },
+  {
+   "id": "S29",
+   "size": "insert",
+   "key": 40,
+   "len": 79,
+   "first": 2564,
+   "line": "You just grab two bags of frozen peas.",
+   "note": "two bags of frozen peas"
+  },
+  {
+   "id": "S30",
+   "size": "medium two-shot",
+   "key": 40,
+   "len": 72,
+   "first": 2643,
+   "line": "One for him. One for you.",
+   "note": "one for him, one for you"
+  },
+  {
+   "id": "S31",
+   "size": "wide",
+   "key": 80,
+   "len": 189,
+   "first": 2715,
+   "line": "Because maybe that's the whole point. When you feel everyone's pain... nobody has to hurt alone.",
+   "note": "pull back: the two of you at the table in the sunrise"
+  },
+  {
+   "id": "S32",
+   "size": "close-up",
+   "key": 60,
+   "len": 196,
+   "first": 2904,
+   "line": "So, would you want this power? Or would it be too much? Tell me in the comments.",
+   "note": "you, to camera: would you want this power?"
+  }
+ ],
+ "fx": [
+  {
+   "kind": "flash",
+   "color": "#FF4A4A",
+   "o": 0.5,
+   "f": 2208
+  }
+ ],
+ "audio": {
+  "voiceVol": 0.8,
+  "sfxVol": 0.4765,
+  "musicVol": 0.149,
+  "voice": "feel-pain-4/voice.wav",
+  "sfx": "feel-pain-4/sfx.wav",
+  "music": "feel-pain-4/music.wav"
+ }
+}

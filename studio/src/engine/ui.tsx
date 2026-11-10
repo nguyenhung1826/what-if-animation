@@ -291,14 +291,14 @@ export const TitleCard: React.FC<{ t: number; lines: [string, string]; accent?: 
   return (
     <g>
       <g transform={`translate(960 ${y}) scale(${pop(2)})`}>
-        <text textAnchor="middle" fontFamily={FONT.title} fontWeight={600} fontSize={size / 2} letterSpacing={4} fill="#F6EFE3" stroke="#1A1230" strokeWidth={8} paintOrder="stroke">
+        <text textAnchor="middle" fontFamily={FONT.title} fontWeight={600} fontSize={size / 2} letterSpacing={4} fill="#FFFFFF" stroke="#0B1A3A" strokeWidth={8} paintOrder="stroke">
           {lines[0]}
         </text>
       </g>
       <g transform={`translate(960 ${y + size - 3}) scale(${pop(5)})`}>
-        <text textAnchor="middle" fontFamily={FONT.title} fontWeight={700} fontSize={size} fill={C.orange} stroke="#1A1230" strokeWidth={12} paintOrder="stroke" style={{ filter: 'drop-shadow(0 0 22px rgba(255,138,61,0.55))' }}>
+        <text textAnchor="middle" fontFamily={FONT.title} fontWeight={700} fontSize={size} fill="#3DA9FF" stroke="#0B1A3A" strokeWidth={12} paintOrder="stroke" style={{ filter: 'drop-shadow(0 0 22px rgba(61,169,255,0.55))' }}>
           {words.map((w, i) => (
-            <tspan key={i} style={w.replace(/[^\w]/g, '') === accent ? { fontSize: size * pulse } : undefined} fill={w.replace(/[^\w]/g, '') === accent ? '#FFE27A' : undefined}>
+            <tspan key={i} style={w.replace(/[^\w]/g, '') === accent ? { fontSize: size * pulse } : undefined} fill={w.replace(/[^\w]/g, '') === accent ? '#FFFFFF' : undefined}>
               {(i ? ' ' : '') + w}
             </tspan>
           ))}

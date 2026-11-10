@@ -40,7 +40,7 @@ or any other tool.
 - **High angle / top-down** (looking down at a desk, a landing) and **low angle** (looking up at a character against
   the sky: the rooftop's `low` prop).
 - **Schematic** for the science beat: a dark grid, line icons, labels in the mono face, numbers counting.
-- **Title card:** a wide establishing shot with the title over it, small first line, big second line.
+- **Title card:** a wide establishing shot with the title over it, small first line, big second line. Channel colors (2026-11-10): first line white, second line bright blue (#3DA9FF) with the key word in white, navy outline and a blue glow (`TitleCard` in `src/engine/ui.tsx`).
 
 ## Characters
 
@@ -79,6 +79,7 @@ again. Only a board that passes goes to animation.
 9. **Continuity.** Same costume, same set layout, same props in the same places across shots of one place.
 10. **Only the title and readouts as text,** spelled right, inside the frame.
 11. **Ours.** Nothing resembles a famous character, a channel's hero or a brand.
+12. **Scene craft.** Passes the craft checklist in `scenes.md`: you can tell where the light is, near/middle/far depth, every surface has base, texture and edge, the hero reads against the set.
 
 ## The motion check (step 6)
 

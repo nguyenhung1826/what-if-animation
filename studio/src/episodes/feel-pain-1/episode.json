@@ -1,0 +1,785 @@
+{
+ "id": "FeelPain1",
+ "slug": "feel-pain-1",
+ "topic": "What if you could feel everyone's pain?",
+ "part": "Chapter 1 of 4: the power (long-form, ~2 min)",
+ "title": [
+  "WHAT IF YOU COULD",
+  "FEEL EVERYONE'S PAIN?"
+ ],
+ "accent": "PAIN",
+ "script": [
+  {
+   "beat": "1.1",
+   "text": "What if you could feel everyone's pain?"
+  },
+  {
+   "beat": "1.2",
+   "text": "Not \"I feel your pain,\" like your friend says when your phone cracks. I mean actually feel it."
+  },
+  {
+   "beat": "1.3",
+   "text": "One morning you wake up, and the rule is simple. Any hurt you see... you feel. Same spot. Same strength."
+  },
+  {
+   "beat": "1.4",
+   "text": "Your roommate stumbles into the kitchen, half asleep... and slams his toe into the table leg."
+  },
+  {
+   "beat": "1.5",
+   "text": "Ouch."
+  },
+  {
+   "beat": "1.6",
+   "text": "You drop your cereal. Your toe is on fire. Your sock isn't even touching anything."
+  },
+  {
+   "beat": "1.7",
+   "text": "Okay. Weird. Maybe you slept on it funny."
+  },
+  {
+   "beat": "1.8",
+   "text": "On the bus, a kid flicks his little sister's ear. Your ear stings. A guy cuts himself on a paper envelope. Your finger stings. Someone across the aisle bites their tongue on a sandwich... and now you're biting yours."
+  },
+  {
+   "beat": "1.9",
+   "text": "By the time you get to work, you've felt three stubbed toes, a hangnail, and a sunburn that wasn't yours."
+  },
+  {
+   "beat": "1.10",
+   "text": "But here's the strange part. When you close your eyes? Nothing. Silence. Your body is just... yours again."
+  },
+  {
+   "beat": "1.11",
+   "text": "So the power isn't about touch. It's about seeing."
+  },
+  {
+   "beat": "1.12",
+   "text": "And that gives you an idea."
+  },
+  {
+   "beat": "1.13",
+   "text": "Your coworker is about to staple a stack of papers... and you know exactly how this ends. You look away. You hear the clack, you hear the \"ow\"..."
+  },
+  {
+   "beat": "1.14",
+   "text": "And you feel nothing."
+  },
+  {
+   "beat": "1.15",
+   "text": "You're a genius. You'll just... never look at anything that's about to hurt."
+  },
+  {
+   "beat": "1.16",
+   "text": "Easy, right?"
+  },
+  {
+   "beat": "1.17",
+   "text": "Except you live in a world where people trip on curbs. Where kids fall off monkey bars. Where your neighbor hammers his own thumb every single weekend."
+  },
+  {
+   "beat": "1.18",
+   "text": "And you can't close your eyes forever."
+  }
+ ],
+ "science": [],
+ "cast": [
+  "hero"
+ ],
+ "gaps": {
+  "word": 0.16,
+  "comma": 0.3,
+  "sentence": 0.55,
+  "question": 0.6,
+  "pairs": {}
+ },
+ "holds": {
+  "pain|Not": 2.4,
+  "it|One": 0.6,
+  "strength|Your": 0.6,
+  "leg|Ouch": 0.6,
+  "Ouch|You": 0.6,
+  "anything|Okay": 0.6,
+  "funny|On": 0.6,
+  "yours|By": 0.6,
+  "yours|But": 0.6,
+  "again|So": 0.6,
+  "seeing|And": 0.6,
+  "idea|Your": 0.6,
+  "ow|And": 0.6,
+  "nothing|Youre": 0.6,
+  "hurt|Easy": 0.6,
+  "right|Except": 0.6,
+  "weekend|And": 0.6
+ },
+ "tail": 1.5,
+ "shots": [
+  {
+   "id": "S1",
+   "size": "wide, title",
+   "set": "street dusk",
+   "key": 60,
+   "note": "the street at dusk, you walk past the shops; title card"
+  },
+  {
+   "id": "S2",
+   "size": "medium two-shot",
+   "set": "living room",
+   "key": 60,
+   "note": "your buddy shows his cracked phone; you pat his shoulder: I feel your pain"
+  },
+  {
+   "id": "S3",
+   "size": "close-up",
+   "set": "apartment (blur)",
+   "key": 40,
+   "note": "you, dead serious: I mean actually feel it"
+  },
+  {
+   "id": "S4",
+   "size": "wide",
+   "set": "apartment dawn",
+   "key": 60,
+   "note": "morning: you stretch by the big window"
+  },
+  {
+   "id": "S5",
+   "size": "schematic",
+   "set": "schematic",
+   "key": 120,
+   "note": "two figures: a hurt seen on one (red ring at the toe) lands on the other; SAME SPOT, SAME STRENGTH"
+  },
+  {
+   "id": "S6",
+   "size": "wide",
+   "set": "apartment dawn",
+   "key": 80,
+   "note": "you at the table with cereal; your roommate shuffles in half asleep"
+  },
+  {
+   "id": "S7",
+   "size": "low insert",
+   "set": "apartment floor",
+   "key": 14,
+   "note": "his sock slams into the table leg: flash, red ring"
+  },
+  {
+   "id": "S8",
+   "size": "close-up",
+   "set": "apartment (blur)",
+   "key": 20,
+   "note": "you: OUCH, eyes flash red"
+  },
+  {
+   "id": "S9",
+   "size": "top-down insert",
+   "set": "table top",
+   "key": 20,
+   "note": "your spoon and cereal splash down"
+  },
+  {
+   "id": "S10",
+   "size": "low insert",
+   "set": "under the table",
+   "key": 40,
+   "note": "your sock foot under the table, glowing red, touching nothing"
+  },
+  {
+   "id": "S11",
+   "size": "medium",
+   "set": "apartment dawn",
+   "key": 60,
+   "note": "you, puzzled, shrug: maybe you slept on it funny"
+  },
+  {
+   "id": "S12",
+   "size": "wide",
+   "set": "bus",
+   "key": 60,
+   "note": "the bus: a kid flicks his little sister's ear (ring); you a row behind"
+  },
+  {
+   "id": "S13",
+   "size": "close-up",
+   "set": "bus (blur)",
+   "key": 20,
+   "note": "your ear throbs red"
+  },
+  {
+   "id": "S14",
+   "size": "medium",
+   "set": "bus",
+   "key": 50,
+   "note": "a man opens an envelope, paper cut (ring on his finger)"
+  },
+  {
+   "id": "S15",
+   "size": "insert",
+   "set": "bus",
+   "key": 20,
+   "note": "your hand: the same finger glows"
+  },
+  {
+   "id": "S16",
+   "size": "medium two-shot",
+   "set": "bus",
+   "key": 70,
+   "note": "a woman bites her tongue on a sandwich; you bite yours (oops)"
+  },
+  {
+   "id": "S17",
+   "size": "wide",
+   "set": "office",
+   "key": 120,
+   "note": "the office: you trudge to your desk; tally: 3 TOES, 1 HANGNAIL, 1 SUNBURN"
+  },
+  {
+   "id": "S18",
+   "size": "close-up",
+   "set": "office (blur)",
+   "key": 80,
+   "note": "you close your eyes: the red fades. Silence"
+  },
+  {
+   "id": "S19",
+   "size": "medium",
+   "set": "office",
+   "key": 40,
+   "note": "eyes shut, leaning back, relieved"
+  },
+  {
+   "id": "S20",
+   "size": "schematic",
+   "set": "schematic",
+   "key": 60,
+   "note": "TOUCH (hand) crossed out; SEEING (eye) ticked"
+  },
+  {
+   "id": "S21",
+   "size": "close-up",
+   "set": "office (blur)",
+   "key": 40,
+   "note": "you get an idea (smug, focus rings)"
+  },
+  {
+   "id": "S22",
+   "size": "medium",
+   "set": "office",
+   "key": 60,
+   "note": "your coworker raises the stapler over a stack of papers"
+  },
+  {
+   "id": "S23",
+   "size": "medium close",
+   "set": "office",
+   "key": 40,
+   "note": "you snap your head away, eyes shut; clack behind you"
+  },
+  {
+   "id": "S24",
+   "size": "close-up",
+   "set": "office (blur)",
+   "key": 30,
+   "note": "nothing: you open one eye, smug"
+  },
+  {
+   "id": "S25",
+   "size": "medium",
+   "set": "office",
+   "key": 50,
+   "note": "arms up in your chair: genius"
+  },
+  {
+   "id": "S26",
+   "size": "close-up",
+   "set": "office (blur)",
+   "key": 20,
+   "note": "you grin"
+  },
+  {
+   "id": "S27",
+   "size": "wide",
+   "set": "street",
+   "key": 30,
+   "note": "on the street a man trips on the curb (ring)"
+  },
+  {
+   "id": "S28",
+   "size": "wide",
+   "set": "street park",
+   "key": 30,
+   "note": "a kid drops off the monkey bars (ring)"
+  },
+  {
+   "id": "S29",
+   "size": "medium",
+   "set": "backyard",
+   "key": 40,
+   "note": "over the fence the neighbor hammers his own thumb (ring)"
+  },
+  {
+   "id": "S30",
+   "size": "close-up",
+   "set": "street (blur)",
+   "key": 40,
+   "note": "you, eyes wide, worried: you can't close your eyes forever"
+  }
+ ],
+ "edit": [
+  {
+   "shot": "S1",
+   "at": "f:0"
+  },
+  {
+   "shot": "S2",
+   "at": "f:118"
+  },
+  {
+   "shot": "S3",
+   "at": "f:246"
+  },
+  {
+   "shot": "S4",
+   "at": "f:311"
+  },
+  {
+   "shot": "S5",
+   "at": "f:395"
+  },
+  {
+   "shot": "S6",
+   "at": "f:542"
+  },
+  {
+   "shot": "S7",
+   "at": "f:639"
+  },
+  {
+   "shot": "S8",
+   "at": "f:713"
+  },
+  {
+   "shot": "S9",
+   "at": "f:752"
+  },
+  {
+   "shot": "S10",
+   "at": "f:809"
+  },
+  {
+   "shot": "S11",
+   "at": "f:958"
+  },
+  {
+   "shot": "S12",
+   "at": "f:1088"
+  },
+  {
+   "shot": "S13",
+   "at": "f:1162"
+  },
+  {
+   "shot": "S14",
+   "at": "f:1218"
+  },
+  {
+   "shot": "S15",
+   "at": "f:1294"
+  },
+  {
+   "shot": "S16",
+   "at": "f:1340"
+  },
+  {
+   "shot": "S17",
+   "at": "f:1489"
+  },
+  {
+   "shot": "S18",
+   "at": "f:1687"
+  },
+  {
+   "shot": "S19",
+   "at": "f:1856"
+  },
+  {
+   "shot": "S20",
+   "at": "f:1950"
+  },
+  {
+   "shot": "S21",
+   "at": "f:2058"
+  },
+  {
+   "shot": "S22",
+   "at": "f:2115"
+  },
+  {
+   "shot": "S23",
+   "at": "f:2289"
+  },
+  {
+   "shot": "S24",
+   "at": "f:2422"
+  },
+  {
+   "shot": "S25",
+   "at": "f:2475"
+  },
+  {
+   "shot": "S26",
+   "at": "f:2616"
+  },
+  {
+   "shot": "S27",
+   "at": "f:2682"
+  },
+  {
+   "shot": "S28",
+   "at": "f:2766"
+  },
+  {
+   "shot": "S29",
+   "at": "f:2826"
+  },
+  {
+   "shot": "S30",
+   "at": "f:2911"
+  }
+ ],
+ "fx": [
+  {
+   "at": "S7+56",
+   "kind": "flash",
+   "color": "#FF4A4A",
+   "o": 0.5
+  },
+  {
+   "at": "S8",
+   "kind": "shake",
+   "len": 8,
+   "amp": 10
+  }
+ ],
+ "sound": {
+  "clips": {
+   "bus_rumble": [
+    "inside a city bus driving, low engine rumble and gentle rattles, no voices",
+    5.0
+   ],
+   "buzzer": [
+    "a game show wrong answer buzzer, short",
+    0.8
+   ],
+   "cereal_splash": [
+    "a metal spoon dropping into a bowl of cereal and milk, a splash and clatter",
+    0.6
+   ],
+   "ding": [
+    "a correct answer ding, bright bell chime",
+    0.8
+   ],
+   "envelope_rip": [
+    "tearing open a paper envelope quickly",
+    0.6
+   ],
+   "hammer_hit": [
+    "a hammer hitting a nail into a wooden fence, single knock",
+    0.5
+   ],
+   "land": [
+    "a heavy body landing flat on a wooden floor, cartoon thud",
+    0.6
+   ],
+   "music": [
+    "playful quirky cartoon background music, pizzicato strings, glockenspiel and soft bass, light and curious, 110 bpm, no vocals",
+    17.0
+   ],
+   "ouch": [
+    "a cartoon sharp twang of a plucked tight rubber band with a tiny comic sting, short",
+    0.6
+   ],
+   "roof_wind": [
+    "a gentle evening breeze on a city rooftop, distant traffic",
+    7.0
+   ],
+   "room_tone": [
+    "quiet indoor room tone in the evening, faint distant city hum, no voices",
+    12.5
+   ],
+   "sparkle": [
+    "a short bright magical sparkle twinkle, cartoon",
+    0.8
+   ],
+   "stapler": [
+    "a stapler clacking shut through a stack of paper, single clack",
+    0.5
+   ],
+   "step": [
+    "a single sneaker footstep on a wooden stair, close",
+    0.5
+   ],
+   "title_boom": [
+    "a cinematic whoosh rising into a deep boom impact",
+    1.6
+   ],
+   "toe_thud": [
+    "a foot in a sock slamming into a wooden table leg, a hollow wooden thunk, cartoon",
+    0.6
+   ]
+  },
+  "events": [
+   [
+    "f:0",
+    "roof_wind",
+    0.1,
+    "onset",
+    "f:118"
+   ],
+   [
+    "f:118",
+    "room_tone",
+    0.09,
+    "onset",
+    "f:491"
+   ],
+   [
+    "f:481",
+    "room_tone",
+    0.09,
+    "onset",
+    "f:854"
+   ],
+   [
+    "f:844",
+    "room_tone",
+    0.09,
+    "onset",
+    "f:1088"
+   ],
+   [
+    "f:1088",
+    "bus_rumble",
+    0.12,
+    "onset",
+    "f:1236"
+   ],
+   [
+    "f:1226",
+    "bus_rumble",
+    0.12,
+    "onset",
+    "f:1374"
+   ],
+   [
+    "f:1364",
+    "bus_rumble",
+    0.12,
+    "onset",
+    "f:1489"
+   ],
+   [
+    "f:1489",
+    "room_tone",
+    0.09,
+    "onset",
+    "f:1687"
+   ],
+   [
+    "f:1856",
+    "room_tone",
+    0.09,
+    "onset",
+    "f:2229"
+   ],
+   [
+    "f:2219",
+    "room_tone",
+    0.09,
+    "onset",
+    "f:2592"
+   ],
+   [
+    "f:2582",
+    "room_tone",
+    0.09,
+    "onset",
+    "f:2682"
+   ],
+   [
+    "f:2682",
+    "roof_wind",
+    0.1,
+    "onset",
+    "f:2890"
+   ],
+   [
+    "f:2880",
+    "roof_wind",
+    0.1,
+    "onset",
+    "f:3005"
+   ],
+   [
+    "S1+48",
+    "title_boom",
+    0.4
+   ],
+   [
+    "S7+56",
+    "toe_thud",
+    0.6
+   ],
+   [
+    "S7+60",
+    "ouch",
+    0.4
+   ],
+   [
+    "S8+30",
+    "ouch",
+    0.4
+   ],
+   [
+    "S9+4",
+    "cereal_splash",
+    0.45
+   ],
+   [
+    "S10+6",
+    "ouch",
+    0.3
+   ],
+   [
+    "S12+68",
+    "ouch",
+    0.3
+   ],
+   [
+    "S13+10",
+    "ouch",
+    0.4
+   ],
+   [
+    "S14+20",
+    "envelope_rip",
+    0.35
+   ],
+   [
+    "S14+26",
+    "ouch",
+    0.3
+   ],
+   [
+    "S15+8",
+    "ouch",
+    0.3
+   ],
+   [
+    "S16+36",
+    "ouch",
+    0.3
+   ],
+   [
+    "S16+100",
+    "ouch",
+    0.45
+   ],
+   [
+    "S20+52",
+    "buzzer",
+    0.15
+   ],
+   [
+    "S20+68",
+    "ding",
+    0.3
+   ],
+   [
+    "S21+24",
+    "sparkle",
+    0.35
+   ],
+   [
+    "S23+57",
+    "stapler",
+    0.5
+   ],
+   [
+    "S25+10",
+    "sparkle",
+    0.3
+   ],
+   [
+    "S27+48",
+    "land",
+    0.35
+   ],
+   [
+    "S27+52",
+    "ouch",
+    0.3
+   ],
+   [
+    "S28+24",
+    "land",
+    0.3
+   ],
+   [
+    "S28+28",
+    "ouch",
+    0.3
+   ],
+   [
+    "S29+46",
+    "hammer_hit",
+    0.4
+   ],
+   [
+    "S29+50",
+    "ouch",
+    0.25
+   ]
+  ],
+  "repeats": [
+   {
+    "at": "S1+4",
+    "clip": "step",
+    "n": 14,
+    "every": 9,
+    "gain": [
+     0.05,
+     0.09
+    ],
+    "pitch": [
+     0.9,
+     1.1
+    ]
+   },
+   {
+    "at": "S17+4",
+    "clip": "step",
+    "n": 8,
+    "every": 9,
+    "gain": [
+     0.05,
+     0.09
+    ],
+    "pitch": [
+     0.9,
+     1.1
+    ]
+   }
+  ],
+  "music": {
+   "clip": "music",
+   "from": "S1",
+   "loop": 1.5,
+   "offset": 0
+  },
+  "levels": {
+   "sfx_lu": -12.0,
+   "music_lu": -15.0
+  }
+ }
+}
