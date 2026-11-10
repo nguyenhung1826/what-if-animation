@@ -165,3 +165,9 @@ const FarCity: React.FC<{ x0: number; x1: number; base: number; h: number; seed:
   }
   return <g>{out}</g>;
 };
+
+// ---------- grades: a full-frame multiply wash laid over a set (draw after the set, before or after the cast) ----------
+/** Night with the lamps off: darker and bluer. o 0.3..0.55 in use. Origin switch-off-sleep-1. */
+export const Night: React.FC<{ o?: number }> = ({ o = 0.42 }) => <rect x={-2000} y={-2000} width={6000} height={6000} fill="#0A1030" opacity={o} style={{ mixBlendMode: 'multiply' }} />;
+/** Early morning before the sun: a light cool wash. Origin switch-off-sleep-3. */
+export const Dawn: React.FC<{ o?: number }> = ({ o = 0.25 }) => <rect x={-2000} y={-2000} width={6000} height={6000} fill="#3A4A80" opacity={o} style={{ mixBlendMode: 'multiply' }} />;

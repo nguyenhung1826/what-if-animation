@@ -1,3 +1,5 @@
+> **Merged into the library on 2026-11-10** (engine + CATALOG.md); what stays here is listed as one-off below or in the merge report.
+
 # Library to-do from switch-off-sleep-5
 
 Made in parallel with chapters 3, 4 and 6, so nothing here was moved into `src/engine/` or `CATALOG.md`. The merge

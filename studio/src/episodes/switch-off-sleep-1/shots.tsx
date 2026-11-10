@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  Hero, Pose, basePose, poseAt, faceAt, kf, clamp, easeOut, settle, camT, LOOKS, HEAD, joints, toWorld,
+  Night, PowerSwitch, Hero, Pose, basePose, poseAt, faceAt, kf, clamp, easeOut, settle, camT, LOOKS, HEAD, joints, toWorld,
   Bedroom, BedDuvet, bedSit, BEDROOM, Classroom, SchoolDesk, Kid, Study, Desk, Kitchen, KitchenIsland, KITCHEN, islandTop, stand,
   Tabletop, AlarmClock, Paper, PaperStack, Cat, Mug, TitleCard, Glow, Foreground, LightVeil, ShotProps,
 } from '../../engine';
@@ -13,9 +13,6 @@ const HERO = LOOKS.hero;
 const GLOW = { ...LOOKS.hero, faceGlow: true };
 const ICE = '#9FE4FF';
 const on = (p: Pose, g: number): Pose => ({ ...p, glint: g, glintColor: ICE });
-
-// the room at night with the lamp off: darker, bluer
-export const Night: React.FC<{ o?: number }> = ({ o = 0.42 }) => <rect x={-2000} y={-2000} width={6000} height={6000} fill="#0A1030" opacity={o} style={{ mixBlendMode: 'multiply' }} />;
 
 // a close-up of the hero against a soft background (pattern from rewind Sh9)
 export const CloseUp: React.FC<{ t: number; len: number; bg: React.ReactNode; p?: Partial<Pose>; face: Partial<Pose>; glint: number; x?: number; rim?: string }> = ({ t, len, bg, p = {}, face, glint, x = 980, rim = 'rimBlueL' }) => {
@@ -102,12 +99,7 @@ export const S4: React.FC<ShotProps> = ({ t, len }) => {
       <Glow x={640} y={300} r={300} o={0.6 * lit} />
       {/* the cord and the rocker switch on it */}
       <path d="M 790 690 Q 900 700 1000 760 L 1300 800 Q 1500 830 1980 820" stroke="#1E1A22" strokeWidth={14} fill="none" />
-      <g transform="translate(1085 770) rotate(6) scale(1.3)">
-        <rect x={-90} y={-40} width={180} height={80} rx={30} fill="#E8E2D6" stroke="#1E1A22" strokeWidth={6} />
-        <g transform={`rotate(${-12 + 24 * down})`}>
-          <rect x={-46} y={-30} width={92} height={42} rx={14} fill={lit > 0.5 ? '#FF8A3D' : '#9A9AA8'} stroke="#1E1A22" strokeWidth={5} />
-        </g>
-      </g>
+      <PowerSwitch kind="cord" x={1085} y={770} rot={6} s={1.3} down={down} lit={lit} />
       {/* your forearm (bare under the pushed-up sleeve) and a pointing hand */}
       <g filter="url(#rimL)">
         <path d={`M ${hand.x + 40} ${hand.y + 20} L ${hand.x + 420} ${hand.y + 420}`} stroke={HERO.line} strokeWidth={120} strokeLinecap="round" />
@@ -226,8 +218,7 @@ export const S9: React.FC<ShotProps> = ({ t, len }) => {
 const CAT = KITCHEN.P(0.78, 0.72, 0.1);
 export const S10: React.FC<ShotProps> = ({ t, len }) => (
   <g transform={camT(CAT.x - 30, CAT.y - 60, kf(t, [[0, 3.0], [len, 3.15]]))}>
-    <Kitchen t={t + 200} id="k10" veil={0.7} />
-    <Night o={0.45} />
+    <Kitchen t={t + 200} id="k10" veil={0.7} tint="night" tintO={0.45} />
     <Cat x={CAT.x} y={CAT.y} mood={t > 10 ? 'alert' : 'sleep'} f={t} />
     <Glow x={CAT.x - 20} y={CAT.y - 40} r={120} kind="cool" o={0.25} />
   </g>
@@ -248,8 +239,7 @@ export const S11: React.FC<ShotProps> = ({ t, len }) => {
   const hand = toWorld(hp, joints(hp).armR.end);
   return (
     <g transform={camT(kf(t, [[0, 1020], [len, 1040]]), 540, kf(t, [[0, 1.6], [len, 1.68]]))}>
-      <Kitchen t={t + 260} id="k11" veil={0.7} />
-      <Night o={0.45} />
+      <Kitchen t={t + 260} id="k11" veil={0.7} tint="night" tintO={0.45} />
       <Cat x={CAT.x} y={CAT.y} mood="alert" f={t + 30} />
       <Hero look={GLOW} pose={on({ ...pose, ...faceAt(t, [[0, 'cool']]) }, 0.9)} rimId="rimBlueL" shadow={0} />
       <KitchenIsland />

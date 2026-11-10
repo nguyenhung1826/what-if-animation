@@ -1,10 +1,10 @@
 import React from 'react';
 import {
-  Hero, Pose, poseAt, faceAt, kf, clamp, easeOut, easeInOut, settle, camT, LOOKS, STUDY, Study, Desk,
+  Night, Hero, Pose, poseAt, faceAt, kf, clamp, easeOut, easeInOut, settle, camT, LOOKS, STUDY, Study, Desk,
   Tabletop, AlarmClock, Paper, PaperStack, OpenBook, BookFlat, BookTower, LaptopBack, Phone, Mug,
   Schematic, SCH, SchLabel, CountUp, DrawOn, Tag, Sparkle, Glow, LightVeil, FONT, ShotProps,
 } from '../../engine';
-import { CloseUp, Night } from '../switch-off-sleep-1/shots';
+import { CloseUp } from '../switch-off-sleep-1/shots';
 
 // "What if you could switch off sleep?" Chapter 2: night one, the fun part. Thirteen shots, all in the study at night
 // (and at sunrise at the end), plus two schematic cards for the number. The power is on the whole night: the hero's

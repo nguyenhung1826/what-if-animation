@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  Hero, Pose, Look, basePose, poseAt, faceAt, kf, clamp, easeOut, easeInOut, camT, LOOKS, tone, LEG_LEN, HEAD,
+  Crate, HandPhone, PowerSwitch, SIS_PJS, SUIT_BLACK, Hero, Pose, Look, basePose, poseAt, faceAt, kf, clamp, easeOut, easeInOut, camT, LOOKS, tone, LEG_LEN, HEAD,
   walkPose, walkPhase, joints, toWorld, Rooftop, Tag, Glow, FONT, ShotProps,
 } from '../../engine';
 import { CloseUp } from '../switch-off-sleep-1/shots';
@@ -15,28 +15,12 @@ const ICE = '#9FE4FF';
 const on = (p: Pose, g = 0.9): Pose => ({ ...p, glint: g, glintColor: ICE });
 
 // costumes (on the storyboard for approval): the man in a charcoal suit and red tie
-// the sister exactly as chapter 3 drew her: black, teal pajamas top and bottom, coral slippers, bunches
-export const SIS: Look = { ...tone(LOOKS.sis, 'black'), jacket: '#3E8C86', jacketShade: '#2F6E69', sleeve: '#3E8C86', limb: '#357A75', accent: '#F2C14E', shoe: '#F28C6A', hair: '#3A2E44' };
-export const SUIT: Look = tone(LOOKS.suit, 'black');
 const SIS_S = 0.7; // the sister at 0.7 of the others
 
 // the roof's parapet top and the deck where feet stand, for a given `low`
 const LEDGE = (low: number) => 790 + low;
 const DECK = (low: number) => 846 + low;
 
-// a wooden crate on the deck to sit on; the hero sits on it side-on (thighs forward, shins down to the deck)
-export const Crate: React.FC<{ x: number; top: number; bottom: number; w: number }> = ({ x, top, bottom, w }) => {
-  const h = bottom - top;
-  return (
-    <g>
-      <ellipse cx={x} cy={bottom + 4} rx={w * 0.62} ry={w * 0.08} fill="#000" opacity={0.3} />
-      <rect x={x - w / 2} y={top} width={w} height={h} rx={4} fill="#7A5236" stroke="#2A1A12" strokeWidth={Math.max(2, w * 0.03)} />
-      {[0.33, 0.66].map((k) => <rect key={k} x={x - w / 2} y={top + h * k - w * 0.015} width={w} height={w * 0.03} fill="#4E3222" />)}
-      <rect x={x - w / 2} y={top} width={w} height={w * 0.035} fill="#E8A070" opacity={0.6} />
-      <path d={`M ${x - w / 2 + 6} ${top + 6} L ${x + w / 2 - 6} ${bottom - 6}`} stroke="#5E3E28" strokeWidth={w * 0.04} />
-    </g>
-  );
-};
 const crateTop = (low: number, scale: number) => DECK(low) - 74 * scale;
 const sitting = (x: number, low: number, scale: number, p: Partial<Pose> = {}): Pose => ({
   ...basePose, x, y: crateTop(low, scale) - 4 * scale, scale, yaw: 0.8, facing: 1, legL: { a: 86, b: -86 }, legR: { a: 80, b: -78 },
@@ -47,18 +31,6 @@ const Seat: React.FC<{ x: number; low: number; scale: number }> = ({ x, low, sca
 );
 
 const standing = (x: number, low: number, scale: number, p: Partial<Pose> = {}): Pose => ({ ...basePose, x, y: DECK(low) - LEG_LEN * scale, scale, ...p });
-
-// a phone in a hand: a dark slab with a lit screen
-const HandPhone: React.FC<{ pose: Pose; side?: 'armL' | 'armR'; lit?: number }> = ({ pose, side = 'armR', lit = 1 }) => {
-  const h = toWorld(pose, joints(pose)[side].end);
-  const s = pose.scale;
-  return (
-    <g transform={`translate(${h.x} ${h.y}) rotate(-12) scale(${s})`}>
-      <rect x={-11} y={-30} width={22} height={42} rx={5} fill="#101018" stroke="#05050A" strokeWidth={2} />
-      <rect x={-8} y={-26} width={16} height={32} rx={3} fill="#9FC0FF" opacity={0.35 + 0.5 * lit} />
-    </g>
-  );
-};
 
 // ---------- S1: wide, low: the roof at sunrise; you sit alone on the parapet. "Sunrise" @62 ----------
 export const S1: React.FC<ShotProps> = ({ t, len }) => {
@@ -97,7 +69,7 @@ export const S2: React.FC<ShotProps> = ({ t, len }) => {
       <Rooftop t={t + 140} sunX={1500} sunY={640} low={low} />
       <Seat x={1180} low={low} scale={1.15} />
       <Hero look={GLOW} pose={on({ ...hero, ...faceAt(t, [[0, 'neutral'], [36, 'worried']]) })} rimId="rimR" shadow={0} />
-      <Hero look={SIS} pose={{ ...sis, yaw: t < 62 ? 0.8 : 0.3, look: 0.6, ...faceAt(t, [[0, 'happy']]) }} rimId="rimR" shadow={0.5} />
+      <Hero look={SIS_PJS} pose={{ ...sis, yaw: t < 62 ? 0.8 : 0.3, look: 0.6, ...faceAt(t, [[0, 'happy']]) }} rimId="rimR" shadow={0.5} />
     </g>
   );
 };
@@ -117,7 +89,7 @@ export const S3: React.FC<ShotProps> = ({ t, len }) => {
       <g filter="url(#blur6)">
         <Rooftop t={t + 240} sunX={1250} sunY={560} low={low} />
       </g>
-      <Hero look={SIS} pose={{ ...pose, y: pose.y - bounce, squash: -bounce / 200, ...faceAt(t, [[0, 'happy']]) }} rimId="rimR" shadow={0} />
+      <Hero look={SIS_PJS} pose={{ ...pose, y: pose.y - bounce, squash: -bounce / 200, ...faceAt(t, [[0, 'happy']]) }} rimId="rimR" shadow={0} />
     </g>
   );
 };
@@ -133,7 +105,7 @@ export const S4: React.FC<ShotProps> = ({ t, len }) => {
   return (
     <g transform={camT(kf(t, [[0, 960], [len, 1000]]), 540, kf(t, [[0, 1.0], [len, 1.08]], easeInOut))}>
       <Rooftop t={t + 300} sunX={720} sunY={560} low={low} />
-      <Hero look={SUIT} pose={{ ...pose, ...faceAt(t, [[0, 'neutral'], [60, 'smug']]) }} rimId="rimL" shadow={0} />
+      <Hero look={SUIT_BLACK} pose={{ ...pose, ...faceAt(t, [[0, 'neutral'], [60, 'smug']]) }} rimId="rimL" shadow={0} />
       <HandPhone pose={pose} lit={1} />
     </g>
   );
@@ -166,8 +138,8 @@ export const S6: React.FC<ShotProps> = ({ t, len }) => {
       <Rooftop t={t + 400} sunX={1500} sunY={650} low={low} cityLit={kf(t, [[0, 1.2], [len, 3.2]])} />
       <Seat x={900} low={low} scale={0.72} />
       <Hero look={GLOW} pose={on({ ...hero, ...faceAt(t, [[0, 'worried']]), blink: t % 70 > 66 ? 1 : 0 }, 0.8)} rimId="rimR" shadow={0} />
-      <Hero look={SIS} pose={{ ...sis, ...faceAt(t, [[0, 'happy']]) }} rimId="rimR" shadow={0.5} />
-      <Hero look={SUIT} pose={{ ...suit, ...faceAt(t, [[0, 'smug']]) }} rimId="rimL" shadow={0.5} />
+      <Hero look={SIS_PJS} pose={{ ...sis, ...faceAt(t, [[0, 'happy']]) }} rimId="rimR" shadow={0.5} />
+      <Hero look={SUIT_BLACK} pose={{ ...suit, ...faceAt(t, [[0, 'smug']]) }} rimId="rimL" shadow={0.5} />
       <HandPhone pose={suit} lit={0.6} />
     </g>
   );
@@ -187,7 +159,7 @@ export const S7: React.FC<ShotProps> = ({ t, len }) => {
       <Rooftop t={t + 520} sunX={1640} sunY={700} low={-20} cityLit={kf(t, [[0, 2.4], [len, 3.4]])} />
       <Tag x={1180} y={420} t={t - 4} text="FACTORIES: 24/7" w={620} />
       <Tag x={1250} y={560} t={t - 62} text="SCHOOL: NEVER ENDS" w={720} />
-      <Hero look={SUIT} pose={{ ...pose, ...faceAt(t, [[0, 'neutral'], [124, 'smug']]) }} rimId="rimR" shadow={0} />
+      <Hero look={SUIT_BLACK} pose={{ ...pose, ...faceAt(t, [[0, 'neutral'], [124, 'smug']]) }} rimId="rimR" shadow={0} />
     </g>
   );
 };
@@ -214,7 +186,7 @@ export const S8: React.FC<ShotProps> = ({ t, len }) => {
       <Rooftop t={t + 700} sunX={1560} sunY={600} low={low} cityLit={2.6} />
       <Seat x={1080} low={low} scale={hs} />
       <Hero look={GLOW} pose={on({ ...hero, armL: { a: hero.armL.a + tug * 0.4, b: hero.armL.b }, ...faceAt(t, [[0, 'worried'], [40, 'neutral']]) }, 0.8)} rimId="rimR" shadow={0} />
-      <Hero look={SIS} pose={{ ...sis, armR: { a: sis.armR.a + (t > 18 ? tug : 0), b: sis.armR.b }, y: sis.y - bounce, ...faceAt(t, [[0, 'happy']]) }} rimId="rimR" shadow={0.5} />
+      <Hero look={SIS_PJS} pose={{ ...sis, armR: { a: sis.armR.a + (t > 18 ? tug : 0), b: sis.armR.b }, y: sis.y - bounce, ...faceAt(t, [[0, 'happy']]) }} rimId="rimR" shadow={0.5} />
     </g>
   );
 };
@@ -228,18 +200,6 @@ export const S9: React.FC<ShotProps> = ({ t, len }) => (
 );
 
 // ---------- S10: insert: your hand over the switch, set to OFF; flip it back on? "flip" @24, "back on" @35, "lose" @66 ----------
-export const PowerSwitch: React.FC<{ x: number; y: number; s: number; down: number; glow?: number }> = ({ x, y, s, down, glow = 1 }) => (
-  <g transform={`translate(${x} ${y}) scale(${s})`}>
-    <rect x={-80} y={-120} width={160} height={240} rx={18} fill="#E8E2D6" stroke="#1E1A22" strokeWidth={6} />
-    <text x={0} y={-82} textAnchor="middle" fontFamily={FONT.ui} fontSize={26} fill="#3A3444">ON</text>
-    <text x={0} y={104} textAnchor="middle" fontFamily={FONT.ui} fontSize={26} fill="#3A3444">OFF</text>
-    <rect x={-38} y={-60} width={76} height={120} rx={12} fill="#C9C2B6" stroke="#1E1A22" strokeWidth={5} />
-    <g transform={`translate(0 ${-28 + 56 * down})`}>
-      <rect x={-34} y={-30} width={68} height={60} rx={10} fill={down > 0.5 ? '#9A9AA8' : '#FF8A3D'} stroke="#1E1A22" strokeWidth={5} />
-    </g>
-    <Glow x={0} y={60} r={140} kind="cool" o={0.35 * glow} />
-  </g>
-);
 export const S10: React.FC<ShotProps> = ({ t, len }) => {
   const press = kf(t, [[0, 0], [30, 0], [40, 0.18], [62, 0.2], [72, 0]], easeInOut);
   const tremble = Math.sin(t * 1.7) * 3;

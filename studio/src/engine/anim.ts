@@ -32,3 +32,6 @@ export const camT = (cx: number, cy: number, s: number) => `translate(960 540) s
 /** A short, decaying camera shake for a hit inside a shot (the engine has its own for cue-driven shakes). */
 export const shake = (t: number, from: number, len = 8, amp = 10) =>
   t >= from && t < from + len ? { x: Math.sin(t * 2.9) * amp * (1 - (t - from) / len), y: Math.cos(t * 3.7) * amp * 0.7 * (1 - (t - from) / len) } : { x: 0, y: 0 };
+
+/** easeOut over d frames starting at a: easeOut(clamp((t - a) / d)) */
+export const ramp = (t: number, a: number, d: number) => easeOut(clamp((t - a) / d));

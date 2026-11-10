@@ -19,10 +19,12 @@ asset's file, only for the asset you are about to use.
 | `Study` + `Desk` | `src/engine/sets/study.tsx` | Dusk study: back window with low sun, bookcase left, door and print right, pendant. `STUDY` is its room. | `night` (moon, desk lamp), `shelf` 0..1 (books fly from `STUDY_SHELF_V`), `veil` | `set-study.png` | shipped |
 | `Stairwell` + `Banister` | `src/engine/sets/stairwell.tsx` | Side-on stairs, 7 steps down to the right from a landing; lit doorway, arched window, lantern. `stepTop(x)`, `hipGround(x)`; `Banister` draws in front. | walk at scale 0.9 | `set-stairwell.png` | shipped |
 | `Classroom` + `SchoolDesk` + `Kid` | `src/engine/sets/classroom.tsx` | Board, windows left, two rows of desks with kids from behind. `CLS` is its room, `KIDS` the kids' looks. | `board` (chalk text), `solved`, `wrong`, `laugh`; `Kid` `turn`, `laugh` | `set-classroom.png` | shipped |
+| `Chalk` | `src/engine/sets/classroom.tsx` | Chalk handwriting that writes itself on left to right (a clip path); pass it as `Classroom`'s `board`. | `x`, `y`, `text`, `size`, `p` 0..1, `id` (unique), `color` | `set-classroom-chalk.png` | switch-off-sleep-4 |
 | `Rooftop` + `SunClock` | `src/engine/sets/rooftop.tsx` | Parapet, three depths of city, string lights, big low sun (optionally a clock face). | `sunX`, `sunY`, `clock`, `spin`, `crack`, `red`, `lightsOut`, `blackout`, `cityLit`, `low` | `set-rooftop.png` | shipped |
-| `Kitchen` + `KitchenIsland` | `src/engine/sets/kitchen.tsx` | Counter run under a window, hob, shelves with jars, fridge, two pendants over an island. `KITCHEN` room, `islandTop(u, d)`. | `veil`, `red` | `set-kitchen.png` | copy-paste |
+| `Kitchen` + `KitchenIsland` | `src/engine/sets/kitchen.tsx` | Counter run under a window, hob, shelves with jars, fridge, two pendants over an island. `KITCHEN` room, `islandTop(u, d)`. | `veil`, `red`, `tint` (`night`: lamps off, `dawn`: early morning; the `Night` / `Dawn` grade over the set), `tintO` | `set-kitchen.png`, `set-kitchen-tint.png` (night) | copy-paste; tint: switch-off-sleep-1/3 |
 | `Bedroom` + `BedDuvet` | `src/engine/sets/bedroom.tsx` | Night bedroom: bed back-left, nightstand lamp and clock, window onto moon and city, calendar, wardrobe, door ajar. `BEDROOM`, `bedTop`, `bedSit`, `LAMP`, `CAL`, `WINDOW`. | `clock`, `lamp` 0..1, `crossed`, `veil`, `duvet` | `set-bedroom.png` | preview run |
 | `Schematic` | `src/engine/sets/schematic.tsx` | Dark blueprint grid for the science beat. With `DrawOn`, `Arrow`, `SchLabel`, `CountUp`, `PlantIcon`; colours in `SCH`. | `PlantIcon` kinds: tower, wind, solar, dam, factory (`on`) | `set-schematic.png` | copy-paste |
+| `BrainOutline`, `BrainCells` | `src/engine/sets/schematic.tsx` | A brain from the side (front left, ~800 px wide at `s` 1) that draws on, outline then folds; a magnified circle of brain cells with gaps, fluid streaming through them (`SCH.fluid`, ice blue) and waste specks carried out. | `BrainOutline`: `x`, `y`, `s`, `t`, `color`. `BrainCells`: `x`, `y`, `r` (300), `t`, `gap` 0..1 (awake -> asleep), `flow` 0..1, `waste` 0..1, `o`, `id` (unique), `label` | `set-schematic-brain.png` | switch-off-sleep-5 |
 | `Tabletop` | `src/engine/furnish.tsx` | A surface from high above for inserts (wood or stone), lit front edge at `edge`. | `edge` (> 1080 = straight top-down) | `set-tabletop.png` | copy-paste |
 
 ## Cast (characters)
@@ -41,6 +43,14 @@ look on the cast sheet: `npx remotion still src/index.ts Cast out/cast.png`.
 | `LOOKS.sis` | the little sister | bunches, teal; draw at about 0.7 scale | `cast-sis.png` | shipped |
 | `LOOKS.mom` | mum | bob, rose cardigan | `cast-mom.png` | shipped |
 | `LOOKS.suit` | the man in a suit | charcoal suit, red tie | `cast-suit.png` | shipped |
+| `MOM_GOWN` | mum at home (`src/engine/looks.tsx`) | `tone(LOOKS.mom, 'white')`, dusty-rose dressing gown (`coat: 'long'`), plum pyjama trousers, pink slippers, dark bob. Approved by the user | `cast-switch-off-sleep.png` | switch-off-sleep-3 |
+| `SIS_PJS` | the little sister in pyjamas | `tone(LOOKS.sis, 'black')`, teal pyjamas, coral slippers; draw at 0.7 of an adult. Approved | `cast-switch-off-sleep.png` | switch-off-sleep-3 |
+| `MO_BOMBER` | Mo, the friend | `tone(LOOKS.mo, 'black')`, olive bomber, mustard accent, dark curls. Approved | `cast-switch-off-sleep.png` | switch-off-sleep-4 |
+| `TEACHER_TWEED` | the teacher | `tone(LOOKS.suit, 'white')`, brown tweed blazer, green tie, grey hair. Approved | `cast-switch-off-sleep.png` | switch-off-sleep-4 |
+| `SUIT_BLACK` | the man in a suit, black tone | `tone(LOOKS.suit, 'black')`, charcoal suit, red tie | `cast-switch-off-sleep.png` | switch-off-sleep-6 |
+
+The named costumes (`MOM_GOWN` ...) live in `src/engine/looks.tsx`: import them like any look, or spread one to
+re-dress it for another episode.
 
 Expressions (`expr`): neutral, happy, smug, shock, worried, oops, cool, dizzy, tired. Motion helpers: `poseAt`,
 `faceAt`, `walkPose`, `joints`, `toWorld`, `reachAngle`.
@@ -82,6 +92,12 @@ light one white) and is dressed per episode to fit its role, by spreading the lo
 | `LaptopBack` | `src/engine/props.tsx` | laptop lid from behind, screen light spilling | `glow`, `tilt` | - | preview run |
 | `PizzaSlice`, `PizzaBox` | `src/engine/props.tsx` | slice from above (bite, drip), open empty box | `bite`, `drip`, `lid` | - | preview run |
 | `Phone` | `src/engine/props.tsx` | phone, dark or ringing, or a group chat thread | `on`, `caller`, `buzz`; `chat` (bubbles `{text, me, o}`), `title`, `status` ("Delivered") | - | preview run; chat: switch-off-sleep-2 |
+| `HandPhone` | `src/engine/props.tsx` | a small lit phone pinned to a character's hand | `pose` (the character's), `side` (`armR`), `lit` | `prop-crate-phone.png` | switch-off-sleep-6 |
+| `Bowl` | `src/engine/props.tsx` | cereal bowl side-on, x, y the bottom centre | `s` | `prop-bowl-can.png` | switch-off-sleep-3 |
+| `Breakfast`, `MugTop` | `src/engine/props.tsx` | from above: a plate with two fried eggs and toast; a coffee mug, handle right, steam looping every 48 f (pairs with `Mug`) | `r` (plate radius 230); `t` | `prop-breakfast.png` | switch-off-sleep-3 |
+| `EnergyCan` | `src/engine/props.tsx` | energy-drink can side-on: colour body, black band with a bolt, x, y the bottom centre | `s`, `rot`, `color` (green default; red `#E0463A`, blue `#3E7AD0`), `crushed` 0..1 | `prop-bowl-can.png` | switch-off-sleep-4 |
+| `Crate` | `src/engine/props.tsx` | wooden crate to sit on (slats, brace, lit top edge, contact shadow). On the rooftop: seat side-on, hip at `deck - 78*scale`, `yaw 0.8` | `x`, `top`, `bottom`, `w` | `prop-crate-phone.png` | switch-off-sleep-6 |
+| `PowerSwitch` | `src/engine/props.tsx` | a power switch: `kind` `wall` (rocker plate marked ON / OFF, cool glow) or `cord` (the small rocker on a lamp cord) | `x`, `y`, `s`, `down` 0 (on)..1 (off), `glow`, `rot`, `lit` (when the colour should change on its own beat) | `prop-powerswitch.png` | switch-off-sleep-6; cord: switch-off-sleep-1 |
 
 ## Room kit (for building a new set)
 
@@ -92,14 +108,20 @@ light one white) and is dressed per episode to fit its role, by spreading the lo
 ## Light and atmosphere
 
 `src/engine/light.tsx`: `Glow`, `Cone`, `LightVeil`, `Dust`, `WallTexture`, `RoomCorners`, `SkyView`, `SetDefs`.
+Grades (a full-frame multiply wash, draw after the set): `Night` (`o` 0.42: lamps off, darker and bluer) and `Dawn`
+(`o` 0.25: early morning). The kitchen has them built in as `tint`. Origin switch-off-sleep-1/3.
 `src/engine/kit.tsx`: `DuskSky`, `Sun`, `Rays`, `Haze`, `Bokeh`, `Shaft`, `Skyline`, `Foreground`, `NightSky`,
 `Moon`, `Stars`, `KitDefs`. Character rim filters: `rimR`, `rimL`, `rimRed`, `rimBlue`, `rimBlueL`.
 
 ## UI and marks
 
-`src/engine/ui.tsx`: `TitleCard`, `HudChip` (icons: rewind, pause, copy, paste, skip, dot, power), `Dial`, `Gauge`, `Tag`,
+`src/engine/ui.tsx`: `TitleCard`, `HudChip` (icons: rewind, pause, copy, paste, skip, dot, power), `Dial`, `Gauge`, `NeedleDial`, `Tag`,
 `Marquee`, `PasteIn`, `Toast`, `FloatLabel`, `FocusRings`, `DizzyStars`, `Sparkle`, `TapeLines`, `UI` (colours).
-Faces: `FONT.title`, `FONT.ui`, `FONT.hand` (`src/engine/fonts.ts`).
+Faces: `FONT.title`, `FONT.ui`, `FONT.hand` (`src/engine/fonts.ts`). Easing helper `ramp(t, a, d)` in `anim.ts`.
+
+| Name | File | What it is | Params | Thumb | Origin |
+|---|---|---|---|---|---|
+| `NeedleDial` | `src/engine/ui.tsx` | half-circle meter with a needle, ticks and a red zone with a marked red line, in schematic colours, for any "past the limit" reading (`Gauge` is the bar) | `x`, `y` (pivot), `r` (380), `p` 0..1, `red` (0.66), `redLabel`, `left`, `right`, `flash` 0..1, `t` | `prop-needledial.png` | switch-off-sleep-5 |
 
 ## Power looks (how a power changes the picture while it runs)
 
@@ -108,7 +130,7 @@ Faces: `FONT.title`, `FONT.ui`, `FONT.hand` (`src/engine/fonts.ts`).
 | `rewindLook` | `src/episodes/rewind/index.tsx` | desaturate, jitter, `TapeLines`, REWIND chip, stopwatch counting back | - | rewind |
 | `copyLook` | `src/episodes/copy-paste/index.tsx` | cools the picture, COPY chip | - | copy-paste |
 | `pasteLook` | `src/episodes/copy-paste/index.tsx` | PASTE chip (the pop is `PasteIn` in the shot) | - | copy-paste |
-| `offLook` | `src/episodes/switch-off-sleep-1/index.tsx` | the power turned off: picture colder, a touch darker, OFF chip with a power icon. In the shot: the lamp `lamp` 1 -> 0, the hero as `{ ...LOOKS.hero, faceGlow: true }` with `glint` 1 and `glintColor` ice blue (`#9FE4FF`), sound `switch_off`. Chapters 2-6 import it from here. Its `shots.tsx` also exports `CloseUp` (a hero close-up on a blurred set) and `Night` (a multiply tint) | - | switch-off-sleep-1 |
+| `offLook` | `src/engine/looks.tsx` | the power turned off: picture colder, a touch darker, OFF chip with a power icon. In the shot: the lamp `lamp` 1 -> 0, the hero as `{ ...LOOKS.hero, faceGlow: true }` with `glint` 1 and `glintColor` ice blue (`#9FE4FF`), sound `switch_off`; for the dark room, `Night` or `Kitchen tint="night"`. switch-off-sleep-1 `shots.tsx` also exports `CloseUp` (a hero close-up on a blurred set) | - | switch-off-sleep-1 |
 
 A look still lives in its episode until a second episode wants it; then move it to `src/engine/looks.tsx`, export
 it from `engine/index.ts` and change its row here.

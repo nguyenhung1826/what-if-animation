@@ -1,3 +1,5 @@
+> **Merged into the library on 2026-11-10** (engine + CATALOG.md); what stays here is listed as one-off below or in the merge report.
+
 # Library TODO — switch-off-sleep-3 (chapter 3, kitchen)
 
 No new SFX (all 9 clips reused from library/sfx: room_tone, clink, cookie_crunch, gulp, cat_yowl, gasp, shades, pop, music).

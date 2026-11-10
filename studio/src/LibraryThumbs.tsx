@@ -3,6 +3,8 @@ import { AbsoluteFill, useCurrentFrame } from 'remotion';
 import {
   Hero, basePose, plain, Pose, LOOKS, CastName, KitDefs, SetDefs,
   Study, Desk, Stairwell, Banister, Classroom, SchoolDesk, Rooftop, Kitchen, KitchenIsland, Bedroom, Schematic, PlantIcon, SchLabel, Tabletop,
+  Look, Chalk, BrainOutline, BrainCells, NeedleDial, Bowl, Breakfast, MugTop, EnergyCan, Crate, HandPhone, PowerSwitch,
+  MOM_GOWN, SIS_PJS, MO_BOMBER, TEACHER_TWEED, SUIT_BLACK,
 } from './engine';
 
 // One frame per catalogued asset, for the Thumb column of CATALOG.md. Frame N is THUMBS[N]; render one with
@@ -25,6 +27,21 @@ const castThumb = (c: CastName, bare = false): React.ReactNode => {
     </>
   );
 };
+
+// a line-up of looks on the blurred study (sis-sized looks drawn smaller)
+const lineup = (looks: [Look, number][]): React.ReactNode => (
+  <>
+    <g filter="url(#blur10)">
+      <Study t={0} id="thumb" />
+    </g>
+    <rect width={1920} height={1080} fill="#0B0816" opacity={0.35} />
+    {looks.map(([look, s], i) => {
+      const x = 260 + i * (1400 / Math.max(1, looks.length - 1));
+      return <Hero key={i} look={look} pose={{ ...basePose, x, y: 940 - 190 * s, scale: s, yaw: 0.3, look: 0.4, expr: 'happy' }} shadow={0.6} />;
+    })}
+  </>
+);
+const crateHero: Pose = { ...basePose, x: 1130, y: 860 - 190 * 1.4, scale: 1.4, yaw: 0.3, look: 0.4, expr: 'happy', armR: { a: 40, b: 100 } };
 
 export const THUMBS: { file: string; draw: () => React.ReactNode }[] = [
   { file: 'set-study.png', draw: () => <><Study t={T} id="th-st" /><Desk x0={560} x1={1360} y={700} /></> },
@@ -55,6 +72,36 @@ export const THUMBS: { file: string; draw: () => React.ReactNode }[] = [
   { file: 'cast-suit.png', draw: () => castThumb('suit') },
   { file: 'cast-hero.png', draw: () => castThumb('hero') },
   { file: 'cast-heroine.png', draw: () => castThumb('heroine') },
+  { file: 'set-classroom-chalk.png', draw: () => <Classroom t={T} id="th-clc" board={<Chalk x={700} y={300} text="sleep = 0 h ?" size={56} p={0.8} id="th-chalk" />} /> },
+  { file: 'set-kitchen-tint.png', draw: () => <><Kitchen t={T} id="th-kn" veil={0.7} tint="night" tintO={0.45} /><KitchenIsland /></> },
+  {
+    file: 'set-schematic-brain.png',
+    draw: () => (
+      <>
+        <Schematic t={T} id="th-sb" />
+        <BrainOutline x={560} y={560} s={0.8} t={60} />
+        <BrainCells x={1360} y={560} r={300} t={T} gap={1} flow={1} waste={0.5} id="th-cells" label="ASLEEP" />
+      </>
+    ),
+  },
+  { file: 'prop-needledial.png', draw: () => <><Schematic t={T} id="th-nd" /><NeedleDial x={960} y={760} p={0.78} redLabel="LIMIT" left="RESTED" right="WIRED" /></> },
+  { file: 'prop-breakfast.png', draw: () => <><Tabletop edge={1200} /><Breakfast x={760} y={560} /><MugTop x={1260} y={520} t={20} /></> },
+  {
+    file: 'prop-bowl-can.png',
+    draw: () => (
+      <>
+        <rect width={1920} height={1080} fill="#2A2230" />
+        <rect y={760} width={1920} height={320} fill="#5A4238" />
+        <Bowl x={520} y={800} s={3} />
+        <EnergyCan x={1040} y={800} s={2.6} />
+        <EnergyCan x={1300} y={800} s={2.6} color="#E0463A" />
+        <EnergyCan x={1560} y={800} s={2.6} color="#3E7AD0" crushed={1} rot={8} />
+      </>
+    ),
+  },
+  { file: 'prop-crate-phone.png', draw: () => <><rect width={1920} height={1080} fill="#2A2230" /><rect y={860} width={1920} height={220} fill="#3A3040" /><Crate x={700} top={600} bottom={860} w={380} /><Hero look={SUIT_BLACK} pose={crateHero} shadow={0.6} /><HandPhone pose={crateHero} /></> },
+  { file: 'prop-powerswitch.png', draw: () => <><rect width={1920} height={1080} fill="#2E2A36" /><PowerSwitch x={660} y={540} s={2.6} down={0} /><PowerSwitch kind="cord" x={1360} y={540} s={2.6} down={1} /></> },
+  { file: 'cast-switch-off-sleep.png', draw: () => lineup([[MOM_GOWN, 1.4], [SIS_PJS, 1.0], [MO_BOMBER, 1.4], [TEACHER_TWEED, 1.4], [SUIT_BLACK, 1.4]]) },
 ];
 
 export const LibraryThumbs: React.FC = () => {

@@ -3,6 +3,7 @@ import { C } from '../rig';
 import { S3, Box, makeRoom, pts } from '../room';
 import { WallTexture, RoomCorners, LightVeil, Dust } from '../light';
 import { FONT } from '../fonts';
+import { clamp } from '../anim';
 
 // The classroom: dusk windows on the left wall, the board on the back wall (`board` sets what is written on it),
 // a pinboard, a clock, the teacher's desk, two rows of desks with classmates seen from behind.
@@ -60,6 +61,18 @@ const KidDesk: React.FC<{ u: number; w: number }> = ({ u, w }) => {
 };
 
 /** `board` replaces the default sum (7 x 8 = ?) with your own chalk; the writing area is x 426-1054, y 196-524. */
+// chalk text that writes itself on (p 0..1 reveals it left to right); id must be unique per use. Use as Classroom `board`. Origin switch-off-sleep-4
+export const Chalk: React.FC<{ x: number; y: number; text: string; size?: number; p?: number; id: string; color?: string }> = ({ x, y, text, size = 46, p = 1, id, color = '#F2F0E6' }) => (
+  <g>
+    <defs>
+      <clipPath id={id}>
+        <rect x={x - 10} y={y - size} width={(text.length * size * 0.56 + 20) * clamp(p)} height={size * 1.4} />
+      </clipPath>
+    </defs>
+    <text x={x} y={y} fontFamily={FONT.hand} fontSize={size} fill={color} clipPath={`url(#${id})`}>{text}</text>
+  </g>
+);
+
 export const Classroom: React.FC<{ t: number; solved?: boolean; wrong?: boolean; laugh?: number; id?: string; board?: React.ReactNode }> = ({ t, solved = false, wrong = false, laugh = 0, id = 'cls', board }) => {
   const r = CLS;
   const { P, Q } = r;

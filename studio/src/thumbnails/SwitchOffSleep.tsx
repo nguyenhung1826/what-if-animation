@@ -1,7 +1,7 @@
 import React from 'react';
 import { AbsoluteFill, useCurrentFrame } from 'remotion';
-import { KitDefs, SetDefs, Bedroom, AlarmClock, WallCalendar, Glow, HudChip, FONT } from '../engine';
-import { CloseUp, Night } from '../episodes/switch-off-sleep-1/shots';
+import { KitDefs, SetDefs, Bedroom, AlarmClock, WallCalendar, Glow, HudChip, FONT, Night } from '../engine';
+import { CloseUp } from '../episodes/switch-off-sleep-1/shots';
 
 // YouTube thumbnails for "What if you could switch off sleep?". One frame per variant (A/B/C for Test & Compare).
 //   npx remotion still src/thumbnails/index.ts SwitchOffSleepThumbs out/thumbs/A.png --frame=0 --scale=0.6667

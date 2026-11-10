@@ -1,10 +1,10 @@
 import React from 'react';
 import {
-  Hero, Pose, basePose, poseAt, faceAt, kf, clamp, easeOut, easeInOut, settle, camT, LOOKS, tone, walkPose, walkPhase, LEG_LEN,
+  Bowl, Breakfast, MugTop, Dawn, MOM_GOWN, SIS_PJS, Night, Hero, Pose, basePose, poseAt, faceAt, kf, clamp, easeOut, easeInOut, settle, camT, LOOKS, tone, walkPose, walkPhase, LEG_LEN,
   Kitchen, KitchenIsland, KITCHEN, islandTop, stand, Tabletop, AlarmClock, Cat, Mug, Plate, PlateTop, CookieStack, Cookie,
   PizzaSlice, PizzaBox, Tag, Sparkle, Glow, LightVeil, FloatLabel, Foreground, FONT, ShotProps,
 } from '../../engine';
-import { CloseUp, Night } from '../switch-off-sleep-1/shots';
+import { CloseUp } from '../switch-off-sleep-1/shots';
 
 // "What if you could switch off sleep?" Chapter 3: the fun part escalates, all in the kitchen. Morning (Mom finds
 // you up and dressed), the night snacks (second dinner), the cat, and your little sister at six a.m. The power is on
@@ -14,53 +14,10 @@ const GLOW = { ...LOOKS.hero, faceGlow: true };
 const ICE = '#9FE4FF';
 const on = (p: Pose, g = 0.7): Pose => ({ ...p, glint: g, glintColor: ICE });
 
-// Mom: white, a dusty-rose dressing gown (long coat) over plum pyjama trousers, pink slippers, her dark bob.
-export const MOM = { ...tone(LOOKS.mom, 'white'), coat: 'long' as const, jacket: '#B7737F', jacketShade: '#9A5C68', sleeve: '#B7737F', accent: '#F2D5DA', limb: '#5A4A6A', shoe: '#E9B9C2', hair: '#4A2A22' };
-// Your little sister: black, teal pyjamas top and bottom, coral slippers, bunches. Drawn at 0.7 of an adult.
-export const SIS = { ...tone(LOOKS.sis, 'black'), jacket: '#3E8C86', jacketShade: '#2F6E69', sleeve: '#3E8C86', limb: '#357A75', accent: '#F2C14E', shoe: '#F28C6A', hair: '#3A2E44' };
-
 const R = KITCHEN;
 const ME = stand(R, 0.42, 0.4); // you, behind the island
 const floorY = (u: number, w: number) => R.P(u, 1, w).y;
 const scaleAt = (u: number, w: number, k: number) => stand(R, u, w, k).scale;
-
-// a bowl of cereal, side-on (x, y = bottom centre)
-const Bowl: React.FC<{ x: number; y: number; s?: number }> = ({ x, y, s = 1 }) => (
-  <g transform={`translate(${x} ${y}) scale(${s})`}>
-    <ellipse cx={0} cy={0} rx={52} ry={8} fill="#000" opacity={0.3} />
-    <path d="M -50 -34 Q -46 0 0 0 Q 46 0 50 -34 Z" fill="#E9E3D6" />
-    <ellipse cx={0} cy={-34} rx={50} ry={10} fill="#F6F1E6" />
-    {[-30, -14, 4, 20, 34].map((cx, i) => <circle key={i} cx={cx} cy={-36 + (i % 2) * 3} r={6} fill="#D9A050" />)}
-    <path d="M -50 -34 Q -46 0 0 0" stroke="#C9C0B0" strokeWidth={3} fill="none" />
-  </g>
-);
-
-// breakfast from above: eggs and toast on a plate
-const Breakfast: React.FC<{ x: number; y: number; r?: number }> = ({ x, y, r = 230 }) => (
-  <g>
-    <PlateTop x={x} y={y} r={r} />
-    <path d={`M ${x - 140} ${y - 30} q 30 -70 90 -40 q 60 10 30 70 q -20 50 -80 30 q -60 -10 -40 -60 Z`} fill="#FBF8F0" />
-    <circle cx={x - 80} cy={y - 10} r={30} fill="#F5B532" />
-    <path d={`M ${x + 10} ${y + 30} q 40 -60 100 -30 q 50 30 20 80 q -40 40 -90 20 q -50 -20 -30 -70 Z`} fill="#FBF8F0" />
-    <circle cx={x + 60} cy={y + 50} r={30} fill="#F5B532" />
-    <rect x={x + 10} y={y - 150} width={120} height={110} rx={18} fill="#C98A48" transform={`rotate(14 ${x + 70} ${y - 95})`} />
-    <rect x={x + 22} y={y - 138} width={96} height={86} rx={12} fill="#E9B970" transform={`rotate(14 ${x + 70} ${y - 95})`} />
-  </g>
-);
-
-// a mug seen from above, steaming
-const MugTop: React.FC<{ x: number; y: number; t: number }> = ({ x, y, t }) => (
-  <g>
-    <circle cx={x + 10} cy={y + 14} r={92} fill="#000" opacity={0.3} />
-    <rect x={x + 70} y={y - 22} width={70} height={44} rx={22} fill="#E9E3D6" />
-    <circle cx={x} cy={y} r={88} fill="#F4F1EA" />
-    <circle cx={x} cy={y} r={70} fill="#5A3828" />
-    {[0, 1, 2].map((i) => {
-      const k = ((t + i * 16) % 48) / 48;
-      return <path key={i} d={`M ${x - 30 + i * 30} ${y - 20 - k * 160} q 20 -30 0 -60 q -20 -30 0 -60`} stroke="#FFFFFF" strokeWidth={10} fill="none" strokeLinecap="round" opacity={Math.sin(k * Math.PI) * 0.35} />;
-    })}
-  </g>
-);
 
 // ---------- S1: wide, morning: you at the island, dressed, breakfast out; Mom walks in from the right ----------
 // "finds" @10 (shot clock)
@@ -94,7 +51,7 @@ export const S1: React.FC<ShotProps> = ({ t, len }) => {
       <ellipse cx={plate.x + 14} cy={plate.y - 12} rx={18} ry={6} fill="#FBF8F0" />
       <circle cx={plate.x + 14} cy={plate.y - 13} r={5} fill="#F5B532" />
       <Mug x={mug.x} y={mug.y} rot={0} f={t} steam={1} />
-      <Hero look={MOM} pose={mom} rimId="rimR" shadow={0.4} />
+      <Hero look={MOM_GOWN} pose={mom} rimId="rimR" shadow={0.4} />
       {k > 0 ? null : null}
     </g>
   );
@@ -142,7 +99,7 @@ export const S3: React.FC<ShotProps> = ({ t, len }) => {
     <g transform={camT(kf(t, [[0, mid], [len, mid + 10]]), kf(t, [[0, 520], [len, 500]]), kf(t, [[0, 1.9], [len, 2.1]], easeInOut))}>
       <Kitchen t={t + 100} id="k3" />
       <Hero look={GLOW} pose={on({ ...me, ...faceAt(t, [[0, 'neutral'], [70, 'smug']]) }, 0.5)} rimId="rimR" shadow={0} />
-      <Hero look={MOM} pose={{ ...mom, ...faceAt(t, [[0, 'worried']]) }} rimId="rimR" shadow={0} />
+      <Hero look={MOM_GOWN} pose={{ ...mom, ...faceAt(t, [[0, 'worried']]) }} rimId="rimR" shadow={0} />
       <KitchenIsland />
       <Mug x={mug.x} y={mug.y} rot={0} f={t} steam={1} />
       <FloatLabel x={MOM3.x + 60} y={MOM3.y - 250} t={t - 22} text="?" size={90} color="#F6EFE3" />
@@ -162,8 +119,7 @@ export const S4: React.FC<ShotProps> = ({ t, len }) => {
   const n = Math.min(5, 2 + Math.floor(t / 14));
   return (
     <g transform={camT(kf(t, [[0, 900], [len, 920]]), 560, kf(t, [[0, 1.75], [len, 1.9]]))}>
-      <Kitchen t={t + 200} id="k4" veil={0.7} />
-      <Night o={0.5} />
+      <Kitchen t={t + 200} id="k4" veil={0.7} tint="night" tintO={0.5} />
       <Glow x={ME.x} y={ME.y - 300} r={360} kind="warm" o={0.35} />
       <Hero look={GLOW} pose={on(pose, 1)} rimId="rimBlueL" shadow={0} />
       <KitchenIsland />
@@ -276,7 +232,6 @@ const sisStill = (extra: Partial<Pose> = {}): Pose => ({
   ...basePose, x: R.P(SIS_STOP.u, 1, SIS_STOP.w).x, y: floorY(SIS_STOP.u, SIS_STOP.w) - LEG_LEN * sisScale, scale: sisScale, yaw: -0.5, look: -0.9,
   armL: { a: 12, b: -8 }, armR: { a: 12, b: -8 }, ...extra,
 });
-const Dawn: React.FC = () => <rect x={-2000} y={-2000} width={6000} height={6000} fill="#3A4A80" opacity={0.25} style={{ mixBlendMode: 'multiply' }} />;
 export const S8: React.FC<ShotProps> = ({ t, len }) => {
   const stopX = R.P(SIS_STOP.u, 1, SIS_STOP.w).x;
   const startX = stopX + 640;
@@ -286,10 +241,9 @@ export const S8: React.FC<ShotProps> = ({ t, len }) => {
   const sis = walkPose(x, walkPhase(x - startX, sisScale) * 0.8, floorY(SIS_STOP.u, SIS_STOP.w), sisScale, { expr: 'tired', armR: { a: 150 + rub, b: 130 }, blink: t % 50 > 40 ? 1 : 0 }, -1);
   return (
     <g transform={camT(kf(t, [[0, 1480], [len, 1360]]), 600, kf(t, [[0, 1.7], [len, 1.8]]))}>
-      <Kitchen t={t + 500} id="k8" />
-      <Dawn />
+      <Kitchen t={t + 500} id="k8" tint="dawn" />
       <KitchenIsland />
-      <Hero look={SIS} pose={sis} rimId="rimR" shadow={0.4} />
+      <Hero look={SIS_PJS} pose={sis} rimId="rimR" shadow={0.4} />
       <text x={1700} y={330} fontFamily={FONT.hand} fontSize={44} fill="#FFE27A" transform="rotate(-5 1700 330)">6:00 AM</text>
     </g>
   );
@@ -309,12 +263,11 @@ export const S9: React.FC<ShotProps> = ({ t, len }) => {
   const bowl = islandTop(0.47, 0.45);
   return (
     <g transform={camT(kf(t, [[0, 1180], [len, 1170]]), 560, kf(t, [[0, 1.45], [len, 1.55]]))}>
-      <Kitchen t={t + 600} id="k9" />
-      <Dawn />
+      <Kitchen t={t + 600} id="k9" tint="dawn" />
       <Hero look={GLOW} pose={on({ ...me, ...faceAt(t, [[0, 'happy']]) }, 0.5)} rimId="rimR" shadow={0} />
       <KitchenIsland />
       <Bowl x={bowl.x} y={bowl.y} s={0.55} />
-      <Hero look={SIS} pose={sisStill({ y: sisStill().y - (t > 32 && t < 44 ? 20 * Math.sin(((t - 32) / 12) * Math.PI) : 0), squash: -0.1 * hop, armL: { a: 40, b: 20 }, armR: { a: 40, b: 20 }, ...faceAt(t, [[0, 'tired'], [22, 'neutral'], [32, 'shock']]) })} rimId="rimR" shadow={0.4} />
+      <Hero look={SIS_PJS} pose={sisStill({ y: sisStill().y - (t > 32 && t < 44 ? 20 * Math.sin(((t - 32) / 12) * Math.PI) : 0), squash: -0.1 * hop, armL: { a: 40, b: 20 }, armR: { a: 40, b: 20 }, ...faceAt(t, [[0, 'tired'], [22, 'neutral'], [32, 'shock']]) })} rimId="rimR" shadow={0.4} />
     </g>
   );
 };
@@ -335,14 +288,13 @@ export const S10: React.FC<ShotProps> = ({ t, len }) => {
   const mug = islandTop(0.58, 0.5);
   return (
     <g transform={camT(1180 + (i % 2) * 30, 560, 1.5 + i * 0.05)}>
-      <Kitchen t={t + 700 + i * 100} id="k10" />
-      <Dawn />
+      <Kitchen t={t + 700 + i * 100} id="k10" tint="dawn" />
       <Hero look={GLOW} pose={on({ ...basePose, x: ME.x, y: ME.y, scale: ME.scale, ...MY_POSES[i] }, 0.5)} rimId="rimR" shadow={0} />
       <KitchenIsland />
       {i === 0 ? <Bowl x={bowl.x} y={bowl.y} s={0.55} /> : null}
       {i === 1 ? <Mug x={mug.x} y={mug.y} rot={0} f={t} /> : null}
       {i === 3 ? <Plate x={bowl.x} y={bowl.y} s={0.6} /> : null}
-      <Hero look={SIS} pose={sisStill({ squash: -0.12 * hop, armL: { a: 40, b: 20 }, armR: { a: 40, b: 20 }, headTilt: (i % 2 ? 6 : -6), expr: 'shock' })} rimId="rimR" shadow={0.4} />
+      <Hero look={SIS_PJS} pose={sisStill({ squash: -0.12 * hop, armL: { a: 40, b: 20 }, armR: { a: 40, b: 20 }, headTilt: (i % 2 ? 6 : -6), expr: 'shock' })} rimId="rimR" shadow={0.4} />
       <g transform={`translate(${1500 + (i % 2) * 30} 330)`}>
         <text x={0} y={0} textAnchor="middle" fontFamily={FONT.hand} fontSize={60} fill="#FFE27A" transform={`rotate(${-5 + i * 3}) scale(${0.8 + 0.2 * clamp(lt / 4)})`}>{DAYS[i]}</text>
       </g>
@@ -360,7 +312,7 @@ export const S11: React.FC<ShotProps> = ({ t, len }) => {
           <Kitchen t={t + 800} id="k11" />
         </g>
         <Dawn />
-        <Hero look={SIS} pose={p} rimId="rimR" shadow={0} />
+        <Hero look={SIS_PJS} pose={p} rimId="rimR" shadow={0} />
       </g>
       <text x={1380} y={330} fontFamily={FONT.hand} fontSize={110} fill="#F6EFE3" opacity={clamp((t - 6) / 5)} transform="rotate(-6 1380 330)">how??</text>
     </g>
@@ -379,7 +331,7 @@ export const S12: React.FC<ShotProps> = ({ t, len }) => {
           yaw: 0.05,
           headTilt: kf(t, [[0, 0], [14, -4], [94, -6], [100, 4], [len, 2]], easeOut),
         }}
-        bg={<g transform="translate(-1300 -700) scale(2.2)"><Kitchen t={t + 900} id="k12" /><Dawn /><Hero look={SIS} pose={sisStill({ expr: 'cool' })} rimId="rimR" shadow={0} /></g>} />
+        bg={<g transform="translate(-1300 -700) scale(2.2)"><Kitchen t={t + 900} id="k12" tint="dawn" /><Hero look={SIS_PJS} pose={sisStill({ expr: 'cool' })} rimId="rimR" shadow={0} /></g>} />
       {/* your hand rises into frame, one finger up to your lips (drawn here: the rig's arm can't reach the mouth in a close-up) */}
       <g transform={`translate(0 ${kf(t, [[0, 520], [6, 520], [13, -12], [16, 0]], easeOut)}) rotate(${kf(t, [[6, 12], [16, -4]])} 990 860)`}>
         <path d="M 900 1180 L 930 900 L 1060 900 L 1080 1180 Z" fill={LOOKS.hero.hand} stroke={LOOKS.hero.line} strokeWidth={8} />

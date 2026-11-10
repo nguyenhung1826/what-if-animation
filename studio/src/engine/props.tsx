@@ -1,5 +1,6 @@
 import React from 'react';
-import { C } from './rig';
+import { C, Pose, joints, toWorld } from './rig';
+import { Glow } from './light';
 import { FONT } from './fonts';
 
 // ---------- the cat ----------
@@ -489,3 +490,112 @@ export const PaperBall: React.FC<{ x: number; y: number; r?: number; rot?: numbe
     <path d={`M ${-r * 0.85} ${-r * 0.2} L ${-r * 0.62} ${-r * 0.7}`} stroke="#FFE7B8" strokeWidth={r * 0.07} strokeLinecap="round" opacity={0.7} />
   </g>
 );
+
+// ---------- from "What if you could switch off sleep?" ----------
+
+// a bowl of cereal, side-on (x, y = bottom centre)
+export const Bowl: React.FC<{ x: number; y: number; s?: number }> = ({ x, y, s = 1 }) => (
+  <g transform={`translate(${x} ${y}) scale(${s})`}>
+    <ellipse cx={0} cy={0} rx={52} ry={8} fill="#000" opacity={0.3} />
+    <path d="M -50 -34 Q -46 0 0 0 Q 46 0 50 -34 Z" fill="#E9E3D6" />
+    <ellipse cx={0} cy={-34} rx={50} ry={10} fill="#F6F1E6" />
+    {[-30, -14, 4, 20, 34].map((cx, i) => <circle key={i} cx={cx} cy={-36 + (i % 2) * 3} r={6} fill="#D9A050" />)}
+    <path d="M -50 -34 Q -46 0 0 0" stroke="#C9C0B0" strokeWidth={3} fill="none" />
+  </g>
+);
+
+// breakfast from above: eggs and toast on a plate
+export const Breakfast: React.FC<{ x: number; y: number; r?: number }> = ({ x, y, r = 230 }) => (
+  <g>
+    <PlateTop x={x} y={y} r={r} />
+    <path d={`M ${x - 140} ${y - 30} q 30 -70 90 -40 q 60 10 30 70 q -20 50 -80 30 q -60 -10 -40 -60 Z`} fill="#FBF8F0" />
+    <circle cx={x - 80} cy={y - 10} r={30} fill="#F5B532" />
+    <path d={`M ${x + 10} ${y + 30} q 40 -60 100 -30 q 50 30 20 80 q -40 40 -90 20 q -50 -20 -30 -70 Z`} fill="#FBF8F0" />
+    <circle cx={x + 60} cy={y + 50} r={30} fill="#F5B532" />
+    <rect x={x + 10} y={y - 150} width={120} height={110} rx={18} fill="#C98A48" transform={`rotate(14 ${x + 70} ${y - 95})`} />
+    <rect x={x + 22} y={y - 138} width={96} height={86} rx={12} fill="#E9B970" transform={`rotate(14 ${x + 70} ${y - 95})`} />
+  </g>
+);
+
+// a mug seen from above, steaming
+export const MugTop: React.FC<{ x: number; y: number; t: number }> = ({ x, y, t }) => (
+  <g>
+    <circle cx={x + 10} cy={y + 14} r={92} fill="#000" opacity={0.3} />
+    <rect x={x + 70} y={y - 22} width={70} height={44} rx={22} fill="#E9E3D6" />
+    <circle cx={x} cy={y} r={88} fill="#F4F1EA" />
+    <circle cx={x} cy={y} r={70} fill="#5A3828" />
+    {[0, 1, 2].map((i) => {
+      const k = ((t + i * 16) % 48) / 48;
+      return <path key={i} d={`M ${x - 30 + i * 30} ${y - 20 - k * 160} q 20 -30 0 -60 q -20 -30 0 -60`} stroke="#FFFFFF" strokeWidth={10} fill="none" strokeLinecap="round" opacity={Math.sin(k * Math.PI) * 0.35} />;
+    })}
+  </g>
+);
+
+/** A can of energy drink, side-on, x/y the bottom centre. Origin switch-off-sleep-4. */
+export const EnergyCan: React.FC<{ x: number; y: number; s?: number; rot?: number; color?: string; crushed?: number }> = ({ x, y, s = 1, rot = 0, color = '#3FB86A', crushed = 0 }) => (
+  <g transform={`translate(${x} ${y}) rotate(${rot}) scale(${s})`}>
+    <ellipse cx={0} cy={2} rx={34} ry={7} fill="#000" opacity={0.3} />
+    <path d={`M -30 0 L -30 ${-112 + crushed * 20} Q -30 -124 -22 -128 L 22 -128 Q 30 -124 30 ${-112 + crushed * 20} L 30 0 Z`} fill={color} stroke="#14121C" strokeWidth={4} />
+    <rect x={-30} y={-84} width={60} height={38} fill="#14121C" />
+    <path d="M -8 -82 L 6 -66 L -2 -66 L 8 -48 L -10 -68 L -2 -68 Z" fill="#FFE27A" />
+    <path d="M -22 -128 L 22 -128" stroke="#C9CCD6" strokeWidth={8} strokeLinecap="round" />
+    <rect x={-24} y={-110} width={6} height={90} fill="#fff" opacity={0.25} />
+  </g>
+);
+
+// a wooden crate on the deck to sit on; x the centre, top / bottom its edges. Origin switch-off-sleep-6
+export const Crate: React.FC<{ x: number; top: number; bottom: number; w: number }> = ({ x, top, bottom, w }) => {
+  const h = bottom - top;
+  return (
+    <g>
+      <ellipse cx={x} cy={bottom + 4} rx={w * 0.62} ry={w * 0.08} fill="#000" opacity={0.3} />
+      <rect x={x - w / 2} y={top} width={w} height={h} rx={4} fill="#7A5236" stroke="#2A1A12" strokeWidth={Math.max(2, w * 0.03)} />
+      {[0.33, 0.66].map((k) => <rect key={k} x={x - w / 2} y={top + h * k - w * 0.015} width={w} height={w * 0.03} fill="#4E3222" />)}
+      <rect x={x - w / 2} y={top} width={w} height={w * 0.035} fill="#E8A070" opacity={0.6} />
+      <path d={`M ${x - w / 2 + 6} ${top + 6} L ${x + w / 2 - 6} ${bottom - 6}`} stroke="#5E3E28" strokeWidth={w * 0.04} />
+    </g>
+  );
+};
+
+// a phone in a hand: a dark slab with a lit screen
+export const HandPhone: React.FC<{ pose: Pose; side?: 'armL' | 'armR'; lit?: number }> = ({ pose, side = 'armR', lit = 1 }) => {
+  const h = toWorld(pose, joints(pose)[side].end);
+  const s = pose.scale;
+  return (
+    <g transform={`translate(${h.x} ${h.y}) rotate(-12) scale(${s})`}>
+      <rect x={-11} y={-30} width={22} height={42} rx={5} fill="#101018" stroke="#05050A" strokeWidth={2} />
+      <rect x={-8} y={-26} width={16} height={32} rx={3} fill="#9FC0FF" opacity={0.35 + 0.5 * lit} />
+    </g>
+  );
+};
+
+// a power switch. kind 'wall': a rocker plate marked ON / OFF (the rocker slides down to OFF, cool glow below);
+// kind 'cord': the small rocker on a lamp cord (tilts). down 0 (on) .. 1 (off); the rocker is orange while on, grey
+// once off (lit overrides when it should change colour on a different beat than the rocker moves). Origin
+// switch-off-sleep-6 (wall) and switch-off-sleep-1 (cord).
+export const PowerSwitch: React.FC<{ x: number; y: number; s: number; down: number; glow?: number; kind?: 'wall' | 'cord'; rot?: number; lit?: number }> = ({ x, y, s, down, glow = 1, kind = 'wall', rot = 0, lit }) => {
+  const on = lit ?? (down > 0.5 ? 0 : 1);
+  const rocker = on > 0.5 ? '#FF8A3D' : '#9A9AA8';
+  const tf = `translate(${x} ${y})${rot ? ` rotate(${rot})` : ''} scale(${s})`;
+  if (kind === 'cord')
+    return (
+      <g transform={tf}>
+        <rect x={-90} y={-40} width={180} height={80} rx={30} fill="#E8E2D6" stroke="#1E1A22" strokeWidth={6} />
+        <g transform={`rotate(${-12 + 24 * down})`}>
+          <rect x={-46} y={-30} width={92} height={42} rx={14} fill={rocker} stroke="#1E1A22" strokeWidth={5} />
+        </g>
+      </g>
+    );
+  return (
+    <g transform={tf}>
+      <rect x={-80} y={-120} width={160} height={240} rx={18} fill="#E8E2D6" stroke="#1E1A22" strokeWidth={6} />
+      <text x={0} y={-82} textAnchor="middle" fontFamily={FONT.ui} fontSize={26} fill="#3A3444">ON</text>
+      <text x={0} y={104} textAnchor="middle" fontFamily={FONT.ui} fontSize={26} fill="#3A3444">OFF</text>
+      <rect x={-38} y={-60} width={76} height={120} rx={12} fill="#C9C2B6" stroke="#1E1A22" strokeWidth={5} />
+      <g transform={`translate(0 ${-28 + 56 * down})`}>
+        <rect x={-34} y={-30} width={68} height={60} rx={10} fill={rocker} stroke="#1E1A22" strokeWidth={5} />
+      </g>
+      <Glow x={0} y={60} r={140} kind="cool" o={0.35 * glow} />
+    </g>
+  );
+};

@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  Hero, Pose, basePose, poseAt, faceAt, kf, clamp, easeOut, easeIn, easeInOut, settle, camT, LOOKS, LEG_LEN, tone, reachAngle,
+  EnergyCan, Chalk, MO_BOMBER, TEACHER_TWEED, Hero, Pose, basePose, poseAt, faceAt, kf, clamp, easeOut, easeIn, easeInOut, settle, camT, LOOKS, LEG_LEN, tone, reachAngle,
   Classroom, SchoolDesk, Kid, Stairwell, Banister, hipGround, stepTop, walkPose, walkPhase, Tabletop, Paper, WallCalendar,
   Schematic, SCH, SchLabel, Tag, FloatLabel, DizzyStars, Glow, LightVeil, Foreground, FONT, ShotProps, Look,
 } from '../../engine';
@@ -14,38 +14,9 @@ const GLOW = { ...LOOKS.hero, faceGlow: true };
 const ICE = '#9FE4FF';
 const on = (p: Pose, g = 0.9): Pose => ({ ...p, glint: g, glintColor: ICE });
 
-// Mo for this episode: black tone, an olive bomber over a mustard tee, headphones kept from his look, red sneakers
-export const MO: Look = { ...tone(LOOKS.mo, 'black'), coat: 'bomber', jacket: '#5E6E46', jacketShade: '#4C5A38', sleeve: '#5E6E46', accent: '#E9C46A', hair: '#2A2430' };
-// the teacher: white tone, a brown tweed blazer, green tie, grey hair in a neat side part
-export const TEACHER: Look = { ...tone(LOOKS.suit, 'white'), jacket: '#7A5A3A', jacketShade: '#62482E', sleeve: '#7A5A3A', accent: '#2F6A4A', limb: '#3A3446', hair: '#8A8A90' };
-
 const DESK = 1000; // the hero's desk (ch1 S6 pattern)
 const MODESK = 1420;
 const SEAT = (x: number): Partial<Pose> => ({ x, y: 760, yaw: 0, look: 0, armL: { a: 14, b: -6 }, armR: { a: 14, b: -6 } });
-
-/** A can of energy drink, side-on, x/y the bottom centre. LIBRARY-TODO: props.tsx `EnergyCan`. */
-export const EnergyCan: React.FC<{ x: number; y: number; s?: number; rot?: number; color?: string; crushed?: number }> = ({ x, y, s = 1, rot = 0, color = '#3FB86A', crushed = 0 }) => (
-  <g transform={`translate(${x} ${y}) rotate(${rot}) scale(${s})`}>
-    <ellipse cx={0} cy={2} rx={34} ry={7} fill="#000" opacity={0.3} />
-    <path d={`M -30 0 L -30 ${-112 + crushed * 20} Q -30 -124 -22 -128 L 22 -128 Q 30 -124 30 ${-112 + crushed * 20} L 30 0 Z`} fill={color} stroke="#14121C" strokeWidth={4} />
-    <rect x={-30} y={-84} width={60} height={38} fill="#14121C" />
-    <path d="M -8 -82 L 6 -66 L -2 -66 L 8 -48 L -10 -68 L -2 -68 Z" fill="#FFE27A" />
-    <path d="M -22 -128 L 22 -128" stroke="#C9CCD6" strokeWidth={8} strokeLinecap="round" />
-    <rect x={-24} y={-110} width={6} height={90} fill="#fff" opacity={0.25} />
-  </g>
-);
-
-// chalk text that writes itself on (p 0..1 reveals it left to right)
-const Chalk: React.FC<{ x: number; y: number; text: string; size?: number; p?: number; id: string; color?: string }> = ({ x, y, text, size = 46, p = 1, id, color = '#F2F0E6' }) => (
-  <g>
-    <defs>
-      <clipPath id={id}>
-        <rect x={x - 10} y={y - size} width={(text.length * size * 0.56 + 20) * clamp(p)} height={size * 1.4} />
-      </clipPath>
-    </defs>
-    <text x={x} y={y} fontFamily={FONT.hand} fontSize={size} fill={color} clipPath={`url(#${id})`}>{text}</text>
-  </g>
-);
 
 // a board full of solved formulas (S1)
 const SolvedBoard: React.FC<{ t: number }> = ({ t }) => (
@@ -135,7 +106,7 @@ export const S3: React.FC<ShotProps> = ({ t, len }) => {
   return (
     <g transform={camT(kf(t, [[0, 1200], [len, 1215]]), 560, kf(t, [[0, 1.75], [len, 1.85]]))}>
       <Room t={t + 90} id="c4s3" board={<SolvedBoard t={99} />} />
-      <Hero look={MO} pose={mo} shadow={0} rimId="rimL" />
+      <Hero look={MO_BOMBER} pose={mo} shadow={0} rimId="rimL" />
       <SchoolDesk x={MODESK} />
       <EnergyCan x={MODESK + 110} y={752} s={0.55} />
       <EnergyCan x={MODESK + 150} y={752} s={0.55} color="#E0463A" rot={6} />
@@ -161,8 +132,8 @@ export const S4: React.FC<ShotProps> = ({ t, len }) => {
       <EnergyCan x={900} y={800} s={2.2} color="#E0463A" rot={3} />
       <g transform={`translate(${(1 - k) * 700} ${-lift * 120})`}>
         <EnergyCan x={1200} y={800} s={2.2} color="#3E7AD0" rot={-lift * 30} />
-        <ellipse cx={1330} cy={680} rx={90} ry={120} fill={MO.hand} stroke={MO.line} strokeWidth={8} transform="rotate(-20 1330 680)" />
-        <path d="M 1380 720 L 1980 620 L 1980 840 L 1380 790 Z" fill={MO.jacket} />
+        <ellipse cx={1330} cy={680} rx={90} ry={120} fill={MO_BOMBER.hand} stroke={MO_BOMBER.line} strokeWidth={8} transform="rotate(-20 1330 680)" />
+        <path d="M 1380 720 L 1980 620 L 1980 840 L 1380 790 Z" fill={MO_BOMBER.jacket} />
       </g>
       {t > 26 ? <Tag x={1500} y={240} t={t - 26} text="3" /> : null}
     </g>
@@ -202,7 +173,7 @@ export const S6: React.FC<ShotProps> = ({ t, len }) => {
   return (
     <g transform={camT(kf(t, [[0, 980], [len, 1000]]), 540, kf(t, [[0, 1.4], [len, 1.48]]))}>
       <Room t={t + 240} id="c4s6" board={<SolvedBoard t={99} />} />
-      <Hero look={TEACHER} pose={tp} shadow={0.4} rimId="rimL" />
+      <Hero look={TEACHER_TWEED} pose={tp} shadow={0.4} rimId="rimL" />
       <Hero look={GLOW} pose={on({ ...hero, ...faceAt(t, [[0, 'neutral'], [40, 'happy'], [78, 'smug']]) })} shadow={0} rimId="rimL" />
       <SchoolDesk x={1300} />
       <Kid x={820} y={1000} s={1.6} look={{ hair: 'pony', hairC: '#2A1C18', top: '#6A8A9A' }} turn={turn} />
@@ -342,7 +313,7 @@ export const S13: React.FC<ShotProps> = ({ t, len }) => {
   return (
     <g transform={camT(hx - 80, stepTop(hx) - 230, kf(t, [[0, 1.7], [len, 1.85]]))}>
       <Stairwell t={t + 200} id="c4s13" />
-      <Hero look={MO} pose={mo} shadow={0.4} rimId="rimR" />
+      <Hero look={MO_BOMBER} pose={mo} shadow={0.4} rimId="rimR" />
       <Hero look={HERO_DARK} pose={hero} shadow={0.4} rimId="rimR" />
       <DizzyStars x={hx + 70} y={hero.y - 330} t={t - 12} rx={90} ry={34} />
       <Banister />

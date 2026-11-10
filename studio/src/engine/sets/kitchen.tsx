@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeRoom, Box, S3, pts } from '../room';
 import { RoomShell, BackWindow, Pendant, pendantLight, WallLight, FloorShadow, WallClock } from '../furnish';
-import { Glow, LightVeil, Dust } from '../light';
+import { Glow, LightVeil, Dust, Night, Dawn } from '../light';
 import { rnd } from '../anim';
 
 // The kitchen at dusk, built with the room kit: a counter run along the back wall under a window with the low sun,
@@ -27,7 +27,8 @@ const Doors: React.FC<{ u0: number; u1: number; v0: number; v1: number; w: numbe
   return <g>{out}</g>;
 };
 
-export const Kitchen: React.FC<{ t: number; id?: string; veil?: number; red?: number }> = ({ t, id = 'kit', veil = 0.5, red = 0 }) => {
+// tint: 'night' (lamps off, Night grade) or 'dawn' (early morning, Dawn grade) over the whole set; tintO its strength.
+export const Kitchen: React.FC<{ t: number; id?: string; veil?: number; red?: number; tint?: 'night' | 'dawn'; tintO?: number }> = ({ t, id = 'kit', veil = 0.5, red = 0, tint, tintO }) => {
   const R = KITCHEN;
   const { P, Q } = R;
   const T = KITCHEN_TOP;
@@ -153,6 +154,7 @@ export const Kitchen: React.FC<{ t: number; id?: string; veil?: number; red?: nu
       })}
       <Dust t={t} seed={31} x0={640} y0={420} w={420} h={420} n={36} />
       {red > 0 ? <rect x={-1500} y={-1500} width={5000} height={4500} fill="#3A0010" opacity={0.35 * red} style={{ mixBlendMode: 'multiply' }} /> : null}
+      {tint === 'night' ? <Night o={tintO} /> : tint === 'dawn' ? <Dawn o={tintO} /> : null}
     </g>
   );
 };

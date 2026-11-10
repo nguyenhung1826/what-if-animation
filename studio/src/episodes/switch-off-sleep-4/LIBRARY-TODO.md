@@ -1,3 +1,5 @@
+> **Merged into the library on 2026-11-10** (engine + CATALOG.md); what stays here is listed as one-off below or in the merge report.
+
 # switch-off-sleep-4: what to merge into the library
 
 All of these live in `src/episodes/switch-off-sleep-4/shots.tsx` for now (the parallel-chapter rule kept `src/engine/`

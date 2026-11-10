@@ -1,3 +1,5 @@
+> **Merged into the library on 2026-11-10** (engine + CATALOG.md); what stays here is listed as one-off below or in the merge report.
+
 # Library to-do from switch-off-sleep-6
 
 Things drawn in this chapter that later episodes could reuse. They live in this episode's `shots.tsx` for now

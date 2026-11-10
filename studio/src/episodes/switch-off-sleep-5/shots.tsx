@@ -1,11 +1,10 @@
 import React from 'react';
 import {
-  Hero, Pose, poseAt, faceAt, kf, clamp, easeOut, easeInOut, camT, LOOKS, Bedroom, BedDuvet, bedSit, LAMP, CAL, Kitchen,
+  BrainOutline, BrainCells, NeedleDial, ramp, Night, Hero, Pose, poseAt, faceAt, kf, clamp, easeOut, easeInOut, camT, LOOKS, Bedroom, BedDuvet, bedSit, LAMP, CAL, Kitchen,
   Tabletop, LightVeil, AlarmClock, WallCalendar, calendarDay, Phone, Schematic, SCH, SchLabel, CountUp, DrawOn, Tag,
   Glow, FONT, ShotProps,
 } from '../../engine';
-import { CloseUp, Night } from '../switch-off-sleep-1/shots';
-import { BrainOutline, BrainCells, NeedleDial, ramp } from './kit';
+import { CloseUp } from '../switch-off-sleep-1/shots';
 
 // "What if you could switch off sleep?" Chapter 5: the twist, the real cost. Sixteen shots: the dark bedroom (the lamp
 // and its switch, the wall calendar, the phone on the nightstand), four schematic cards for the science (the brain's
@@ -187,7 +186,7 @@ export const S10: React.FC<ShotProps> = ({ t, len }) => (
     <CloseUp t={t} len={len} glint={1} rim="rimL" x={1040}
       face={{ ...faceAt(t, [[0, 'tired']]), blink: t > 28 && t < 34 ? 0.6 : 0 }}
       p={{ headTilt: 6 + Math.sin(t / 7) * 1.5, yaw: 0.25, tilt: 2 }}
-      bg={<g transform="translate(-800 -500) scale(2.2)"><Kitchen t={t + 50} id="k510" veil={0.7} /><Night o={0.55} /></g>} />
+      bg={<g transform="translate(-800 -500) scale(2.2)"><Kitchen t={t + 50} id="k510" veil={0.7} tint="night" tintO={0.55} /></g>} />
     <text x={300} y={260} fontFamily={FONT.hand} fontSize={110} fill="#FF7A6A" opacity={clamp((t - 8) / 6)} transform="rotate(-6 300 260)">DAY 6</text>
   </g>
 );

@@ -2,6 +2,7 @@ import React from 'react';
 import { clamp, backOut, easeOut } from './anim';
 import { C } from './rig';
 import { FONT } from './fonts';
+import { SCH } from './sets/schematic';
 
 // What goes on top of a shot. The genre keeps text off the picture: one title card, small UI readouts in a mono
 // face (a timer, a label, a chip), a few marks. No comic speech bubbles, no "HA HA", no captions of the voice.
@@ -101,6 +102,56 @@ export const Gauge: React.FC<{ x: number; y: number; w?: number; p: number; labe
     <rect x={0} y={0} width={w * clamp(p)} height={26} rx={13} fill={p > danger ? UI.bad : UI.live} />
   </g>
 );
+
+/**
+ * A half-circle dial with a needle (schematic colours; Gauge is the bar version) (a meter, a test score). p 0..1 the needle, red 0..1 where the red zone starts,
+ * redLabel the mark at the red line, left / right the ends' labels, flash 0..1 pulses the red zone.
+ */
+export const NeedleDial: React.FC<{ x: number; y: number; r?: number; p: number; red?: number; redLabel?: string; left?: string; right?: string; flash?: number; t?: number }> = ({
+  x, y, r = 380, p, red = 0.66, redLabel, left, right, flash = 0, t = 0,
+}) => {
+  const ang = (u: number) => Math.PI * (1 - u); // 0 -> left, 1 -> right
+  const pt = (u: number, rr: number) => ({ x: x + rr * Math.cos(ang(u)), y: y - rr * Math.sin(ang(u)) });
+  const arc = (u0: number, u1: number, rr: number) => {
+    const a = pt(u0, rr);
+    const b = pt(u1, rr);
+    return `M ${a.x} ${a.y} A ${rr} ${rr} 0 0 1 ${b.x} ${b.y}`;
+  };
+  const tip = pt(clamp(p, 0, 1.02), r * 0.86);
+  const redO = 0.75 + 0.25 * flash * (0.5 + 0.5 * Math.sin(t * 0.8));
+  const rl = pt(red, r + 46);
+  return (
+    <g>
+      <path d={arc(0, red, r)} stroke={SCH.dim} strokeWidth={34} fill="none" />
+      <path d={arc(red, 1, r)} stroke="#E0443A" strokeWidth={34} fill="none" opacity={redO} />
+      {Array.from({ length: 11 }).map((_, i) => {
+        const a = pt(i / 10, r - 34);
+        const b = pt(i / 10, r - 64);
+        return <path key={i} d={`M ${a.x} ${a.y} L ${b.x} ${b.y}`} stroke={SCH.line} strokeWidth={5} />;
+      })}
+      {/* the red line */}
+      <path d={`M ${pt(red, r - 70).x} ${pt(red, r - 70).y} L ${pt(red, r + 24).x} ${pt(red, r + 24).y}`} stroke="#FF5A4A" strokeWidth={10} />
+      {redLabel ? (
+        <text x={rl.x + 20} y={rl.y - 10} textAnchor="start" fontFamily={FONT.ui} fontSize={38} fill="#FF7A6A" letterSpacing={2}>
+          {redLabel}
+        </text>
+      ) : null}
+      {left ? (
+        <text x={x - r} y={y + 70} textAnchor="middle" fontFamily={FONT.ui} fontSize={36} fill={SCH.dim} letterSpacing={2}>
+          {left}
+        </text>
+      ) : null}
+      {right ? (
+        <text x={x + r} y={y + 70} textAnchor="middle" fontFamily={FONT.ui} fontSize={36} fill="#FF7A6A" letterSpacing={2}>
+          {right}
+        </text>
+      ) : null}
+      <path d={`M ${x} ${y} L ${tip.x} ${tip.y}`} stroke={SCH.live} strokeWidth={14} strokeLinecap="round" style={{ filter: `drop-shadow(0 0 12px ${SCH.glow})` }} />
+      <circle cx={x} cy={y} r={30} fill={SCH.live} />
+      <circle cx={x} cy={y} r={12} fill={SCH.ground} />
+    </g>
+  );
+};
 
 /** A label that pops up and drifts off ("x10", "+1", "56"), from t = 0 over 24 frames. */
 export const FloatLabel: React.FC<{ x: number; y: number; t: number; text: string; color?: string; size?: number }> = ({ x, y, t, text, color = '#FFE27A', size = 72 }) => {
